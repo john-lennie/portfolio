@@ -1,5 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Image from "next/image"
+import { GlobalStyles } from "@/components/GlobalStyles"
 
 const projects = [
   {
@@ -38,7 +39,7 @@ const projects = [
     video: "https://example.com/portfolio-demo.mp4",
   },
   {
-    name: "Susan For Susan",
+    name: "Susan for Susan",
     images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
     video: "https://example.com/portfolio-demo.mp4",
   },
@@ -47,6 +48,7 @@ const projects = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-black text-white">
+      <GlobalStyles />
       <main className="container px-24 py-36">
         <div className="w-full sm:w-1/2 lg:w-1/3">
           <Accordion type="single" collapsible>
@@ -81,20 +83,6 @@ export default function Home() {
           </Accordion>
         </div>
       </main>
-      <style jsx global>{`
-        .accordion-plus {
-          display: block;
-        }
-        .accordion-minus {
-          display: none;
-        }
-        [data-state=open] .accordion-plus {
-          display: none;
-        }
-        [data-state=open] .accordion-minus {
-          display: block;
-        }
-      `}</style>
     </div>
   )
 }
