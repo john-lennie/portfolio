@@ -6,7 +6,7 @@ const projects = [
   {
     name: "Basma 16",
     images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
-    video: "https://example.com/ecommerce-demo.mp4",
+    video: "/basma/m1.mp4",
   },
   {
     name: "Faces Of Another",
