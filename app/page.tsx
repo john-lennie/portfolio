@@ -49,8 +49,8 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black">
       <GlobalStyles />
-      <main className="container px-24 py-36">
-        <div className="w-full sm:w-1/2 lg:w-1/3">
+      <main className="container px-6 md:px-12 lg:px-24 py-36">
+        <div className="w-full md:w-1/2 lg:w-1/3">
           <Accordion type="single" collapsible>
             {projects.map((project, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
