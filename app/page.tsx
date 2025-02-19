@@ -38,7 +38,7 @@ const projects = [
     video: "https://example.com/portfolio-demo.mp4",
   },
   {
-    name: "Susan for Susan",
+    name: "Susan For Susan",
     images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
     video: "https://example.com/portfolio-demo.mp4",
   },
