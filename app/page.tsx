@@ -72,7 +72,7 @@ export default function Home() {
                       ))}
                     </div>
                     <div className="aspect-w-16 aspect-h-9">
-                      <video src={project.video} muted autoplay className="rounded-lg shadow-md w-full h-full object-cover">
+                      <video src={project.video} muted loop autoplay className="rounded-lg shadow-md w-full h-full object-cover">
                         Your browser does not support the video tag.
                       </video>
                     </div>
