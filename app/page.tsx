@@ -47,7 +47,7 @@ const projects = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-white text-black">
       <GlobalStyles />
       <main className="container px-24 py-36">
         <div className="w-full sm:w-1/2 lg:w-1/3">
@@ -72,7 +72,7 @@ export default function Home() {
                       ))}
                     </div>
                     <div className="aspect-w-16 aspect-h-9">
-                      <video src={project.video} controls className="rounded-lg shadow-md w-full h-full object-cover">
+                      <video src={project.video} muted autoplay className="rounded-lg shadow-md w-full h-full object-cover">
                         Your browser does not support the video tag.
                       </video>
                     </div>
