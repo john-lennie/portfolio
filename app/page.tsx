@@ -72,8 +72,7 @@ export default function Home() {
                       ))}
                     </div>
                     <div className="aspect-w-16 aspect-h-9">
-                      <video playsinline autoplay muted loop className="w-full h-full object-cover">
-                      <source src={project.video} />
+                      <video src={project.video} play playsinline autoplay muted loop className="w-full h-full object-cover">
                         Your browser does not support the video tag.
                       </video>
                     </div>
