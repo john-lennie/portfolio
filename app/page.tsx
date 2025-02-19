@@ -53,7 +53,7 @@ export default function Home() {
         <div className="w-full sm:w-1/2 lg:w-1/3">
           <Accordion type="single" collapsible>
             {projects.map((project, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-white">
+              <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
                 <AccordionTrigger className="text-sm font-normal py-2 uppercase text-left">
                   {project.name}
                 </AccordionTrigger>
@@ -72,7 +72,7 @@ export default function Home() {
                       ))}
                     </div>
                     <div className="aspect-w-16 aspect-h-9">
-                      <video src={project.video} muted loop autoplay className="w-full h-full object-cover">
+                      <video src={project.video} playsInline autoPlay muted loop className="w-full h-full object-cover">
                         Your browser does not support the video tag.
                       </video>
                     </div>
