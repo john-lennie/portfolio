@@ -54,7 +54,7 @@ export default function Home() {
                 <AccordionTrigger className="text-xs font-normal py-2 uppercase text-left">
                   {project.name}
                 </AccordionTrigger>
-                <AccordionContent className="py-4">
+                <AccordionContent className="pb-4">
                   <div className="space-y-4">
                     {project.images && 
                       <div className="grid grid-cols-1 gap-4">
