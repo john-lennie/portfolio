@@ -63,9 +63,7 @@ export default function Home() {
                             key={imgIndex}
                             src={image || "/placeholder.svg"}
                             alt={`${project.name} screenshot ${imgIndex + 1}`}
-                            width={400}
-                            height={300}
-                            className="rounded-lg shadow-md w-full"
+                            className="w-full"
                           />
                         ))}
                       </div>
