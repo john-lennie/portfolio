@@ -9,7 +9,7 @@ const projects = [
   },
   {
     name: "Milou",
-    images: ["/milou/d.png"]
+    images: ["/milou/2.png", "/milou/3.png", "/milou/d.png"]
   },
   {
     name: "Basma 16",
@@ -46,7 +46,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black">
       <GlobalStyles />
-      <main className="container px-6 md:px-12 lg:px-24 py-36">
+      <main className="px-6 md:px-12 lg:px-16 py-36">
         <div className="w-full md:w-1/2">
           <Accordion type="single" collapsible>
             {projects.map((project, index) => (
