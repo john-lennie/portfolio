@@ -19,8 +19,7 @@ const projects = [
   },
   {
     name: "Full Court Press",
-    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
-    video: "https://example.com/portfolio-demo.mp4",
+    video: "/full-court-press/m1.mp4",
   },
   {
     name: "Milou",
