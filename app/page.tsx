@@ -47,7 +47,7 @@ export default function Home() {
     <div>
       <div className="min-h-screen bg-white text-black">
         <GlobalStyles />
-        <main className="px-6 md:px-12 lg:px-36 py-48">
+        <main className="px-4 md:px-12 lg:px-36 py-48">
           <div className="w-full md:w-1/2">
             <Accordion type="multiple" collapsible>
               {projects.map((project, index) => (
