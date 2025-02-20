@@ -49,7 +49,7 @@ export default function Home() {
         <GlobalStyles />
         <main className="px-4 md:px-12 lg:px-36 py-48">
           <div className="w-full md:w-1/2">
-            <Accordion type="multiple" collapsible>
+            <Accordion type="single" defaultValue="0" collapsible>
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
                   <AccordionTrigger className="text-xs font-normal py-2 lg:py-1 text-left">
