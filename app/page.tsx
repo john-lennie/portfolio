@@ -69,8 +69,8 @@ export default function Home() {
                       </div>
                     }
                     {project.video && 
-                      <div class>
-                        <div className="aspect-w-16 aspect-h-9 lg:(w-1/2 py-12)">
+                      <div className="flex justify-center py-12">
+                        <div className="aspect-w-16 aspect-h-9 lg:w-1/3">
                           <video src={project.video} muted playsInline autoPlay loop className="w-full h-full object-cover">
                             Your browser does not support the video tag.
                           </video>
