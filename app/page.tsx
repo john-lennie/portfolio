@@ -52,7 +52,7 @@ export default function Home() {
             <Accordion type="multiple" collapsible>
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
-                  <AccordionTrigger className="text-xs font-normal py-2 text-left">
+                  <AccordionTrigger className="text-xs font-normal py-2 lg:py-1 text-left">
                     {project.name}
                   </AccordionTrigger>
                   <AccordionContent className="pb-4">
