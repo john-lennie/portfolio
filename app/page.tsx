@@ -8,6 +8,10 @@ const projects = [
     video: "/full-court-press/m1.mp4",
   },
   {
+    name: "Milou",
+    images: ["/milou/d1.png"]
+  },
+  {
     name: "Basma 16",
     video: "/basma/m1.mp4",
   },
@@ -20,11 +24,6 @@ const projects = [
     name: "Club 16",
     images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
     video: "https://example.com/dashboard-demo.mp4",
-  },
-  {
-    name: "Milou",
-    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
-    video: "https://example.com/ecommerce-demo.mp4",
   },
   {
     name: "Norman Wong",
@@ -71,11 +70,13 @@ export default function Home() {
                         ))}
                       </div>
                     }
-                    <div className="aspect-w-16 aspect-h-9">
-                      <video src={project.video} muted playsInline autoPlay loop className="w-full h-full object-cover">
-                        Your browser does not support the video tag.
-                      </video>
-                    </div>
+                    {project.video && 
+                      <div className="aspect-w-16 aspect-h-9">
+                        <video src={project.video} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+                    }
                   </div>
                 </AccordionContent>
               </AccordionItem>
