@@ -4,6 +4,10 @@ import { GlobalStyles } from "@/components/GlobalStyles"
 
 const projects = [
   {
+    name: "Full Court Press",
+    video: "/full-court-press/m1.mp4",
+  },
+  {
     name: "Basma 16",
     video: "/basma/m1.mp4",
   },
@@ -16,10 +20,6 @@ const projects = [
     name: "Club 16",
     images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
     video: "https://example.com/dashboard-demo.mp4",
-  },
-  {
-    name: "Full Court Press",
-    video: "/full-court-press/m1.mp4",
   },
   {
     name: "Milou",
