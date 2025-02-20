@@ -9,7 +9,7 @@ const projects = [
   },
   {
     name: "Milou",
-    images: ["/milou/d1.png"]
+    images: ["/milou/d.png"]
   },
   {
     name: "Basma 16",
@@ -47,7 +47,7 @@ export default function Home() {
     <div className="min-h-screen bg-white text-black">
       <GlobalStyles />
       <main className="container px-6 md:px-12 lg:px-24 py-36">
-        <div className="w-full md:w-1/2 lg:w-2/5">
+        <div className="w-full md:w-1/2">
           <Accordion type="single" collapsible>
             {projects.map((project, index) => (
               <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
