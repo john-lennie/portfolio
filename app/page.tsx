@@ -44,46 +44,49 @@ const projects = [
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-white text-black">
-      <GlobalStyles />
-      <main className="px-6 md:px-12 lg:px-36 py-36">
-        <div className="w-full md:w-1/2">
-          <Accordion type="single" collapsible>
-            {projects.map((project, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
-                <AccordionTrigger className="text-xs font-normal py-2 uppercase text-left">
-                  {project.name}
-                </AccordionTrigger>
-                <AccordionContent className="pb-4">
-                  <div className="space-y-4">
-                    {project.images && 
-                      <div className="grid grid-cols-1 gap-4">
-                        {project.images.map((image, imgIndex) => (
-                          <Image
-                            key={imgIndex}
-                            src={image || "/placeholder.svg"}
-                            alt={`${project.name} screenshot ${imgIndex + 1}`}
-                            className="w-full"
-                          />
-                        ))}
-                      </div>
-                    }
-                    {project.video && 
-                      <div className="flex justify-center py-12">
-                        <div className="aspect-w-16 aspect-h-9 lg:w-1/3">
-                          <video src={project.video} muted playsInline autoPlay loop className="w-full h-full object-cover">
-                            Your browser does not support the video tag.
-                          </video>
+    <div>
+      <div className="min-h-screen bg-white text-black">
+        <GlobalStyles />
+        <main className="px-6 md:px-12 lg:px-36 py-36">
+          <div className="w-full md:w-1/2">
+            <Accordion type="single" collapsible>
+              {projects.map((project, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
+                  <AccordionTrigger className="text-xs font-normal py-2 uppercase text-left">
+                    {project.name}
+                  </AccordionTrigger>
+                  <AccordionContent className="pb-4">
+                    <div className="space-y-4">
+                      {project.images &&
+                        <div className="grid grid-cols-1 gap-4">
+                          {project.images.map((image, imgIndex) => (
+                            <Image
+                              key={imgIndex}
+                              src={image || "/placeholder.svg"}
+                              alt={`${project.name} screenshot ${imgIndex + 1}`}
+                              className="w-full"
+                            />
+                          ))}
                         </div>
-                      </div>
-                    }
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </main>
+                      }
+                      {project.video &&
+                        <div className="flex justify-center py-12">
+                          <div className="aspect-w-16 aspect-h-9 lg:w-1/3">
+                            <video src={project.video} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                              Your browser does not support the video tag.
+                            </video>
+                          </div>
+                        </div>
+                      }
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </main>
+      </div>
+      <div className="min-h-screen"></div>
     </div>
   )
 }
