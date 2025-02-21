@@ -11,7 +11,7 @@ const projects = [
     video: "/full-court-press/m1.mp4",
   },
   {
-    name: "Milou",
+    name: "Milou Restaurant",
     images: ["/milou/2.png", "/milou/3.png", "/milou/d.png"]
   },
   {
