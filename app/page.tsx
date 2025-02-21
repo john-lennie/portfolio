@@ -9,11 +9,14 @@ const projects = [
   {
     name: "Full Court Press",
     video: "/full-court-press/m1.mp4",
-    description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
+    description: "Full Court Press, Web Development - with Ronan Mcgee (design)",
+    tags: "Shopify"
   },
   {
     name: "Milou Restaurant",
-    images: ["/milou/2.png", "/milou/3.png", "/milou/d.png"]
+    images: ["/milou/2.png", "/milou/3.png", "/milou/d.png"],
+    description: "Milou Restaurant, Shopify Theme Development",
+    tags: "Shopify"
   },
   {
     name: "Basma Beauty",
@@ -98,6 +101,9 @@ export default function Home() {
                       }
                       {project.description &&
                         <p className="text-xs font-normal">{project.description}</p>
+                      }
+                      {project.tags &&
+                        <p className="text-xs text-gray-500 font-normal italic">{project.tags}</p>
                       }
                     </div>
                   </AccordionContent>
