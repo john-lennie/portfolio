@@ -28,8 +28,8 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <Plus className="h-4 w-4 shrink-0 transition-transform duration-200 accordion-plus" />
-      <Minus className="h-4 w-4 shrink-0 transition-transform duration-200 accordion-minus" />
+      <Plus className="h-3 w-3 shrink-0 transition-transform duration-200 accordion-plus" />
+      <Minus className="h-3 w-3 shrink-0 transition-transform duration-200 accordion-minus" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
