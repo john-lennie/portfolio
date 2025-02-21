@@ -51,7 +51,7 @@ const projects = [
 export default function Home() {
   return (
     <div>
-      <div className="min-h-screen bg-white text-black">
+      <div className="min-h-screen bg-gray-50 text-black">
         <GlobalStyles />
         <header className="fixed z-[1] w-full items-center justify-between flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
           <span className="animate-fade-in-slow">Juniper</span>
