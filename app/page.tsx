@@ -1,5 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Button } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import Image from "next/image"
 import { GlobalStyles } from "@/components/GlobalStyles"
 
@@ -43,11 +43,6 @@ const projects = [
   },
 ]
 
-function handleClick() {
-  console.log('click');
-}
-
-
 export default function Home() {
   return (
     <div>
@@ -55,7 +50,7 @@ export default function Home() {
         <GlobalStyles />
         <header className="fixed w-full justify-between flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
           Juniper Studio
-          <Button onClick={handleClick}>
+          <Button variant="default" size="default">
             Info
           </Button>
         </header>
