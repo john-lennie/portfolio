@@ -51,9 +51,9 @@ export default function Home() {
       <div className="min-h-screen bg-white text-black">
         <GlobalStyles />
         <header className="fixed w-full items-center justify-between flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
-          <span className="animate-fade-in-slow">Juniper Studio</span>
+          <span className="">Juniper Studio</span>
           <button
-            className="animate-fade-in-slow uppercase"
+            className="uppercase"
             onClick={() => {
               alert('clicked');
             }}
