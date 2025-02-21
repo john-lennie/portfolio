@@ -95,7 +95,7 @@ const config: Config = {
 				'fade-in-fast': 'fade-in .25s ease-in-out',
 				'fade-in': 'fade-in .5s ease-in-out',
 				'fade-in-slow': 'fade-in 1s ease-in-out',
-				'fade-in-slow-delay': 'fade-in 1s 1s ease-in-out forwards'
+				'fade-in-slow-delay': 'fade-in 1s .25s ease-in-out forwards'
   		}
   	}
   },
