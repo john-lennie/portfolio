@@ -47,7 +47,7 @@ export default function Home() {
     <div>
       <div className="min-h-screen bg-white text-black">
         <GlobalStyles />
-        <header className="px-4 md:px-12 lg:px-36 py-2 text-xs font-normal uppercase">
+        <header className="px-4 md:px-12 lg:px-36 py-6 text-xs font-normal uppercase">
           Juniper
         </header>
         <main className="px-4 md:px-12 lg:px-36 py-48">
