@@ -8,7 +8,7 @@ import { GlobalStyles } from "@/components/GlobalStyles"
 const projects = [
   {
     name: "North of Now",
-    video: "/north-of-now/m2.mp4",
+    video: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/watch",
     description: "North of Now, Web Design, Web Development"
   },
   {
@@ -18,7 +18,7 @@ const projects = [
   },
   {
     name: "Full Court Press",
-    video: "/full-court-press/m1.mp4",
+    video: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/9e25f93385b57f6b0c06e90c4eb76b7e/watch",
     description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
   },
   {
@@ -28,7 +28,7 @@ const projects = [
   },
   {
     name: "Basma Beauty",
-    video: "/basma/m1.mp4",
+    video: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/e839f788e73987827ba6046dde85e49e/watch",
     description: "Basma Beauty, Web Development - with 56 Digital"
   },
   {
@@ -38,7 +38,7 @@ const projects = [
   },
   {
     name: "Club 16",
-    video: "/club-16/1.mp4",
+    video: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/watch",
     description: "Club 16, Web Development - with Ronan Mcgee (design)"
   },
   {
