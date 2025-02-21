@@ -83,11 +83,18 @@ const config: Config = {
   				to: {
   					height: '0'
   				}
-  			}
+  			},
+				'fade-in': {
+					from: { opacity: 0 },
+					to: { opacity: 1 },
+				},
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
-  			'accordion-up': 'accordion-up 0.2s ease-out'
+  			'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in-fast': 'fade-in .25s ease-in-out',
+				'fade-in': 'fade-in .5s ease-in-out',
+				'fade-in-slow': 'fade-in 1s ease-in-out'
   		}
   	}
   },
