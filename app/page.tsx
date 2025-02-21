@@ -53,9 +53,6 @@ export default function Home() {
           <Button
             variant="default"
             size="default"
-            onClick={() => {
-              alert('clicked');
-            }}
           >
             Info
           </Button>
