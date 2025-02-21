@@ -1,4 +1,5 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { GlobalStyles } from "@/components/GlobalStyles"
 
@@ -49,6 +50,7 @@ export default function Home() {
         <GlobalStyles />
         <header className="fixed w-full backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
           Juniper Studio
+          <Button>Info</Button>
         </header>
         <main className="px-4 md:px-12 lg:px-36 py-48">
           <div className="w-full md:w-1/2">
