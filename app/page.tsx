@@ -9,14 +9,12 @@ const projects = [
   {
     name: "Full Court Press",
     video: "/full-court-press/m1.mp4",
-    description: "Full Court Press, Web Development - with Ronan Mcgee (design)",
-    tags: "Shopify"
+    description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
   },
   {
     name: "Milou Restaurant",
     images: ["/milou/2.png", "/milou/3.png", "/milou/d.png"],
-    description: "Milou Restaurant, Web Development",
-    tags: "Shopify"
+    description: "Milou Restaurant, Web Development"
   },
   {
     name: "Basma Beauty",
@@ -25,8 +23,8 @@ const projects = [
   },
   {
     name: "Faces Of Another",
-    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
-    video: "https://example.com/dashboard-demo.mp4",
+    images: ["/faces-of-another/2.png", "/faces-of-another/3.png"],
+    description: "Faces Of Another, Web Design, Web Development"
   },
   {
     name: "Club 16",
