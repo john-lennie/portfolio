@@ -51,7 +51,7 @@ export default function Home() {
       <div className="min-h-screen bg-white text-black">
         <GlobalStyles />
         <header className="animate-fade-in-slow fixed w-full items-center justify-between flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
-          Juniper
+          Juniper Studio
           <button
             className="uppercase"
             onClick={() => {
@@ -61,7 +61,7 @@ export default function Home() {
             Info
           </button>
         </header>
-        <main className="animate-fade-in-slower px-4 md:px-12 lg:px-36 py-48">
+        <main className="animate-fade-in-slower [animation-delay:5s] px-4 md:px-12 lg:px-36 py-48">
           <div className="w-full md:w-1/2">
             <Accordion type="multiple" collapsible>
               {projects.map((project, index) => (
