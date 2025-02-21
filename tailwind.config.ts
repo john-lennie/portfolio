@@ -94,7 +94,8 @@ const config: Config = {
   			'accordion-up': 'accordion-up 0.2s ease-out',
 				'fade-in-fast': 'fade-in .25s ease-in-out',
 				'fade-in': 'fade-in .5s ease-in-out',
-				'fade-in-slow': 'fade-in 1s ease-in-out'
+				'fade-in-slow': 'fade-in 1s ease-in-out',
+				'fade-in-slower': 'fade-in 1s ease-in-out'
   		}
   	}
   },

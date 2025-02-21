@@ -50,7 +50,7 @@ export default function Home() {
     <div>
       <div className="min-h-screen bg-white text-black">
         <GlobalStyles />
-        <header className="animate-fade-in fixed w-full items-center justify-between flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
+        <header className="animate-fade-in-slow fixed w-full items-center justify-between flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
           Juniper
           <button
             className="uppercase"
@@ -61,7 +61,7 @@ export default function Home() {
             Info
           </button>
         </header>
-        <main className="px-4 md:px-12 lg:px-36 py-48">
+        <main className="animate-fade-in-slower px-4 md:px-12 lg:px-36 py-48">
           <div className="w-full md:w-1/2">
             <Accordion type="multiple" collapsible>
               {projects.map((project, index) => (
