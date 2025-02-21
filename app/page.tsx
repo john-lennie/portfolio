@@ -15,7 +15,7 @@ const projects = [
     images: ["/milou/2.png", "/milou/3.png", "/milou/d.png"]
   },
   {
-    name: "Basma 16",
+    name: "Basma Beauty",
     video: "/basma/m1.mp4",
   },
   {
