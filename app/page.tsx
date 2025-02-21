@@ -50,15 +50,13 @@ export default function Home() {
         <GlobalStyles />
         <header className="fixed w-full justify-between flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
           Juniper Studio
-          <Button
-            variant="default"
-            size="default"
+          <button
             onClick={() => {
               alert('clicked');
             }}
           >
             Info
-          </Button>
+          </button>
         </header>
         <main className="px-4 md:px-12 lg:px-36 py-48">
           <div className="w-full md:w-1/2">
