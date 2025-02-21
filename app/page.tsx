@@ -18,6 +18,7 @@ const projects = [
   {
     name: "Basma Beauty",
     video: "/basma/m1.mp4",
+    description: "Basma Beauty, Web Development - with 56 Digital"
   },
   {
     name: "Faces Of Another",
