@@ -47,7 +47,7 @@ export default function Home() {
     <div>
       <div className="min-h-screen bg-white text-black">
         <GlobalStyles />
-        <header className="fixed w-full backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase lg:relative lg:backdrop-blur-none lg:px-36">
+        <header className="fixed w-full backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
           Juniper Studio
         </header>
         <main className="px-4 md:px-12 lg:px-36 py-48">
