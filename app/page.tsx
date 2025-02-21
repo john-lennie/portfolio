@@ -61,7 +61,7 @@ export default function Home() {
             Info
           </button>
         </header>
-        <main className="animate-fade-in-slow-delay px-4 md:px-12 lg:px-36 py-48">
+        <main className="animate-fade-in-slow-delay opacity-0 px-4 md:px-12 lg:px-36 py-48">
           <div className="w-full md:w-1/2">
             <Accordion type="multiple" collapsible>
               {projects.map((project, index) => (
