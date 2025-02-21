@@ -9,6 +9,7 @@ const projects = [
   {
     name: "Full Court Press",
     video: "/full-court-press/m1.mp4",
+    description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
   },
   {
     name: "Milou Restaurant",
@@ -93,6 +94,9 @@ export default function Home() {
                             </video>
                           </div>
                         </div>
+                      }
+                      {project.description &&
+                        <p className="text-xs font-normal">{project.name}</p>
                       }
                     </div>
                   </AccordionContent>
