@@ -96,7 +96,7 @@ export default function Home() {
                         </div>
                       }
                       {project.description &&
-                        <p className="text-xs font-normal">{project.name}</p>
+                        <p className="text-xs font-normal">{project.description}</p>
                       }
                     </div>
                   </AccordionContent>
