@@ -58,7 +58,7 @@ export default function Home() {
               alert('clicked');
             }}
           >
-            Info
+            Studio Info
           </button>
         </header>
         <main className="px-4 md:px-12 lg:px-36 py-48">
