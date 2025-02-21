@@ -15,7 +15,7 @@ const projects = [
   {
     name: "Milou Restaurant",
     images: ["/milou/2.png", "/milou/3.png", "/milou/d.png"],
-    description: "Milou Restaurant, Shopify Theme Development",
+    description: "Milou Restaurant, Web Development",
     tags: "Shopify"
   },
   {
@@ -103,7 +103,7 @@ export default function Home() {
                         <p className="text-xs font-normal">{project.description}</p>
                       }
                       {project.tags &&
-                        <p className="text-xs text-gray-500 font-normal italic">{project.tags}</p>
+                        <p className="text-xs text-gray-400 font-normal italic">{project.tags}</p>
                       }
                     </div>
                   </AccordionContent>
