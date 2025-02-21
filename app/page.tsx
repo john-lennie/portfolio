@@ -7,6 +7,16 @@ import { GlobalStyles } from "@/components/GlobalStyles"
 
 const projects = [
   {
+    name: "North of Now",
+    video: "/north-of-now/m2.mp4",
+    description: "North of Now, Web Design, Web Development"
+  },
+  {
+    name: "Faces Of Another",
+    images: ["/faces-of-another/1.png", "/faces-of-another/2.png"],
+    description: "Faces Of Another, Web Design, Web Development"
+  },
+  {
     name: "Full Court Press",
     video: "/full-court-press/m1.mp4",
     description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
@@ -22,29 +32,19 @@ const projects = [
     description: "Basma Beauty, Web Development - with 56 Digital"
   },
   {
-    name: "Faces Of Another",
-    images: ["/faces-of-another/1.png", "/faces-of-another/2.png"],
-    description: "Faces Of Another, Web Design, Web Development"
+    name: "Susan for Susan",
+    images: ["/susan-for-susan/1.png"],
+    description: "Susan for Susan, Web Development - with Ronan Mcgee (design)"
   },
   {
     name: "Club 16",
-    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
-    video: "https://example.com/dashboard-demo.mp4",
+    video: "/club-16/1.mp4",
+    description: "Club 16, Web Development - with Ronan Mcgee (design)"
   },
   {
     name: "Norman Wong",
-    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
-    video: "https://example.com/dashboard-demo.mp4",
-  },
-  {
-    name: "North of Now",
-    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
-    video: "https://example.com/portfolio-demo.mp4",
-  },
-  {
-    name: "Susan for Susan",
-    images: ["/placeholder.svg?height=300&width=400", "/placeholder.svg?height=300&width=400"],
-    video: "https://example.com/portfolio-demo.mp4",
+    images: ["/norman-wong/1.png", "/norman-wong/3.png"],
+    description: "Norman Wong, Web Development"
   },
 ]
 
