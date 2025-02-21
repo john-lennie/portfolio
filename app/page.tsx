@@ -63,6 +63,8 @@ export default function Home() {
         </header>
         <main className="animate-fade-in-slow-delay opacity-0 px-4 md:px-12 lg:px-36 py-48">
           <div className="w-full md:w-1/2">
+            <h1>Juniper is a digital product studio specializing in the design and development of ecommerce and digital experiences for global companies, local businesses, creative studios and artists.</h1>
+            <h2>Projects</h2>
             <Accordion type="multiple" collapsible>
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
