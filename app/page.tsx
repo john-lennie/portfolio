@@ -53,6 +53,7 @@ export default function Home() {
         <header className="fixed w-full items-center justify-between flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
           Juniper Studio
           <button
+            className="uppercase"
             onClick={() => {
               alert('clicked');
             }}
