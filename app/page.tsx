@@ -1,5 +1,4 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { Button, buttonVariants } from "@/components/ui/button"
 import Image from "next/image"
 import { GlobalStyles } from "@/components/GlobalStyles"
 
