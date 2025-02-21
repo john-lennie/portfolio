@@ -23,7 +23,7 @@ const projects = [
   },
   {
     name: "Faces Of Another",
-    images: ["/faces-of-another/2.png", "/faces-of-another/3.png"],
+    images: ["/faces-of-another/1.png", "/faces-of-another/2.png"],
     description: "Faces Of Another, Web Design, Web Development"
   },
   {
