@@ -44,13 +44,20 @@ const projects = [
 ]
 
 export default function Home() {
+
+  function handleClick() {
+    console.log('click');
+  }
+  
   return (
     <div>
       <div className="min-h-screen bg-white text-black">
         <GlobalStyles />
         <header className="fixed w-full justify-around flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
           Juniper Studio
-          <Button>Info</Button>
+          <Button onClick={handleClick}>
+            Info
+          </Button>
         </header>
         <main className="px-4 md:px-12 lg:px-36 py-48">
           <div className="w-full md:w-1/2">
