@@ -25,8 +25,8 @@ const projects = [
   },
   {
     name: "Milou Restaurant",
-    images: ["/milou/2.png", "/milou/3.png", "/milou/d.png"],
-    description: "Milou Restaurant, Web Development"
+    images: ["/milou/d.png"],
+    description: "Milou Restaurant, Shopify Theme Enhancement (Tabbable Menus)"
   },
   
   {
