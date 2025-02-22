@@ -48,7 +48,7 @@ const projects = [
 
 export default function Home() {
 
-  const [direction, setDirection] = React.useState('up')
+  const [direction, setDirection] = React.useState('down')
   const { isScrollingUp, isScrollingDown } = useScrollDirection()
 
   React.useEffect(() => {
@@ -60,7 +60,7 @@ export default function Home() {
     <div className="bg-white">
       <div className="min-h-screen text-black">
         <GlobalStyles />
-        <header className={"fixed z-[1] w-full items-center justify-between duration-300 ease-in-out flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36 " + (direction === 'up' ? 'top-0' : '-top-[52px]')}>
+        <header className={"fixed top-0 z-[1] w-full items-center justify-between duration-300 ease-in-out flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36 " + (direction === 'down' ? '-top-[52px]' : 'top-0')}>
           <span className="animate-fade-in-slow">Juniper</span>
           <button
             className="animate-fade-in-slow uppercase"
