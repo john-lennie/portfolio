@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { useScrollDirection } from 'react-use-scroll-direction'
+import useDetectScroll from "@smakss/react-scroll-direction"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
@@ -49,12 +49,12 @@ const projects = [
 export default function Home() {
 
   const [direction, setDirection] = React.useState('up')
-  const { isScrollingUp, isScrollingDown, scrollDirection } = useScrollDirection()
+  const { scrollDir } = useDetectScroll();
 
   React.useEffect(() => {
-    isScrollingDown && scrollDirection !== null && setDirection('down')
-    isScrollingUp && setDirection('up')
-  }, [isScrollingDown, isScrollingUp, scrollDirection])
+    scrollDir === "down" && setDirection('down')
+    scrollDir === "up" && setDirection('up')
+  }, [scrollDir])
 
   return (
     <div className="bg-white">
