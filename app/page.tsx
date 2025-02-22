@@ -75,8 +75,8 @@ export default function Home() {
           <div className="w-full md:w-1/2">
             {direction === 'down' ? 'Scrolling down' : 'scrolling up'}
             <h1 className="mb-16 text-lg leading-[1.5rem] w-11/12 lg:w-4/5 lg:text-xl">Juniper is a digital product studio specializing in the design and development of ecommerce platforms and digital experiences for global companies, marketing teams, small businesses, creative studios and artists.</h1>
-            <h2 className="text-xs uppercase mb-2">Projects:</h2>
-            <Accordion type="multiple" collapsible className="mb-2">
+            <h2 className="text-xs uppercase">Projects:</h2>
+            <Accordion type="multiple" collapsible className="mb-4">
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
                   <AccordionTrigger className="text-xs font-normal py-2 lg:py-1 text-left">
