@@ -75,7 +75,7 @@ export default function Home() {
                     {project.name}
                   </AccordionTrigger>
                   <AccordionContent className="pb-4">
-                    <div className="animate-fade-in-slow-delay space-y-4">
+                    <div className="animate-fade-in-slow-delay opacity-0 space-y-4">
                       {project.images &&
                         <div className="grid grid-cols-1 gap-4">
                           {project.images.map((image, imgIndex) => (
