@@ -46,15 +46,16 @@ const projects = [
   },
 ]
 
-const [direction, setDirection] = React.useState(String)
-const { isScrollingUp, isScrollingDown } = useScrollDirection()
-
-React.useEffect(() => {
-  isScrollingDown && setDirection('down')
-  isScrollingUp && setDirection('up')
-}, [isScrollingDown, isScrollingUp])
-
 export default function Home() {
+
+  const [direction, setDirection] = React.useState(String)
+  const { isScrollingUp, isScrollingDown } = useScrollDirection()
+
+  React.useEffect(() => {
+    isScrollingDown && setDirection('down')
+    isScrollingUp && setDirection('up')
+  }, [isScrollingDown, isScrollingUp])
+
   return (
     <div className="bg-white">
       <div className="min-h-screen text-black">
