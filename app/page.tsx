@@ -50,7 +50,7 @@ const projects = [
 
 export default function Home() {
   return (
-    <div className="bg-gray-100">
+    <div className="bg-white">
       <div className="min-h-screen text-black">
         <GlobalStyles />
         <header className="fixed z-[1] w-full items-center justify-between flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36">
@@ -74,7 +74,7 @@ export default function Home() {
                   <AccordionTrigger className="text-xs font-normal py-2 lg:py-1 text-left">
                     {project.name}
                   </AccordionTrigger>
-                  <AccordionContent className="pb-4">
+                  <AccordionContent forceMount className="pb-4">
                     <div className="space-y-4">
                       {project.images &&
                         <div className="grid grid-cols-1 gap-4">
