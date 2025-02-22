@@ -84,6 +84,7 @@ export default function Home() {
                               src={image || "/placeholder.svg"}
                               alt={`${project.name} screenshot ${imgIndex + 1}`}
                               className="w-full"
+                              placeholder="blur"
                             />
                           ))}
                         </div>
