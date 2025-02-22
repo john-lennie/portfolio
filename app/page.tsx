@@ -130,7 +130,7 @@ export default function Home() {
       </div>
       <div className="min-h-screen fixed top-0 w-full flex items-center justify-center px-4 md:px-12 lg:px-36 md:hidden">
         <button
-          className="uppercase border-solid border-black w-11/12 h-screen"
+          className="uppercase border border-solid border-black w-11/12 h-[calc(100dvh - 8rem)]"
           onClick={() => {
             alert('clicked');
           }}
