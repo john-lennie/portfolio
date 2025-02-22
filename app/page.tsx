@@ -26,11 +26,7 @@ const projects = [
     images: ["/milou/2.png", "/milou/3.png", "/milou/d.png"],
     description: "Milou Restaurant, Web Development"
   },
-  {
-    name: "Basma Beauty",
-    mobileVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/e839f788e73987827ba6046dde85e49e/downloads/default.mp4",
-    description: "Basma Beauty, Web Development - with 56 Digital"
-  },
+  
   {
     name: "Susan for Susan",
     images: ["/susan-for-susan/1.png"],
@@ -67,7 +63,9 @@ export default function Home() {
         <main className="animate-fade-in-slow-delay opacity-0 px-4 py-44 md:px-12 lg:px-36 lg:py-36">
           <div className="w-full md:w-1/2">
             <h1 className="mb-16 text-lg leading-[1.5rem] w-11/12 lg:w-4/5 lg:text-xl">Juniper is a digital product studio specializing in the design and development of ecommerce platforms and digital experiences for global companies, marketing teams, small businesses, creative studios and artists.</h1>
-            <h2 className="text-xs uppercase mb-2">Projects</h2>
+            <h2 className="text-sm uppercase mb-2">Clients:</h2>
+            <p>VF Corporation</p>
+            <h2 className="text-sm uppercase mb-2">Projects:</h2>
             <Accordion type="multiple" collapsible>
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
