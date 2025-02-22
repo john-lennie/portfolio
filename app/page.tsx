@@ -49,15 +49,15 @@ const projects = [
 export default function Home() {
 
   const [direction, setDirection] = React.useState('up')
-  const { isScrollingUp, isScrollingDown, scrollTargetRef } = useScrollDirection()
+  const { isScrollingUp, isScrollingDown, scrollDirection } = useScrollDirection()
 
   React.useEffect(() => {
-    isScrollingDown && setDirection('down')
+    isScrollingDown && scrollDirection !== null && setDirection('down')
     isScrollingUp && setDirection('up')
-  }, [isScrollingDown, isScrollingUp])
+  }, [isScrollingDown, isScrollingUp, scrollDirection])
 
   return (
-    <div className="bg-white" ref={scrollTargetRef}>
+    <div className="bg-white">
       <div className="min-h-screen text-black">
         <GlobalStyles />
         <header className={"fixed z-[1] w-full items-center justify-between duration-300 ease-in-out flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36 " + (direction === 'down' ? '-top-[52px]' : 'top-0')}>
