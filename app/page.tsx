@@ -60,16 +60,16 @@ export default function Home() {
     <div className="bg-white">
       <div className="min-h-screen text-black mb-[104px] lg:mb-[184px]">
         <GlobalStyles />
-        <header className={"fixed z-[2] w-full items-center justify-between duration-300 ease-in-out flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36 " + (direction === 'down' ? '-top-[52px]' : 'top-0')}>
+        <header className={"fixed z-[2] bg-[#ffffff80] w-full items-center justify-between duration-300 ease-in-out flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36 " + (direction === 'down' ? '-top-[52px]' : 'top-0')}>
           <span className="animate-fade-in-slow">Juniper</span>
-          <button
+          {/* <button
             className="animate-fade-in-slow uppercase"
             onClick={() => {
               alert('clicked');
             }}
           >
             Info
-          </button>
+          </button> */}
         </header>
         <main className="relative z-[1] px-4 bg-white pt-44 pb-4 md:px-12 lg:px-36 lg:pt-36">
           <div className="w-full animate-fade-in-slow-delay opacity-0 md:w-1/2">
@@ -129,14 +129,7 @@ export default function Home() {
         </main>
       </div>
       <div className="animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-4 lg:pt-36">
-        <button
-          className="text-xs"
-          onClick={() => {
-            alert('clicked');
-          }}
-        >
-          johnanthonylennie@gmail.com
-        </button>
+        <a href="mailto:johnanthonylennie@gmail.com" target="_blank" className="text-xs">johnanthonylennie@gmail.com</a>
       </div>
     </div>
   )
