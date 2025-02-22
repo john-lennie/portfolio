@@ -63,9 +63,9 @@ export default function Home() {
         <main className="animate-fade-in-slow-delay opacity-0 px-4 py-44 md:px-12 lg:px-36 lg:py-36">
           <div className="w-full md:w-1/2">
             <h1 className="mb-16 text-lg leading-[1.5rem] w-11/12 lg:w-4/5 lg:text-xl">Juniper is a digital product studio specializing in the design and development of ecommerce platforms and digital experiences for global companies, marketing teams, small businesses, creative studios and artists.</h1>
-            <h2 className="text-sm uppercase mb-2">Clients:</h2>
+            <h2 className="text-xs mb-2"><span className="uppercase">Clients:</span> VF Corporation</h2>
             <p>VF Corporation</p>
-            <h2 className="text-sm uppercase mb-2">Projects:</h2>
+            <h2 className="text-xs uppercase mb-2">Projects:</h2>
             <Accordion type="multiple" collapsible>
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
