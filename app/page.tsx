@@ -63,10 +63,8 @@ export default function Home() {
         <main className="animate-fade-in-slow-delay opacity-0 px-4 py-44 md:px-12 lg:px-36 lg:py-36">
           <div className="w-full md:w-1/2">
             <h1 className="mb-16 text-lg leading-[1.5rem] w-11/12 lg:w-4/5 lg:text-xl">Juniper is a digital product studio specializing in the design and development of ecommerce platforms and digital experiences for global companies, marketing teams, small businesses, creative studios and artists.</h1>
-            <h2 className="text-xs uppercase mb-2">Clients:</h2>
-            <p className="mb-8">VF Corporation <span className="text-xs">(THE NORTH FACE, TIMBERLAND, VANS)</span></p>
             <h2 className="text-xs uppercase mb-2">Projects:</h2>
-            <Accordion type="multiple" collapsible>
+            <Accordion type="multiple" collapsible className="mb-16">
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
                   <AccordionTrigger className="text-xs font-normal py-2 lg:py-1 text-left">
@@ -114,6 +112,8 @@ export default function Home() {
                 </AccordionItem>
               ))}
             </Accordion>
+            <h2 className="text-xs uppercase mb-2">Clients:</h2>
+            <p className="text-xs">VF Corporation (The North Face, Timberland, Vans)</p>
           </div>
         </main>
       </div>
