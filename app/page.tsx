@@ -130,19 +130,13 @@ export default function Home() {
       </div>
       <div className="min-h-screen fixed top-0 w-full flex items-center justify-center px-4 md:px-12 lg:px-36 md:hidden">
         <button
-          className="uppercase"
+          className="uppercase border-solid border-black w-11/12 h-screen"
           onClick={() => {
             alert('clicked');
           }}
         >
-          Contact Us
+          Contact
         </button>
-        <p className="mt-8">email?</p>
-        <p className="mt-8">an</p>
-        <p className="mt-8">send</p>
-        <p className="mt-8">to</p>
-        <p className="mt-8">want</p>
-        <p className="mt-8">Hello,</p>
       </div>
     </div>
   )
