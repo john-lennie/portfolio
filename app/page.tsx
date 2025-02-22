@@ -60,7 +60,7 @@ export default function Home() {
     <div className="bg-white">
       <div className="min-h-screen text-black">
         <GlobalStyles />
-        <header className={"fixed z-[1] w-full items-center justify-between duration-300 ease-in-out flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36 " + (direction === 'down' ? '-top-[52px]' : 'top-0')}>
+        <header className={"fixed z-[2] w-full items-center justify-between duration-300 ease-in-out flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36 " + (direction === 'down' ? '-top-[52px]' : 'top-0')}>
           <span className="animate-fade-in-slow">Juniper</span>
           <button
             className="animate-fade-in-slow uppercase"
@@ -71,7 +71,7 @@ export default function Home() {
             Info
           </button>
         </header>
-        <main className="animate-fade-in-slow-delay opacity-0 px-4 py-44 md:px-12 lg:px-36 lg:py-36">
+        <main className="relative z-[1] animate-fade-in-slow-delay opacity-0 px-4 py-44 md:px-12 lg:px-36 lg:py-36">
           <div className="w-full md:w-1/2">
             <h1 className="mb-16 text-lg leading-[1.5rem] w-11/12 lg:w-4/5 lg:text-xl">Juniper is a digital product studio specializing in the design and development of ecommerce platforms and digital experiences for global companies, marketing teams, small businesses, creative studios and artists.</h1>
             <h2 className="text-xs uppercase mb-1">Projects:</h2>
@@ -128,7 +128,9 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <div className="min-h-screen"></div>
+      <div className="min-h-screen fixed flex items-center justify-center md:hidden">
+        test
+      </div>
     </div>
   )
 }
