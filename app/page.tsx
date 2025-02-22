@@ -71,8 +71,8 @@ export default function Home() {
             Info
           </button>
         </header>
-        <main className="relative z-[1] animate-fade-in-slow-delay opacity-0 px-4 bg-white pt-44 pb-4 md:px-12 lg:px-36 lg:pt-36">
-          <div className="w-full md:w-1/2">
+        <main className="relative z-[1] px-4 bg-white pt-44 pb-4 md:px-12 lg:px-36 lg:pt-36">
+          <div className="w-full animate-fade-in-slow-delay opacity-0 md:w-1/2">
             <h1 className="mb-16 text-lg leading-[1.5rem] w-11/12 lg:w-4/5 lg:text-xl">Juniper is a digital product studio specializing in the design and development of ecommerce platforms and digital experiences for global companies, marketing teams, small businesses, creative studios and artists.</h1>
             <h2 className="text-xs uppercase mb-1">Projects:</h2>
             <Accordion type="multiple" collapsible className="mb-12">
@@ -128,15 +128,21 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <div className="min-h-screen fixed top-0 bg-black w-full flex items-center justify-center px-4 md:px-12 lg:px-36 md:hidden">
+      <div className="min-h-screen fixed top-0 w-full flex items-center justify-center px-4 md:px-12 lg:px-36 md:hidden">
         <button
           className="uppercase"
           onClick={() => {
             alert('clicked');
           }}
         >
-          Info
+          Contact Us
         </button>
+        <p className="mt-8">email?</p>
+        <p className="mt-8">an</p>
+        <p className="mt-8">send</p>
+        <p className="mt-8">to</p>
+        <p className="mt-8">want</p>
+        <p className="mt-8">Hello,</p>
       </div>
     </div>
   )
