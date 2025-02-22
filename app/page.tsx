@@ -58,7 +58,7 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <div className="min-h-screen text-black">
+      <div className="min-h-screen text-black mb-[56px]">
         <GlobalStyles />
         <header className={"fixed z-[2] w-full items-center justify-between duration-300 ease-in-out flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36 " + (direction === 'down' ? '-top-[52px]' : 'top-0')}>
           <span className="animate-fade-in-slow">Juniper</span>
@@ -128,7 +128,7 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <div className="fixed bottom-0 w-full px-4 md:px-12 lg:px-36 py-4 md:hidden">
+      <div className="animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 py-4 md:hidden">
         <button
           className="text-xs"
           onClick={() => {
