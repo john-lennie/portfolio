@@ -49,10 +49,10 @@ const projects = [
 export default function Home() {
 
   const [direction, setDirection] = React.useState('up')
-  const { isScrollingUp, isScrollingDown } = useScrollDirection()
+  const { isScrolling, isScrollingUp, isScrollingDown } = useScrollDirection()
 
   React.useEffect(() => {
-    isScrollingDown && setDirection('down')
+    isScrollingDown && isScrolling && setDirection('down')
     isScrollingUp && setDirection('up')
   }, [isScrollingDown, isScrollingUp])
 
