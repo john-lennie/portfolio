@@ -128,7 +128,7 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <div className="animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 py-4 md:hidden">
+      <div className="animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-4 lg:pt-36">
         <button
           className="text-xs"
           onClick={() => {
