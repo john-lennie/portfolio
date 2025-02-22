@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import * as React from "react"
 import { useScrollDirection } from 'react-use-scroll-direction'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
