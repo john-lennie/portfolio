@@ -74,8 +74,8 @@ export default function Home() {
                   <AccordionTrigger className="text-xs font-normal py-2 lg:py-1 text-left">
                     {project.name}
                   </AccordionTrigger>
-                  <AccordionContent forceMount className="pb-4">
-                    <div className="space-y-4">
+                  <AccordionContent className="pb-4">
+                    <div className="animate-fade-in space-y-4">
                       {project.images &&
                         <div className="grid grid-cols-1 gap-4">
                           {project.images.map((image, imgIndex) => (
