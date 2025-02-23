@@ -73,7 +73,7 @@ export default function Home() {
         </header>
         <main className="relative z-[1] px-4 bg-white pt-44 pb-4 md:px-12 lg:px-36 lg:pt-36">
           <div className="w-full animate-fade-in-slow-delay opacity-0 md:w-1/2">
-            <h1 className="mb-16 text-lg/5 w-11/12 lg:w-4/5 lg:text-2xl/5">Juniper is a digital product studio specializing in the design and development of ecommerce platforms and digital experiences for global companies, marketing teams, small businesses, creative studios and artists.</h1>
+            <h1 className="mb-16 text-lg/6 w-11/12 lg:w-4/5 lg:text-2xl/6">Juniper is a digital product studio specializing in the design and development of ecommerce platforms and digital experiences for global companies, marketing teams, small businesses, creative studios and artists.</h1>
             <h2 className="text-xs uppercase mb-1">Projects:</h2>
             <Accordion type="multiple" collapsible className="mb-12">
               {projects.map((project, index) => (
