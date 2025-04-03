@@ -24,12 +24,6 @@ const projects = [
     description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
   },
   {
-    name: "Milou Restaurant",
-    images: ["/milou/d.png"],
-    description: "Milou Restaurant, Shopify Theme Enhancement (Tabbable Menus)"
-  },
-  
-  {
     name: "Susan for Susan",
     images: ["/susan-for-susan/1.png"],
     description: "Susan for Susan, Web Development - with Ronan Mcgee (design)"
