@@ -23,7 +23,7 @@ const AccordionTrigger = React.forwardRef<
       ref={ref}
       className={cn(
         "flex flex-1 items-center justify-between py-4 font-bold transition-all",
-        className,
+        className
       )}
       {...props}
     >
@@ -38,22 +38,47 @@ AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
->(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Content
-    forceMount
-    className={cn(
-      "overflow-hidden text-sm transition-all duration-300 ease-in-out",
-      "max-h-0 opacity-0", // Initial state: Hidden but still in DOM
-      "data-[state=open]:max-h-[500px] data-[state=open]:opacity-100", // Animate open
-      "will-change:max-height, opacity", // Improve animation performance
-      className
-    )}
-    {...props}
-  >
-    <div className="pt-0">{children}</div>
-  </AccordionPrimitive.Content>
-))
+>(({ className, children, ...props }, ref) => {
+  const contentRef = React.useRef<HTMLDivElement>(null)
+  const [height, setHeight] = React.useState(0)
+
+  React.useEffect(() => {
+    if (contentRef.current) {
+      setHeight(contentRef.current.scrollHeight)
+    }
+  }, [children]) // Updates height if content changes
+
+  return (
+    <AccordionPrimitive.Content
+      forceMount
+      ref={contentRef}
+      style={{
+        height: 0,
+        opacity: 0,
+        transition: "height 300ms ease-in-out, opacity 200ms ease-in-out",
+      }}
+      className={cn(
+        "overflow-hidden",
+        "data-[state=open]:opacity-100 data-[state=open]:h-auto",
+        className
+      )}
+      data-state="closed"
+      {...props}
+      onTransitionEnd={(e) => {
+        if (e.target.getAttribute("data-state") === "open") {
+          e.target.style.height = "auto" // Fixes jumpy behavior
+        }
+      }}
+      onAnimationStart={(e) => {
+        if (e.target.getAttribute("data-state") === "open") {
+          e.target.style.height = `${height}px` // Expands dynamically
+        }
+      }}
+    >
+      <div className="p-2">{children}</div>
+    </AccordionPrimitive.Content>
+  )
+})
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-
