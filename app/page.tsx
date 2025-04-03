@@ -123,8 +123,8 @@ export default function Home() {
                 </AccordionItem>
               ))}
             </Accordion>
-            <h2 className="text-xs uppercase mb-2">Clients:</h2>
-            <p className="text-xs">VF Corporation (The North Face, Timberland, Vans)</p>
+            {/* <h2 className="text-xs uppercase mb-2">Clients:</h2>
+            <p className="text-xs">VF Corporation (The North Face, Timberland, Vans)</p> */}
           </div>
         </main>
       </div>
