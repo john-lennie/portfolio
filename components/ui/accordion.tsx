@@ -42,14 +42,15 @@ const AccordionContent = React.forwardRef<
   <AccordionPrimitive.Content
     forceMount
     className={cn(
-      "overflow-hidden text-sm transition-all",
-      "opacity-0 h-0", // Keep content in DOM but hidden
-      "data-[state=open]:opacity-100 data-[state=open]:h-auto", // Reveal when opened
+      "overflow-hidden text-sm transition-all duration-300 ease-in-out",
+      "max-h-0 opacity-0", // Initial state: Hidden but still in DOM
+      "data-[state=open]:max-h-[500px] data-[state=open]:opacity-100", // Animate open
+      "will-change:max-height, opacity", // Improve animation performance
       className
     )}
     {...props}
   >
-    <div className="pt-0">{children}</div>
+    <div className="p-2">{children}</div>
   </AccordionPrimitive.Content>
 ))
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
