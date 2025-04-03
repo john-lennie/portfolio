@@ -40,18 +40,17 @@ const AccordionContent = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
   <AccordionPrimitive.Content
-  forceMount
-  ref={ref}
-  className={cn(
-    "overflow-hidden text-sm transition-all",
-    "data-[state=closed]:hidden", // Hides the content when closed
-    "data-[state=open]:animate-accordion-down", // Keeps animations
-    className
-  )}
-  {...props}
->
-  <div className="pt-0">{children}</div>
-</AccordionPrimitive.Content>
+    forceMount
+    className={cn(
+      "overflow-hidden text-sm transition-all",
+      "opacity-0 h-0", // Keep content in DOM but hidden
+      "data-[state=open]:opacity-100 data-[state=open]:h-auto", // Reveal when opened
+      className
+    )}
+    {...props}
+  >
+    <div className="pt-0">{children}</div>
+  </AccordionPrimitive.Content>
 ))
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
