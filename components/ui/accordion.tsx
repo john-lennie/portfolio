@@ -43,9 +43,9 @@ const AccordionContent = React.forwardRef<
   forceMount
   ref={ref}
   className={cn(
-    "overflow-hidden text-sm transition-all animate-accordion-down",
+    "overflow-hidden text-sm transition-all",
     "data-[state=closed]:h-0", // Hides the content when closed
-    "data-[state=open]:h-auto", // Keeps animations
+    "data-[state=open]:h-auto animate-accordion-down", // Keeps animations
     className
   )}
   {...props}
