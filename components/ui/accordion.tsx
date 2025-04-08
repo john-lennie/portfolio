@@ -3,7 +3,6 @@
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
 import { Plus, Minus } from "lucide-react"
-
 import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
@@ -12,11 +11,7 @@ const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
 >(({ className, ...props }, ref) => (
-  <AccordionPrimitive.Item
-    ref={ref}
-    className={cn(className)}
-    {...props}
-  />
+  <AccordionPrimitive.Item ref={ref} className={cn(className)} {...props} />
 ))
 AccordionItem.displayName = "AccordionItem"
 
@@ -53,8 +48,7 @@ const AccordionContent = React.forwardRef<
     const el = contentRef.current
     if (!el) return
 
-    const setHeight = () => {
-      if (!el) return
+    const updateHeight = () => {
       if (el.dataset.state === "open") {
         el.style.height = `${el.scrollHeight}px`
       } else {
@@ -63,10 +57,35 @@ const AccordionContent = React.forwardRef<
     }
 
     const observer = new MutationObserver(() => {
-      requestAnimationFrame(setHeight)
+      requestAnimationFrame(updateHeight)
     })
 
     observer.observe(el, { attributes: true, attributeFilter: ["data-state"] })
 
-    // Initial update after mount
-    requestAnimationFrame(setHeight)
+    requestAnimationFrame(updateHeight)
+
+    return () => observer.disconnect()
+  }, [])
+
+  return (
+    <AccordionPrimitive.Content
+      forceMount
+      ref={(node) => {
+        contentRef.current = node
+        if (typeof ref === "function") ref(node)
+        else if (ref) ref.current = node
+      }}
+      className={cn(
+        "overflow-hidden transition-[height] duration-300 ease-in-out",
+        className
+      )}
+      style={{ height: "0px" }}
+      {...props}
+    >
+      <div className="pt-0 pb-4">{children}</div>
+    </AccordionPrimitive.Content>
+  )
+})
+AccordionContent.displayName = AccordionPrimitive.Content.displayName
+
+export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
