@@ -11,7 +11,13 @@ const Accordion = AccordionPrimitive.Root
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
->(({ className, ...props }, ref) => <AccordionPrimitive.Item ref={ref} className={cn(className)} {...props} />)
+>(({ className, ...props }, ref) => (
+  <AccordionPrimitive.Item
+    ref={ref}
+    className={cn(className)}
+    {...props}
+  />
+))
 AccordionItem.displayName = "AccordionItem"
 
 const AccordionTrigger = React.forwardRef<
@@ -35,7 +41,6 @@ const AccordionTrigger = React.forwardRef<
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
-
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 const AccordionContent = React.forwardRef<
@@ -48,45 +53,20 @@ const AccordionContent = React.forwardRef<
     const el = contentRef.current
     if (!el) return
 
-    const setInitialHeight = () => {
-      el.style.height = el.dataset.state === "open" ? `${el.scrollHeight}px` : "0px"
-    }
-
-    const observer = new MutationObserver(() => {
+    const setHeight = () => {
       if (!el) return
       if (el.dataset.state === "open") {
         el.style.height = `${el.scrollHeight}px`
       } else {
         el.style.height = "0px"
       }
+    }
+
+    const observer = new MutationObserver(() => {
+      requestAnimationFrame(setHeight)
     })
 
-    setInitialHeight()
     observer.observe(el, { attributes: true, attributeFilter: ["data-state"] })
 
-    return () => observer.disconnect()
-  }, [])
-
-  return (
-    <AccordionPrimitive.Content
-      forceMount
-      ref={(node) => {
-        contentRef.current = node
-        if (typeof ref === "function") ref(node)
-        else if (ref) ref.current = node
-      }}
-      className={cn(
-        "overflow-hidden transition-[height] duration-300 ease-in-out",
-        className
-      )}
-      style={{ height: "0px" }}
-      {...props}
-    >
-      <div className="pt-0 pb-4">{children}</div>
-    </AccordionPrimitive.Content>
-  )
-})
-AccordionContent.displayName = AccordionPrimitive.Content.displayName
-
-export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }
-
+    // Initial update after mount
+    requestAnimationFrame(setHeight)
