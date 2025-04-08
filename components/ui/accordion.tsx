@@ -22,19 +22,20 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        "flex flex-1 items-center justify-between py-4 font-bold transition-all",
+        "group flex flex-1 items-center justify-between py-4 font-bold transition-all",
         className
       )}
       {...props}
     >
       {children}
-      <span className="ml-2 flex items-center justify-center">
-        <Plus className="h-3 w-3 shrink-0 transition-all duration-200 data-[state=open]:rotate-180 data-[state=open]:scale-0 opacity-100 data-[state=open]:opacity-0" />
-        <Minus className="absolute h-3 w-3 shrink-0 transition-all duration-200 opacity-0 data-[state=open]:opacity-100 data-[state=open]:scale-100 scale-0" />
+      <span className="ml-2 relative w-4 h-4">
+        <Plus className="absolute inset-0 h-4 w-4 transition-opacity duration-200 group-data-[state=open]:opacity-0" />
+        <Minus className="absolute inset-0 h-4 w-4 opacity-0 transition-opacity duration-200 group-data-[state=open]:opacity-100" />
       </span>
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
+
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 const AccordionContent = React.forwardRef<
@@ -47,7 +48,7 @@ const AccordionContent = React.forwardRef<
     const el = contentRef.current
     if (!el) return
 
-    const handleTransition = () => {
+    const updateHeight = () => {
       if (el.dataset.state === "open") {
         el.style.height = `${el.scrollHeight}px`
       } else {
@@ -55,8 +56,9 @@ const AccordionContent = React.forwardRef<
       }
     }
 
-    handleTransition() // set initial state
-    const observer = new MutationObserver(handleTransition)
+    updateHeight()
+
+    const observer = new MutationObserver(updateHeight)
     observer.observe(el, { attributes: true, attributeFilter: ["data-state"] })
 
     return () => observer.disconnect()
@@ -66,16 +68,13 @@ const AccordionContent = React.forwardRef<
     <AccordionPrimitive.Content
       forceMount
       ref={ref}
-      className={cn(
-        "overflow-hidden transition-all duration-300 ease-in-out",
-        className
-      )}
+      className={cn("overflow-hidden transition-all duration-300", className)}
       {...props}
     >
       <div
         ref={contentRef}
         data-state={props["data-state"]}
-        className="pt-0 pb-4"
+        className="pt-0 pb-4 transition-all duration-300"
         style={{ height: "0px" }}
       >
         {children}
