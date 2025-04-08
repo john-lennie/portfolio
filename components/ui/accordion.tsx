@@ -42,23 +42,26 @@ const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => {
-  const contentRef = React.useRef<HTMLDivElement>(null)
+  const contentRef = React.useRef<HTMLDivElement | null>(null)
 
   React.useEffect(() => {
     const el = contentRef.current
     if (!el) return
 
-    const updateHeight = () => {
+    const setInitialHeight = () => {
+      el.style.height = el.dataset.state === "open" ? `${el.scrollHeight}px` : "0px"
+    }
+
+    const observer = new MutationObserver(() => {
+      if (!el) return
       if (el.dataset.state === "open") {
         el.style.height = `${el.scrollHeight}px`
       } else {
         el.style.height = "0px"
       }
-    }
+    })
 
-    updateHeight()
-
-    const observer = new MutationObserver(updateHeight)
+    setInitialHeight()
     observer.observe(el, { attributes: true, attributeFilter: ["data-state"] })
 
     return () => observer.disconnect()
@@ -67,18 +70,19 @@ const AccordionContent = React.forwardRef<
   return (
     <AccordionPrimitive.Content
       forceMount
-      ref={ref}
-      className={cn("overflow-hidden transition-all duration-300", className)}
+      ref={(node) => {
+        contentRef.current = node
+        if (typeof ref === "function") ref(node)
+        else if (ref) ref.current = node
+      }}
+      className={cn(
+        "overflow-hidden transition-[height] duration-300 ease-in-out",
+        className
+      )}
+      style={{ height: "0px" }}
       {...props}
     >
-      <div
-        ref={contentRef}
-        data-state={props["data-state"]}
-        className="pt-0 pb-4 transition-all duration-300"
-        style={{ height: "0px" }}
-      >
-        {children}
-      </div>
+      <div className="pt-0 pb-4">{children}</div>
     </AccordionPrimitive.Content>
   )
 })
