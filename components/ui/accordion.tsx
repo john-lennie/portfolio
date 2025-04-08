@@ -48,7 +48,7 @@ const AccordionContent = React.forwardRef<
     const el = contentRef.current
     if (!el) return
 
-    const updateHeight = () => {
+    const setHeight = () => {
       if (el.dataset.state === "open") {
         el.style.height = `${el.scrollHeight}px`
       } else {
@@ -56,15 +56,23 @@ const AccordionContent = React.forwardRef<
       }
     }
 
-    const observer = new MutationObserver(() => {
-      requestAnimationFrame(updateHeight)
+    const mutationObserver = new MutationObserver(() => {
+      requestAnimationFrame(setHeight)
     })
 
-    observer.observe(el, { attributes: true, attributeFilter: ["data-state"] })
+    const resizeObserver = new ResizeObserver(() => {
+      requestAnimationFrame(setHeight)
+    })
 
-    requestAnimationFrame(updateHeight)
+    mutationObserver.observe(el, { attributes: true, attributeFilter: ["data-state"] })
+    resizeObserver.observe(el)
 
-    return () => observer.disconnect()
+    requestAnimationFrame(setHeight)
+
+    return () => {
+      mutationObserver.disconnect()
+      resizeObserver.disconnect()
+    }
   }, [])
 
   return (
