@@ -10,9 +10,7 @@ const Accordion = AccordionPrimitive.Root
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
->(({ className, ...props }, ref) => (
-  <AccordionPrimitive.Item ref={ref} className={cn(className)} {...props} />
-))
+>(({ className, ...props }, ref) => <AccordionPrimitive.Item ref={ref} className={cn(className)} {...props} />)
 AccordionItem.displayName = "AccordionItem"
 
 const AccordionTrigger = React.forwardRef<
@@ -36,6 +34,7 @@ const AccordionTrigger = React.forwardRef<
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
+
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 const AccordionContent = React.forwardRef<
@@ -44,18 +43,24 @@ const AccordionContent = React.forwardRef<
 >(({ className, children, ...props }, ref) => {
   const contentRef = React.useRef<HTMLDivElement | null>(null)
 
+  const setHeight = () => {
+    const el = contentRef.current
+    if (!el) return
+    if (el.dataset.state === "open") {
+      el.style.height = `${el.scrollHeight}px`
+    } else {
+      el.style.height = "0px"
+    }
+  }
+
   React.useEffect(() => {
     const el = contentRef.current
     if (!el) return
 
-    const setHeight = () => {
-      if (el.dataset.state === "open") {
-        el.style.height = `${el.scrollHeight}px`
-      } else {
-        el.style.height = "0px"
-      }
-    }
+    // Set initial height
+    setHeight()
 
+    // Resize and mutation observers
     const mutationObserver = new MutationObserver(() => {
       requestAnimationFrame(setHeight)
     })
@@ -67,7 +72,27 @@ const AccordionContent = React.forwardRef<
     mutationObserver.observe(el, { attributes: true, attributeFilter: ["data-state"] })
     resizeObserver.observe(el)
 
-    requestAnimationFrame(setHeight)
+    // Listen for images and videos to load
+    const loadImagesAndVideos = () => {
+      const elements = el.querySelectorAll("img, video")
+      let loadCount = elements.length
+      if (loadCount === 0) {
+        setHeight() // No images/videos, so set height immediately
+      }
+
+      elements.forEach((element) => {
+        const onLoad = () => {
+          loadCount -= 1
+          if (loadCount === 0) {
+            setHeight() // Recalculate height once all elements are loaded
+          }
+        }
+        element.addEventListener("load", onLoad)
+        element.addEventListener("error", onLoad) // Handle error event
+      })
+    }
+
+    loadImagesAndVideos()
 
     return () => {
       mutationObserver.disconnect()
