@@ -55,7 +55,7 @@ export default function Home() {
       <div className="min-h-screen text-black mb-[104px] lg:mb-[184px]">
         <GlobalStyles />
         <header className={"fixed z-[2] bg-[#ffffff80] w-full items-center justify-between duration-300 ease-in-out flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36 " + (direction === 'down' ? '-top-[52px]' : 'top-0')}>
-          <span className="animate-fade-in-slow">Juniper</span>
+          <span className="animate-fade-in-slow">JNPR</span>
           {/* <button
             className="animate-fade-in-slow uppercase"
             onClick={() => {
@@ -67,7 +67,7 @@ export default function Home() {
         </header>
         <main className="relative z-[1] px-4 bg-white pt-44 pb-4 md:px-12 lg:px-36 lg:pt-36">
           <div className="w-full animate-fade-in-slow-delay opacity-0 md:w-1/2">
-            <h1 className="mb-16 text-lg/6 w-11/12 lg:w-4/5 lg:text-2xl/7">Juniper is a digital product studio specializing in the design and development of ecommerce platforms and digital experiences for global companies, marketing teams, small businesses, creative studios and artists.</h1>
+            <h1 className="mb-16 text-lg/6 w-11/12 lg:w-4/5 lg:text-2xl/7">JNPR is a digital product studio specializing in the design and development of ecommerce platforms and digital experiences for global companies, marketing teams, small businesses, creative studios and artists.</h1>
             <h2 className="text-xs uppercase mb-1">Projects:</h2>
             <Accordion type="multiple" collapsible className="mb-12">
               {projects.map((project, index) => (
