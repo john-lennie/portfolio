@@ -11,6 +11,7 @@ const projects = [
   {
     name: "North of Now",
     mobileVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4",
+    images: ["/north-of-now/1.svg"],
     description: "North of Now, Web Design, Web Development"
   },
   {
