@@ -52,7 +52,7 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <div className="min-h-screen text-black mb-[104px] lg:mb-[184px]">
+      <div className="min-h-screen text-black mb-[136px] lg:mb-[184px]">
         <GlobalStyles />
         <header className={"fixed z-[2] w-full items-center justify-between duration-300 ease-in-out flex px-4 md:px-12 py-4 lg:relative lg:px-36 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
           <span className="animate-fade-in-slow">
@@ -124,7 +124,7 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <div className="animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-4 lg:pt-36">
+      <div className="text-center animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-12 lg:pb-4 lg:pt-36 lg:text-left">
         <a href="mailto:hello@jnpr.studio" target="_blank" className="text-xs text-blue-700 underline">hello@jnpr.studio</a>
       </div>
     </div>
