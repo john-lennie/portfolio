@@ -125,7 +125,7 @@ export default function Home() {
         </main>
       </div>
       <div className="animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-4 lg:pt-36">
-        <a href="mailto:johnanthonylennie@gmail.com" target="_blank" className="text-xs">johnanthonylennie@gmail.com</a>
+        <a href="mailto:hello@jnpr.studio" target="_blank" className="text-xs">hello@jnpr.studio</a>
       </div>
     </div>
   )
