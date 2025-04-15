@@ -54,7 +54,7 @@ export default function Home() {
     <div className="bg-white">
       <div className="min-h-screen text-black mb-[104px] lg:mb-[184px]">
         <GlobalStyles />
-        <header className={"fixed z-[2] bg-[#ffffff80] w-full items-center justify-between duration-300 ease-in-out flex backdrop-blur-2xl px-4 md:px-12 py-4 text-sm font-black uppercase tracking-tighter lg:relative lg:backdrop-blur-none lg:px-36 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
+        <header className={"fixed z-[2] w-full items-center justify-between flex px-4 md:px-12 py-4 lg:relative lg:px-36 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
           <span className="animate-fade-in-slow">
             <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
           </span>
