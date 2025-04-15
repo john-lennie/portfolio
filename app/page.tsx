@@ -124,7 +124,7 @@ export default function Home() {
           </div>
         </main>
       </div>
-      <div className="text-center animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-8 lg:pb-4 lg:pt-36 lg:text-left">
+      <div className="text-center animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-8 lg:pb-4 lg:pt-36 lg:text-left">
         <a href="mailto:hello@jnpr.studio" target="_blank" className="text-xs text-blue-700 underline">hello@jnpr.studio</a>
       </div>
     </div>
