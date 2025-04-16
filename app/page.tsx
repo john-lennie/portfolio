@@ -75,7 +75,7 @@ export default function Home() {
         <main className="relative z-[1] px-4 bg-white pt-44 pb-4 md:px-12 lg:px-36 lg:pt-36">
           <div className="w-full animate-fade-in-slow-delay opacity-0 md:w-1/2">
             <h1 className="mb-16 text-lg/5 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
-            We focus on building unique ecommerce and digital experiences for global companies and local businesses.</h1>
+            Building unique ecommerce and digital experiences for global companies and local businesses.</h1>
             <h2 className="text-xs uppercase mb-1">Projects:</h2>
             <Accordion type="multiple" collapsible className="mb-12">
               {projects.map((project, index) => (
