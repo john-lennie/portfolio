@@ -24,6 +24,11 @@ const projects = [
     description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
   },
   {
+    name: "Basma Beauty",
+    mobileVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/e839f788e73987827ba6046dde85e49e/downloads/default.mp4",
+    description: "Basma Beauty, Web Development, for 56 Digital"
+  },
+  {
     name: "Susan for Susan",
     images: ["/susan-for-susan/1.png"],
     description: "Susan for Susan, Web Development - with Ronan Mcgee (design)"
