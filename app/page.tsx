@@ -15,7 +15,18 @@ const projects = [
   },
   {
     name: "Faces Of Another",
-    images: ["/faces-of-another/1.png", "/faces-of-another/2.png"],
+    images: [
+      {
+        src: "/faces-of-another/1.png",
+        width: 1000,
+        height: 579
+      },
+      {
+        src: "/faces-of-another/2.png",
+        width: 1000,
+        height: 579
+      }
+    ],
     description: "Faces Of Another, Web Design, Web Development"
   },
   {
@@ -30,7 +41,13 @@ const projects = [
   },
   {
     name: "Susan for Susan",
-    images: ["/susan-for-susan/1.png"],
+    images: [
+      {
+        src: "/susan-for-susan/1.png",
+        width: 1000,
+        height: 652
+      }
+    ],
     description: "Susan for Susan, Web Development - with Ronan Mcgee (design)"
   },
   {
@@ -40,7 +57,18 @@ const projects = [
   },
   {
     name: "Norman Wong",
-    images: ["/norman-wong/1.png", "/norman-wong/3.png"],
+    images: [
+      {
+        src: "/norman-wong/1.png",
+        width: 800,
+        height: 487
+      },
+      {
+        src: "/norman-wong/3.png",
+        width: 800,
+        height: 487
+      }
+    ],
     description: "Norman Wong, Web Development"
   },
 ]
@@ -77,7 +105,7 @@ export default function Home() {
             <h1 className="mb-16 text-lg/5 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
             Building unique ecommerce and digital experiences for global companies and local businesses.</h1>
             <h2 className="text-xs uppercase mb-1">Projects:</h2>
-            <Accordion type="multiple" collapsible className="mb-12">
+            <Accordion type="multiple" className="mb-12">
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
                   <AccordionTrigger className="text-xs font-normal py-2 lg:py-1 text-left">
@@ -86,14 +114,15 @@ export default function Home() {
                   <AccordionContent>
                     <div className="animate-fade-in-slow-delay opacity-0 space-y-4">
                       {project.images &&
-                        <div className="grid grid-cols-1 gap-4">
+                        <div className="relative grid grid-cols-1 gap-4">
                           {project.images.map((image, imgIndex) => (
                             <Image
-                              key={imgIndex}
-                              src={image || "/placeholder.svg"}
-                              alt={`${project.name} screenshot ${imgIndex + 1}`}
+                              width={image.width}
+                              height={image.height}
                               className="w-full"
-                              placeholder="blur"
+                              src={image.src || "/placeholder.svg"}
+                              alt={`${project.name} screenshot ${imgIndex + 1}`}
+                              key={imgIndex}
                             />
                           ))}
                         </div>
