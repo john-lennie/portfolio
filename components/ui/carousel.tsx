@@ -283,7 +283,7 @@
     if (!api) return null
   
     return (
-      <div className={cn("flex justify-center gap-2 mt-4", className)}>
+      <div className={cn("flex justify-center gap-1 mt-4", className)}>
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
