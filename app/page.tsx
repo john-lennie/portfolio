@@ -2,7 +2,20 @@
 
 import * as React from "react"
 import useDetectScroll from "@smakss/react-scroll-direction"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { 
+  Accordion, 
+  AccordionContent, 
+  AccordionItem, 
+  AccordionTrigger 
+} from "@/components/ui/accordion"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+  CarouselNavigation
+} from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { GlobalStyles } from "@/components/GlobalStyles"
@@ -113,36 +126,42 @@ export default function Home() {
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="animate-fade-in-slow-delay opacity-0 space-y-4">
-                      {project.images &&
-                        <div className="relative grid grid-cols-1 gap-4">
-                          {project.images.map((image, imgIndex) => (
-                            <Image
-                              width={image.width}
-                              height={image.height}
-                              className="w-full"
-                              src={image.src || "/placeholder.svg"}
-                              alt={`${project.name} screenshot ${imgIndex + 1}`}
-                              key={imgIndex}
-                            />
+                      <Carousel className="relative w-full" orientation="horizontal">
+                        <CarouselContent>
+                          {project.images && project.images.map((image, imgIndex) => (
+                            <CarouselItem key={imgIndex}>
+                              <Image
+                                width={image.width}
+                                height={image.height}
+                                className="w-full"
+                                src={image.src || "/placeholder.svg"}
+                                alt={`${project.name} screenshot ${imgIndex + 1}`}
+                              />
+                            </CarouselItem>
                           ))}
-                        </div>
-                      }
-                      {project.mobileVideo &&
-                        <div className="flex justify-center py-20">
-                          <div className="aspect-w-16 aspect-h-9 w-1/2 lg:w-1/3">
-                            <video src={project.mobileVideo} muted playsInline autoPlay loop className="w-full h-full object-cover">
-                              Your browser does not support the video tag.
-                            </video>
-                          </div>
-                        </div>
-                      }
-                      {project.desktopVideo &&
-                        <div className="aspect-w-16 aspect-h-9">
-                          <video src={project.desktopVideo} muted playsInline autoPlay loop className="w-full h-full object-cover">
-                            Your browser does not support the video tag.
-                          </video>
-                        </div>
-                      }
+                          {project.mobileVideo &&
+                            <CarouselItem>
+                              <div className="flex justify-center py-20">
+                                <div className="aspect-w-16 aspect-h-9 w-1/2 lg:w-1/3">
+                                  <video src={project.mobileVideo} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                                    Your browser does not support the video tag.
+                                  </video>
+                                </div>
+                              </div>
+                            </CarouselItem>
+                          }
+                          {project.desktopVideo &&
+                            <CarouselItem>
+                              <div className="aspect-w-16 aspect-h-9">
+                                <video src={project.desktopVideo} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                                  Your browser does not support the video tag.
+                                </video>
+                              </div>
+                            </CarouselItem>
+                          }
+                        </CarouselContent>
+                        <CarouselNavigation />
+                      </Carousel>
                       {project.description &&
                         <p className="text-xs font-normal">{project.description}</p>
                       }
@@ -150,7 +169,7 @@ export default function Home() {
                         <p className="text-xs text-gray-400 font-normal italic">{project.tags}</p>
                       }
                     </div>
-                  </AccordionContent>
+                    </AccordionContent>
                 </AccordionItem>
               ))}
             </Accordion>
