@@ -209,7 +209,7 @@
         className={cn(
           "absolute h-4 w-4 hidden lg:block",
           orientation === "horizontal"
-            ? "left-0 -bottom-1.5 -translate-y-1/2"
+            ? "left-0 top-1/2 -translate-y-1/2"
             : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
           className
         )}
@@ -236,9 +236,9 @@
         variant={variant}
         size={size}
         className={cn(
-          "absolute h-4 w-4 hidden lg:block",
+          "absolute h-full w-full hidden lg:block",
           orientation === "horizontal"
-            ? "right-0 -bottom-1.5 -translate-y-1/2"
+            ? "left-0 right-0 top-1/2 -translate-y-1/2"
             : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
           className
         )}
@@ -246,7 +246,6 @@
         onClick={scrollNext}
         {...props}
       >
-        <ArrowRight strokeWidth={1} className="h-4 w-4" />
         <span className="sr-only">Next slide</span>
       </Button>
     )
@@ -281,7 +280,7 @@
       }
     }, [api])
   
-    if (!api) return null
+    if (!api || scrollSnaps.length <= 1) return null
   
     return (
       <div className={cn("flex justify-center gap-1 mt-4", className)}>
@@ -298,7 +297,7 @@
         ))}
       </div>
     )
-  }
+  }  
 
   export {
     type CarouselApi,

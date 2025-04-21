@@ -43,11 +43,6 @@ const projects = [
     description: "Faces Of Another, Web Design, Web Development"
   },
   {
-    name: "Full Court Press",
-    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
-    description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
-  },
-  {
     name: "Basma Beauty",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"],
     images: [
@@ -58,6 +53,11 @@ const projects = [
       }
     ],
     description: "Basma Beauty, Web Development, for 56 Digital"
+  },
+  {
+    name: "Full Court Press",
+    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
+    description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
   },
   {
     name: "Susan for Susan",
@@ -151,7 +151,7 @@ export default function Home() {
                         ))}
                         {project.mobileVideos && project.mobileVideos.map((video, videoIndex) => (
                             <CarouselItem key={videoIndex}>
-                              <div className="flex justify-center">
+                              <div className="flex justify-center items-center h-full">
                                 <div className="aspect-w-16 aspect-h-9 w-1/2 lg:w-1/3">
                                   <video src={video} muted playsInline autoPlay loop className="w-full h-full object-cover">
                                     Your browser does not support the video tag.
@@ -170,7 +170,6 @@ export default function Home() {
                             </CarouselItem>
                           }
                         </CarouselContent>
-                        <CarouselPrevious variant="quiet" />
                         <CarouselNavigation />
                         <CarouselNext variant="quiet" />
                       </Carousel>
