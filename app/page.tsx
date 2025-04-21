@@ -134,7 +134,7 @@ export default function Home() {
               <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-blue-700 underline">hello@jnpr.studio</a>
             </div>
             <div className="lg:mt-[202px] lg:mb-[404px]">
-              <h2 className="text-xs uppercase mb-1">Projects:</h2>
+              {/* <h2 className="text-xs uppercase mb-1">Projects:</h2> */}
               <Accordion type="multiple" defaultValue={['item-0']} className="mb-12">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
