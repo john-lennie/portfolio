@@ -106,9 +106,9 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <div className="min-h-screen text-black mb-[200px] lg:mb-[400px]">
+      <div className="min-h-screen text-black mb-[200px] lg:mb-0">
         <GlobalStyles />
-        <header className={"fixed z-[2] w-full items-center justify-between duration-300 ease-in-out flex px-4 md:px-12 py-4 lg:relative lg:px-36 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
+        <header className={"fixed z-[2] w-full items-center justify-between duration-300 ease-in-out flex px-4 md:px-12 py-4 lg:relative lg:px-36 lg:hidden " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
           <span className="animate-fade-in-slow">
             <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
           </span>
@@ -121,69 +121,79 @@ export default function Home() {
             Info
           </button> */}
         </header>
-        <main className="relative z-[1] px-4 bg-white pt-44 pb-4 md:px-12 lg:px-36 lg:pt-36">
-          <div className="w-full animate-fade-in-slow-delay opacity-0 md:w-1/2">
-            <h1 className="mb-16 text-2xl/6 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
-            Building unique ecommerce and digital experiences for global companies and local businesses.</h1>
-            <h2 className="text-xs uppercase mb-1">Projects:</h2>
-            <Accordion type="multiple" defaultValue={['item-0']} className="animate-fade-in-slow-delay opacity-0 mb-12">
-              {projects.map((project, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
-                  <AccordionTrigger className="text-sm font-normal py-2 lg:py-1 text-left">
-                    {project.name}
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="space-y-4">
-                      <Carousel className="relative w-full py-2" orientation="horizontal">
-                        <CarouselContent>
-                        {project.images && project.images.map((image, imgIndex) => (
-                          <CarouselItem key={imgIndex}>
-                            <div className="flex justify-center items-center h-full">
-                              <Image
-                                width={image.width}
-                                height={image.height}
-                                className="w-full"
-                                src={image.src || "/placeholder.svg"}
-                                alt={`${project.name} screenshot ${imgIndex + 1}`}
-                              />
-                            </div>
-                          </CarouselItem>
-                        ))}
-                        {project.mobileVideos && project.mobileVideos.map((video, videoIndex) => (
-                            <CarouselItem key={videoIndex}>
+        <main className="relative z-[1] px-4 bg-white pt-44 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
+          <div className="grid lg:grid-cols-2 w-full animate-fade-in-slow-delay opacity-0">
+            <div className="lg:sticky lg:top-0 lg:py-6 lg:h-screen lg:flex lg:flex-col lg:justify-between">
+              <div>
+                <span className="hidden lg:block animate-fade-in-slow">
+                  <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
+                </span>
+                <h1 className="lg:mt-[150px] mb-16 text-2xl/6 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
+                Building unique ecommerce and digital experiences for global companies and local businesses.</h1>
+              </div>
+              <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-blue-700 underline">hello@jnpr.studio</a>
+            </div>
+            <div className="lg:mt-[202px] lg:mb-[202px]">
+              <h2 className="text-xs uppercase mb-1">Projects:</h2>
+              <Accordion type="multiple" defaultValue={['item-0']} className="mb-12">
+                {projects.map((project, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
+                    <AccordionTrigger className="text-sm font-normal py-2 lg:py-1 text-left">
+                      {project.name}
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="space-y-4">
+                        <Carousel className="relative w-full py-2" orientation="horizontal">
+                          <CarouselContent>
+                          {project.images && project.images.map((image, imgIndex) => (
+                            <CarouselItem key={imgIndex}>
                               <div className="flex justify-center items-center h-full">
-                                <div className="aspect-w-16 aspect-h-9 w-1/2 lg:w-1/3">
-                                  <video src={video} muted playsInline autoPlay loop className="w-full h-full object-cover">
-                                    Your browser does not support the video tag.
-                                  </video>
-                                </div>
+                                <Image
+                                  width={image.width}
+                                  height={image.height}
+                                  className="w-full"
+                                  src={image.src || "/placeholder.svg"}
+                                  alt={`${project.name} screenshot ${imgIndex + 1}`}
+                                />
                               </div>
                             </CarouselItem>
                           ))}
-                          {project.desktopVideo &&
-                            <CarouselItem>
-                              <div className="aspect-w-16 aspect-h-9">
-                                <video src={project.desktopVideo} muted playsInline autoPlay loop className="w-full h-full object-cover">
-                                  Your browser does not support the video tag.
-                                </video>
-                              </div>
-                            </CarouselItem>
-                          }
-                        </CarouselContent>
-                        <CarouselNavigation />
-                        <CarouselNext variant="quiet" />
-                      </Carousel>
-                      {project.description &&
-                        <p className="text-xs font-normal">{project.description}</p>
-                      }
-                      {project.tags &&
-                        <p className="text-xs text-gray-400 font-normal italic">{project.tags}</p>
-                      }
-                    </div>
-                    </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+                          {project.mobileVideos && project.mobileVideos.map((video, videoIndex) => (
+                              <CarouselItem key={videoIndex}>
+                                <div className="flex justify-center items-center h-full">
+                                  <div className="aspect-w-16 aspect-h-9 w-1/2 lg:w-1/3">
+                                    <video src={video} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                                      Your browser does not support the video tag.
+                                    </video>
+                                  </div>
+                                </div>
+                              </CarouselItem>
+                            ))}
+                            {project.desktopVideo &&
+                              <CarouselItem>
+                                <div className="aspect-w-16 aspect-h-9">
+                                  <video src={project.desktopVideo} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                                    Your browser does not support the video tag.
+                                  </video>
+                                </div>
+                              </CarouselItem>
+                            }
+                          </CarouselContent>
+                          <CarouselNavigation />
+                          <CarouselNext variant="quiet" />
+                        </Carousel>
+                        {project.description &&
+                          <p className="text-xs font-normal">{project.description}</p>
+                        }
+                        {project.tags &&
+                          <p className="text-xs text-gray-400 font-normal italic">{project.tags}</p>
+                        }
+                      </div>
+                      </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
             {/* <h2 className="text-xs uppercase mb-2">Clients:</h2>
             <p className="text-xs">VF Corporation (The North Face, Timberland, Vans)</p> */}
           </div>
