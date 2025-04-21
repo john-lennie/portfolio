@@ -50,6 +50,13 @@ const projects = [
   {
     name: "Basma Beauty",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"],
+    images: [
+      {
+        src: "/basma/bb-d.png",
+        width: 1000,
+        height: 761
+      }
+    ],
     description: "Basma Beauty, Web Development, for 56 Digital"
   },
   {
