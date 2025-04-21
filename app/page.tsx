@@ -128,7 +128,7 @@ export default function Home() {
                 <span className="hidden lg:block animate-fade-in-slow">
                   <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
                 </span>
-                <h1 className="lg:mt-[150px] mb-16 text-4xl/9 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
+                <h1 className="lg:mt-[150px] mb-16 text-3xl/8 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
                 Building unique ecommerce and digital experiences for global companies and local businesses.</h1>
               </div>
               <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-blue-700 underline">hello@jnpr.studio</a>
