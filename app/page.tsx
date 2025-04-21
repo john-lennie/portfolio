@@ -30,12 +30,12 @@ const projects = [
     name: "Faces Of Another",
     images: [
       {
-        src: "/faces-of-another/1.png",
+        src: "/faces-of-another/2.png",
         width: 1000,
         height: 579
       },
       {
-        src: "/faces-of-another/2.png",
+        src: "/faces-of-another/1.png",
         width: 1000,
         height: 579
       }
@@ -44,16 +44,17 @@ const projects = [
   },
   {
     name: "Full Court Press",
-    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/9e25f93385b57f6b0c06e90c4eb76b7e/downloads/default.mp4"],
+    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
     description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
   },
   {
     name: "Basma Beauty",
-    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/e839f788e73987827ba6046dde85e49e/downloads/default.mp4"],
+    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"],
     description: "Basma Beauty, Web Development, for 56 Digital"
   },
   {
     name: "Susan for Susan",
+    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/downloads/default.mp4"],
     images: [
       {
         src: "/susan-for-susan/1.png",
@@ -126,22 +127,11 @@ export default function Home() {
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="space-y-4">
-                      <Carousel className="relative w-full" orientation="horizontal">
+                      <Carousel className="relative w-full py-2" orientation="horizontal">
                         <CarouselContent>
-                          {project.images && project.images.map((image, imgIndex) => (
-                            <CarouselItem key={imgIndex}>
-                              <Image
-                                width={image.width}
-                                height={image.height}
-                                className="w-full"
-                                src={image.src || "/placeholder.svg"}
-                                alt={`${project.name} screenshot ${imgIndex + 1}`}
-                              />
-                            </CarouselItem>
-                          ))}
-                          {project.mobileVideos && project.mobileVideos.map((video, videoIndex) => (
+                        {project.mobileVideos && project.mobileVideos.map((video, videoIndex) => (
                             <CarouselItem key={videoIndex}>
-                              <div className="flex justify-center py-20">
+                              <div className="flex justify-center">
                                 <div className="aspect-w-16 aspect-h-9 w-1/2 lg:w-1/3">
                                   <video src={video} muted playsInline autoPlay loop className="w-full h-full object-cover">
                                     Your browser does not support the video tag.
@@ -159,6 +149,19 @@ export default function Home() {
                               </div>
                             </CarouselItem>
                           }
+                          {project.images && project.images.map((image, imgIndex) => (
+                            <CarouselItem key={imgIndex}>
+                              <div className="flex justify-center items-center h-full">
+                                <Image
+                                  width={image.width}
+                                  height={image.height}
+                                  className="w-full"
+                                  src={image.src || "/placeholder.svg"}
+                                  alt={`${project.name} screenshot ${imgIndex + 1}`}
+                                />
+                              </div>
+                            </CarouselItem>
+                          ))}
                         </CarouselContent>
                         <CarouselNavigation />
                       </Carousel>

@@ -58,15 +58,20 @@ const AccordionContent = React.forwardRef(
       const wrapper = wrapperRef.current
       const inner = innerRef.current
       if (!wrapper || !inner) return
-
+    
+      const isOpen = wrapper.dataset.state === "open"
       const height = inner.offsetHeight
-
-      if (wrapper.dataset.state === "open") {
+    
+      if (isOpen) {
         wrapper.style.height = `${height}px`
       } else {
+        // Set to fixed height before collapsing to trigger animation
+        wrapper.style.height = `${height}px`
+        // Force reflow
+        void wrapper.offsetHeight
         wrapper.style.height = "0px"
       }
-    }
+    }    
 
     // Run right after DOM is mounted, before paint
     React.useLayoutEffect(() => {
