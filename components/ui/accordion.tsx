@@ -10,7 +10,9 @@ const Accordion = AccordionPrimitive.Root
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
->(({ className, ...props }, ref) => <AccordionPrimitive.Item ref={ref} className={cn(className)} {...props} />)
+>(({ className, ...props }, ref) => (
+  <AccordionPrimitive.Item ref={ref} className={cn(className)} {...props} />
+))
 AccordionItem.displayName = "AccordionItem"
 
 const AccordionTrigger = React.forwardRef<
@@ -34,7 +36,6 @@ const AccordionTrigger = React.forwardRef<
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
-
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 const AccordionContent = React.forwardRef<
@@ -65,14 +66,15 @@ const AccordionContent = React.forwardRef<
     const el = contentRef.current
     if (!el) return
 
-    // Set initial height correctly
-    requestAnimationFrame(updateHeight)
+    // Ensure data-state is applied before measuring
+    requestAnimationFrame(() => {
+      requestAnimationFrame(updateHeight)
+    })
 
     // Listen to data-state changes
     const mutationObserver = new MutationObserver(() => {
       updateHeight()
     })
-
     mutationObserver.observe(el, { attributes: true, attributeFilter: ["data-state"] })
 
     // Resize observer handles dynamic content
@@ -89,7 +91,6 @@ const AccordionContent = React.forwardRef<
         el.style.height = "auto"
       }
     }
-
     el.addEventListener("transitionend", handleTransitionEnd)
 
     return () => {
