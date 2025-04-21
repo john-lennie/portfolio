@@ -62,6 +62,7 @@
         {
           ...opts,
           axis: orientation === "horizontal" ? "x" : "y",
+          loop: true
         },
         plugins
       )
@@ -206,9 +207,9 @@
         variant={variant}
         size={size}
         className={cn(
-          "absolute  h-8 w-8 rounded-full",
+          "absolute h-4 w-4 hidden lg:block",
           orientation === "horizontal"
-            ? "left-0 top-1/2 -translate-y-1/2"
+            ? "left-0 -bottom-1.5 -translate-y-1/2"
             : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
           className
         )}
@@ -216,7 +217,7 @@
         onClick={scrollPrev}
         {...props}
       >
-        <ArrowLeft className="h-4 w-4" />
+        <ArrowLeft strokeWidth={1} className="h-4 w-4" />
         <span className="sr-only">Previous slide</span>
       </Button>
     )
@@ -235,9 +236,9 @@
         variant={variant}
         size={size}
         className={cn(
-          "absolute h-8 w-8 rounded-full",
+          "absolute h-4 w-4 hidden lg:block",
           orientation === "horizontal"
-            ? "right-0 top-1/2 -translate-y-1/2"
+            ? "right-0 -bottom-1.5 -translate-y-1/2"
             : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
           className
         )}
@@ -245,7 +246,7 @@
         onClick={scrollNext}
         {...props}
       >
-        <ArrowRight className="h-4 w-4" />
+        <ArrowRight strokeWidth={1} className="h-4 w-4" />
         <span className="sr-only">Next slide</span>
       </Button>
     )

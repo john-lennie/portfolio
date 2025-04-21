@@ -99,7 +99,7 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <div className="min-h-screen text-black mb-[120px] lg:mb-[184px]">
+      <div className="min-h-screen text-black mb-[200px] lg:mb-[400px]">
         <GlobalStyles />
         <header className={"fixed z-[2] w-full items-center justify-between duration-300 ease-in-out flex px-4 md:px-12 py-4 lg:relative lg:px-36 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
           <span className="animate-fade-in-slow">
@@ -163,7 +163,9 @@ export default function Home() {
                             </CarouselItem>
                           ))}
                         </CarouselContent>
+                        <CarouselPrevious variant="quiet" />
                         <CarouselNavigation />
+                        <CarouselNext variant="quiet" />
                       </Carousel>
                       {project.description &&
                         <p className="text-xs font-normal">{project.description}</p>
