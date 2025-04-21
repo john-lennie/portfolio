@@ -118,14 +118,14 @@ export default function Home() {
             <h1 className="mb-16 text-lg/5 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
             Building unique ecommerce and digital experiences for global companies and local businesses.</h1>
             <h2 className="text-xs uppercase mb-1">Projects:</h2>
-            <Accordion type="multiple" defaultValue={['item-0']} className="mb-12">
+            <Accordion type="multiple" defaultValue={['item-0']} className="animate-fade-in-slow-delay opacity-0 mb-12">
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
                   <AccordionTrigger className="text-xs font-normal py-2 lg:py-1 text-left">
                     {project.name}
                   </AccordionTrigger>
                   <AccordionContent>
-                    <div className="animate-fade-in-slow-delay opacity-0 space-y-4">
+                    <div className="space-y-4">
                       <Carousel className="relative w-full" orientation="horizontal">
                         <CarouselContent>
                           {project.images && project.images.map((image, imgIndex) => (
