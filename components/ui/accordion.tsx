@@ -40,58 +40,67 @@ const AccordionTrigger = React.forwardRef(
 AccordionTrigger.displayName = "AccordionTrigger"
 
 const AccordionContent = React.forwardRef(
-  (props: React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>, ref: React.Ref<HTMLDivElement>) => {
+  (
+    props: React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>,
+    ref: React.Ref<HTMLDivElement>
+  ) => {
     const { className, children, ...rest } = props
-    const contentRef = React.useRef<HTMLDivElement | null>(null)
+    const wrapperRef = React.useRef<HTMLDivElement | null>(null)
+    const innerRef = React.useRef<HTMLDivElement | null>(null)
 
     const setRef = (node: HTMLDivElement | null) => {
-      contentRef.current = node
+      wrapperRef.current = node
       if (typeof ref === "function") ref(node)
       else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node
     }
 
     const updateHeight = () => {
-      const el = contentRef.current
-      if (!el) return
-      if (el.dataset.state === "open") {
-        el.style.height = `${el.scrollHeight}px`
+      const wrapper = wrapperRef.current
+      const inner = innerRef.current
+      if (!wrapper || !inner) return
+
+      const height = inner.offsetHeight
+
+      if (wrapper.dataset.state === "open") {
+        wrapper.style.height = `${height}px`
       } else {
-        el.style.height = "0px"
+        wrapper.style.height = "0px"
       }
     }
 
-    React.useEffect(() => {
-      const el = contentRef.current
-      if (!el) return
-
-      const observer = new MutationObserver(() => updateHeight())
-      observer.observe(el, { attributes: true, attributeFilter: ["data-state"] })
+    // Run right after DOM is mounted, before paint
+    React.useLayoutEffect(() => {
+      const wrapper = wrapperRef.current
+      const inner = innerRef.current
+      if (!wrapper || !inner) return
 
       const resizeObserver = new ResizeObserver(() => {
-        if (el.dataset.state === "open") {
-          el.style.height = `${el.scrollHeight}px`
+        if (wrapper.dataset.state === "open") {
+          wrapper.style.height = `${inner.offsetHeight}px`
         }
       })
-      resizeObserver.observe(el)
+      resizeObserver.observe(inner)
+
+      const mutationObserver = new MutationObserver(updateHeight)
+      mutationObserver.observe(wrapper, {
+        attributes: true,
+        attributeFilter: ["data-state"]
+      })
 
       const onTransitionEnd = () => {
-        if (el.dataset.state === "open") {
-          el.style.height = "auto"
+        if (wrapper.dataset.state === "open") {
+          wrapper.style.height = "auto"
         }
       }
+      wrapper.addEventListener("transitionend", onTransitionEnd)
 
-      el.addEventListener("transitionend", onTransitionEnd)
-
-      requestAnimationFrame(() => {
-        if (el.dataset.state === "open") {
-          el.style.height = `${el.scrollHeight}px`
-        }
-      })
+      // Initial height update
+      updateHeight()
 
       return () => {
-        observer.disconnect()
         resizeObserver.disconnect()
-        el.removeEventListener("transitionend", onTransitionEnd)
+        mutationObserver.disconnect()
+        wrapper.removeEventListener("transitionend", onTransitionEnd)
       }
     }, [])
 
@@ -106,7 +115,9 @@ const AccordionContent = React.forwardRef(
         style={{ height: "0px" }}
         {...rest}
       >
-        <div className="pt-0 pb-4">{children}</div>
+        <div ref={innerRef} className="pt-0 pb-4">
+          {children}
+        </div>
       </AccordionPrimitive.Content>
     )
   }
