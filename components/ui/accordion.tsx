@@ -65,40 +65,47 @@ const AccordionContent = React.forwardRef<
   React.useEffect(() => {
     const el = contentRef.current
     if (!el) return
-
-    // Ensure data-state is applied before measuring
-    requestAnimationFrame(() => {
-      requestAnimationFrame(updateHeight)
+  
+    // Keep checking for correct data-state until available
+    let frame = requestAnimationFrame(function checkAndSetHeight() {
+      if (el.dataset.state === "open") {
+        el.style.height = `${el.scrollHeight}px`
+      } else {
+        el.style.height = "0px"
+      }
+  
+      // If state is still missing, check again next frame
+      if (!el.dataset.state) {
+        frame = requestAnimationFrame(checkAndSetHeight)
+      }
     })
-
-    // Listen to data-state changes
+  
     const mutationObserver = new MutationObserver(() => {
       updateHeight()
     })
     mutationObserver.observe(el, { attributes: true, attributeFilter: ["data-state"] })
-
-    // Resize observer handles dynamic content
+  
     const resizeObserver = new ResizeObserver(() => {
       if (el.dataset.state === "open") {
         el.style.height = `${el.scrollHeight}px`
       }
     })
     resizeObserver.observe(el)
-
-    // After transition, set to auto for flexibility
+  
     const handleTransitionEnd = () => {
       if (el.dataset.state === "open") {
         el.style.height = "auto"
       }
     }
     el.addEventListener("transitionend", handleTransitionEnd)
-
+  
     return () => {
+      cancelAnimationFrame(frame)
       mutationObserver.disconnect()
       resizeObserver.disconnect()
       el.removeEventListener("transitionend", handleTransitionEnd)
     }
-  }, [])
+  }, [])  
 
   return (
     <AccordionPrimitive.Content
