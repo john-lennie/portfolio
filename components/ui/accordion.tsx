@@ -10,13 +10,7 @@ const Accordion = AccordionPrimitive.Root
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
->(({ className, ...props }, ref) => (
-  <AccordionPrimitive.Item
-    ref={ref}
-    className={cn("border-b border-border", className)}
-    {...props}
-  />
-))
+>(({ className, ...props }, ref) => <AccordionPrimitive.Item ref={ref} className={cn(className)} {...props} />)
 AccordionItem.displayName = "AccordionItem"
 
 const AccordionTrigger = React.forwardRef<
@@ -40,24 +34,86 @@ const AccordionTrigger = React.forwardRef<
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))
+
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
 const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
->(({ className, children, ...props }, ref) => (
-  <AccordionPrimitive.Content
-    forceMount
-    ref={ref}
-    className={cn(
-      "overflow-hidden transition-[max-height] duration-300 ease-in-out data-[state=open]:max-h-[9999px] max-h-0",
-      className
-    )}
-    {...props}
-  >
-    <div className="pt-0 pb-4">{children}</div>
-  </AccordionPrimitive.Content>
-))
+>(({ className, children, ...props }, ref) => {
+  const contentRef = React.useRef<HTMLDivElement | null>(null)
+
+  // Merge refs
+  const setRef = (node: HTMLDivElement | null) => {
+    contentRef.current = node
+    if (typeof ref === "function") ref(node)
+    else if (ref) ref.current = node
+  }
+
+  const updateHeight = () => {
+    const el = contentRef.current
+    if (!el) return
+
+    if (el.dataset.state === "open") {
+      el.style.height = `${el.scrollHeight}px`
+    } else {
+      el.style.height = "0px"
+    }
+  }
+
+  React.useEffect(() => {
+    const el = contentRef.current
+    if (!el) return
+
+    // Set initial height correctly
+    requestAnimationFrame(updateHeight)
+
+    // Listen to data-state changes
+    const mutationObserver = new MutationObserver(() => {
+      updateHeight()
+    })
+
+    mutationObserver.observe(el, { attributes: true, attributeFilter: ["data-state"] })
+
+    // Resize observer handles dynamic content
+    const resizeObserver = new ResizeObserver(() => {
+      if (el.dataset.state === "open") {
+        el.style.height = `${el.scrollHeight}px`
+      }
+    })
+    resizeObserver.observe(el)
+
+    // After transition, set to auto for flexibility
+    const handleTransitionEnd = () => {
+      if (el.dataset.state === "open") {
+        el.style.height = "auto"
+      }
+    }
+
+    el.addEventListener("transitionend", handleTransitionEnd)
+
+    return () => {
+      mutationObserver.disconnect()
+      resizeObserver.disconnect()
+      el.removeEventListener("transitionend", handleTransitionEnd)
+    }
+  }, [])
+
+  return (
+    <AccordionPrimitive.Content
+      forceMount
+      ref={setRef}
+      className={cn(
+        "overflow-hidden transition-[height] duration-300 ease-in-out",
+        className
+      )}
+      style={{ height: "0px" }}
+      {...props}
+    >
+      <div className="pt-0 pb-4">{children}</div>
+    </AccordionPrimitive.Content>
+  )
+})
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 
 export { Accordion, AccordionItem, AccordionTrigger, AccordionContent }

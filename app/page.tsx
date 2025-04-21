@@ -23,7 +23,7 @@ import { GlobalStyles } from "@/components/GlobalStyles"
 const projects = [
   {
     name: "North of Now",
-    mobileVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4",
+    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4", "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"],
     description: "North of Now, UI Design, Web Development"
   },
   {
@@ -44,12 +44,12 @@ const projects = [
   },
   {
     name: "Full Court Press",
-    mobileVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/9e25f93385b57f6b0c06e90c4eb76b7e/downloads/default.mp4",
+    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/9e25f93385b57f6b0c06e90c4eb76b7e/downloads/default.mp4"],
     description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
   },
   {
     name: "Basma Beauty",
-    mobileVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/e839f788e73987827ba6046dde85e49e/downloads/default.mp4",
+    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/e839f788e73987827ba6046dde85e49e/downloads/default.mp4"],
     description: "Basma Beauty, Web Development, for 56 Digital"
   },
   {
@@ -139,17 +139,17 @@ export default function Home() {
                               />
                             </CarouselItem>
                           ))}
-                          {project.mobileVideo &&
-                            <CarouselItem>
+                          {project.mobileVideos && project.mobileVideos.map((video, videoIndex) => (
+                            <CarouselItem key={videoIndex}>
                               <div className="flex justify-center py-20">
                                 <div className="aspect-w-16 aspect-h-9 w-1/2 lg:w-1/3">
-                                  <video src={project.mobileVideo} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                                  <video src={video} muted playsInline autoPlay loop className="w-full h-full object-cover">
                                     Your browser does not support the video tag.
                                   </video>
                                 </div>
                               </div>
                             </CarouselItem>
-                          }
+                          ))}
                           {project.desktopVideo &&
                             <CarouselItem>
                               <div className="aspect-w-16 aspect-h-9">

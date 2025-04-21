@@ -289,7 +289,7 @@
             key={index}
             onClick={() => api.scrollTo(index)}
             className={cn(
-              "h-1.25 w-1.25 rounded-full",
+              "h-1 w-1 rounded-full",
               index === selectedIndex ? "bg-black" : "bg-gray-300"
             )}
             aria-label={`Go to slide ${index + 1}`}
