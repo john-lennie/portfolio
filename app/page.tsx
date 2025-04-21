@@ -129,6 +129,19 @@ export default function Home() {
                     <div className="space-y-4">
                       <Carousel className="relative w-full py-2" orientation="horizontal">
                         <CarouselContent>
+                        {project.images && project.images.map((image, imgIndex) => (
+                          <CarouselItem key={imgIndex}>
+                            <div className="flex justify-center items-center h-full">
+                              <Image
+                                width={image.width}
+                                height={image.height}
+                                className="w-full"
+                                src={image.src || "/placeholder.svg"}
+                                alt={`${project.name} screenshot ${imgIndex + 1}`}
+                              />
+                            </div>
+                          </CarouselItem>
+                        ))}
                         {project.mobileVideos && project.mobileVideos.map((video, videoIndex) => (
                             <CarouselItem key={videoIndex}>
                               <div className="flex justify-center">
@@ -149,19 +162,6 @@ export default function Home() {
                               </div>
                             </CarouselItem>
                           }
-                          {project.images && project.images.map((image, imgIndex) => (
-                            <CarouselItem key={imgIndex}>
-                              <div className="flex justify-center items-center h-full">
-                                <Image
-                                  width={image.width}
-                                  height={image.height}
-                                  className="w-full"
-                                  src={image.src || "/placeholder.svg"}
-                                  alt={`${project.name} screenshot ${imgIndex + 1}`}
-                                />
-                              </div>
-                            </CarouselItem>
-                          ))}
                         </CarouselContent>
                         <CarouselPrevious variant="quiet" />
                         <CarouselNavigation />
