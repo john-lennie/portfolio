@@ -108,7 +108,7 @@ export default function Home() {
     <div className="bg-white">
       <div className="min-h-screen text-black mb-[200px] lg:mb-0">
         <GlobalStyles />
-        <header className={"fixed z-[2] w-full items-center justify-between duration-300 ease-in-out flex px-4 md:px-12 py-4 lg:relative lg:px-36 lg:hidden " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
+        <header className={"fixed z-[2] bg-white/75 backdrop-blur-2xl w-full items-center justify-between duration-300 ease-in-out flex px-4 md:px-12 py-4 lg:relative lg:px-36 lg:hidden " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
           <span className="animate-fade-in-slow">
             <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
           </span>
@@ -133,14 +133,14 @@ export default function Home() {
                 <div className="mb-16 grid grid-cols-[80px_auto_auto] sm:grid-cols-[auto_auto_auto]">
                   <h2 className="text-xs">Services:</h2>
                   <p className="text-xs">
-                    Reaserch & Planning<br />
+                    Research & Planning<br />
                     Visual Identity<br />
                     User Experience
                   </p>
                   <p className="text-xs">
                     Web Development<br />
                     Data & Analytics<br />
-                    Maintainance
+                    Maintenance
                   </p>
                 </div>
               </div>
