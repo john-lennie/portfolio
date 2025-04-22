@@ -36,7 +36,7 @@ const projects = [
         height: 579
       }
     ],
-    description: "Designed and built the headless e-commerce platform for men's clothing line 'Faces of Another'.",
+    description: "Designed and built the headless e-commerce platform for men's clothing line Faces of Another.",
     serviceTags: "Research & Planning\nVisual Identity\nUser Experience\nWeb Development",
     stackTags: {
       cms: "Sanity.io",
@@ -49,7 +49,7 @@ const projects = [
     name: "North of Now",
     year: "2023",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4", "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"],
-    description: "North of Now, UI Design, Web Development",
+    description: "Designed and built new website for Los Angeles based film production company North of Now.",
     serviceTags: "User Experience\nWeb Development",
     stackTags: {
       cms: "Prismic",
@@ -71,7 +71,8 @@ const projects = [
     description: "Basma Beauty, Web Development, for 56 Digital",
     serviceTags: "Web Development",
     stackTags: {
-      commerce: "Shopify"
+      commerce: "Shopify",
+      frontEnd: "Liquid, JS",
     },
   },
   {
@@ -82,6 +83,7 @@ const projects = [
     serviceTags: "Web Development",
     stackTags: {
       commerce: "Shopify",
+      frontEnd: "Liquid, JS",
     },
   },
   {
@@ -99,7 +101,7 @@ const projects = [
     serviceTags: "Web Development",
     stackTags: {
       cms: "Squarespace",
-      frontEnd: "Vanilla JS"
+      frontEnd: "JS"
     },
   },
   {
@@ -110,6 +112,7 @@ const projects = [
     serviceTags: "Web Development",
     stackTags: {
       commerce: "Shopify",
+      frontEnd: "Liquid, JS",
     },
   },
   {
@@ -131,7 +134,7 @@ const projects = [
     serviceTags: "Web Development",
     stackTags: {
       cms: "Craft CMS",
-      frontEnd: "HTML + Twig"
+      frontEnd: "HTML + Twig, JS"
     },
   },
 ]
@@ -248,20 +251,20 @@ export default function Home() {
                             <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.serviceTags}</p>
                           }
                           {project.stackTags &&
-                            <p className="text-xxs/3 text-gray-500 font-source tracking-tightest">Platforms:</p>
+                            <p className="text-xxs/3 text-gray-500 font-source tracking-tightest">Stack:</p>
                           }
                           <div className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
                             {project.stackTags.deployment &&
-                              <p className="whitespace-nowrap">Deployment:</p>
+                              <p className="whitespace-nowrap">Deployment</p>
                             }
                             {project.stackTags.frontEnd &&
-                              <p className="whitespace-nowrap">Front-End:</p>
+                              <p className="whitespace-nowrap">Front-End</p>
                             }
                             {project.stackTags.commerce &&
-                              <p className="whitespace-nowrap">Commerce:</p>
+                              <p className="whitespace-nowrap">Commerce</p>
                             }
                             {project.stackTags.cms &&
-                              <p className="whitespace-nowrap">CMS:</p>
+                              <p className="whitespace-nowrap">CMS</p>
                             }
                           </div>
                           <div className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
