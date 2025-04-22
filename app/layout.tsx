@@ -3,8 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'JNPR',
-  description: 'Digital Product Studio',
-  generator: 'v0.dev',
+  description: 'JNPR is a design and development studio based in Toronto.'
 }
 
 export default function RootLayout({
