@@ -38,15 +38,24 @@ const projects = [
     ],
     description: "Designed and built the headless e-commerce platform for men's clothing line 'Faces of Another'.",
     serviceTags: "Research & Planning\nVisual Identity\nUser Experience\nWeb Development",
-    stackTags: "CMS: Sanity.io\nCommerce: Shopify\nFE: Next.js\nDeployment: Vercel"
+    stackTags: {
+      cms: "Sanity.io",
+      commerce: "Shopify",
+      frontEnd: "Next.js",
+      deployment: "Vercel"
+    },
   },
   {
     name: "North of Now",
     year: "2023",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4", "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"],
     description: "North of Now, UI Design, Web Development",
-    serviceTags: "User Experience",
-    stackTags: "CMS: Prismic\nFE: Next.js\nDeployment: Vercel"
+    serviceTags: "User Experience\nWeb Development",
+    stackTags: {
+      cms: "Prismic",
+      frontEnd: "Next.js",
+      deployment: "Vercel"
+    },
   },
   {
     name: "Basma Beauty",
@@ -61,7 +70,9 @@ const projects = [
     ],
     description: "Basma Beauty, Web Development, for 56 Digital",
     serviceTags: "Web Development",
-    stackTags: "FE: Shopify"
+    stackTags: {
+      commerce: "Shopify"
+    },
   },
   {
     name: "Full Court Press",
@@ -69,7 +80,9 @@ const projects = [
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
     description: "Full Court Press, Web Development - with Ronan Mcgee (design)",
     serviceTags: "Web Development",
-    stackTags: "FE: Shopify"
+    stackTags: {
+      commerce: "Shopify",
+    },
   },
   {
     name: "Susan for Susan",
@@ -84,7 +97,10 @@ const projects = [
     ],
     description: "Susan for Susan, Web Development - with Ronan Mcgee (design)",
     serviceTags: "Web Development",
-    stackTags: "CMS: Squarespace"
+    stackTags: {
+      cms: "Squarespace",
+      frontEnd: "Vanilla JS"
+    },
   },
   {
     name: "Club 16",
@@ -92,7 +108,9 @@ const projects = [
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
     description: "Club 16, Web Development - with Ronan Mcgee (design)",
     serviceTags: "Web Development",
-    stackTags: "FE: Shopify"
+    stackTags: {
+      commerce: "Shopify",
+    },
   },
   {
     name: "Norman Wong",
@@ -111,7 +129,10 @@ const projects = [
     ],
     description: "Norman Wong, Web Development",
     serviceTags: "Web Development",
-    stackTags: "CMS: Craft CMS\nFE: HTML + Twig + Vanilla JS"
+    stackTags: {
+      cms: "Craft CMS",
+      frontEnd: "HTML + Twig"
+    },
   },
 ]
 
@@ -222,16 +243,41 @@ export default function Home() {
                         {project.description &&
                           <p className="text-sm font-normal whitespace-pre-line">{project.description}</p>
                         }
-                        <div className="grid grid-cols-[auto_80px_120px]">
+                        <div className="grid grid-cols-[auto_75px_75px_max-content]">
                           {project.serviceTags &&
                             <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.serviceTags}</p>
                           }
                           {project.stackTags &&
                             <p className="text-xxs/3 text-gray-500 font-source tracking-tightest">Platforms:</p>
                           }
-                          {project.stackTags &&
-                            <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.stackTags}</p>
-                          }
+                          <div className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
+                            {project.stackTags.deployment &&
+                              <p className="whitespace-nowrap">Deployment:</p>
+                            }
+                            {project.stackTags.frontEnd &&
+                              <p className="whitespace-nowrap">Front-End:</p>
+                            }
+                            {project.stackTags.commerce &&
+                              <p className="whitespace-nowrap">Commerce:</p>
+                            }
+                            {project.stackTags.cms &&
+                              <p className="whitespace-nowrap">CMS:</p>
+                            }
+                          </div>
+                          <div className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
+                            {project.stackTags.deployment &&
+                              <p className="whitespace-nowrap">{project.stackTags.deployment}</p>
+                            }
+                            {project.stackTags.frontEnd &&
+                              <p className="whitespace-nowrap">{project.stackTags.frontEnd}</p>
+                            }
+                            {project.stackTags.commerce &&
+                              <p className="whitespace-nowrap">{project.stackTags.commerce}</p>
+                            }
+                            {project.stackTags.cms &&
+                              <p className="whitespace-nowrap">{project.stackTags.cms}</p>
+                            }
+                          </div>
                         </div>
                       </div>
                       </AccordionContent>
