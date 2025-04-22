@@ -22,12 +22,8 @@ import { GlobalStyles } from "@/components/GlobalStyles"
 
 const projects = [
   {
-    name: "North of Now",
-    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4", "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"],
-    description: "North of Now, UI Design, Web Development"
-  },
-  {
     name: "Faces Of Another",
+    year: "2023 - 2025",
     images: [
       {
         src: "/faces-of-another/2.png",
@@ -43,7 +39,14 @@ const projects = [
     description: "Faces Of Another, Web Design, Web Development"
   },
   {
+    name: "North of Now",
+    year: "2023",
+    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4", "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"],
+    description: "North of Now, UI Design, Web Development"
+  },
+  {
     name: "Basma Beauty",
+    year: "2022",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"],
     images: [
       {
@@ -56,11 +59,13 @@ const projects = [
   },
   {
     name: "Full Court Press",
+    year: "2022",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
     description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
   },
   {
     name: "Susan for Susan",
+    year: "2022",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/downloads/default.mp4"],
     images: [
       {
@@ -73,11 +78,13 @@ const projects = [
   },
   {
     name: "Club 16",
+    year: "2021",
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
     description: "Club 16, Web Development - with Ronan Mcgee (design)"
   },
   {
     name: "Norman Wong",
+    year: "2021",
     images: [
       {
         src: "/norman-wong/1.png",
@@ -152,7 +159,10 @@ export default function Home() {
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
                     <AccordionTrigger className="text-sm font-normal py-2 lg:py-1 text-left">
-                      {project.name}
+                      <div className="flex justify-between w-full">
+                        <span>{project.name}</span>
+                        <span>{project.year}</span>
+                      </div>
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-4">
