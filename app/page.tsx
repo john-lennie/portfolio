@@ -36,13 +36,15 @@ const projects = [
         height: 579
       }
     ],
-    description: "Faces Of Another, Web Design, Web Development"
+    description: "Headless e-commerce storefront for men's clothing line 'Faces of Another'. ",
+    tags: "Research & Planning\nVisual Identity\nUser Experience\nWeb Development"
   },
   {
     name: "North of Now",
     year: "2023",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4", "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"],
-    description: "North of Now, UI Design, Web Development"
+    description: "North of Now, UI Design, Web Development",
+    tags: "User Experience"
   },
   {
     name: "Basma Beauty",
@@ -137,7 +139,7 @@ export default function Home() {
                 </span>
                 <h1 className="lg:mt-[150px] tracking-tight mb-16 text-2xl/7 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
                 We Build unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
-                <div className="mb-16 grid grid-cols-[80px_auto_auto] sm:grid-cols-[auto_auto_auto]">
+                <div className="mb-16 grid grid-cols-[auto_auto_110px] sm:grid-cols-[auto_auto_auto]">
                   <h2 className="text-xs">Services:</h2>
                   <p className="text-xs">
                     Research & Planning<br />
@@ -153,7 +155,7 @@ export default function Home() {
               </div>
               <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-black underline">hello@jnpr.studio</a>
             </div>
-            <div className="lg:mt-[202px] lg:mb-[404px]">
+            <div className="lg:mt-[196px] lg:mb-[404px]">
               {/* <h2 className="text-xs mb-2">Projects</h2> */}
               <Accordion type="multiple" defaultValue={['item-0']} className="mb-12">
                 {projects.map((project, index) => (
@@ -165,7 +167,7 @@ export default function Home() {
                       </div>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4">
+                      <div className="space-y-4 mb-2">
                         <Carousel className="relative w-full py-2" orientation="horizontal">
                           <CarouselContent>
                           {project.images && project.images.map((image, imgIndex) => (
@@ -206,10 +208,10 @@ export default function Home() {
                           <CarouselNext variant="quiet" />
                         </Carousel>
                         {project.description &&
-                          <p className="text-xs font-normal">{project.description}</p>
+                          <p className="text-sm font-normal whitespace-pre-line">{project.description}</p>
                         }
                         {project.tags &&
-                          <p className="text-xs text-gray-400 font-normal italic">{project.tags}</p>
+                          <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.tags}</p>
                         }
                       </div>
                       </AccordionContent>

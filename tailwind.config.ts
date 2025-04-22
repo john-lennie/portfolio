@@ -97,7 +97,16 @@ const config: Config = {
 				'fade-in-slow': 'fade-in 1s ease-in-out',
 				'fade-in-slow-delay': 'fade-in 1s .25s ease-in-out forwards',
 				'fade-in-slower-delay': 'fade-in 1s .5s ease-in-out forwards'
-  		}
+  		},
+			letterSpacing: {
+        tightest: '-.075em'
+      },
+			fontFamily: {
+        source: ['var(--font-source-code-pro)']
+      },
+			fontSize: {
+        'xxs': '0.625rem', // 10px
+      },
   	}
   },
   plugins: [require("tailwindcss-animate")],
