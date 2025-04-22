@@ -121,20 +121,33 @@ export default function Home() {
             Info
           </button> */}
         </header>
-        <main className="relative z-[1] px-4 bg-white pt-44 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
-          <div className="grid lg:grid-cols-2 w-full animate-fade-in-slow-delay opacity-0">
+        <main className="relative z-[1] px-4 bg-white pt-24 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
+          <div className="grid lg:grid-cols-2 lg:gap-10 w-full animate-fade-in-slow-delay opacity-0">
             <div className="lg:sticky lg:top-0 lg:py-6 lg:h-screen lg:flex lg:flex-col lg:justify-between">
               <div>
                 <span className="hidden lg:block animate-fade-in-slow">
                   <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
                 </span>
-                <h1 className="lg:mt-[150px] mb-16 text-3xl/8 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
-                Building unique ecommerce and digital experiences for global companies and local businesses.</h1>
+                <h1 className="lg:mt-[150px] tracking-tight mb-16 text-2xl/7 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
+                We Build unique e-commerce and digital experiences for global companies and local businesses.</h1>
+                <div className="mb-16 grid grid-cols-[80px_auto_auto] sm:grid-cols-[auto_auto_auto]">
+                  <h2 className="text-xs">Services:</h2>
+                  <p className="text-xs">
+                    Reaserch & Planning<br />
+                    Visual Identity<br />
+                    User Experience
+                  </p>
+                  <p className="text-xs">
+                    Web Development<br />
+                    Data & Analytics<br />
+                    Maintainance
+                  </p>
+                </div>
               </div>
-              <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-blue-700 underline">hello@jnpr.studio</a>
+              <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-black underline">hello@jnpr.studio</a>
             </div>
             <div className="lg:mt-[202px] lg:mb-[404px]">
-              {/* <h2 className="text-xs uppercase mb-1">Projects:</h2> */}
+              {/* <h2 className="text-xs mb-2">Projects</h2> */}
               <Accordion type="multiple" defaultValue={['item-0']} className="mb-12">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
@@ -200,7 +213,7 @@ export default function Home() {
         </main>
       </div>
       <div className="text-center animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-8 lg:pb-4 lg:pt-36 lg:text-left">
-        <a href="mailto:hello@jnpr.studio" target="_blank" className="text-xs text-blue-700 underline">hello@jnpr.studio</a>
+        <a href="mailto:hello@jnpr.studio" target="_blank" className="text-xs text-black underline">hello@jnpr.studio</a>
       </div>
     </div>
   )
