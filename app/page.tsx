@@ -36,15 +36,17 @@ const projects = [
         height: 579
       }
     ],
-    description: "Headless e-commerce storefront for men's clothing line 'Faces of Another'. ",
-    tags: "Research & Planning\nVisual Identity\nUser Experience\nWeb Development"
+    description: "Designed and built the headless e-commerce platform for men's clothing line 'Faces of Another'.",
+    serviceTags: "Research & Planning\nVisual Identity\nUser Experience\nWeb Development",
+    stackTags: "CMS: Sanity.io\nCommerce: Shopify\nFE: Next.js\nDeployment: Vercel"
   },
   {
     name: "North of Now",
     year: "2023",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4", "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"],
     description: "North of Now, UI Design, Web Development",
-    tags: "User Experience"
+    serviceTags: "User Experience",
+    stackTags: "CMS: Prismic\nFE: Next.js\nDeployment: Vercel"
   },
   {
     name: "Basma Beauty",
@@ -57,13 +59,17 @@ const projects = [
         height: 761
       }
     ],
-    description: "Basma Beauty, Web Development, for 56 Digital"
+    description: "Basma Beauty, Web Development, for 56 Digital",
+    serviceTags: "Web Development",
+    stackTags: "FE: Shopify"
   },
   {
     name: "Full Court Press",
     year: "2022",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
-    description: "Full Court Press, Web Development - with Ronan Mcgee (design)"
+    description: "Full Court Press, Web Development - with Ronan Mcgee (design)",
+    serviceTags: "Web Development",
+    stackTags: "FE: Shopify"
   },
   {
     name: "Susan for Susan",
@@ -76,13 +82,17 @@ const projects = [
         height: 652
       }
     ],
-    description: "Susan for Susan, Web Development - with Ronan Mcgee (design)"
+    description: "Susan for Susan, Web Development - with Ronan Mcgee (design)",
+    serviceTags: "Web Development",
+    stackTags: "CMS: Squarespace"
   },
   {
     name: "Club 16",
     year: "2021",
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
-    description: "Club 16, Web Development - with Ronan Mcgee (design)"
+    description: "Club 16, Web Development - with Ronan Mcgee (design)",
+    serviceTags: "Web Development",
+    stackTags: "FE: Shopify"
   },
   {
     name: "Norman Wong",
@@ -99,7 +109,9 @@ const projects = [
         height: 487
       }
     ],
-    description: "Norman Wong, Web Development"
+    description: "Norman Wong, Web Development",
+    serviceTags: "Web Development",
+    stackTags: "CMS: Craft CMS\nFE: HTML + Twig + Vanilla JS"
   },
 ]
 
@@ -210,9 +222,17 @@ export default function Home() {
                         {project.description &&
                           <p className="text-sm font-normal whitespace-pre-line">{project.description}</p>
                         }
-                        {project.tags &&
-                          <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.tags}</p>
-                        }
+                        <div className="grid grid-cols-[auto_80px_120px]">
+                          {project.serviceTags &&
+                            <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.serviceTags}</p>
+                          }
+                          {project.stackTags &&
+                            <p className="text-xxs/3 text-gray-500 font-source tracking-tightest">Platforms:</p>
+                          }
+                          {project.stackTags &&
+                            <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.stackTags}</p>
+                          }
+                        </div>
                       </div>
                       </AccordionContent>
                   </AccordionItem>
