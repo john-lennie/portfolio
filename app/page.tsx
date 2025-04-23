@@ -26,12 +26,12 @@ const projects = [
     year: "2023 - 2025",
     images: [
       {
-        src: "/faces-of-another/foa-1.png",
+        src: "/faces-of-another/foa-2.png",
         width: 1500,
         height: 860
       },
       {
-        src: "/faces-of-another/foa.2.png",
+        src: "/faces-of-another/foa-1.png",
         width: 1500,
         height: 860
       }
