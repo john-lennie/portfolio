@@ -56,9 +56,9 @@ const projects = [
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4"],
     images: [
       {
-        src: "/north-of-now/non-1.png",
+        src: "/north-of-now/non-3.png",
         width: 1500,
-        height: 860
+        height: 1131
       },
       {
         src: "/north-of-now/non-2.png",
@@ -66,9 +66,9 @@ const projects = [
         height: 777
       },
       {
-        src: "/north-of-now/non-3.png",
+        src: "/north-of-now/non-1.png",
         width: 1500,
-        height: 1131
+        height: 860
       }
     ],
     description: "New visual identity and website for Los Angeles based film production company North of Now.",
@@ -227,6 +227,19 @@ export default function Home() {
                       <div className="space-y-4 mb-2">
                         <Carousel className="relative w-full py-2" orientation="horizontal">
                           <CarouselContent>
+                          {project.images && project.images.map((image, imgIndex) => (
+                            <CarouselItem key={imgIndex}>
+                              <div className="flex justify-center items-center h-full">
+                                <Image
+                                  width={image.width}
+                                  height={image.height}
+                                  className="w-full"
+                                  src={image.src || "/placeholder.svg"}
+                                  alt={`${project.name} screenshot ${imgIndex + 1}`}
+                                />
+                              </div>
+                            </CarouselItem>
+                          ))}
                           {project.mobileVideos && project.mobileVideos.map((video, videoIndex) => (
                               <CarouselItem key={videoIndex}>
                                 <div className="flex justify-center items-center h-full">
@@ -247,19 +260,6 @@ export default function Home() {
                                 </div>
                               </CarouselItem>
                             }
-                            {project.images && project.images.map((image, imgIndex) => (
-                              <CarouselItem key={imgIndex}>
-                                <div className="flex justify-center items-center h-full">
-                                  <Image
-                                    width={image.width}
-                                    height={image.height}
-                                    className="w-full"
-                                    src={image.src || "/placeholder.svg"}
-                                    alt={`${project.name} screenshot ${imgIndex + 1}`}
-                                  />
-                                </div>
-                              </CarouselItem>
-                            ))}
                           </CarouselContent>
                           <CarouselNavigation />
                           <CarouselNext variant="quiet" />
