@@ -26,14 +26,14 @@ const projects = [
     year: "2023 - 2025",
     images: [
       {
-        src: "/faces-of-another/2.png",
-        width: 1000,
-        height: 579
+        src: "/faces-of-another/foa-1.png",
+        width: 1500,
+        height: 860
       },
       {
-        src: "/faces-of-another/1.png",
-        width: 1000,
-        height: 579
+        src: "/faces-of-another/foa.2.png",
+        width: 1500,
+        height: 860
       }
     ],
     description: "Designed and built the headless e-commerce platform for men's clothing line Faces of Another.",
@@ -49,8 +49,8 @@ const projects = [
     name: "North of Now",
     year: "2023",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4", "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"],
-    description: "Designed and built new website for Los Angeles based film production company North of Now.",
-    serviceTags: "User Experience\nWeb Development",
+    description: "New visual identity and website for Los Angeles based film production company North of Now.",
+    serviceTags: "Research & Planning\nVisual Identity\nUI Design\nUI Development\nUX Design",
     stackTags: {
       cms: "Prismic",
       frontEnd: "Next.js",
@@ -69,7 +69,7 @@ const projects = [
       }
     ],
     description: "Worked with 56.digital to develop a shade finder quiz for Basma Beauty.",
-    serviceTags: "Web Development",
+    serviceTags: "UI Development",
     stackTags: {
       commerce: "Shopify"
     },
@@ -78,8 +78,8 @@ const projects = [
     name: "Full Court Press",
     year: "2022",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
-    description: "Worked with Ronan Mcgee on the UI",
-    serviceTags: "Web Development",
+    description: "UI Development for Full Court Press.\nUI Design by Ronan Mcgee.",
+    serviceTags: "UI Development",
     stackTags: {
       commerce: "Shopify"
     },
@@ -95,17 +95,17 @@ const projects = [
         height: 652
       }
     ],
-    description: "Susan for Susan, Web Development - with Ronan Mcgee (design)",
+    description: "UI Development for industrial design studio Susan for Susan.\nUI Design by Ronan Mcgee.",
     serviceTags: "Web Development",
     stackTags: {
       cms: "Squarespace"
     },
   },
   {
-    name: "Club 16",
+    name: "Club Dieciséis",
     year: "2021",
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
-    description: "Club 16, Web Development - with Ronan Mcgee (design)",
+    description: "UI Development for the launch of Club Dieciséis, an album by Puerto Rican artist TAINY.\nUI Design by Ronan Mcgee.",
     serviceTags: "Web Development",
     stackTags: {
       commerce: "Shopify"
@@ -165,11 +165,11 @@ export default function Home() {
         <main className="relative z-[1] px-4 bg-white pt-24 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
           <div className="grid lg:grid-cols-2 lg:gap-10 w-full animate-fade-in-slow-delay opacity-0">
             <div className="lg:sticky lg:top-0 lg:py-6 lg:h-screen lg:flex lg:flex-col lg:justify-between">
-              <div>
+              <div className="max-w-xl">
                 <span className="hidden lg:block animate-fade-in-slow">
                   <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
                 </span>
-                <h1 className="lg:mt-[150px] tracking-tight mb-16 text-2xl/7 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
+                <h1 className="lg:mt-[150px] tracking-tight mb-16 text-2xl/7">JNPR is a design and development studio based in Toronto.<br /><br />
                 We Build unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
                 <div className="mb-16 grid grid-cols-[auto_auto_max-content] sm:grid-cols-[auto_auto_auto]">
                   <h2 className="text-xs">Services:</h2>
@@ -177,11 +177,11 @@ export default function Home() {
                     Research & Planning<br />
                     Visual Identity<br /><br />
                     UI Development<br />
-                    UI Design
+                    Front-End Development
                   </p>
                   <p className="text-xs">
-                    Front-End Development<br />
-                    UX Design & Research<br /><br />
+                    UX Design<br />
+                    UX Research<br /><br />
                     Data & Analytics<br />
                     Maintenance
                   </p>
