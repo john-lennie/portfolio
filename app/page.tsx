@@ -64,6 +64,11 @@ const projects = [
         src: "/north-of-now/non-2.png",
         width: 1500,
         height: 777
+      },
+      {
+        src: "/north-of-now/non-3.png",
+        width: 1500,
+        height: 1131
       }
     ],
     description: "New visual identity and website for Los Angeles based film production company North of Now.",
