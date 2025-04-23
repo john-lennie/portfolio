@@ -101,7 +101,7 @@ const projects = [
       }
     ],
     description: "UI Development for industrial design studio Susan for Susan.\nUI Design by Ronan Mcgee.",
-    serviceTags: "Web Development",
+    serviceTags: "UI Development",
     stackTags: {
       cms: "Squarespace"
     },
@@ -111,7 +111,7 @@ const projects = [
     year: "2021",
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
     description: "UI Development for the launch of Club Dieciséis, an album by Puerto Rican artist TAINY.\nUI Design by Ronan Mcgee.",
-    serviceTags: "Web Development",
+    serviceTags: "UI Development",
     stackTags: {
       commerce: "Shopify"
     },
@@ -131,8 +131,8 @@ const projects = [
         height: 487
       }
     ],
-    description: "Norman Wong, Web Development",
-    serviceTags: "Web Development",
+    description: "Portfolio website for Toronto based photographer Norman Wong.",
+    serviceTags: "Front-End Development",
     stackTags: {
       cms: "Craft CMS",
       frontEnd: "HTML + Twig, JS"
@@ -183,6 +183,7 @@ export default function Home() {
                     Visual Identity<br /><br />
                     Front-End Development<br />
                     UI Development<br />
+                    UI Design
                   </p>
                   <p className="text-xs">
                     UX Research<br />
@@ -249,7 +250,7 @@ export default function Home() {
                         {project.description &&
                           <p className="text-sm font-normal whitespace-pre-line">{project.description}</p>
                         }
-                        <div className="grid grid-cols-[auto_max-content_max-content_max-content] gap-8 max-w-[90%] md:max-w-none">
+                        <div className="grid grid-cols-[auto_max-content_max-content_max-content] gap-8">
                           {project.serviceTags &&
                             <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.serviceTags}</p>
                           }
