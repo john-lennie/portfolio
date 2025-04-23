@@ -39,7 +39,7 @@ const projects = [
     description: "Designed and built the headless e-commerce platform for men's clothing line Faces of Another.",
     serviceTags: "Research & Planning\nVisual Identity\nUser Experience\nWeb Development",
     stackTags: {
-      cms: "Sanity.io",
+      cms: "Sanity",
       commerce: "Shopify",
       frontEnd: "Next.js",
       deployment: "Vercel"
@@ -68,22 +68,20 @@ const projects = [
         height: 761
       }
     ],
-    description: "Basma Beauty, Web Development, for 56 Digital",
+    description: "Worked with 56.digital to develop a shade finder quiz for Basma Beauty.",
     serviceTags: "Web Development",
     stackTags: {
-      commerce: "Shopify",
-      frontEnd: "Liquid, JS",
+      commerce: "Shopify"
     },
   },
   {
     name: "Full Court Press",
     year: "2022",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
-    description: "Full Court Press, Web Development - with Ronan Mcgee (design)",
+    description: "Worked with Ronan Mcgee on the UI",
     serviceTags: "Web Development",
     stackTags: {
-      commerce: "Shopify",
-      frontEnd: "Liquid, JS",
+      commerce: "Shopify"
     },
   },
   {
@@ -100,8 +98,7 @@ const projects = [
     description: "Susan for Susan, Web Development - with Ronan Mcgee (design)",
     serviceTags: "Web Development",
     stackTags: {
-      cms: "Squarespace",
-      frontEnd: "JS"
+      cms: "Squarespace"
     },
   },
   {
@@ -111,8 +108,7 @@ const projects = [
     description: "Club 16, Web Development - with Ronan Mcgee (design)",
     serviceTags: "Web Development",
     stackTags: {
-      commerce: "Shopify",
-      frontEnd: "Liquid, JS",
+      commerce: "Shopify"
     },
   },
   {
@@ -175,15 +171,17 @@ export default function Home() {
                 </span>
                 <h1 className="lg:mt-[150px] tracking-tight mb-16 text-2xl/7 w-11/12 lg:w-4/5">JNPR is a design and development studio based in Toronto.<br /><br />
                 We Build unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
-                <div className="mb-16 grid grid-cols-[auto_auto_110px] sm:grid-cols-[auto_auto_auto]">
+                <div className="mb-16 grid grid-cols-[auto_auto_max-content] sm:grid-cols-[auto_auto_auto]">
                   <h2 className="text-xs">Services:</h2>
                   <p className="text-xs">
                     Research & Planning<br />
-                    Visual Identity<br />
-                    User Experience
+                    Visual Identity<br /><br />
+                    UI Development<br />
+                    UI Design
                   </p>
                   <p className="text-xs">
-                    Web Development<br />
+                    Front-End Development<br />
+                    UX Design & Research<br /><br />
                     Data & Analytics<br />
                     Maintenance
                   </p>
@@ -246,25 +244,25 @@ export default function Home() {
                         {project.description &&
                           <p className="text-sm font-normal whitespace-pre-line">{project.description}</p>
                         }
-                        <div className="grid grid-cols-[auto_85px_85px_max-content]">
+                        <div className="grid grid-cols-[auto_max-content_max-content_max-content] gap-8">
                           {project.serviceTags &&
                             <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.serviceTags}</p>
                           }
                           {project.stackTags &&
-                            <p className="text-xxs/3 text-gray-500 font-source tracking-tightest">Stack:</p>
+                            <p className="text-xxs/3 text-gray-500 font-source tracking-tightest">Platforms:</p>
                           }
                           <div className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
                             {project.stackTags.deployment &&
-                              <p className="whitespace-nowrap">Deployment</p>
+                              <p className="whitespace-nowrap">Deployment:</p>
                             }
                             {project.stackTags.frontEnd &&
-                              <p className="whitespace-nowrap">Front-End</p>
+                              <p className="whitespace-nowrap">Front-End:</p>
                             }
                             {project.stackTags.commerce &&
-                              <p className="whitespace-nowrap">Commerce</p>
+                              <p className="whitespace-nowrap">Commerce:</p>
                             }
                             {project.stackTags.cms &&
-                              <p className="whitespace-nowrap">CMS</p>
+                              <p className="whitespace-nowrap">CMS:</p>
                             }
                           </div>
                           <div className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
