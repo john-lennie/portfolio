@@ -192,7 +192,7 @@ export default function Home() {
                   <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
                 </span>
                 <h1 className="lg:mt-[150px] tracking-tight mb-16 text-2xl/7">JNPR is a design and development studio based in Toronto.<br /><br />
-                We Build unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
+                Building unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
                 <div className="mb-16 grid grid-cols-[auto_auto_max-content] sm:grid-cols-[auto_auto_auto]">
                   <h2 className="text-xs">Services:</h2>
                   <p className="text-xs">
