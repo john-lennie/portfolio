@@ -170,7 +170,7 @@ export default function Home() {
         <main className="relative z-[1] px-4 bg-white pt-24 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
           <div className="grid lg:grid-cols-2 lg:gap-10 w-full animate-fade-in-slow-delay opacity-0">
             <div className="lg:sticky lg:top-0 lg:py-6 lg:h-screen lg:flex lg:flex-col lg:justify-between">
-              <div className="max-w-xl">
+              <div className="max-w-[80%] md:max-w-xl">
                 <span className="hidden lg:block animate-fade-in-slow">
                   <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
                 </span>
