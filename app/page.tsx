@@ -54,6 +54,13 @@ const projects = [
     name: "North of Now",
     year: "2023",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4", "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"],
+    images: [
+      {
+        src: "/north-of-now/non-1.png",
+        width: 1500,
+        height: 860
+      },
+    ],
     description: "New visual identity and website for Los Angeles based film production company North of Now.",
     serviceTags: "Research & Planning\nVisual Identity\nUI Design\nUI Development\nUX Design",
     stackTags: {
