@@ -197,6 +197,7 @@ export default function Home() {
                   <h2 className="text-xs">Services:</h2>
                   <p className="text-xs">
                     Research & Planning<br />
+                    Graphic Design<br />
                     Visual Identity<br /><br />
                     Front-End Development<br />
                     UI Development<br />
