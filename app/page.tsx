@@ -181,12 +181,12 @@ export default function Home() {
                   <p className="text-xs">
                     Research & Planning<br />
                     Visual Identity<br /><br />
+                    Front-End Development<br />
                     UI Development<br />
-                    Front-End Development
                   </p>
                   <p className="text-xs">
-                    UX Design<br />
-                    UX Research<br /><br />
+                    UX Research<br />
+                    UX Design<br /><br />
                     Data & Analytics<br />
                     Maintenance
                   </p>
