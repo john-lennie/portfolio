@@ -249,7 +249,7 @@ export default function Home() {
                         {project.description &&
                           <p className="text-sm font-normal whitespace-pre-line">{project.description}</p>
                         }
-                        <div className="grid grid-cols-[auto_max-content_max-content_max-content] gap-8">
+                        <div className="grid grid-cols-[auto_max-content_max-content_max-content] gap-8 max-w-[90%] md:max-w-none">
                           {project.serviceTags &&
                             <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.serviceTags}</p>
                           }
