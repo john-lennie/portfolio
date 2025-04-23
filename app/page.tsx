@@ -31,7 +31,12 @@ const projects = [
         height: 860
       },
       {
-        src: "/faces-of-another/foa-1.png",
+        src: "/faces-of-another/foa-3.png",
+        width: 1500,
+        height: 860
+      },
+      {
+        src: "/faces-of-another/foa-4.png",
         width: 1500,
         height: 860
       }
