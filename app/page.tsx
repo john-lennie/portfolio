@@ -146,7 +146,7 @@ const projects = [
     year: "2021",
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
     description: [
-      "Front-End Development for Puerto Rican artist Tainy..\n\nUX by Ronan Mcgee."
+      "Front-End Development for Puerto Rican artist Tainy.\n\nUX by Ronan Mcgee."
     ],
     serviceTags: "Front-End Development",
     stackTags: {
