@@ -41,8 +41,8 @@ const projects = [
         height: 860
       }
     ],
-    description: "Designed and built the headless e-commerce platform for men's clothing line Faces of Another.",
-    serviceTags: "Research & Planning\nVisual Identity\nUser Experience\nWeb Development",
+    description: "Designed and built a headless e-commerce platform for men's clothing line Faces of Another.",
+    serviceTags: "UX Design\nFront-End Development\nData & Analytics\nMaintenance",
     stackTags: {
       cms: "Sanity",
       commerce: "Shopify",
@@ -53,7 +53,10 @@ const projects = [
   {
     name: "North of Now",
     year: "2023",
-    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4"],
+    mobileVideos: [
+      "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
+      "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"
+    ],
     images: [
       {
         src: "/north-of-now/non-3.png",
@@ -67,7 +70,7 @@ const projects = [
       }
     ],
     description: "New visual identity and website for Los Angeles based film production company North of Now.",
-    serviceTags: "Research & Planning\nVisual Identity\nUI Design\nUI Development\nUX Design",
+    serviceTags: "Graphic Design\nVisual Identity\nUX Design\nFront-End Development",
     stackTags: {
       cms: "Prismic",
       frontEnd: "Next.js",
@@ -86,7 +89,7 @@ const projects = [
       }
     ],
     description: "Worked with 56.digital to develop a shade finder quiz for Basma Beauty.",
-    serviceTags: "UI Development",
+    serviceTags: "Front-End Development",
     stackTags: {
       commerce: "Shopify"
     },
@@ -95,8 +98,8 @@ const projects = [
     name: "Full Court Press",
     year: "2022",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
-    description: "UI Development for Full Court Press.\nUI Design by Ronan Mcgee.",
-    serviceTags: "UI Development",
+    description: "Front-End Development for New York-based clothing line/publishing house Full Court Press.\nUX by Ronan Mcgee.",
+    serviceTags: "Front-End Development",
     stackTags: {
       commerce: "Shopify"
     },
@@ -113,7 +116,7 @@ const projects = [
       }
     ],
     description: "UI Development for industrial design studio Susan for Susan.\nUI Design by Ronan Mcgee.",
-    serviceTags: "UI Development",
+    serviceTags: "Front-End Development",
     stackTags: {
       cms: "Squarespace"
     },
@@ -123,7 +126,7 @@ const projects = [
     year: "2021",
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
     description: "UI Development for the launch of Club Dieciséis, an album by Puerto Rican artist TAINY.\nUI Design by Ronan Mcgee.",
-    serviceTags: "UI Development",
+    serviceTags: "Front-End Development",
     stackTags: {
       commerce: "Shopify"
     },
@@ -143,11 +146,11 @@ const projects = [
         height: 487
       }
     ],
-    description: "Portfolio website for Toronto based photographer Norman Wong.",
-    serviceTags: "Front-End Development",
+    description: "Front-End Development for Toronto-based photographer Norman Wong.",
+    serviceTags: "Front-End Development\nMaintenance",
     stackTags: {
-      cms: "Craft CMS",
-      frontEnd: "HTML + Twig, JS"
+      cms: "Craft",
+      frontEnd: "HTML + Twig, Vanilla JS"
     },
   },
 ]
@@ -191,16 +194,12 @@ export default function Home() {
                 <div className="mb-16 grid grid-cols-[auto_auto_max-content] sm:grid-cols-[auto_auto_auto]">
                   <h2 className="text-xs">Services:</h2>
                   <p className="text-xs">
-                    Research & Planning<br />
                     Graphic Design<br />
-                    Visual Identity<br /><br />
-                    Front-End Development<br />
-                    UI Development<br />
-                    UI Design
+                    Visual Identity<br />
+                    UX Design<br />
                   </p>
                   <p className="text-xs">
-                    UX Research<br />
-                    UX Design<br /><br />
+                    Front-End Development<br />
                     Data & Analytics<br />
                     Maintenance
                   </p>
@@ -210,7 +209,7 @@ export default function Home() {
             </div>
             <div className="lg:mt-[196px] lg:mb-[404px]">
               {/* <h2 className="text-xs mb-2">Projects</h2> */}
-              <Accordion type="multiple" defaultValue={['item-0']} className="mb-12">
+              <Accordion type="single" defaultValue="item-0" className="mb-12" collapsible>
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
                     <AccordionTrigger className="text-sm font-normal py-2 lg:py-1 text-left">
@@ -263,36 +262,33 @@ export default function Home() {
                         {project.description &&
                           <p className="text-sm font-normal whitespace-pre-line">{project.description}</p>
                         }
-                        <div className="grid grid-cols-[auto_max-content_max-content_max-content] gap-8">
+                        <div className="grid grid-cols-[auto_max-content_max-content] gap-4">
                           {project.serviceTags &&
                             <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.serviceTags}</p>
                           }
-                          {project.stackTags &&
-                            <p className="text-xxs/3 text-gray-500 font-source tracking-tightest">Platforms:</p>
-                          }
                           <div className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
-                            {project.stackTags.deployment &&
-                              <p className="whitespace-nowrap">Deployment:</p>
-                            }
                             {project.stackTags.frontEnd &&
-                              <p className="whitespace-nowrap">Front-End:</p>
+                              <p className="whitespace-nowrap">JS Framework:</p>
                             }
                             {project.stackTags.commerce &&
-                              <p className="whitespace-nowrap">Commerce:</p>
+                              <p className="whitespace-nowrap">eCommerce:</p>
+                            }
+                            {project.stackTags.deployment &&
+                              <p className="whitespace-nowrap">PAAS:</p>
                             }
                             {project.stackTags.cms &&
                               <p className="whitespace-nowrap">CMS:</p>
                             }
                           </div>
                           <div className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
-                            {project.stackTags.deployment &&
-                              <p className="whitespace-nowrap">{project.stackTags.deployment}</p>
-                            }
                             {project.stackTags.frontEnd &&
                               <p className="whitespace-nowrap">{project.stackTags.frontEnd}</p>
                             }
                             {project.stackTags.commerce &&
                               <p className="whitespace-nowrap">{project.stackTags.commerce}</p>
+                            }
+                            {project.stackTags.deployment &&
+                              <p className="whitespace-nowrap">{project.stackTags.deployment}</p>
                             }
                             {project.stackTags.cms &&
                               <p className="whitespace-nowrap">{project.stackTags.cms}</p>
