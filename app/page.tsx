@@ -74,6 +74,11 @@ const projects = [
         src: "/north-of-now/non-1.png",
         width: 1500,
         height: 860
+      },
+      {
+        src: "/north-of-now/non-4.png",
+        width: 1500,
+        height: 954
       }
     ],
     description: [
