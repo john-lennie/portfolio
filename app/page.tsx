@@ -134,7 +134,7 @@ const projects = [
       }
     ],
     description: [
-      "Front-End Development for Toronto-based design studio Susan for Susan..\n\nUX by Ronan Mcgee."
+      "Front-End Development for Toronto-based design studio Susan for Susan.\n\nUX by Ronan Mcgee."
     ],
     serviceTags: "Front-End Development",
     stackTags: {
