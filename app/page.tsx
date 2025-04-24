@@ -41,7 +41,13 @@ const projects = [
         height: 860
       }
     ],
-    description: "Designed and built a headless e-commerce platform for men's clothing line Faces of Another.",
+    description: [
+      "Designed and built a headless e-commerce platform for men's clothing line Faces of Another.\n\n",
+      { 
+        text: "facesofanother.com", 
+        link: "https://facesofanother.com/" 
+      },
+    ],
     serviceTags: "UX Design\nFront-End Development\nData & Analytics\nMaintenance",
     stackTags: {
       cms: "Sanity",
@@ -70,7 +76,9 @@ const projects = [
         height: 860
       }
     ],
-    description: "New visual identity and website for Los Angeles based film production company North of Now.",
+    description: [
+      "New visual identity and website for Los Angeles based film production company North of Now."
+    ],
     serviceTags: "Graphic Design\nVisual Identity\nUX Design\nFront-End Development",
     stackTags: {
       cms: "Prismic",
@@ -89,7 +97,14 @@ const projects = [
         height: 761
       }
     ],
-    description: "Worked with 56.digital to develop a shade finder quiz for Basma Beauty.",
+    description: [
+      "Worked with ",
+      { 
+        text: "56.digital", 
+        link: "https://56.digital/" 
+      },
+      " to develop a shade finder quiz for Basma Beauty."
+    ],
     serviceTags: "Front-End Development",
     stackTags: {
       commerce: "Shopify"
@@ -99,7 +114,18 @@ const projects = [
     name: "Full Court Press",
     year: "2022",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
-    description: "Front-End Development for New York-based clothing line/publishing house Full Court Press.\nUX by Ronan Mcgee.",
+    description: [
+      "Front-End Development for New York-based clothing line/publishing house Full Court Press.\n\nUX by ",
+      { 
+        text: "Ronan Mcgee", 
+        link: "http://rónán.com/" 
+      },
+      ".\n\n",
+      { 
+        text: "fullcourtpress.us", 
+        link: "https://www.fullcourtpress.us" 
+      },
+    ],
     serviceTags: "Front-End Development",
     stackTags: {
       commerce: "Shopify"
@@ -116,7 +142,13 @@ const projects = [
         height: 652
       }
     ],
-    description: "Front-End Development for Toronto-based design studio Susan for Susan.\nUX by Ronan Mcgee.",
+    description: [
+      "Front-End Development for Toronto-based design studio Susan for Susan..\n\nUX by ",
+      { 
+        text: "Ronan Mcgee", 
+        link: "http://rónán.com/" 
+      },
+    ],
     serviceTags: "Front-End Development",
     stackTags: {
       cms: "Squarespace"
@@ -126,7 +158,13 @@ const projects = [
     name: "Club Dieciséis",
     year: "2021",
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
-    description: "Front-End Development for Puerto Rican artist Tainy.\nUX by Ronan Mcgee.",
+    description: [
+      "Front-End Development for Puerto Rican artist Tainy..\n\nUX by ",
+      { 
+        text: "Ronan Mcgee", 
+        link: "http://rónán.com/" 
+      },
+    ],
     serviceTags: "Front-End Development",
     stackTags: {
       commerce: "Shopify"
@@ -147,7 +185,9 @@ const projects = [
         height: 487
       }
     ],
-    description: "Front-End Development for Toronto-based photographer Norman Wong.",
+    description: [
+      "Front-End Development for Toronto-based photographer Norman Wong."
+    ],
     serviceTags: "Front-End Development\nMaintenance",
     stackTags: {
       cms: "Craft"
@@ -260,7 +300,17 @@ export default function Home() {
                           <CarouselNext variant="quiet" />
                         </Carousel>
                         {project.description &&
-                          <p className="text-sm font-normal whitespace-pre-line">{project.description}</p>
+                          <p className="text-sm font-normal whitespace-pre-line">
+                            {project.description.map((item, i) =>
+                              typeof item === "string" ? (
+                                item
+                              ) : (
+                                <a key={i} href={item.link} target="_blank" className="underline">
+                                  {item.text}
+                                </a>
+                              )
+                            )}
+                          </p>
                         }
                         <div className="grid grid-cols-[auto_max-content_max-content] gap-4">
                           {project.serviceTags &&
