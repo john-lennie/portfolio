@@ -115,7 +115,7 @@ const projects = [
         height: 652
       }
     ],
-    description: "UI Development for industrial design studio Susan for Susan.\nUI Design by Ronan Mcgee.",
+    description: "Front-End Development for Toronto-based design studio Susan for Susan.\nUX by Ronan Mcgee.",
     serviceTags: "Front-End Development",
     stackTags: {
       cms: "Squarespace"
@@ -125,7 +125,7 @@ const projects = [
     name: "Club Dieciséis",
     year: "2021",
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
-    description: "UI Development for the launch of Club Dieciséis, an album by Puerto Rican artist TAINY.\nUI Design by Ronan Mcgee.",
+    description: "Front-End Development for Puerto Rican artist Tainy.\nUX by Ronan Mcgee.",
     serviceTags: "Front-End Development",
     stackTags: {
       commerce: "Shopify"
