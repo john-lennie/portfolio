@@ -56,7 +56,7 @@ const projects = [
     mobileVideos: [
       "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
       "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4",
-      "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/692b4f4ab79863852669c4e4293a6ae1/downloads/default.mp4"
+      "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/63a1f5c62792f9d1b14507c55cf1ea5b/downloads/default.mp4"
     ],
     images: [
       {
