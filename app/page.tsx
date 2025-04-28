@@ -236,12 +236,12 @@ export default function Home() {
                 Building unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
                 <div className="mb-16 grid grid-cols-[auto_auto_max-content] sm:grid-cols-[auto_auto_auto]">
                   <h2 className="text-xs">Services:</h2>
-                  <p className="text-xs">
+                  <p className="text-xxs/3 font-source tracking-tightest text-gray-500">
                     Graphic Design<br />
                     Visual Identity<br />
                     UX Design<br />
                   </p>
-                  <p className="text-xs">
+                  <p className="text-xxs/3 font-source tracking-tightest text-gray-500">
                     Front-End Development<br />
                     Data & Analytics<br />
                     Maintenance
