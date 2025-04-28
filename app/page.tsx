@@ -191,7 +191,7 @@ const projects = [
     description: [
       "Front-End Development for Toronto-based photographer Norman Wong."
     ],
-    serviceTags: "Front-End Development\nMaintenance",
+    serviceTags: "Front-End Development",
     stackTags: {
       cms: "Craft"
     },
