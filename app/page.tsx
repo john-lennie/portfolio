@@ -232,7 +232,7 @@ export default function Home() {
                 <span className="hidden lg:block animate-fade-in-slow">
                   <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
                 </span>
-                <h1 className="lg:mt-[150px] tracking-tight mb-16 text-2xl/7">JNPR is a design and development studio based in Toronto.<br /><br />
+                <h1 className="lg:mt-[80px] tracking-tight mb-16 text-2xl/7">JNPR is a design and development studio based in Toronto.<br /><br />
                 Building unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
                 <div className="mb-16 grid grid-cols-[auto_auto_max-content] sm:grid-cols-[auto_auto_auto]">
                   <h2 className="text-xs">Services:</h2>
@@ -250,7 +250,7 @@ export default function Home() {
               </div>
               <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-black underline">hello@jnpr.studio</a>
             </div>
-            <div className="lg:mt-[196px] lg:mb-[404px]">
+            <div className="lg:mt-[126px] lg:mb-[404px]">
               {/* <h2 className="text-xs mb-2">Projects</h2> */}
               <Accordion type="multiple" defaultValue={["item-0"]} className="mb-12">
                 {projects.map((project, index) => (
