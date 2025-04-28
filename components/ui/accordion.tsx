@@ -28,10 +28,10 @@ const AccordionTrigger = React.forwardRef(
           {...rest}
         >
           {children}
-          {/* <span className="ml-2 relative w-4 h-4">
+          <span className="ml-2 relative w-4 h-4">
             <Plus className="absolute inset-0 h-4 w-4 transition-opacity duration-200 group-data-[state=open]:opacity-0" />
             <Minus className="absolute inset-0 h-4 w-4 opacity-0 transition-opacity duration-200 group-data-[state=open]:opacity-100" />
-          </span> */}
+          </span>
         </AccordionPrimitive.Trigger>
       </AccordionPrimitive.Header>
     )
