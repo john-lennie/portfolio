@@ -120,7 +120,12 @@ const projects = [
     year: "2022",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
     description: [
-      "Front-End Development for New York-based clothing line/publishing house Full Court Press.\n\nUX by Ronan Mcgee."
+      "Front-End Development for New York-based clothing line/publishing house Full Court Press.\n\nUX by ",
+      { 
+        text: "Ronan Mcgee", 
+        link: "https://www.xn--rnn-fla2g.com/" 
+      },
+      "."
     ],
     serviceTags: "Front-End Development",
     stackTags: {
@@ -139,7 +144,12 @@ const projects = [
       }
     ],
     description: [
-      "Front-End Development for Toronto-based design studio Susan for Susan.\n\nUX by Ronan Mcgee."
+      "Front-End Development for Toronto-based design studio Susan for Susan.\n\nUX by ",
+      { 
+        text: "Ronan Mcgee", 
+        link: "https://www.xn--rnn-fla2g.com/" 
+      },
+      "."
     ],
     serviceTags: "Front-End Development",
     stackTags: {
@@ -151,7 +161,12 @@ const projects = [
     year: "2021",
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
     description: [
-      "Front-End Development for Puerto Rican artist Tainy.\n\nUX by Ronan Mcgee."
+      "Front-End Development for Puerto Rican artist Tainy.\n\nUX by ",
+      { 
+        text: "Ronan Mcgee", 
+        link: "https://www.xn--rnn-fla2g.com/" 
+      },
+      "."
     ],
     serviceTags: "Front-End Development",
     stackTags: {
