@@ -212,18 +212,11 @@ export default function Home() {
     <div className="bg-white">
       <div className="min-h-screen text-black mb-[200px] lg:mb-0">
         <GlobalStyles />
-        <header className={"fixed z-[2] bg-white/75 backdrop-blur-2xl w-full items-center justify-between duration-300 ease-in-out flex px-4 md:px-12 py-4 lg:relative lg:px-36 lg:hidden " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
+        <header className={"fixed z-[2] bg-white/50 backdrop-blur-xl w-full items-center justify-between duration-300 ease-in-out flex px-4 md:px-12 py-3 lg:relative lg:px-36 lg:hidden " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
           <span className="animate-fade-in-slow">
             <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
           </span>
-          {/* <button
-            className="animate-fade-in-slow uppercase"
-            onClick={() => {
-              alert('clicked');
-            }}
-          >
-            Info
-          </button> */}
+          <button className="block lg:hidden btn-primary text-xs">Email Us</button>
         </header>
         <main className="relative z-[1] px-4 bg-white pt-24 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
           <div className="grid lg:grid-cols-2 lg:gap-10 w-full animate-fade-in-slow-delay opacity-0">
@@ -232,7 +225,7 @@ export default function Home() {
                 <span className="hidden lg:block animate-fade-in-slow">
                   <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
                 </span>
-                <h1 className="lg:mt-[80px] tracking-tight mb-16 text-2xl/7">JNPR is a design and development studio based in Toronto.<br /><br />
+                <h1 className="lg:mt-[120px] tracking-tight mb-16 text-2xl/7">JNPR is a design and development studio based in Toronto.<br /><br />
                 Building unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
                 <div className="mb-16 grid grid-cols-[auto_auto_max-content] sm:grid-cols-[auto_auto_auto]">
                   <h2 className="text-xs">Services:</h2>
@@ -247,6 +240,7 @@ export default function Home() {
                     Maintenance
                   </p>
                 </div>
+                <button className="text-lg hidden lg:block btn-primary">Email Us</button>
               </div>
               <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-black underline">hello@jnpr.studio</a>
             </div>
@@ -254,7 +248,7 @@ export default function Home() {
               {/* <h2 className="text-xs mb-2">Projects</h2> */}
               <Accordion type="multiple" defaultValue={["item-0"]} className="mb-12">
                 {projects.map((project, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
+                  <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-gray-400">
                     <AccordionTrigger className="text-sm font-normal py-2 lg:py-1 text-left">
                       <div className="flex justify-between w-full">
                         <span>{project.name}</span>

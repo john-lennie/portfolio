@@ -92,3 +92,7 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+.btn-primary {
+  @apply px-6 py-2 bg-[#ff6d0c] text-white rounded-full hover:bg-gray-500 transition duration-300;
+}
