@@ -216,7 +216,7 @@ export default function Home() {
         <header className={"fixed z-[2] w-full bg-white/50 backdrop-blur-lg px-4 md:px-12 py-3 lg:relative lg:px-36 lg:hidden duration-300 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
           <div className="flex justify-between items-center animate-fade-in-slow">
             <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
-            <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary flex"><SquarePen className="h-[14px] w-[14px] mr-2" /> Email Us</a>
+            <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary flex"><SquarePen className="h-[14px] w-[14px] mr-2" /> Compose</a>
           </div>
         </header>
         <main className="relative z-[1] px-4 bg-white pt-24 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
@@ -224,9 +224,9 @@ export default function Home() {
             <div className="lg:sticky lg:top-0 lg:py-6 lg:h-screen lg:flex lg:flex-col lg:justify-between">
               <div className="max-w-[90%] md:max-w-xl">
                 <img className="hidden lg:block h-7" src="/jnpr.svg" alt="JNPR Studio" />
-                <h1 className="lg:mt-[120px] tracking-tight mb-16 text-2xl/7">JNPR is a design and development studio based in Toronto.<br /><br />
+                <h1 className="lg:mt-[120px] tracking-tight mb-16 lg:mb-8 text-2xl/7">JNPR is a design and development studio based in Toronto.<br /><br />
                 Building unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
-                <div className="mb-14 grid grid-cols-[auto_auto_max-content] sm:grid-cols-[auto_auto_auto]">
+                <div className="mb-16 lg:mb-8 grid grid-cols-[auto_auto_max-content] sm:grid-cols-[auto_auto_auto]">
                   <h2 className="text-xs">Services:</h2>
                   <p className="text-xxs/3 font-source tracking-tightest text-gray-500">
                     Graphic Design<br />
@@ -239,8 +239,8 @@ export default function Home() {
                     Maintenance
                   </p>
                 </div>
-                <h2 className="hidden lg:block mb-6">Have a project you think we'd be a good fit for?</h2>
-                <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:flex btn-primary flex"><SquarePen className="h-4 w-4 mr-2" /> Email Us</a>
+                <h2 className="hidden lg:block mb-8">Interested in working with JNPR?<br />Send us an Email!</h2>
+                <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:flex btn-primary flex"><SquarePen className="h-4 w-4 mr-2" /> Compose</a>
               </div>
               <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-black underline">hello@jnpr.studio</a>
             </div>
