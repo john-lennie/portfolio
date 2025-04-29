@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { Plus, Minus } from "lucide-react"
+import { Plus, Minus, Ellipsis, Dot } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
@@ -29,6 +29,8 @@ const AccordionTrigger = React.forwardRef(
         >
           {children}
           {/* <span className="ml-2 relative w-4 h-4">
+            <Ellipsis className="absolute inset-0 h-4 w-4 transition-opacity duration-200 group-data-[state=open]:opacity-0" />
+            <Dot className="absolute inset-0 h-4 w-4 opacity-0 transition-opacity duration-200 group-data-[state=open]:opacity-100" />
             <Plus className="absolute inset-0 h-4 w-4 transition-opacity duration-200 group-data-[state=open]:opacity-0" />
             <Minus className="absolute inset-0 h-4 w-4 opacity-0 transition-opacity duration-200 group-data-[state=open]:opacity-100" />
           </span> */}

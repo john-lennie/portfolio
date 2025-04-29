@@ -213,10 +213,10 @@ export default function Home() {
     <div className="bg-white">
       <div className="min-h-screen text-black mb-[200px] lg:mb-0">
         <GlobalStyles />
-        <header className={"fixed z-[2] w-full bg-white/50 backdrop-blur-xl px-4 md:px-12 py-3 lg:relative lg:px-36 lg:hidden duration-300 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
+        <header className={"fixed z-[2] w-full bg-white/50 backdrop-blur-lg px-4 md:px-12 py-3 lg:relative lg:px-36 lg:hidden duration-300 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
           <div className="flex justify-between items-center animate-fade-in-slow">
             <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
-            <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary flex"><SquarePen className="h-3 w-3 mr-1" /> Email Us</a>
+            <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary flex"><SquarePen className="h-[14px] w-[14px] mr-2" /> Email Us</a>
           </div>
         </header>
         <main className="relative z-[1] px-4 bg-white pt-24 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
@@ -315,7 +315,7 @@ export default function Home() {
                           }
                           <div className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
                             {project.stackTags.frontEnd &&
-                              <p className="whitespace-nowrap">JS Framework:</p>
+                              <p className="whitespace-nowrap">Framework:</p>
                             }
                             {project.stackTags.commerce &&
                               <p className="whitespace-nowrap">eCommerce:</p>
