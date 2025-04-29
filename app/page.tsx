@@ -239,7 +239,7 @@ export default function Home() {
                   </p>
                 </div>
                 <h2 className="hidden lg:block mb-6">Have a project you'd like to talk about?</h2>
-                <a className="hidden lg:block btn-primary">Contact JNPR</a>
+                <a className="hidden lg:inline-block btn-primary">Contact JNPR</a>
               </div>
               <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-black underline">hello@jnpr.studio</a>
             </div>
