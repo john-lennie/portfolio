@@ -215,7 +215,7 @@ export default function Home() {
         <header className={"fixed z-[2] w-full bg-white/50 backdrop-blur-xl px-4 md:px-12 py-3 lg:relative lg:px-36 lg:hidden duration-300 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
           <div className="flex justify-between items-center animate-fade-in-slow">
             <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
-            <button className="btn-primary text-xs">Contact JNPR</button>
+            <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary text-xs">Contact JNPR</a>
           </div>
         </header>
         <main className="relative z-[1] px-4 bg-white pt-24 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
@@ -239,7 +239,7 @@ export default function Home() {
                   </p>
                 </div>
                 <h2 className="hidden lg:block mb-6">Have a project you'd like to talk about?</h2>
-                <button className="hidden lg:block btn-primary">Contact JNPR</button>
+                <a className="hidden lg:block btn-primary">Contact JNPR</a>
               </div>
               <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-black underline">hello@jnpr.studio</a>
             </div>
