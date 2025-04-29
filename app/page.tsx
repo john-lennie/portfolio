@@ -239,7 +239,7 @@ export default function Home() {
                     Maintenance
                   </p>
                 </div>
-                <h2 className="hidden lg:block mb-6">Interested in working together?</h2>
+                <h2 className="hidden lg:block mb-6">Have a project you think we'd be a good fit for?</h2>
                 <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:flex btn-primary flex"><SquarePen className="h-4 w-4 mr-2" /> Email Us</a>
               </div>
               <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-black underline">hello@jnpr.studio</a>
