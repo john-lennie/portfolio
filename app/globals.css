@@ -94,5 +94,5 @@ body {
 }
 
 .btn-primary {
-  @apply px-4 py-2 bg-[#ff6d0c] text-white rounded-full hover:bg-gray-500 transition duration-300;
+  @apply px-4 py-2 bg-[#ff6d0c] text-white text-xs rounded-full hover:bg-gray-500 transition duration-300;
 }
