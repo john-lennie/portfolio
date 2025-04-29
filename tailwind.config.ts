@@ -88,10 +88,22 @@ const config: Config = {
 					from: { opacity: 0 },
 					to: { opacity: 1 },
 				},
+				'gray-to-black': {
+					'0%': { color: '#6b7280' },
+          '10%': { color: 'black' },
+					'50%': { color: '#6b7280' },
+          '100%': { color: '#6b7280' },
+				}
   		},
   		animation: {
   			'accordion-down': 'accordion-down 0.2s ease-out',
   			'accordion-up': 'accordion-up 0.2s ease-out',
+				'gray-to-black-1': 'gray-to-black 12s infinite',
+				'gray-to-black-2': 'gray-to-black 12s 2s infinite',
+				'gray-to-black-3': 'gray-to-black 12s 4s infinite',
+				'gray-to-black-4': 'gray-to-black 12s 6s infinite',
+				'gray-to-black-5': 'gray-to-black 12s 8s infinite',
+				'gray-to-black-6': 'gray-to-black 12s 10s infinite',
 				'fade-in-fast': 'fade-in .25s ease-in-out',
 				'fade-in': 'fade-in .5s ease-in-out',
 				'fade-in-slow': 'fade-in 1s ease-in-out',

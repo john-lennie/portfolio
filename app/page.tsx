@@ -229,14 +229,14 @@ export default function Home() {
                 <div className="mb-16 lg:mb-8 grid grid-cols-[auto_auto_max-content] sm:grid-cols-[auto_auto_auto]">
                   <h2 className="text-xs">Services:</h2>
                   <p className="text-xxs/3 font-source tracking-tightest text-gray-500">
-                    Graphic Design<br />
-                    Visual Identity<br />
-                    UX Design<br />
+                    <span className="animate-gray-to-black-1">Graphic Design</span><br />
+                    <span className="animate-gray-to-black-2">Visual Identity</span><br />
+                    <span className="animate-gray-to-black-3">UX Design</span><br />
                   </p>
                   <p className="text-xxs/3 font-source tracking-tightest text-gray-500">
-                    Front-End Development<br />
-                    Data & Analytics<br />
-                    Maintenance
+                    <span className="animate-gray-to-black-4">Front-End Development</span><br />
+                    <span className="animate-gray-to-black-5">Data & Analytics</span><br />
+                    <span className="animate-gray-to-black-6">Maintenance</span>
                   </p>
                 </div>
                 <h2 className="hidden lg:block mb-8">Interested in working with JNPR?<br />Send us an Email :)</h2>
