@@ -213,7 +213,7 @@ export default function Home() {
     <div className="bg-white">
       <div className="min-h-screen text-black mb-[200px] lg:mb-0">
         <GlobalStyles />
-        <header className={"fixed z-[2] w-full bg-white/50 backdrop-blur-lg px-4 md:px-12 py-3 lg:relative lg:px-36 lg:hidden duration-300 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
+        <header className={"fixed z-[2] w-full bg-white/50 backdrop-blur-md px-4 md:px-12 pb-9 py-3 lg:relative lg:px-36 lg:hidden duration-300 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
           <div className="flex justify-between items-center animate-fade-in-slow">
             <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
             <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary flex"><SquarePen className="h-[14px] w-[14px] mr-2" /> Contact Us</a>
@@ -265,6 +265,7 @@ export default function Home() {
                                 <Image
                                   width={image.width}
                                   height={image.height}
+                                  sizes="(max-width: 1023px) 100vw, 50vw"
                                   className="w-full"
                                   src={image.src || "/placeholder.svg"}
                                   alt={`${project.name} screenshot ${imgIndex + 1}`}
