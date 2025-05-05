@@ -263,8 +263,7 @@ export default function Home() {
                             <CarouselItem key={imgIndex}>
                               <div className="flex justify-center items-center h-full">
                                 <Image
-                                  width={image.width}
-                                  height={image.height}
+                                  fill
                                   sizes="(max-width: 1023px) 100vw, 50vw"
                                   className="w-full"
                                   src={image.src || "/placeholder.svg"}
