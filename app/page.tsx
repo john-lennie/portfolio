@@ -257,7 +257,7 @@ export default function Home() {
               {/* <h2 className="text-xs mb-2">Projects</h2> */}
               <Accordion type="multiple" defaultValue={["item-0"]} className="mb-12">
                 {projects.map((project, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-gray-300">
+                  <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
                     <AccordionTrigger className="text-sm font-normal py-2 lg:py-1 text-left">
                       <div className="flex justify-between w-full">
                         <span>{project.name}</span>
@@ -306,12 +306,12 @@ export default function Home() {
                           <CarouselNext variant="quiet" />
                         </Carousel>
                         {project.description &&
-                          <p className="text-sm font-normal whitespace-pre-line">
+                          <p className="text-sm font-normal whitespace-pre-line leading-[1.1rem]">
                             {project.description.map((item, i) =>
                               typeof item === "string" ? (
                                 item
                               ) : (
-                                <a key={i} href={item.link} target="_blank" className="underline">
+                                <a key={i} href={item.link} target="_blank" className="link">
                                   {item.text}
                                 </a>
                               )
@@ -363,7 +363,7 @@ export default function Home() {
         </main>
       </div>
       <div className="block lg:hidden text-center animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-8 lg:pb-4 lg:pt-36 lg:text-left">
-        <a href="mailto:hello@jnpr.studio" target="_blank" className="text-xs text-black underline">hello@jnpr.studio</a>
+        <a href="mailto:hello@jnpr.studio" target="_blank" className="link">hello@jnpr.studio</a>
       </div>
     </div>
   )

@@ -111,7 +111,8 @@ const config: Config = {
   },
   plugins: [require("tailwindcss-animate")],
 	safelist: [
-    'btn-primary'
+    'btn-primary',
+		'link'
   ]
 };
 export default config;

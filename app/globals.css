@@ -96,3 +96,7 @@ body {
 .btn-primary {
   @apply w-fit items-center px-3 lg:px-6 lg:py-2.5 py-2 bg-[#000000] text-white text-sm leading-[14px] lg:text-base/4 rounded-full hover:bg-[#000000] transition duration-300;
 }
+
+.link {
+  @apply text-blue-700 underline hover:text-blue-700 text-sm;
+}
