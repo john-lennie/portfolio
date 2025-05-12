@@ -234,7 +234,7 @@ export default function Home() {
               <div className="max-w-[90%] md:max-w-xl">
                 <img className="hidden lg:block h-7" src="/jnpr.svg" alt="JNPR Studio" />
                 <h1 className="lg:mt-[120px] tracking-tight mb-16 lg:mb-12 text-2xl leading-[26px]">JNPR is a design and development studio based in Toronto.<br /><br />
-                Building unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
+                We build unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
                 <div className="mb-16 lg:mb-8 lg:mr-12 grid grid-cols-[auto_auto_max-content]">
                   <h2 className="text-xs">Services:</h2>
                   <p className="text-xxs/3 font-source tracking-tightest text-gray-500">
