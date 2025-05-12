@@ -213,10 +213,19 @@ export default function Home() {
     <div className="bg-white">
       <div className="min-h-screen text-black mb-[200px] lg:mb-0">
         <GlobalStyles />
-        <header className={"fixed z-[2] w-full bg-white/50 backdrop-blur-md px-4 md:px-12 pb-9 py-3 lg:relative lg:px-36 lg:hidden duration-300 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}>
-          <div className="flex justify-between items-center animate-fade-in-slow">
+        <header
+          className={"fixed z-[2] w-full px-4 md:px-12 pt-4 pb-6 lg:relative lg:px-36 lg:hidden duration-300 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}
+          style={{
+            backgroundColor: 'transparent',
+            backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
+            backgroundSize: '4px 4px',
+            backdropFilter: 'blur(3px)',
+            mask: 'linear-gradient(#000 calc(100% - 16px), #0000)'
+          }}
+        >
+          <div className="relative z-50 flex justify-between items-center animate-fade-in-slow">
             <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
-            <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary flex"><SquarePen className="h-[14px] w-[14px] mr-2" /> Contact Us</a>
+            <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary flex"><SquarePen className="h-[14px] w-[14px] mr-1.5" /> Contact</a>
           </div>
         </header>
         <main className="relative z-[1] px-4 bg-white pt-24 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
