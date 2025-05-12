@@ -251,7 +251,7 @@ export default function Home() {
                 {/* <h2 className="hidden lg:block mb-8">Interested in working with JNPR?<br />Send us a message :)</h2>
                 <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:flex btn-primary flex"><SquarePen className="h-4 w-4 mr-2" /> Compose</a> */}
               </div>
-              <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block text-xs text-black underline">hello@jnpr.studio</a>
+              <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block link">hello@jnpr.studio</a>
             </div>
             <div className="lg:mt-[126px] lg:mb-[404px]">
               {/* <h2 className="text-xs mb-2">Projects</h2> */}
