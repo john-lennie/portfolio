@@ -225,7 +225,7 @@ export default function Home() {
         >
           <div className="relative z-50 flex justify-between items-center animate-fade-in-slow">
             <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
-            <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary flex"><SquarePen className="h-[14px] w-[14px] mr-1.5" /> Contact</a>
+            <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary flex"><SquarePen className="h-[14px] w-[14px] mr-1.5" /> Contact Us</a>
           </div>
         </header>
         <main className="relative z-[1] px-4 bg-white pt-24 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
