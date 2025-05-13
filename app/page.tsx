@@ -274,7 +274,7 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 lg:gap-12 w-full animate-fade-in-slow-delay opacity-0">
             <div className="lg:sticky lg:top-0 lg:py-6 lg:h-screen lg:flex lg:flex-col lg:justify-between">
               <div className="max-w-[90%] md:max-w-xl">
-                <h1 className="lg:mt-[120px] tracking-tight mb-16 lg:mb-8 text-2xl leading-[26px]">JNPR is a design and development studio based in Toronto.<br /><br />
+                <h1 className="lg:mt-[120px] tracking-tight mb-16 text-2xl leading-[26px]">JNPR is a design and development studio based in Toronto.<br /><br />
                 We build unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
                 <div className="mb-16 lg:mb-18 lg:mr-12 grid grid-cols-[auto_auto_max-content]">
                   <h2 className="text-xxs/3 font-source tracking-tightest text-gray-500">Services:</h2>
