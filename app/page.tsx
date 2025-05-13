@@ -289,11 +289,11 @@ export default function Home() {
                     Maintenance
                   </p>
                 </div>
-                <h2 className="hidden tracking-tight lg:block text-2xl leading-[26px] mb-8">Want to work together?</h2>
+                {/* <h2 className="hidden tracking-tight lg:block text-2xl leading-[26px] mb-8">Want to work together?</h2>
                 <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary lg:flex hidden">
                   <SquarePen className="h-[18px] w-[18px] mr-2" />
                   Contact Us
-                </a>
+                </a> */}
                 {/* <h2 className="hidden lg:block mb-8">Interested in working with JNPR?<br />Send us a message :)</h2>
                 <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:flex btn-primary flex"><SquarePen className="h-4 w-4 mr-2" /> Compose</a> */}
               </div>
