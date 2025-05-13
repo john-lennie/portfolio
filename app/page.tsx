@@ -277,7 +277,7 @@ export default function Home() {
                 <h1 className="lg:mt-[120px] tracking-tight mb-16 lg:mb-8 text-2xl leading-[26px]">JNPR is a design and development studio based in Toronto.<br /><br />
                 We build unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
                 <div className="mb-16 lg:mb-18 lg:mr-12 grid grid-cols-[auto_auto_max-content]">
-                  <h2 className="text-sm">Services:</h2>
+                  <h2 className="text-xxs/3 font-source tracking-tightest text-gray-500">Services:</h2>
                   <p className="text-xxs/3 font-source tracking-tightest text-gray-500">
                     Graphic Design<br />
                     Visual Identity<br />
