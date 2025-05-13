@@ -194,7 +194,6 @@ const projects = [
     ],
     serviceTags: "Front-End Development",
     stackTags: {
-      cms: "Craft"
     },
   },
 ]
@@ -214,7 +213,7 @@ export default function Home() {
       <div className="min-h-screen text-black mb-[200px] lg:mb-0">
         <GlobalStyles />
         <header
-          className={"fixed z-[2] w-full px-4 md:px-12 pt-4 pb-6 lg:relative lg:px-36 lg:hidden duration-300 " + (direction === 'down' ? '-top-[60px]' : 'top-0')}
+          className={"fixed z-[2] w-full md:px-12 duration-300 lg:px-36 " + (direction === 'down' ? '-top-[60px] lg:top-0' : 'top-0')}
           style={{
             backgroundColor: 'transparent',
             backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
@@ -224,19 +223,61 @@ export default function Home() {
           }}
         >
           <div className="relative z-50 flex justify-between items-center animate-fade-in-slow">
-            <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
-            <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary flex"><SquarePen className="h-[14px] w-[14px] mr-1.5" /> Contact Us</a>
+            <div
+            className="pt-4 pb-8 pr-12 pl-4 "
+            style={{
+              backgroundColor: '#fff',
+              WebkitMaskImage: `
+                linear-gradient(to right, black, black 50%, transparent 100%),
+                linear-gradient(to top, transparent, black 50%, black 100%);
+              `,
+              WebkitMaskComposite: 'intersect',
+              maskImage: `
+                linear-gradient(to right, black, black 50%, transparent 100%),
+                linear-gradient(to top, transparent, black 50%, black 100%);
+              `,
+              maskComposite: 'intersect'
+            }}
+            >
+              <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
+              </div>
+            <ul
+            className="flex gap-4 pt-6 pb-10 pr-4 pl-20"
+            style={{
+              backgroundColor: '#ffffffd9',
+              WebkitMaskImage: `
+                linear-gradient(to right, transparent, black 50%, black 100%),
+                linear-gradient(to top, transparent, black 40%, black 100%);
+              `,
+              WebkitMaskComposite: 'intersect',
+              maskImage: `
+                linear-gradient(to right, transparent, black 50%, black 100%),
+                linear-gradient(to top, transparent, black 40%, black 100%);
+              `,
+              maskComposite: 'intersect'
+            }}
+            >
+              <li>
+                <a href="mailto:hello@jnpr.studio" target="_blank" className="link-secondary flex">
+                  Studio Info
+                </a>
+              </li>
+              <li>
+                <a href="mailto:hello@jnpr.studio" target="_blank" className="link-secondary flex">
+                  Contact
+                </a>
+              </li>
+            </ul>
           </div>
         </header>
         <main className="relative z-[1] px-4 bg-white pt-24 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
-          <div className="grid lg:grid-cols-2 lg:gap-10 w-full animate-fade-in-slow-delay opacity-0">
+          <div className="grid lg:grid-cols-2 lg:gap-12 w-full animate-fade-in-slow-delay opacity-0">
             <div className="lg:sticky lg:top-0 lg:py-6 lg:h-screen lg:flex lg:flex-col lg:justify-between">
               <div className="max-w-[90%] md:max-w-xl">
-                <img className="hidden lg:block h-7" src="/jnpr.svg" alt="JNPR Studio" />
-                <h1 className="lg:mt-[120px] tracking-tight mb-16 lg:mb-12 text-2xl leading-[26px]">JNPR is a design and development studio based in Toronto.<br /><br />
+                <h1 className="lg:mt-[120px] tracking-tight mb-16 lg:mb-8 text-2xl leading-[26px]">JNPR is a design and development studio based in Toronto.<br /><br />
                 We build unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
-                <div className="mb-16 lg:mb-8 lg:mr-12 grid grid-cols-[auto_auto_max-content]">
-                  <h2 className="text-xs">Services:</h2>
+                <div className="mb-16 lg:mb-18 lg:mr-12 grid grid-cols-[auto_auto_max-content]">
+                  <h2 className="text-sm">Services:</h2>
                   <p className="text-xxs/3 font-source tracking-tightest text-gray-500">
                     Graphic Design<br />
                     Visual Identity<br />
@@ -248,20 +289,23 @@ export default function Home() {
                     Maintenance
                   </p>
                 </div>
+                <h2 className="hidden tracking-tight lg:block text-2xl leading-[26px] mb-8">Want to work together?</h2>
+                <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary lg:flex hidden">
+                  <SquarePen className="h-[18px] w-[18px] mr-2" />
+                  Contact Us
+                </a>
                 {/* <h2 className="hidden lg:block mb-8">Interested in working with JNPR?<br />Send us a message :)</h2>
                 <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:flex btn-primary flex"><SquarePen className="h-4 w-4 mr-2" /> Compose</a> */}
               </div>
-              <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:block link">hello@jnpr.studio</a>
             </div>
-            <div className="lg:mt-[126px] lg:mb-[404px]">
+            <div className="lg:mt-[145px] lg:mb-[404px]">
               {/* <h2 className="text-xs mb-2">Projects</h2> */}
-              <Accordion type="multiple" defaultValue={["item-0"]} className="mb-12">
+              <Accordion type="multiple" defaultValue={["item-0"]} className="mb-12 border-t border-b border-solid border-black">
                 {projects.map((project, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border-b border-solid border-black">
-                    <AccordionTrigger className="text-sm font-normal py-2 lg:py-1 text-left">
+                  <AccordionItem key={index} value={`item-${index}`} className="border-b last:border-b-0 border-solid border-black">
+                    <AccordionTrigger className="text-sm/none font-normal py-2 text-left">
                       <div className="flex justify-between w-full">
                         <span>{project.name}</span>
-                        <span>{project.year}</span>
                       </div>
                     </AccordionTrigger>
                     <AccordionContent>
@@ -311,7 +355,7 @@ export default function Home() {
                               typeof item === "string" ? (
                                 item
                               ) : (
-                                <a key={i} href={item.link} target="_blank" className="link">
+                                <a key={i} href={item.link} target="_blank" className="link-primary">
                                   {item.text}
                                 </a>
                               )

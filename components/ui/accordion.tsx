@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
+import { ChevronDownIcon } from "@radix-ui/react-icons"
 import { Plus, Minus, Ellipsis, Dot } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -28,12 +29,7 @@ const AccordionTrigger = React.forwardRef(
           {...rest}
         >
           {children}
-          {/* <span className="ml-2 relative w-4 h-4">
-            <Ellipsis className="absolute inset-0 h-4 w-4 transition-opacity duration-200 group-data-[state=open]:opacity-0" />
-            <Dot className="absolute inset-0 h-4 w-4 opacity-0 transition-opacity duration-200 group-data-[state=open]:opacity-100" />
-            <Plus className="absolute inset-0 h-4 w-4 transition-opacity duration-200 group-data-[state=open]:opacity-0" />
-            <Minus className="absolute inset-0 h-4 w-4 opacity-0 transition-opacity duration-200 group-data-[state=open]:opacity-100" />
-          </span> */}
+          <ChevronDownIcon className="duration-200 transition-transform group-data-[state=open]:rotate-180" aria-hidden />
         </AccordionPrimitive.Trigger>
       </AccordionPrimitive.Header>
     )
