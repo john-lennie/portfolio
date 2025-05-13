@@ -242,7 +242,7 @@ export default function Home() {
               <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
               </div>
             <ul
-            className="flex gap-6 pt-6 pb-10 pr-6 pl-20"
+            className="flex gap-6 pt-6 pb-10 pr-6 lg:pr-4 pl-20"
             style={{
               backgroundColor: '#ffffffd9',
               WebkitMaskImage: `
