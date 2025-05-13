@@ -300,7 +300,7 @@ export default function Home() {
             </div>
             <div className="lg:mt-[145px] lg:mb-[404px]">
               {/* <h2 className="text-xs mb-2">Projects</h2> */}
-              <Accordion type="multiple" defaultValue={["item-0"]} className="mb-12 border-t border-b border-solid border-black">
+              <Accordion type="multiple" defaultValue={["item-0", "item-1", "item-2", "item-3", "item-4", "item-5", "item-6"]} className="mb-12 border-t border-b border-solid border-black">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`} className="border-b last:border-b-0 border-solid border-black">
                     <AccordionTrigger className="text-sm/none font-normal py-2 text-left">
