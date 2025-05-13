@@ -102,5 +102,5 @@ body {
 }
 
 .link-secondary {
-  @apply text-black hover:text-black text-sm/none;
+  @apply text-black hover:text-black text-sm/none underline;
 }
