@@ -298,8 +298,8 @@ export default function Home() {
             We build digital experiences and e&#8209;commerce solutions for global companies and local businesses.
           </h1>
           <div className="relative grid grid-cols-1 lg:grid-cols-[40%_60%]  box-border w-full animate-fade-in-slower-delay opacity-0">
-            <div className="mb-4 grid grid-cols-[35%_35%_30%_0%]">
-              <h2 className="text-xs/5 font-normal">Services:</h2>
+            <div className="mb-4 grid grid-cols-[35%_35%_30%_0%] h-max lg:sticky lg:top-20">
+              <h2 className="text-xs/5 font-normal italic">Our Services:</h2>
               <p className="text-xs/5 font-normal">
                 Graphic Design<br />
                 Visual Identity<br />
@@ -313,7 +313,7 @@ export default function Home() {
               <p></p>
             </div>
             <div className="lg:pl-16">
-              <h2 className="text-xs/6 font-normal mb-[0.625rem]">Work:</h2>
+              <h2 className="text-xs/6 font-normal mb-[0.625rem] italic">Our Work:</h2>
               <Accordion type="single" className="mb-12">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
@@ -323,7 +323,7 @@ export default function Home() {
                       <p className="whitespace-pre-line text-xs/5 font-normal text-right pr-3 lg:pr-4">{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4 lg:mb-1 lg:mt-4 mt-2 mb-0">
+                      <div className="space-y-4 lg:mt-4 mt-2 mb-1">
                         <Carousel className="relative w-full py-2" orientation="horizontal">
                           <CarouselContent>
                           {project.images && project.images.map((image, imgIndex) => (
