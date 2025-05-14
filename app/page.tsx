@@ -298,7 +298,7 @@ export default function Home() {
             </div>
             <div>
               <h2 className="text-xs/6 font-normal">Work:</h2>
-              <Accordion type="multiple" defaultValue={["item-0"]} className="mb-12">
+              <Accordion type="single" defaultValue="item-0" className="mb-12">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal py-1.5 text-left">
