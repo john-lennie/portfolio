@@ -307,7 +307,7 @@ export default function Home() {
                       <p>{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4 mt-4 mb-4">
+                      <div className="space-y-4 mt-4 mb-2 lg:mb-4">
                         <Carousel className="relative w-full py-2" orientation="horizontal">
                           <CarouselContent>
                           {project.images && project.images.map((image, imgIndex) => (
