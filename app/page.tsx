@@ -30,7 +30,7 @@ const projects = [
       "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4"
     ],
     description: [
-      "Worked with the various brands & teams at VF Corp to develop experiential landing pages as they onboarded their brands to a new Nuxt.js powered framework.",
+      "Worked with the VF Digital Technology team to develop experiential landing pages for VF's brands as they onboarded to a multi-brand Nuxt.js framework.",
     ],
     serviceTags: "Front-End Development",
     stackTags: {
@@ -39,7 +39,7 @@ const projects = [
   },
   {
     name: "Faces Of Another",
-    year: "2023 - 2025",
+    year: "2022 - 2025",
     type: "UI Design\nFE Development",
     images: [
       {
@@ -65,7 +65,7 @@ const projects = [
         link: "https://facesofanother.com/" 
       },
     ],
-    serviceTags: "UX Design\nFront-End Development\nData & Analytics\nMaintenance",
+    serviceTags: "UI Design\nFront-End Development\nData & Analytics\nMaintenance",
     stackTags: {
       cms: "Sanity",
       commerce: "Shopify",
@@ -102,7 +102,7 @@ const projects = [
     description: [
       "New visual identity and website for Los Angeles based film production company North of Now."
     ],
-    serviceTags: "Graphic Design\nVisual Identity\nUX Design\nFront-End Development",
+    serviceTags: "Graphic Design\nVisual Identity\nUI Design\nFront-End Development",
     stackTags: {
       cms: "Prismic",
       frontEnd: "Next.js",
@@ -154,7 +154,7 @@ const projects = [
   },
   {
     name: "Susan for Susan",
-    year: "2022",
+    year: "2021",
     type: "FE Development",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/downloads/default.mp4"],
     images: [
@@ -297,21 +297,22 @@ export default function Home() {
             JNPR is a design and development studio based in Toronto.<br /><br />
             We build digital experiences and e&#8209;commerce solutions for global companies and local businesses.
           </h1>
-          <div className="relative grid grid-cols-1 lg:grid-cols-[40%_60%] md:gap-16 gap-0   animate-fade-in-slower-delay opacity-0">
-            <div className="mb-4 grid grid-cols-[35%_35%_max-content]">
+          <div className="relative grid grid-cols-1 lg:grid-cols-[40%_60%]  box-border w-full animate-fade-in-slower-delay opacity-0">
+            <div className="mb-4 grid grid-cols-[35%_35%_30%_0%]">
               <h2 className="text-xs/5 font-normal">Services:</h2>
               <p className="text-xs/5 font-normal">
                 Graphic Design<br />
                 Visual Identity<br />
-                UX Design<br />
+                UI Design<br />
               </p>
               <p className="text-xs/5 font-normal">
                 FE Development<br />
                 Data & Analytics<br />
                 Maintenance
               </p>
+              <p></p>
             </div>
-            <div>
+            <div className="lg:pl-16">
               <h2 className="text-xs/6 font-normal mb-[0.625rem]">Work:</h2>
               <Accordion type="single" className="mb-12">
                 {projects.map((project, index) => (
@@ -319,10 +320,10 @@ export default function Home() {
                     <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal py-1.5 text-left">
                       <p className="whitespace-pre-line text-xs/5 font-normal">{project.name}</p>
                       <p className="whitespace-pre-line text-xs/5 font-normal">{project.type}</p>
-                      <p className="whitespace-pre-line text-xs/5 font-normal">{project.year}</p>
+                      <p className="whitespace-pre-line text-xs/5 font-normal text-right pr-3 lg:pr-4">{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4 mt-4 mb-2 lg:mb-4">
+                      <div className="space-y-4 lg:mb-1 lg:mt-4 mt-2 mb-0">
                         <Carousel className="relative w-full py-2" orientation="horizontal">
                           <CarouselContent>
                           {project.images && project.images.map((image, imgIndex) => (
