@@ -30,7 +30,7 @@ const projects = [
       "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4"
     ],
     description: [
-      "Worked with the VF Digital Technology team to develop experiential landing pages for VF's brands as they onboarded to a multi-brand Nuxt.js framework.",
+      "Worked with the VF Digital Technology team to develop experiential landing pages for VF brands as they onboarded to a multi-brand Nuxt.js framework.",
     ],
     serviceTags: "Front-End Development",
     stackTags: {
