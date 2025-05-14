@@ -293,7 +293,7 @@ export default function Home() {
           </div>
         </header>
         <main className="container py-16">
-          <h1 className="lg:mt-18 2xl:text-4xl xl:text-4xl lg:text-3xl mt-12 tracking-tight mb-20 2xl:mb-24 text-2xl leading-[26px] animate-fade-in-slow-delay opacity-0 max-w-[90%]">
+          <h1 className="lg:mt-18 2xl:text-4xl xl:text-4xl lg:text-3xl mt-12 tracking-tight mb-20 2xl:mb-24 text-2xl leading-[26px] animate-fade-in-slow-delay opacity-0 max-w-[90%] lg:max-w-[40%]">
             JNPR is a design and development studio based in Toronto.<br /><br />
             We build digital experiences and e&#8209;commerce solutions for global companies and local businesses.
           </h1>

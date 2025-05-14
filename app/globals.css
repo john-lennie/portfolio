@@ -95,7 +95,7 @@ body {
 }
 
 .container {
-  @apply lg:px-36 md:px-24 px-4 w-full max-w-none;
+  @apply lg:px-32 md:px-24 px-4 w-full max-w-none;
 }
 
 .btn-primary {
