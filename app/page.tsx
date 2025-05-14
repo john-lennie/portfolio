@@ -278,13 +278,13 @@ export default function Home() {
           </div>
         </header>
         <main className="container py-16">
-          <h1 className="lg:mt-24 lg:text-6xl md:text-4xl mt-12 tracking-tight mb-16 lg:mb-22 2xl:mb-36 text-2xl leading-[26px] animate-fade-in-slow-delay opacity-0">
+          <h1 className="lg:mt-18 2xl:text-4xl xl:text-4xl lg:text-3xl mt-12 tracking-tight mb-20 2xl:mb-24 text-2xl leading-[26px] animate-fade-in-slow-delay opacity-0 max-w-[90%]">
             JNPR is a design and development studio based in Toronto.<br /><br />
             We build digital experiences and e&#8209;commerce solutions for global companies and local businesses.
           </h1>
-          <div className="relative grid grid-cols-1 lg:grid-cols-2 animate-fade-in-slower-delay opacity-0">
-            <div className="mb-16 lg:mb-18 grid grid-cols-[35%_35%_max-content]">
-              <h2 className="text-xs font-normal">Services:</h2>
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 md:gap-12 gap-0   animate-fade-in-slower-delay opacity-0">
+            <div className="mb-4 grid grid-cols-[35%_35%_max-content]">
+              <h2 className="text-xs/6 font-normal">Services:</h2>
               <p className="text-xs/6 font-normal">
                 Graphic Design<br />
                 Visual Identity<br />
@@ -297,8 +297,8 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h2 className="text-xs/6 font-normal">Work:</h2>
-              <Accordion type="single" defaultValue="item-0" className="mb-12">
+              <h2 className="text-xs/6 font-normal lg:mb-6 mb-5">Work:</h2>
+              <Accordion type="single" className="mb-12">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal py-1.5 text-left">
@@ -369,7 +369,7 @@ export default function Home() {
                               <p className="whitespace-nowrap">Framework:</p>
                             }
                             {project.stackTags.commerce &&
-                              <p className="whitespace-nowrap">eCommerce:</p>
+                              <p className="whitespace-nowrap">E-Commerce:</p>
                             }
                             {project.stackTags.deployment &&
                               <p className="whitespace-nowrap">PAAS:</p>
