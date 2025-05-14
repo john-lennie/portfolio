@@ -23,9 +23,24 @@ import { GlobalStyles } from "@/components/GlobalStyles"
 
 const projects = [
   {
+    name: "VF Corporation",
+    year: "2022 - 2025",
+    type: "FE Development",
+    mobileVideos: [
+      "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4"
+    ],
+    description: [
+      "Worked with the various brands & teams at VF Corp to develop experiential landing pages as they onboarded their brands to a new Nuxt.js powered framework.",
+    ],
+    serviceTags: "Front-End Development",
+    stackTags: {
+      frontEnd: "Nuxt.js"
+    },
+  },
+  {
     name: "Faces Of Another",
     year: "2023 - 2025",
-    type: "Website",
+    type: "UI Design\nFE Development",
     images: [
       {
         src: "/faces-of-another/foa-2.png",
@@ -61,7 +76,7 @@ const projects = [
   {
     name: "North of Now",
     year: "2023",
-    type: "Website",
+    type: "Graphic Design\nUI Design\nFE Development",
     mobileVideos: [
       "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
       "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/63a1f5c62792f9d1b14507c55cf1ea5b/downloads/default.mp4",
@@ -97,7 +112,7 @@ const projects = [
   {
     name: "Basma Beauty",
     year: "2022",
-    type: "Website",
+    type: "FE Development",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"],
     images: [
       {
@@ -122,7 +137,7 @@ const projects = [
   {
     name: "Full Court Press",
     year: "2022",
-    type: "Website",
+    type: "FE Development",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
     description: [
       "Front-End Development for New York-based clothing line/publishing house Full Court Press.\n\nUX by ",
@@ -140,7 +155,7 @@ const projects = [
   {
     name: "Susan for Susan",
     year: "2022",
-    type: "Website",
+    type: "FE Development",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/downloads/default.mp4"],
     images: [
       {
@@ -165,7 +180,7 @@ const projects = [
   {
     name: "Club Dieciséis",
     year: "2021",
-    type: "Website",
+    type: "FE Development",
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
     description: [
       "Front-End Development for Puerto Rican artist Tainy.\n\nUX by ",
@@ -183,7 +198,7 @@ const projects = [
   {
     name: "Norman Wong",
     year: "2021",
-    type: "Website",
+    type: "FE Development",
     images: [
       {
         src: "/norman-wong/1.png",
@@ -282,29 +297,29 @@ export default function Home() {
             JNPR is a design and development studio based in Toronto.<br /><br />
             We build digital experiences and e&#8209;commerce solutions for global companies and local businesses.
           </h1>
-          <div className="relative grid grid-cols-1 lg:grid-cols-2 md:gap-12 gap-0   animate-fade-in-slower-delay opacity-0">
+          <div className="relative grid grid-cols-1 lg:grid-cols-[40%_60%] md:gap-16 gap-0   animate-fade-in-slower-delay opacity-0">
             <div className="mb-4 grid grid-cols-[35%_35%_max-content]">
-              <h2 className="text-xs/6 font-normal">Services:</h2>
-              <p className="text-xs/6 font-normal">
+              <h2 className="text-xs/5 font-normal">Services:</h2>
+              <p className="text-xs/5 font-normal">
                 Graphic Design<br />
                 Visual Identity<br />
                 UX Design<br />
               </p>
-              <p className="text-xs/6 font-normal">
+              <p className="text-xs/5 font-normal">
                 FE Development<br />
                 Data & Analytics<br />
                 Maintenance
               </p>
             </div>
             <div>
-              <h2 className="text-xs/6 font-normal lg:mb-6 mb-5">Work:</h2>
+              <h2 className="text-xs/6 font-normal mb-[0.625rem]">Work:</h2>
               <Accordion type="single" className="mb-12">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal py-1.5 text-left">
-                      <p>{project.name}</p>
-                      <p>{project.type}</p>
-                      <p>{project.year}</p>
+                      <p className="whitespace-pre-line text-xs/5 font-normal">{project.name}</p>
+                      <p className="whitespace-pre-line text-xs/5 font-normal">{project.type}</p>
+                      <p className="whitespace-pre-line text-xs/5 font-normal">{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-4 mt-4 mb-2 lg:mb-4">
