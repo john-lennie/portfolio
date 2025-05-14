@@ -4,6 +4,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+
 }
 
 @layer utilities {
@@ -93,12 +94,16 @@ body {
   }
 }
 
+.container {
+  @apply lg:px-36 md:px-24 px-4 w-full max-w-none;
+}
+
 .btn-primary {
   @apply w-fit items-center px-3 py-2 lg:px-4 lg:py-2.5 bg-blue-700 text-white text-sm/none lg:text-base/none leading-[14px] rounded-full hover:bg-blue-700 transition duration-300;
 }
 
 .link-primary {
-  @apply text-blue-700 underline hover:text-blue-700 text-sm;
+  @apply text-blue-700 underline hover:text-blue-700;
 }
 
 .link-secondary {

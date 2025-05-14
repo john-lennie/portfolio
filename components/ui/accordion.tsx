@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { ChevronDownIcon } from "@radix-ui/react-icons"
+import { ChevronDownIcon, ArrowDownIcon } from "@radix-ui/react-icons"
 import { Plus, Minus, Ellipsis, Dot } from "lucide-react"
 import { cn } from "@/lib/utils"
 
@@ -23,13 +23,18 @@ const AccordionTrigger = React.forwardRef(
         <AccordionPrimitive.Trigger
           ref={ref}
           className={cn(
-            "group flex flex-1 items-center justify-between py-4 font-bold transition-all",
+            "group transition-all",
             className
           )}
           {...rest}
         >
           {children}
-          <ChevronDownIcon className="duration-200 transition-transform group-data-[state=open]:rotate-180" aria-hidden />
+          {/* <ArrowDownIcon className="duration-200 h-3 transition-transform group-data-[state=open]:rotate-180" aria-hidden /> */}
+          {/* <ChevronDownIcon className="duration-200 h-3 transition-transform group-data-[state=open]:rotate-180" aria-hidden /> */}
+          <span className="ml-2 relative w-3 h-3">
+            <Plus className="absolute inset-0 h-3 w-3 transition-opacity duration-200 group-data-[state=open]:opacity-0" />
+            <Minus className="absolute inset-0 h-3 w-3 opacity-0 transition-opacity duration-200 group-data-[state=open]:opacity-100" />
+          </span>
         </AccordionPrimitive.Trigger>
       </AccordionPrimitive.Header>
     )

@@ -25,6 +25,7 @@ const projects = [
   {
     name: "Faces Of Another",
     year: "2023 - 2025",
+    type: "Website",
     images: [
       {
         src: "/faces-of-another/foa-2.png",
@@ -60,6 +61,7 @@ const projects = [
   {
     name: "North of Now",
     year: "2023",
+    type: "Website",
     mobileVideos: [
       "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
       "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/63a1f5c62792f9d1b14507c55cf1ea5b/downloads/default.mp4",
@@ -95,6 +97,7 @@ const projects = [
   {
     name: "Basma Beauty",
     year: "2022",
+    type: "Website",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"],
     images: [
       {
@@ -119,6 +122,7 @@ const projects = [
   {
     name: "Full Court Press",
     year: "2022",
+    type: "Website",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
     description: [
       "Front-End Development for New York-based clothing line/publishing house Full Court Press.\n\nUX by ",
@@ -136,6 +140,7 @@ const projects = [
   {
     name: "Susan for Susan",
     year: "2022",
+    type: "Website",
     mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/downloads/default.mp4"],
     images: [
       {
@@ -160,6 +165,7 @@ const projects = [
   {
     name: "Club Dieciséis",
     year: "2021",
+    type: "Website",
     desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
     description: [
       "Front-End Development for Puerto Rican artist Tainy.\n\nUX by ",
@@ -177,6 +183,7 @@ const projects = [
   {
     name: "Norman Wong",
     year: "2021",
+    type: "Website",
     images: [
       {
         src: "/norman-wong/1.png",
@@ -213,7 +220,7 @@ export default function Home() {
       <div className="min-h-screen text-black mb-[200px] lg:mb-0">
         <GlobalStyles />
         <header
-          className={"fixed z-[2] w-full md:px-12 duration-300 lg:px-36 " + (direction === 'down' ? '-top-[60px] lg:top-0' : 'top-0')}
+          className={"container fixed z-[2] duration-300 " + (direction === 'down' ? '-top-[60px] lg:top-0' : 'top-0')}
           style={{
             backgroundColor: 'transparent',
             backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
@@ -224,35 +231,35 @@ export default function Home() {
         >
           <div className="relative z-50 flex justify-between items-center animate-fade-in-slow">
             <div
-            className="pt-4 pb-8 pr-12 pl-4 lg:pl-0"
+            className="pt-4 pb-8 pr-12 md:pl-0"
             style={{
               backgroundColor: '#fff',
               WebkitMaskImage: `
                 linear-gradient(to right, black, black 50%, transparent 100%),
-                linear-gradient(to top, transparent, black 50%, black 100%);
+                linear-gradient(to top, transparent, black 50%, black 100%)
               `,
               WebkitMaskComposite: 'intersect',
               maskImage: `
                 linear-gradient(to right, black, black 50%, transparent 100%),
-                linear-gradient(to top, transparent, black 50%, black 100%);
+                linear-gradient(to top, transparent, black 50%, black 100%)
               `,
               maskComposite: 'intersect'
             }}
             >
               <img className="h-7" src="/jnpr.svg" alt="JNPR Studio" />
               </div>
-            <ul
-            className="flex gap-6 pt-6 pb-10 pr-6 lg:pr-0 pl-20"
+            {/* <ul
+            className="flex gap-6 pt-6 pb-10 pr-6 md:pr-0 pl-20"
             style={{
               backgroundColor: '#ffffffd9',
               WebkitMaskImage: `
                 linear-gradient(to right, transparent, black 50%, black 100%),
-                linear-gradient(to top, transparent, black 40%, black 100%);
+                linear-gradient(to top, transparent, black 40%, black 100%)
               `,
               WebkitMaskComposite: 'intersect',
               maskImage: `
                 linear-gradient(to right, transparent, black 50%, black 100%),
-                linear-gradient(to top, transparent, black 40%, black 100%);
+                linear-gradient(to top, transparent, black 40%, black 100%)
               `,
               maskComposite: 'intersect'
             }}
@@ -267,49 +274,40 @@ export default function Home() {
                   Contact
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </div>
         </header>
-        <main className="relative z-[1] px-4 bg-white pt-24 pb-4 lg:pb-0 md:px-12 lg:px-36 lg:pt-0">
-          <div className="grid lg:grid-cols-2 lg:gap-12 w-full animate-fade-in-slow-delay opacity-0">
-            <div className="lg:sticky lg:top-0 lg:py-6 lg:h-screen lg:flex lg:flex-col lg:justify-between">
-              <div className="max-w-[90%] md:max-w-xl">
-                <h1 className="lg:mt-[120px] tracking-tight mb-16 text-2xl leading-[26px]">JNPR is a design and development studio based in Toronto.<br /><br />
-                We build unique digital experiences and e&#8209;commerce solutions for global companies and local businesses.</h1>
-                <div className="mb-16 lg:mb-18 lg:mr-12 grid grid-cols-[auto_auto_max-content]">
-                  <h2 className="text-xxs/3 font-source tracking-tightest text-gray-500">Services:</h2>
-                  <p className="text-xxs/3 font-source tracking-tightest text-gray-500">
-                    Graphic Design<br />
-                    Visual Identity<br />
-                    UX Design<br />
-                  </p>
-                  <p className="text-xxs/3 font-source tracking-tightest text-gray-500">
-                    Front-End Development<br />
-                    Data & Analytics<br />
-                    Maintenance
-                  </p>
-                </div>
-                {/* <h2 className="hidden tracking-tight lg:block text-2xl leading-[26px] mb-8">Want to work together?</h2>
-                <a href="mailto:hello@jnpr.studio" target="_blank" className="btn-primary lg:flex hidden">
-                  <SquarePen className="h-[18px] w-[18px] mr-2" />
-                  Contact Us
-                </a> */}
-                {/* <h2 className="hidden lg:block mb-8">Interested in working with JNPR?<br />Send us a message :)</h2>
-                <a href="mailto:hello@jnpr.studio" target="_blank" className="hidden lg:flex btn-primary flex"><SquarePen className="h-4 w-4 mr-2" /> Compose</a> */}
-              </div>
+        <main className="container py-16">
+          <h1 className="lg:mt-24 lg:text-6xl md:text-4xl mt-12 tracking-tight mb-16 lg:mb-22 2xl:mb-36 text-2xl leading-[26px] animate-fade-in-slow-delay opacity-0">
+            JNPR is a design and development studio based in Toronto.<br /><br />
+            We build digital experiences and e&#8209;commerce solutions for global companies and local businesses.
+          </h1>
+          <div className="relative grid grid-cols-1 lg:grid-cols-2 animate-fade-in-slower-delay opacity-0">
+            <div className="mb-16 lg:mb-18 grid grid-cols-[35%_35%_max-content]">
+              <h2 className="text-xs font-normal">Services:</h2>
+              <p className="text-xs/6 font-normal">
+                Graphic Design<br />
+                Visual Identity<br />
+                UX Design<br />
+              </p>
+              <p className="text-xs/6 font-normal">
+                FE Development<br />
+                Data & Analytics<br />
+                Maintenance
+              </p>
             </div>
-            <div className="lg:mt-[145px] lg:mb-[404px]">
-              {/* <h2 className="text-xs mb-2">Projects</h2> */}
-              <Accordion type="multiple" defaultValue={["item-0", "item-1", "item-2", "item-3", "item-4", "item-5", "item-6"]} className="mb-12 border-t border-b border-solid border-black">
+            <div>
+              <h2 className="text-xs/6 font-normal mb-4">Work:</h2>
+              <Accordion type="multiple" className="mb-12">
                 {projects.map((project, index) => (
-                  <AccordionItem key={index} value={`item-${index}`} className="border-b last:border-b-0 border-solid border-black">
-                    <AccordionTrigger className="text-sm/none font-normal py-2 text-left">
-                      <div className="flex justify-between w-full">
-                        <span>{project.name}</span>
-                      </div>
+                  <AccordionItem key={index} value={`item-${index}`}>
+                    <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal py-1.5 text-left">
+                      <p>{project.name}</p>
+                      <p>{project.type}</p>
+                      <p>{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4 mb-2">
+                      <div className="space-y-4 mt-4 mb-2">
                         <Carousel className="relative w-full py-2" orientation="horizontal">
                           <CarouselContent>
                           {project.images && project.images.map((image, imgIndex) => (
@@ -350,7 +348,7 @@ export default function Home() {
                           <CarouselNext variant="quiet" />
                         </Carousel>
                         {project.description &&
-                          <p className="text-sm font-normal whitespace-pre-line leading-[1.1rem]">
+                          <p className="text-xs font-normal whitespace-pre-line leading-[1.1rem]">
                             {project.description.map((item, i) =>
                               typeof item === "string" ? (
                                 item
@@ -362,7 +360,7 @@ export default function Home() {
                             )}
                           </p>
                         }
-                        <div className="grid grid-cols-[auto_max-content_max-content] gap-4">
+                        <div className="grid grid-cols-[70%_auto_max-content]">
                           {project.serviceTags &&
                             <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.serviceTags}</p>
                           }
@@ -401,14 +399,12 @@ export default function Home() {
                 ))}
               </Accordion>
             </div>
-            {/* <h2 className="text-xs uppercase mb-2">Clients:</h2>
-            <p className="text-xs">VF Corporation (The North Face, Timberland, Vans)</p> */}
           </div>
         </main>
       </div>
-      <div className="block lg:hidden text-center animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-8 lg:pb-4 lg:pt-36 lg:text-left">
+      {/* <div className="block lg:hidden text-center animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-8 lg:pb-4 lg:pt-36 lg:text-left">
         <a href="mailto:hello@jnpr.studio" target="_blank" className="link">hello@jnpr.studio</a>
-      </div>
+      </div> */}
     </div>
   )
 }
