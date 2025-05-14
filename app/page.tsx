@@ -297,8 +297,8 @@ export default function Home() {
               </p>
             </div>
             <div>
-              <h2 className="text-xs/6 font-normal mb-4">Work:</h2>
-              <Accordion type="multiple" className="mb-12">
+              <h2 className="text-xs/6 font-normal">Work:</h2>
+              <Accordion type="multiple" defaultValue={["item-0"]} className="mb-12">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal py-1.5 text-left">
@@ -307,7 +307,7 @@ export default function Home() {
                       <p>{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4 mt-4 mb-2">
+                      <div className="space-y-4 mt-4 mb-4">
                         <Carousel className="relative w-full py-2" orientation="horizontal">
                           <CarouselContent>
                           {project.images && project.images.map((image, imgIndex) => (
