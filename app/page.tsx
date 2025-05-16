@@ -16,8 +16,8 @@ import {
   CarouselNext,
   CarouselNavigation
 } from "@/components/ui/carousel"
-import { Button } from "@/components/ui/button"
-import { SquarePen } from "lucide-react"
+import { EnvelopeClosedIcon } from "@radix-ui/react-icons"
+import CopyButton from '@/components/ui/copyButton';
 import Image from "next/image"
 import { GlobalStyles } from "@/components/GlobalStyles"
 
@@ -101,12 +101,6 @@ const projects = [
       {
         type: "mobileVideo",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"
-      },
-      {
-        type: "image",
-        src: "/north-of-now/non-4.png",
-        width: 1500,
-        height: 954
       }
     ],
     description: [
@@ -262,7 +256,7 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <div className="min-h-screen text-black mb-[200px] lg:mb-0">
+      <div className="min-h-screen text-black">
         <GlobalStyles />
         <header
           className={"container fixed z-[2] duration-300 " + (direction === 'down' ? '-top-[60px] lg:top-0' : 'top-0')}
@@ -444,6 +438,13 @@ export default function Home() {
               </Accordion>
             </div>
           </div>
+          <section className="max-w-96">
+            <p className="text-xs/5 flex items-center">
+              {/* <EnvelopeClosedIcon className="h-3 mr-1" /> */}
+              hello@jnpr.studio
+              <CopyButton textToCopy="hello@jnpr.studio" />
+            </p>
+          </section>
         </main>
       </div>
       {/* <div className="block lg:hidden text-center animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-8 lg:pb-4 lg:pt-36 lg:text-left">

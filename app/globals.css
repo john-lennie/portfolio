@@ -94,8 +94,17 @@ body {
   }
 }
 
+.formspree-error::before,
+.formspree-error-icon {
+  display: none !important;
+}
+
 .container {
   @apply lg:px-32 md:px-24 px-4 w-full max-w-none;
+}
+
+.field {
+  @apply w-full px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition;
 }
 
 .btn-primary {
