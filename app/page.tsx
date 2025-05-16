@@ -26,8 +26,17 @@ const projects = [
     name: "VF Corporation",
     year: "2022 - 2025",
     type: "FE Development",
-    mobileVideos: [
-      "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4"
+    media: [
+      {
+        type: "image",
+        src: "/vf-corp/tnf_history_1.png",
+        width: 1500,
+        height: 954
+      },
+      {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4"
+      }
     ],
     description: [
       "Worked with the VF Digital Technology team to develop experiential landing pages for VF brands as they onboarded to a multi-brand Nuxt.js framework.",
@@ -38,24 +47,15 @@ const projects = [
     },
   },
   {
-    name: "Faces Of Another",
+    name: "Faces Of Another", 
     year: "2022 - 2025",
-    type: "UI Design\nFE Development",
-    images: [
+    type: "UI Design\nFE Development\nData & Analytics",
+    media: [
       {
-        src: "/faces-of-another/foa-2.png",
+        type: "image",
+        src: "/faces-of-another/foa-5.png",
         width: 1500,
-        height: 860
-      },
-      {
-        src: "/faces-of-another/foa-3.png",
-        width: 1500,
-        height: 860
-      },
-      {
-        src: "/faces-of-another/foa-4.png",
-        width: 1500,
-        height: 860
+        height: 1068
       }
     ],
     description: [
@@ -75,25 +75,35 @@ const projects = [
   },
   {
     name: "North of Now",
-    year: "2023",
+    year: "2022",
     type: "Graphic Design\nUI Design\nFE Development",
-    mobileVideos: [
-      "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
-      "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/63a1f5c62792f9d1b14507c55cf1ea5b/downloads/default.mp4",
-      "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"
-    ],
-    images: [
+    media: [
       {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
+      },
+      {
+        type: "image",
         src: "/north-of-now/non-3.png",
         width: 1500,
         height: 1131
       },
       {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/63a1f5c62792f9d1b14507c55cf1ea5b/downloads/default.mp4",
+      },
+      {
+        type: "image",
         src: "/north-of-now/non-1.png",
         width: 1500,
         height: 860
       },
       {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"
+      },
+      {
+        type: "image",
         src: "/north-of-now/non-4.png",
         width: 1500,
         height: 954
@@ -113,9 +123,13 @@ const projects = [
     name: "Basma Beauty",
     year: "2022",
     type: "FE Development",
-    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"],
-    images: [
+    media: [
       {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"
+      },
+      {
+        type: "image",
         src: "/basma/bb-d.png",
         width: 1000,
         height: 761
@@ -138,7 +152,12 @@ const projects = [
     name: "Full Court Press",
     year: "2022",
     type: "FE Development",
-    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"],
+    media: [
+      {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"
+      }
+    ],
     description: [
       "Front-End Development for New York-based clothing line/publishing house Full Court Press.\n\nUI Design by ",
       { 
@@ -153,12 +172,41 @@ const projects = [
     },
   },
   {
+    name: "Norman Wong",
+    year: "2021 - 2022",
+    type: "FE Development\nMaintenance",
+    media: [
+      {
+        type: "image",
+        src: "/norman-wong/1.png",
+        width: 800,
+        height: 487
+      },
+      {
+        type: "image",
+        src: "/norman-wong/3.png",
+        width: 800,
+        height: 487
+      }
+    ],
+    description: [
+      "Front-End Development for Toronto-based photographer Norman Wong."
+    ],
+    serviceTags: "Front-End Development",
+    stackTags: {
+    },
+  },
+  {
     name: "Susan for Susan",
     year: "2021",
     type: "FE Development",
-    mobileVideos: ["https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/downloads/default.mp4"],
-    images: [
+    media: [
       {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/downloads/default.mp4"
+      },
+      {
+        type: "image",
         src: "/susan-for-susan/1.png",
         width: 1000,
         height: 652
@@ -181,7 +229,12 @@ const projects = [
     name: "Club Dieciséis",
     year: "2021",
     type: "FE Development",
-    desktopVideo: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4",
+    media: [
+      {
+        type: "desktopVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4"
+      }
+    ],
     description: [
       "Front-End Development for Puerto Rican artist Tainy.\n\nUI Design by ",
       { 
@@ -194,30 +247,7 @@ const projects = [
     stackTags: {
       commerce: "Shopify"
     },
-  },
-  {
-    name: "Norman Wong",
-    year: "2021",
-    type: "FE Development",
-    images: [
-      {
-        src: "/norman-wong/1.png",
-        width: 800,
-        height: 487
-      },
-      {
-        src: "/norman-wong/3.png",
-        width: 800,
-        height: 487
-      }
-    ],
-    description: [
-      "Front-End Development for Toronto-based photographer Norman Wong."
-    ],
-    serviceTags: "Front-End Development",
-    stackTags: {
-    },
-  },
+  }
 ]
 
 export default function Home() {
@@ -299,7 +329,7 @@ export default function Home() {
           </h1>
           <div className="relative grid grid-cols-1 lg:grid-cols-[40%_60%]  box-border w-full animate-fade-in-slower-delay opacity-0">
             <div className="mb-4 grid grid-cols-[35%_35%_30%_0%] h-max lg:sticky lg:top-20">
-              <h2 className="text-xs/5 font-normal italic">Our Services:</h2>
+              <h2 className="text-xs/5 font-normal italic">Services:</h2>
               <p className="text-xs/5 font-normal">
                 Graphic Design<br />
                 Visual Identity<br />
@@ -313,52 +343,50 @@ export default function Home() {
               <p></p>
             </div>
             <div className="lg:pl-16">
-              <h2 className="text-xs/6 font-normal mb-[0.625rem] italic">Our Work:</h2>
-              <Accordion type="single" className="mb-12">
+              <h2 className="text-xs/6 font-normal mb-[0.625rem] italic">Work:</h2>
+              <Accordion type="single" collapsible className="mb-12">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal py-1.5 text-left">
                       <p className="whitespace-pre-line text-xs/5 font-normal">{project.name}</p>
                       <p className="whitespace-pre-line text-xs/5 font-normal">{project.type}</p>
-                      <p className="whitespace-pre-line text-xs/5 font-normal text-right pr-3 lg:pr-4">{project.year}</p>
+                      <p className="whitespace-pre-line text-xs/5 font-normal text-right pr-2">{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-4 lg:mt-4 mt-2 mb-1">
                         <Carousel className="relative w-full py-2" orientation="horizontal">
                           <CarouselContent>
-                          {project.images && project.images.map((image, imgIndex) => (
-                            <CarouselItem key={imgIndex}>
-                              <div className="flex justify-center items-center h-full">
-                                <Image
-                                  width={image.width}
-                                  height={image.height}
-                                  className="w-full"
-                                  src={image.src || "/placeholder.svg"}
-                                  alt={`${project.name} screenshot ${imgIndex + 1}`}
-                                />
-                              </div>
-                            </CarouselItem>
-                          ))}
-                          {project.mobileVideos && project.mobileVideos.map((video, videoIndex) => (
-                              <CarouselItem key={videoIndex}>
+                          {project.media.map((item, itemIndex) => (
+                            <CarouselItem key={itemIndex}>
+                              {item.type === "image" && (
+                                <div className="flex justify-center items-center h-full">
+                                  <Image
+                                    width={item.width}
+                                    height={item.height}
+                                    className="w-full"
+                                    src={item.src || "/placeholder.svg"}
+                                    alt={`${project.name} screenshot ${itemIndex + 1}`}
+                                  />
+                                </div>
+                              )}
+                              {item.type === "mobileVideo" && (
                                 <div className="flex justify-center items-center h-full">
                                   <div className="aspect-w-16 aspect-h-9 w-1/2 lg:w-1/3">
-                                    <video src={video} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                                    <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
                                       Your browser does not support the video tag.
                                     </video>
                                   </div>
                                 </div>
-                              </CarouselItem>
-                            ))}
-                            {project.desktopVideo &&
-                              <CarouselItem>
+                              )}
+                              {item.type === "desktopVideo" && (
                                 <div className="aspect-w-16 aspect-h-9">
-                                  <video src={project.desktopVideo} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                                  <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
                                     Your browser does not support the video tag.
                                   </video>
                                 </div>
-                              </CarouselItem>
-                            }
+                              )}
+                            </CarouselItem>
+                          ))}
                           </CarouselContent>
                           <CarouselNavigation />
                           <CarouselNext variant="quiet" />
