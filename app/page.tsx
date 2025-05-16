@@ -256,7 +256,7 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <div className="min-h-screen text-black">
+      <div className="min-h-screen text-black pb-16">
         <GlobalStyles />
         <header
           className={"container fixed z-[2] duration-300 " + (direction === 'down' ? '-top-[60px] lg:top-0' : 'top-0')}
