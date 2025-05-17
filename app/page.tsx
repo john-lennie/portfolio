@@ -39,7 +39,7 @@ const projects = [
       }
     ],
     description: [
-      "Worked with the VF Digital Technology team to develop experiential landing pages for VF brands as they onboarded to a multi-brand Nuxt.js framework.",
+      "Worked with the VF Digital Technology team to develop experiential landing pages for their brands(The North Face, Vans, Timberland) as they onboarded to a multi-brand Nuxt.js framework.",
     ],
     serviceTags: "Front-End Development",
     stackTags: {
