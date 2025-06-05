@@ -43,13 +43,13 @@ const projects = [
     ],
     serviceTags: "Front-End Development",
     stackTags: {
-      frontEnd: "Nuxt.js"
+      frontEnd: "Nuxt"
     },
   },
   {
     name: "Faces Of Another", 
     year: "2022 - 2025",
-    type: "UI Design\nFE Development\nData & Analytics",
+    type: "UI/UX Design\nFE Development\nData & Analytics",
     media: [
       {
         type: "image",
@@ -76,7 +76,7 @@ const projects = [
   {
     name: "North of Now",
     year: "2022",
-    type: "Graphic Design\nUI Design\nFE Development",
+    type: "Graphic Design\nUI/UX Design\nFE Development",
     media: [
       {
         type: "mobileVideo",
@@ -168,7 +168,7 @@ const projects = [
   {
     name: "Norman Wong",
     year: "2021 - 2022",
-    type: "FE Development\nMaintenance",
+    type: "FE Development",
     media: [
       {
         type: "image",
@@ -188,6 +188,7 @@ const projects = [
     ],
     serviceTags: "Front-End Development",
     stackTags: {
+      cms: "Craft",
     },
   },
   {
@@ -256,7 +257,7 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <div className="min-h-screen text-black pb-16">
+      <div className="min-h-screen text-black pb-2">
         <GlobalStyles />
         <header
           className={"container fixed z-[2] duration-300 " + (direction === 'down' ? '-top-[60px] lg:top-0' : 'top-0')}
@@ -316,25 +317,26 @@ export default function Home() {
             </ul> */}
           </div>
         </header>
-        <main className="container py-16">
-          <h1 className="lg:mt-18 2xl:text-4xl xl:text-4xl lg:text-3xl mt-12 tracking-tighter mb-20 2xl:mb-24 text-2xl leading-[26px] animate-fade-in-slow-delay opacity-0 max-w-[90%] lg:max-w-[40%]">
+        <main className="container pt-16">
+          <h1 className="lg:mt-18 2xl:text-4xl xl:text-4xl lg:text-3xl mt-12 tracking-tight mb-20 2xl:mb-24 text-2xl leading-[26px] animate-fade-in-slow-delay opacity-0 max-w-[90%] lg:max-w-[55%]">
             JNPR is a design and development studio based in Toronto.<br /><br />
-            We build digital experiences and e&#8209;commerce solutions for global companies and local businesses.
+            We specialize in building web-based digital marketing experiences & e&#8209;commerce solutions for global companies and local businesses.
           </h1>
-          <div className="relative grid grid-cols-1 lg:grid-cols-[40%_60%]  box-border w-full animate-fade-in-slower-delay opacity-0">
-            <div className="mb-4 grid grid-cols-[35%_35%_30%_0%] h-max lg:sticky lg:top-20">
-              <h2 className="text-xs/5 font-normal italic">Services:</h2>
-              <p className="text-xs/5 font-normal">
-                Graphic Design<br />
-                Visual Identity<br />
-                UI Design<br />
-              </p>
+          <div className="relative grid grid-cols-1 lg:grid-cols-[40%_60%]  box-border w-full animate-fade-in-slower-delay opacity-0 mb-4">
+            <div className="mb-12 grid grid-cols-[35%_35%_auto_max-content] h-max lg:sticky lg:top-20">
+              <h2 className="col-span-4 mb-[0.625rem] text-xs/5 font-normal italic">Services:</h2>
               <p className="text-xs/5 font-normal">
                 FE Development<br />
-                Data & Analytics<br />
-                Maintenance
+                CMS Development
               </p>
-              <p></p>
+              <p className="text-xs/5 font-normal">
+                Graphic Design<br />
+                UI/UX Design
+              </p>
+              <p className="text-xs/5 font-normal">
+              Visual Idenity<br />
+              Data & Analytics
+              </p>
             </div>
             <div className="lg:pl-16">
               <h2 className="text-xs/6 font-normal mb-[0.625rem] italic">Work:</h2>
@@ -344,10 +346,10 @@ export default function Home() {
                     <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal py-1.5 text-left">
                       <p className="whitespace-pre-line text-xs/5 font-normal">{project.name}</p>
                       <p className="whitespace-pre-line text-xs/5 font-normal">{project.type}</p>
-                      <p className="whitespace-pre-line text-xs/5 font-normal text-right pr-2">{project.year}</p>
+                      <p className="whitespace-pre-line text-xs/5 font-normal pr-2">{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4 lg:mt-4 mt-2 mb-1">
+                      <div className="space-y-4 lg:mt-4 mt-2 mt-1">
                         <Carousel className="relative w-full py-2" orientation="horizontal">
                           <CarouselContent>
                           {project.media.map((item, itemIndex) => (
@@ -398,16 +400,13 @@ export default function Home() {
                             )}
                           </p>
                         }
-                        <div className="grid grid-cols-[70%_auto_max-content]">
-                          {project.serviceTags &&
-                            <p className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">{project.serviceTags}</p>
-                          }
+                        <div className="grid grid-cols-[35%_35%_auto_max-content]">
                           <div className="text-xxs/3 text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
                             {project.stackTags.frontEnd &&
-                              <p className="whitespace-nowrap">Framework:</p>
+                              <p className="whitespace-nowrap">JS Framework:</p>
                             }
                             {project.stackTags.commerce &&
-                              <p className="whitespace-nowrap">E-Commerce:</p>
+                              <p className="whitespace-nowrap">E-Commerce Platform:</p>
                             }
                             {project.stackTags.deployment &&
                               <p className="whitespace-nowrap">PAAS:</p>
@@ -438,12 +437,8 @@ export default function Home() {
               </Accordion>
             </div>
           </div>
-          <section className="max-w-96">
-            <p className="text-xs/5 flex items-center">
-              {/* <EnvelopeClosedIcon className="h-3 mr-1" /> */}
-              hello@jnpr.studio
-              <CopyButton textToCopy="hello@jnpr.studio" />
-            </p>
+          <section className="lg:mb-12">
+            <CopyButton textToCopy="hello@jnpr.studio" />
           </section>
         </main>
       </div>

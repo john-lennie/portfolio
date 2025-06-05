@@ -11,13 +11,14 @@ function CopyButton({ textToCopy }: CopyButtonProps) {
   const handleCopy = () => {
     navigator.clipboard.writeText(textToCopy).then(() => {
       setCopied(true);
-      setTimeout(() => setCopied(false), 1000);
+      setTimeout(() => setCopied(false), 1500);
     });
   };
 
   return (
-    <button className='ml-1' onClick={handleCopy}>
-      {copied ? 'Copied.' : <CopyIcon  className='h-3 text-blue-700' />}
+    <button className='text-blue-700 text-[10vw] md:text-[9vw] flex items-center justify-between w-full' onClick={handleCopy}>
+      {copied ? 'Copied.' : textToCopy }
+      <CopyIcon  className='w-[10vw] h-[10vw] md:w-[9vw] md:h-[9vw]' />
     </button>
   );
 }
