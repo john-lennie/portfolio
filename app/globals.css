@@ -100,7 +100,7 @@ body {
 }
 
 .container {
-  @apply lg:px-32 md:px-24 px-4 w-full max-w-none;
+  @apply px-4 w-full max-w-none;
 }
 
 .field {
