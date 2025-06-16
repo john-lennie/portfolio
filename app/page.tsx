@@ -324,57 +324,60 @@ export default function Home() {
           </h1> */}
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24">
-              <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-[3vw] leading-[3.5vw] animate-fade-in-slow-delay opacity-0">
+              <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-base animate-fade-in-slow-delay opacity-0">
                 JNPR is a design & development studio based in Toronto.
               </h1>
-              <h2 className="col-span-3 mb-4 lg:mb-8 text-[3vw] leading-[4vw] font-normal italic">Services:</h2>
-              <p className="lg:mb-3 text-[3vw] leading-[4vw] font-normal">
+              <h2 className="col-span-3 mb-4 lg:mb-8 text-base italic">Services:</h2>
+              <p className="lg:mb-3 text-base">
                 FE Development<br />
                 CMS Development
               </p>
-              <p className="lg:mb-3 text-[3vw] leading-[4vw] font-normal">
+              <p className="lg:mb-3 text-base">
                 Graphic Design<br />
                 UI/UX Design
               </p>
-              <p className="lg:mb-3 text-[3vw] leading-[4vw] font-normal">
+              <p className="lg:mb-3 text-base">
               Visual Idenity<br />
               Data & Analytics
               </p>
             </div>
             <div>
-              <h2 className="text-[3vw] leading-[4vw] font-normal mb-4 lg:mb-8 italic">Work:</h2>
-              <Accordion type="single" defaultValue="item-0" collapsible className="mb-12">
+              <h2 className="text-base mb-4 lg:mb-8 italic">Work:</h2>
+              <Accordion type="single" collapsible className="mb-12 space-y-1 lg:space-y-2">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal mb-2 text-left">
-                      <p className="whitespace-pre-line text-[3vw] leading-[4vw] font-normal">{project.name}</p>
-                      <p className="whitespace-pre-line text-[3vw] leading-[4vw] font-normal">{project.type}</p>
-                      <p className="whitespace-pre-line text-[3vw] leading-[4vw] font-normal pr-2">{project.year}</p>
+                    <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal text-left">
+                      <p className="whitespace-pre-line text-base">{project.name}</p>
+                      <p className="whitespace-pre-line text-base">{project.type}</p>
+                      <p className="whitespace-pre-line text-base pr-2">{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4 lg:mt-4 mt-1 lg:grid lg:grid-cols-[35%_35%_auto]">
-                        <Carousel className="relative w-full py-2 lg:order-1" orientation="horizontal">
+                      <div className="space-y-4 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[35%_35%_auto]">
+                        <Carousel speed="2" className="relative w-full py-2 lg:order-1" orientation="horizontal">
                           <CarouselContent>
                           {project.media.map((item, itemIndex) => (
-                            <CarouselItem key={itemIndex}>
+                            <CarouselItem key={itemIndex} className="flex justify-center items-center">
                               {item.type === "image" && (
-                                <div className="flex justify-center items-center h-full">
+                                <div
+                                  className="relative w-full"
+                                  style={{
+                                    aspectRatio: `${item.width} / ${item.height}`,
+                                  }}
+                                >
                                   <Image
-                                    width={item.width}
-                                    height={item.height}
-                                    className="w-full"
-                                    src={item.src || "/placeholder.svg"}
+                                    fill
+                                    src={item.src}
                                     alt={`${project.name} screenshot ${itemIndex + 1}`}
+                                    sizes="(max-width: 1024px) 120vw, 40vw"
+                                    style={{ objectFit: "contain" }}
                                   />
                                 </div>
                               )}
                               {item.type === "mobileVideo" && (
-                                <div className="flex justify-center items-center h-full">
-                                  <div className="aspect-w-16 aspect-h-9 w-1/2 lg:w-1/3">
-                                    <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
-                                      Your browser does not support the video tag.
-                                    </video>
-                                  </div>
+                                <div className="aspect-w-16 aspect-h-9 w-1/2 lg:w-1/3">
+                                  <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                                    Your browser does not support the video tag.
+                                  </video>
                                 </div>
                               )}
                               {item.type === "desktopVideo" && (
@@ -391,7 +394,7 @@ export default function Home() {
                           <CarouselNext variant="quiet" />
                         </Carousel>
                         {project.description &&
-                          <p className="text-xs lg:text-[1.5vw] lg:leading-[2vw] font-normal whitespace-pre-line leading-[1.1rem] lg:pr-32">
+                          <p className="text-base whitespace-pre-line lg:pr-32">
                             {project.description.map((item, i) =>
                               typeof item === "string" ? (
                                 item
@@ -404,7 +407,7 @@ export default function Home() {
                           </p>
                         }
                         <div className="grid grid-cols-[35%_35%_auto_max-content] lg:grid-cols-2">
-                          <div className="text-xxs/3 lg:text-[1.5vw] lg:leading-[2vw] text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
+                          <div className="text-xxs/3 lg:text-[1vw] lg:leading-[1.5vw] text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
                             {project.stackTags.frontEnd &&
                               <p className="whitespace-nowrap">JS Framework:</p>
                             }
@@ -412,7 +415,7 @@ export default function Home() {
                               <p className="whitespace-nowrap">UI Documentation:</p>
                             }
                             {project.stackTags.commerce &&
-                              <p className="whitespace-nowrap">E-Com Platform:</p>
+                              <p className="whitespace-nowrap">E-Commerce Platform:</p>
                             }
                             {project.stackTags.deployment &&
                               <p className="whitespace-nowrap">PAAS:</p>
@@ -421,7 +424,7 @@ export default function Home() {
                               <p className="whitespace-nowrap">CMS:</p>
                             }
                           </div>
-                          <div className="text-xxs/3 lg:text-[1.5vw] lg:leading-[2vw] text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
+                          <div className="text-xxs/3 lg:text-[1vw] lg:leading-[1.5vw] text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
                             {project.stackTags.frontEnd &&
                               <p className="whitespace-nowrap">{project.stackTags.frontEnd}</p>
                             }

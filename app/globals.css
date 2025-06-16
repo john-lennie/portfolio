@@ -107,6 +107,10 @@ body {
   @apply w-full px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition;
 }
 
+.text-base {
+  @apply font-normal text-[2.5vw] leading-[3vw] lg:text-[2vw] lg:leading-[2.25vw];
+}
+
 .btn-primary {
   @apply w-fit items-center px-3 py-2 lg:px-4 lg:py-2.5 bg-blue-700 text-white text-sm/none lg:text-base/none leading-[14px] rounded-full hover:bg-blue-700 transition duration-300;
 }
