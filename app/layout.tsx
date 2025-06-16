@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Head from 'next/head'
 import './globals.css'
 
 import { Source_Code_Pro } from 'next/font/google';
@@ -10,7 +11,7 @@ const sourceCodePro = Source_Code_Pro({
 });
 
 export const metadata: Metadata = {
-  title: 'JNPR',
+  title: 'JNPR Studio',
   description: 'JNPR is a design and development studio based in Toronto.'
 }
 
@@ -21,6 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={sourceCodePro.variable}>
+      <Head>
+        <meta property="og:image" content="/transparent-1x1.png" />
+        <meta name="twitter:card" content="summary" />
+      </Head>
       <body>{children}</body>
     </html>
   )
