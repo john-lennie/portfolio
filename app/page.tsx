@@ -420,8 +420,8 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24">
               <div>
-                <p className="mb-2 lg:mb-4 text-base animate-fade-in-slow-delay opacity-0">
-                  For work inquiries, reach out via email:
+                <p className="mb-1 lg:mb-2 text-base animate-fade-in-slow-delay opacity-0">
+                  For work inquiries, email:
                 </p>
                 <CopyButton textToCopy="hello@jnpr.studio" />
               </div>
