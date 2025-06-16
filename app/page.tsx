@@ -338,7 +338,7 @@ export default function Home() {
                                     fill
                                     src={item.src}
                                     alt={`${project.name} screenshot ${itemIndex + 1}`}
-                                    sizes="(max-width: 1024px) 120vw, 40vw"
+                                    sizes="(max-width: 1024px) 100vw, 40vw"
                                     style={{ objectFit: "contain" }}
                                   />
                                 </div>
