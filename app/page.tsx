@@ -50,7 +50,7 @@ const projects = [
   {
     name: "Faces Of Another", 
     year: "2022 - 2025",
-    type: "UI/UX Design\nFE Development\nCMS Development\nData & Analytics",
+    type: "UI/UX Design\nFE Development",
     media: [
       {
         type: "image",
@@ -77,7 +77,7 @@ const projects = [
   {
     name: "North of Now",
     year: "2022",
-    type: "Graphic Design\nUI/UX Design\nFE Development\nCMS Development",
+    type: "UI/UX Design\nFE Development\nGraphic Design",
     media: [
       {
         type: "mobileVideo",
@@ -289,39 +289,9 @@ export default function Home() {
             >
               <img className="h-7 lg:h-14" src="/jnpr.svg" alt="JNPR Studio" />
               </div>
-            {/* <ul
-            className="flex gap-6 pt-6 pb-10 pr-6 md:pr-0 pl-20"
-            style={{
-              backgroundColor: '#ffffffd9',
-              WebkitMaskImage: `
-                linear-gradient(to right, transparent, black 50%, black 100%),
-                linear-gradient(to top, transparent, black 40%, black 100%)
-              `,
-              WebkitMaskComposite: 'intersect',
-              maskImage: `
-                linear-gradient(to right, transparent, black 50%, black 100%),
-                linear-gradient(to top, transparent, black 40%, black 100%)
-              `,
-              maskComposite: 'intersect'
-            }}
-            >
-              <li>
-                <a href="mailto:hello@jnpr.studio" target="_blank" className="link-secondary flex">
-                  Studio Info
-                </a>
-              </li>
-              <li>
-                <a href="mailto:hello@jnpr.studio" target="_blank" className="link-secondary flex">
-                  Contact
-                </a>
-              </li>
-            </ul> */}
           </div>
         </header>
         <main className="container pt-16">
-          {/* <h1 className="lg:mt-18 mt-12 mb-12 text-[5vw] tracking-tight leading-[5.5vw] animate-fade-in-slow-delay opacity-0 max-w-[90%]">
-            JNPR is a design & development studio based in Toronto.
-          </h1> */}
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24">
               <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-base animate-fade-in-slow-delay opacity-0">
@@ -341,9 +311,9 @@ export default function Home() {
               Data & Analytics
               </p>
             </div>
-            <div>
+            <div className="mb-12 lg:mb-24">
               <h2 className="text-base mb-4 lg:mb-8 italic">Work:</h2>
-              <Accordion type="single" collapsible className="mb-12 space-y-1 lg:space-y-2">
+              <Accordion type="single" collapsible className="space-y-1 lg:space-y-2">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal text-left">
@@ -448,15 +418,17 @@ export default function Home() {
                 ))}
               </Accordion>
             </div>
+            <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24">
+              <div>
+                <p className="mb-2 lg:mb-4 text-base animate-fade-in-slow-delay opacity-0">
+                  For work inquiries, reach out via email:
+                </p>
+                <CopyButton textToCopy="hello@jnpr.studio" />
+              </div>
+            </div>
           </div>
-          <section>
-            <CopyButton textToCopy="hello@jnpr.studio" />
-          </section>
         </main>
       </div>
-      {/* <div className="block lg:hidden text-center animate-fade-in-slower-delay opacity-0 fixed bottom-0 w-full px-4 md:px-12 lg:px-36 pt-16 pb-8 lg:pb-4 lg:pt-36 lg:text-left">
-        <a href="mailto:hello@jnpr.studio" target="_blank" className="link">hello@jnpr.studio</a>
-      </div> */}
     </div>
   )
 }
