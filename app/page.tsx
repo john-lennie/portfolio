@@ -313,7 +313,7 @@ export default function Home() {
             </div>
             <div className="mb-12 lg:mb-24">
               <h2 className="text-base mb-4 lg:mb-8 italic">Work:</h2>
-              <Accordion type="single" collapsible className="space-y-1 lg:space-y-2">
+              <Accordion type="single" defaultValue="item-0" collapsible className="space-y-2">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal text-left">
@@ -323,10 +323,10 @@ export default function Home() {
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-4 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[35%_35%_auto]">
-                        <Carousel speed="2" className="relative w-full py-2 lg:order-1" orientation="horizontal">
+                        <Carousel className="relative w-full py-2 lg:order-1" orientation="horizontal">
                           <CarouselContent>
                           {project.media.map((item, itemIndex) => (
-                            <CarouselItem key={itemIndex} className="flex justify-center items-center">
+                            <CarouselItem key={itemIndex} className="flex justify-center items-center pt-4">
                               {item.type === "image" && (
                                 <div
                                   className="relative w-full"
