@@ -108,7 +108,7 @@ body {
 }
 
 .text-base {
-  @apply font-normal text-[2.5vw] leading-[3vw] lg:text-[2vw] lg:leading-[2.25vw];
+  @apply font-normal text-[3vw] leading-[3.5vw] lg:text-[2vw] lg:leading-[2.25vw];
 }
 
 .btn-primary {

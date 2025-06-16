@@ -28,14 +28,14 @@ const projects = [
     type: "FE Development",
     media: [
       {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4"
+      },
+      {
         type: "image",
         src: "/vf-corp/tnf_history_1.png",
         width: 1500,
         height: 954
-      },
-      {
-        type: "mobileVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4"
       }
     ],
     description: [
