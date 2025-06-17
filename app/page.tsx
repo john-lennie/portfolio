@@ -107,7 +107,7 @@ const projects = [
     description: [
       "New visual identity and website for Los Angeles based film production company North of Now."
     ],
-    serviceTags: "Graphic Design\nVisual Identity\nUI Design\nFront-End Development",
+    serviceTags: "Graphic Design\nVisual Identity\nUI/UX Design\nFront-End Development",
     stackTags: {
       cms: "Prismic",
       frontEnd: "Next.js",
@@ -154,7 +154,7 @@ const projects = [
       }
     ],
     description: [
-      "Front-End Development for New York-based clothing line/publishing house Full Court Press.\n\nUI Design by ",
+      "Front-End Development for New York-based clothing line/publishing house Full Court Press.\n\nUI/UX Design by ",
       { 
         text: "Ronan Mcgee", 
         link: "https://www.xn--rnn-fla2g.com/" 
@@ -209,7 +209,7 @@ const projects = [
       }
     ],
     description: [
-      "Front-End Development for Toronto-based design studio Susan for Susan.\n\nUI Design by ",
+      "Front-End Development for Toronto-based design studio Susan for Susan.\n\nUI/UX Design by ",
       { 
         text: "Ronan Mcgee", 
         link: "https://www.xn--rnn-fla2g.com/" 
@@ -232,7 +232,7 @@ const projects = [
       }
     ],
     description: [
-      "Front-End Development for Puerto Rican artist Tainy.\n\nUI Design by ",
+      "Front-End Development for Puerto Rican artist Tainy.\n\nUI/UX Design by ",
       { 
         text: "Ronan Mcgee", 
         link: "https://www.xn--rnn-fla2g.com/" 
