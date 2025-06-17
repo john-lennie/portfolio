@@ -271,24 +271,7 @@ export default function Home() {
           }}
         >
           <div className="relative z-50 flex justify-between items-center animate-fade-in-slow">
-            <div
-            className="pt-4 pb-8 pr-12 md:pl-0"
-            style={{
-              backgroundColor: '#fff',
-              WebkitMaskImage: `
-                linear-gradient(to right, black, black 50%, transparent 100%),
-                linear-gradient(to top, transparent, black 50%, black 100%)
-              `,
-              WebkitMaskComposite: 'intersect',
-              maskImage: `
-                linear-gradient(to right, black, black 50%, transparent 100%),
-                linear-gradient(to top, transparent, black 50%, black 100%)
-              `,
-              maskComposite: 'intersect'
-            }}
-            >
-              <img className="h-7 lg:h-14" src="/jnpr.svg" alt="JNPR Studio" />
-              </div>
+            <img className="h-7 lg:h-14" src="/jnpr.svg" alt="JNPR Studio" />
           </div>
         </header>
         <main className="container pt-16">
