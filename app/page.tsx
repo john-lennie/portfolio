@@ -344,7 +344,7 @@ export default function Home() {
                                 </div>
                               )}
                               {item.type === "mobileVideo" && (
-                                <div className="aspect-w-16 aspect-h-9 w-1/2 md:w-2/5">
+                                <div className="aspect-w-16 aspect-h-9 w-1/2 sm:w-2/5">
                                   <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
                                     Your browser does not support the video tag.
                                   </video>
