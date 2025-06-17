@@ -261,7 +261,7 @@ export default function Home() {
       <div className="min-h-screen text-black">
         <GlobalStyles />
         <header
-          className={"container fixed z-[2] duration-300 " + (direction === 'down' ? '-top-[60px] lg:top-0' : 'top-0')}
+          className={"container fixed z-[2] duration-300 " + (direction === 'down' ? '-top-[76px] lg:-top-[104px]' : 'top-0')}
           style={{
             backgroundColor: 'transparent',
             backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
