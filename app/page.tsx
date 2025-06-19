@@ -361,8 +361,8 @@ export default function Home() {
                             )}
                           </p>
                         }
-                        <div className="grid grid-cols-[35%_35%_auto_max-content] lg:grid-cols-2">
-                          <div className="text-xxs/3 lg:text-[1vw] lg:leading-[1.5vw] text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
+                        <div className="grid grid-cols-[35%_35%_auto_max-content] lg:grid-cols-[35%_65%]">
+                          <div className="text-sm text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
                             {project.stackTags.frontEnd &&
                               <p className="whitespace-nowrap">JS Framework:</p>
                             }
@@ -379,7 +379,7 @@ export default function Home() {
                               <p className="whitespace-nowrap">CMS:</p>
                             }
                           </div>
-                          <div className="text-xxs/3 lg:text-[1vw] lg:leading-[1.5vw] text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
+                          <div className="text-sm text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
                             {project.stackTags.frontEnd &&
                               <p className="whitespace-nowrap">{project.stackTags.frontEnd}</p>
                             }
