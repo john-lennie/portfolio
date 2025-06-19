@@ -271,7 +271,9 @@ export default function Home() {
           }}
         >
           <div className="relative z-50 flex justify-between items-center animate-fade-in-slow">
-            <img className="h-7 lg:h-14" src="/jnpr.svg" alt="JNPR Studio" />
+            <div className="pt-4 pb-8 pr-12 md:pl-0">
+              <img className="h-7 lg:h-14" src="/jnpr.svg" alt="JNPR Studio" />
+              </div>
           </div>
         </header>
         <main className="container pt-16">
