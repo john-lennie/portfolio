@@ -36,7 +36,7 @@ const projects = [
         src: "/vf-corp/tnf_history_1.png",
         width: 1500,
         height: 954
-      }
+      } 
     ],
     description: [
       "Developed bespoke microsites for The North Face, Vans, and Timberland to build brand awareness, showcase specific technologies, and elevate product visibility.",
@@ -80,14 +80,14 @@ const projects = [
     type: "UI/UX Design\nFE Development\nGraphic Design",
     media: [
       {
-        type: "mobileVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
-      },
-      {
         type: "image",
         src: "/north-of-now/non-3.png",
         width: 1500,
         height: 1131
+      },
+      {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
       },
       {
         type: "mobileVideo",
