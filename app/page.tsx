@@ -279,7 +279,7 @@ export default function Home() {
         <main className="container pt-16">
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24">
-              <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-base animate-fade-in-slow-delay opacity-0">
+              <h1 className="col-span-2 mt-8 lg:mt-24 mb-12 lg:mb-24 text-base animate-fade-in-slow-delay opacity-0">
                 JNPR is a design & engineering studio by John Lennie with a focus on web development projects.<br />
                 Based in Toronto.
               </h1>
@@ -405,14 +405,14 @@ export default function Home() {
               </Accordion>
             </div>
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24 animate-fade-in-slow-delay opacity-0">
-              <div></div>
-              <div></div>
               <div>
                 <p className="text-base">
                   For work inquiries:
                 </p>
                 <CopyButton textToCopy="hello@jnpr.studio" />
               </div>
+              <div></div>
+              <div></div>
             </div>
           </div>
         </main>
