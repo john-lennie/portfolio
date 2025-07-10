@@ -281,7 +281,7 @@ export default function Home() {
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24">
               <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-base animate-fade-in-slow-delay opacity-0">
                 JNPR is a design & engineering studio by John Lennie<br />
-                We specialize in create engaging, frictionless, and performance-driven user interfaces.<br />
+                Specialize in create engaging, frictionless, and performance-driven user interfaces.<br />
                 Based in Toronto.
               </h1>
               <h2 className="col-span-3 mb-4 lg:mb-8 text-base italic">Services:</h2>
