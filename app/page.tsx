@@ -39,7 +39,7 @@ const projects = [
       }
     ],
     description: [
-      "Worked with the VF Digital Technology team to develop experiential landing pages for VF's various brands including The North Face, Vans & Timberland.",
+      "Worked with the VF Digital Technology team to develop bespoke microsites for The North Face, Vans, and Timberland in order to build brand awareness, showcase specific technologies, and elevate product visibility.",
     ],
     serviceTags: "Front-End Development",
     stackTags: {
