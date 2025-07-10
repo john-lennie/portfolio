@@ -404,6 +404,7 @@ export default function Home() {
               </Accordion>
             </div>
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24 animate-fade-in-slow-delay opacity-0">
+              <div></div>
               <p className="text-base">
                 For work inquiries:
               </p>
