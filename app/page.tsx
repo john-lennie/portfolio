@@ -280,7 +280,7 @@ export default function Home() {
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24">
               <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-base animate-fade-in-slow-delay opacity-0">
-                JNPR is a design & development studio based in Toronto.
+                JNPR is a design & engineering studio by John Lennie with a focus on web development projects. Based in Toronto.
               </h1>
               <h2 className="col-span-3 mb-4 lg:mb-8 text-base italic">Services:</h2>
               <p className="lg:mb-3 text-base">
