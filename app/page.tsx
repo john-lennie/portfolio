@@ -39,7 +39,7 @@ const projects = [
       } 
     ],
     description: [
-      "Developed a variety of microsites for The North Face, Vans, and Timberland to build brand awareness, showcase specific technologies, and elevate product visibility.",
+      "Developed a variety of microsites and components for The North Face, Vans, and Timberland to build brand awareness, showcase specific technologies, and integrate product recommendations.",
     ],
     serviceTags: "Front-End Development",
     stackTags: {
@@ -280,8 +280,8 @@ export default function Home() {
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24">
               <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-base animate-fade-in-slow-delay opacity-0">
-                JNPR is a design & engineering studio by John Lennie<br />
-                Specialize in create engaging, frictionless, and performance-driven user interfaces.<br />
+                JNPR is a design & deveelopment studio by John Lennie<br />
+                Specializing in create engaging, frictionless, and performance-driven user interfaces.<br />
                 Based in Toronto.
               </h1>
               <h2 className="col-span-3 mb-4 lg:mb-8 text-base italic">Services:</h2>
