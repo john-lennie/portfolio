@@ -39,7 +39,7 @@ const projects = [
       } 
     ],
     description: [
-      "Developed a variety of microsites and components for The North Face, Vans, and Timberland. Through these microsites, we worked to build brand awareness, showcase specific technologies, and integrate product recommendations.",
+      "Worked with the VF Digital Technology Team to develop microsites for The North Face, Vans, and Timberland.",
     ],
     serviceTags: "Front-End Development",
     stackTags: {
