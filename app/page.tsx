@@ -280,8 +280,7 @@ export default function Home() {
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24">
               <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-base animate-fade-in-slow-delay opacity-0">
-                JNPR is a design & deveelopment studio by John Lennie<br />
-                Specializing in creating engaging, frictionless, and performance-driven user interfaces.<br />
+                JNPR Studio builds refined websites for design-led clients — combining front-end engineering with a deep understanding of contemporary design and digital strategy.<br />
                 Based in Toronto.
               </h1>
               <h2 className="col-span-3 mb-4 lg:mb-8 text-base italic">Services:</h2>
