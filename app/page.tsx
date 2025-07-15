@@ -168,7 +168,7 @@ const projects = [
   },
   {
     name: "Norman Wong",
-    year: "2021 - 2022",
+    year: "2021",
     type: "FE Development",
     media: [
       {
