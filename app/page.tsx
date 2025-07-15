@@ -282,7 +282,7 @@ export default function Home() {
               <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-base animate-fade-in-slow-delay opacity-0">
                 JNPR is a design & deveelopment studio by John Lennie<br />
                 Specializing in creating engaging, frictionless, and performance-driven user interfaces.<br />
-                Based in Toronto.s
+                Based in Toronto.
               </h1>
               <h2 className="col-span-3 mb-4 lg:mb-8 text-base italic">Services:</h2>
               <p className="lg:mb-3 text-base">
