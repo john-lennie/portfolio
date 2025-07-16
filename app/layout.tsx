@@ -12,7 +12,7 @@ const sourceCodePro = Source_Code_Pro({
 
 export const metadata: Metadata = {
   title: 'JNPR Studio',
-  description: 'JNPR specializes in building websites for design-led clients — combining front-end engineering, a deep understanding of contemporary design, and digital strategy.'
+  description: 'JNPR is a digital design and engineering studio based in Toronto.'
 }
 
 export default function RootLayout({
