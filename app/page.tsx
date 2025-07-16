@@ -39,7 +39,7 @@ const projects = [
       } 
     ],
     description: [
-      "Worked with the VF Digital Technology Team to develop microsites for The North Face, Vans, and Timberland.",
+      "Worked with the VF Digital Technology Team to develop numerous microsites for The North Face, Vans, and Timberland.",
     ],
     serviceTags: "Front-End Development",
     stackTags: {
