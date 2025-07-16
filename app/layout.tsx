@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={sourceCodePro.variable}>
       <Head>
-        <meta property="og:image" content="/transparent-1x1.png" />
+        <meta property="og:image" content="https://jnpr.studio/transparent.png" />
         <meta name="twitter:card" content="summary" />
       </Head>
       <body>{children}</body>
