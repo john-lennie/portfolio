@@ -23,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={sourceCodePro.variable}>
       <Head>
+        {/* Open Graph Protocol (iMessage, Facebook, LinkedIn) */}
         <meta property="og:image" content="https://jnpr.studio/og_image.png" />
         <meta name="twitter:card" content="summary" />
       </Head>
