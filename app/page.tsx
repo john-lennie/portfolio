@@ -41,7 +41,7 @@ const projects = [
     description: [
       "Worked with the VF Digital Technology Team to develop numerous microsites for The North Face, Vans, and Timberland.",
     ],
-    serviceTags: "Front-End Development",
+    serviceTags: "Front-End Development\nPerformance Optimization\nAccessibility Audits",
     stackTags: {
       frontEnd: "Nuxt",
       ui: "Storybook"
@@ -280,20 +280,21 @@ export default function Home() {
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24">
               <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-base animate-fade-in-slow-delay opacity-0">
-                JNPR specializes in building websites for design-led clients — combining front-end engineering, a deep understanding of contemporary design, and digital strategy.
+                JNPR Studio works with discerning clients on website development and e-commerce strategy.<br />
+                Based in Toronto, Canada.
               </h1>
               <h2 className="col-span-3 mb-4 lg:mb-8 text-base italic">Services:</h2>
               <p className="lg:mb-3 text-base">
-                FE Development<br />
-                CMS Development
+                Front-End Development<br />
+                UX Design
               </p>
               <p className="lg:mb-3 text-base">
-                Graphic Design<br />
-                UI/UX Design
+                Technical Direction<br />
+                Interaction Design
               </p>
               <p className="lg:mb-3 text-base">
-              Visual Idenity<br />
-              Data & Analytics
+                Performance Optimization<br />
+                Accessibility Audits
               </p>
             </div>
             <div className="mb-12 lg:mb-24">
