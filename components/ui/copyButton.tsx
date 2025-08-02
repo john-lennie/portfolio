@@ -16,7 +16,7 @@ function CopyButton({ textToCopy }: CopyButtonProps) {
   };
 
   return (
-    <button className='text-blue-700 text-base flex items-center justify-between w-full' onClick={handleCopy}>
+    <button className='text-blue-700 text-xs flex items-center justify-between w-full' onClick={handleCopy}>
       {copied ? 'Copied.' : textToCopy }
       {/* <CopyIcon className='w-[10vw] h-[10vw] md:w-[9vw] md:h-[9vw]' /> */}
     </button>

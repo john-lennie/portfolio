@@ -25,7 +25,7 @@ const projects = [
   {
     name: "VF Corporation",
     year: "2022 - 2025",
-    type: "FE Development",
+    type: "Jamstack",
     media: [
       {
         type: "mobileVideo",
@@ -39,7 +39,7 @@ const projects = [
       } 
     ],
     description: [
-      "Worked with the VF Digital Technology Team to develop numerous microsites for The North Face, Vans, and Timberland.",
+      "Worked with the VF Digital Technology Team to develop branded story pages for The North Face, Vans, and Timberland.",
     ],
     serviceTags: "Front-End Development\nPerformance Optimization\nAccessibility Audits",
     stackTags: {
@@ -50,7 +50,7 @@ const projects = [
   {
     name: "Faces Of Another", 
     year: "2022 - 2025",
-    type: "UI/UX Design\nFE Development",
+    type: "Jamstack, Shopify",
     media: [
       {
         type: "image",
@@ -77,7 +77,7 @@ const projects = [
   {
     name: "North of Now",
     year: "2022",
-    type: "UI/UX Design\nFE Development\nGraphic Design",
+    type: "Jamstack",
     media: [
       {
         type: "image",
@@ -117,7 +117,7 @@ const projects = [
   {
     name: "Basma Beauty",
     year: "2022",
-    type: "FE Development",
+    type: "Shopify",
     media: [
       {
         type: "mobileVideo",
@@ -146,7 +146,7 @@ const projects = [
   {
     name: "Full Court Press",
     year: "2022",
-    type: "FE Development",
+    type: "Shopify",
     media: [
       {
         type: "mobileVideo",
@@ -224,7 +224,7 @@ const projects = [
   {
     name: "Club Dieciséis",
     year: "2021",
-    type: "FE Development",
+    type: "Shopify",
     media: [
       {
         type: "desktopVideo",
@@ -272,40 +272,49 @@ export default function Home() {
         >
           <div className="relative z-50 flex justify-between items-center animate-fade-in-slow">
             <div className="pt-4 pb-8 pr-12 md:pl-0">
-              <img className="h-7 lg:h-14" src="/jnpr.svg" alt="JNPR Studio" />
+              <img className="h-8" src="/jnpr.svg" alt="JNPR Studio" />
               </div>
           </div>
         </header>
         <main className="container pt-16">
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
-            <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24">
-              <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-base animate-fade-in-slow-delay opacity-0">
-                JNPR Studio works with discerning clients on website development and e-commerce strategy.<br />
+            <div className="grid grid-cols-[50%_50%] lg:grid-cols-[35%_22%_22%_21%] h-max mt-12 lg:mt-24 mb-6 lg:mb-24">
+              {/* <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-xs animate-fade-in-slow-delay opacity-0">
+                JNPR works with clients on website development and e-commerce strategy.<br />
                 Based in Toronto, Canada.
-              </h1>
-              <h2 className="col-span-3 mb-4 lg:mb-8 text-base italic">Services:</h2>
-              <p className="lg:mb-3 text-base">
-                Front-End Development<br />
-                UX Design
+              </h1> */}
+              <p className="col-span-2 lg:col-span-1 text-xs mb-4 lg:mb-8 max-w-56">
+                JNPR works with clients on website development and e-commerce strategy.<br /><br />
+                Based in Toronto.
               </p>
-              <p className="lg:mb-3 text-base">
-                Technical Direction<br />
-                Interaction Design
+              <p className="col-span-2 lg:col-span-1 mb-4 lg:mb-0 text-xs">
+                Services:
               </p>
-              <p className="lg:mb-3 text-base">
-                Performance Optimization<br />
-                Accessibility Audits
+              <p className="lg:mb-3 text-xs">
+                Shopify Development<br /><br /><br />
+                Jamstack Development<br /><br /><br />
+                Core Web Vitals
+              </p>
+              <p className="lg:mb-3 text-xs">
+                Headless Integrations<br />
+                Theme Customization<br /><br />
+                Next.js<br />
+                Nuxt.js<br /><br />
+                Performance<br />
+                Accessibility<br />
+                Best Practices<br />
+                SEO
               </p>
             </div>
             <div className="mb-12 lg:mb-24">
-              <h2 className="text-base mb-4 lg:mb-8 italic">Work:</h2>
-              <Accordion type="single" defaultValue="item-0" collapsible className="space-y-3">
+              <h2 className="text-xs mb-4 lg:mb-8">Work:</h2>
+              <Accordion type="single" defaultValue="item-0" collapsible className="space-y-2">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="grid grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal text-left">
-                      <p className="whitespace-pre-line text-base">{project.name}</p>
-                      <p className="whitespace-pre-line text-base">{project.type}</p>
-                      <p className="whitespace-pre-line text-base pr-2">{project.year}</p>
+                    <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal text-left">
+                      <p className="whitespace-pre-line text-xs">{project.name}</p>
+                      <p className="hidden lg:block whitespace-pre-line text-xs">{project.type}</p>
+                      <p className="whitespace-pre-line text-xs pr-2">{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-4 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[35%_35%_auto]">
@@ -350,7 +359,7 @@ export default function Home() {
                           <CarouselNext variant="quiet" />
                         </Carousel>
                         {project.description &&
-                          <p className="text-base whitespace-pre-line lg:pr-32">
+                          <p className="text-xs whitespace-pre-line lg:pr-32">
                             {project.description.map((item, i) =>
                               typeof item === "string" ? (
                                 item
@@ -362,8 +371,8 @@ export default function Home() {
                             )}
                           </p>
                         }
-                        <div className="grid grid-cols-[35%_35%_auto_max-content] lg:grid-cols-[35%_65%]">
-                          <div className="text-sm text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
+                        <div className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[35%_65%]">
+                          <div className="text-xs max-w-[95%] whitespace-pre-line">
                             {project.stackTags.frontEnd &&
                               <p className="whitespace-nowrap">JS Framework:</p>
                             }
@@ -371,7 +380,7 @@ export default function Home() {
                               <p className="whitespace-nowrap">UI Documentation:</p>
                             }
                             {project.stackTags.commerce &&
-                              <p className="whitespace-nowrap">E-Commerce Platform:</p>
+                              <p className="whitespace-nowrap">E-Commerce:</p>
                             }
                             {project.stackTags.deployment &&
                               <p className="whitespace-nowrap">PAAS:</p>
@@ -380,7 +389,7 @@ export default function Home() {
                               <p className="whitespace-nowrap">CMS:</p>
                             }
                           </div>
-                          <div className="text-sm text-gray-500 font-source tracking-tightest max-w-[95%] whitespace-pre-line">
+                          <div className="text-xs max-w-[95%] whitespace-pre-line">
                             {project.stackTags.frontEnd &&
                               <p className="whitespace-nowrap">{project.stackTags.frontEnd}</p>
                             }
@@ -406,7 +415,7 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24 animate-fade-in-slow-delay opacity-0">
               <div>
-                <p className="text-base">
+                <p className="text-xs">
                   For work inquiries:
                 </p>
                 <CopyButton textToCopy="hello@jnpr.studio" />
