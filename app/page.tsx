@@ -283,7 +283,7 @@ export default function Home() {
                 JNPR works with clients on website development and e-commerce strategy.<br />
                 Based in Toronto, Canada.
               </h1> */}
-              <p className="col-span-2 lg:col-span-1 text-xs mb-4 lg:mb-8 max-w-56">
+              <p className="col-span-2 lg:col-span-1 text-xs mb-12 lg:mb-8 max-w-56">
                 JNPR works with clients on website development and e-commerce strategy.<br /><br />
                 Based in Toronto.
               </p>
