@@ -278,7 +278,7 @@ export default function Home() {
         </header>
         <main className="container pt-16">
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
-            <div className="grid grid-cols-[50%_50%] lg:grid-cols-[35%_22%_22%_21%] h-max mt-12 lg:mt-24 mb-6 lg:mb-24">
+            <div className="grid grid-cols-[50%_50%] lg:grid-cols-[35%_22%_22%_21%] h-max mt-12 lg:mt-24 mb-12 lg:mb-24">
               {/* <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-xs animate-fade-in-slow-delay opacity-0">
                 JNPR works with clients on website development and e-commerce strategy.<br />
                 Based in Toronto, Canada.
