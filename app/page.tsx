@@ -232,7 +232,7 @@ const projects = [
       }
     ],
     description: [
-      "Front-End Development for Puerto Rican artist Tainy.\n\nUI/UX Design by ",
+      "Front-End Development for Puerto Rican musician Tainy.\n\nUI/UX Design by ",
       { 
         text: "Ronan Mcgee", 
         link: "https://www.xn--rnn-fla2g.com/" 
