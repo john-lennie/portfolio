@@ -25,8 +25,8 @@ const projects = [
   {
     name: "VF Corporation",
     year: "2023 - 2025",
-    type: "Frontend Engineering",
-    stack: "Nuxt.js",
+    type: "Frontend Engineering, Core Web Vitals",
+    stack: "Nuxt.js, Accessibility",
     media: [
       {
         type: "image",
@@ -36,7 +36,7 @@ const projects = [
       } 
     ],
     description: [
-      "Worked with the VF Digital Technology Team over a two year period to develop branded story pages for The North Face, Vans, and Timberland.",
+      "Developed custom landing pages and improved accessibility across the multi-brand Nuxt.js application for The North Face, Vans, and Timberland.",
     ],
     stackTags: {
       frontEnd: "Nuxt",
@@ -278,7 +278,7 @@ export default function Home() {
               <p className="col-span-2 lg:col-span-1 mb-12 lg:mb-0 max-w-44 text-xs">
                 JNPR works with clients on website development and e-commerce strategy.
               </p>
-              <p className="mb-4 lg:mb-8 col-span-2 lg:col-span-4 text-xs">What We Do:</p>
+              <p className="mb-4 lg:mb-8 col-span-2 lg:col-span-4 text-xs">Services:</p>
               <p className="text-xs lg:col-start-2">
                 Frontend Engineering<br /><br /><br /><br />
                 Theme Development<br /><br /><br /><br />
@@ -299,7 +299,7 @@ export default function Home() {
             </div>
             <div className="mb-12 lg:mb-24">
               <h2 className="text-xs mb-4 lg:mb-8">Work:</h2>
-              <Accordion type="single" defaultValue="item-0" collapsible className="space-y-2">
+              <Accordion type="single" collapsible className="space-y-2">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_30%_auto_max-content] w-full text-xs/none font-normal text-left">
@@ -310,14 +310,6 @@ export default function Home() {
                     </AccordionTrigger>
                     <AccordionContent>
                       <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[30%_40%_30%]">
-                        <div className="lg:hidden mt-2 grid grid-cols-[50%_auto_max-content] lg:grid-cols-[35%_65%]">
-                          <div className="text-xs max-w-[95%] whitespace-pre-line">
-                            {project.type}
-                          </div>
-                          <div className="text-xs max-w-[95%] whitespace-pre-line">
-                            {project.stack}
-                          </div>
-                        </div>
                         <Carousel className="relative w-full py-2 lg:order-1" orientation="horizontal">
                           <CarouselContent>
                           {project.media.map((item, itemIndex) => (
@@ -373,6 +365,14 @@ export default function Home() {
                             </p>
                           </div>
                         }
+                        <div className="lg:hidden grid grid-cols-[50%_auto] italic">
+                          <div className="text-xs max-w-[95%] mb-2 whitespace-pre-line">
+                            {project.type}
+                          </div>
+                          <div className="text-xs max-w-[95%] whitespace-pre-line">
+                            {project.stack}
+                          </div>
+                        </div>
                       </div>
                       </AccordionContent>
                   </AccordionItem>
