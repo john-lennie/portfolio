@@ -275,16 +275,16 @@ export default function Home() {
         <main className="container pt-16">
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
             <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12 lg:mb-24">
-              <p className="col-span-2 lg:col-span-1 mb-4 lg:mb-0 max-w-44 text-xs">
+              <p className="col-span-2 lg:col-span-1 mb-12 lg:mb-0 max-w-44 text-xs">
                 JNPR works with clients on website development and e-commerce strategy.
               </p>
-              <p className="text-xs">
-                What We Do:<br /><br /><br />
+              <p className="mb-4 lg:mb-8 col-span-2 lg:col-span-4 text-xs">What We Do:</p>
+              <p className="text-xs lg:col-start-2">
                 Frontend Engineering<br /><br /><br /><br />
                 Theme Development<br /><br /><br /><br />
                 Core Web Vitals
               </p>
-              <p className="text-xs"><br /><br /><br />
+              <p className="text-xs">
                 Meta JS Frameworks<br />
                 Headless Commerce<br />
                 Headless CMS<br /><br />
