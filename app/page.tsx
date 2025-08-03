@@ -365,7 +365,7 @@ export default function Home() {
                             </p>
                           </div>
                         }
-                        <div className="lg:hidden grid grid-cols-[50%_auto] italic">
+                        <div className="lg:hidden grid grid-cols-[50%_auto]">
                           <div className="text-xs max-w-[95%] mb-2 whitespace-pre-line">
                             {project.type}
                           </div>
