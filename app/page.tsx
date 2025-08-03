@@ -24,13 +24,10 @@ import { GlobalStyles } from "@/components/GlobalStyles"
 const projects = [
   {
     name: "VF Corporation",
-    year: "2022 - 2025",
-    type: "Jamstack",
+    year: "2023 - 2025",
+    type: "Frontend Engineering",
+    stack: "Nuxt.js",
     media: [
-      {
-        type: "mobileVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4"
-      },
       {
         type: "image",
         src: "/vf-corp/tnf_history_1.png",
@@ -39,9 +36,8 @@ const projects = [
       } 
     ],
     description: [
-      "Worked with the VF Digital Technology Team to develop branded story pages for The North Face, Vans, and Timberland.",
+      "Worked with the VF Digital Technology Team over a two year period to develop branded story pages for The North Face, Vans, and Timberland.",
     ],
-    serviceTags: "Front-End Development\nPerformance Optimization\nAccessibility Audits",
     stackTags: {
       frontEnd: "Nuxt",
       ui: "Storybook"
@@ -50,7 +46,8 @@ const projects = [
   {
     name: "Faces Of Another", 
     year: "2022 - 2025",
-    type: "Jamstack, Shopify",
+    type: "Frontend Engineering",
+    stack: "Headless CMS & Commerce, Next.js",
     media: [
       {
         type: "image",
@@ -66,7 +63,6 @@ const projects = [
         link: "https://facesofanother.com/" 
       },
     ],
-    serviceTags: "UI Design\nFront-End Development\nCMS Development\nData & Analytics\nMaintenance",
     stackTags: {
       cms: "Sanity",
       commerce: "Shopify",
@@ -77,7 +73,8 @@ const projects = [
   {
     name: "North of Now",
     year: "2022",
-    type: "Jamstack",
+    type: "Frontend Engineering",
+    stack: "Headless CMS, Next.js",
     media: [
       {
         type: "image",
@@ -107,7 +104,6 @@ const projects = [
     description: [
       "New visual identity and website for Los Angeles based film production company North of Now."
     ],
-    serviceTags: "Graphic Design\nVisual Identity\nUI/UX Design\nFront-End Development",
     stackTags: {
       cms: "Prismic",
       frontEnd: "Next.js",
@@ -117,7 +113,8 @@ const projects = [
   {
     name: "Basma Beauty",
     year: "2022",
-    type: "Shopify",
+    type: "Theme Development",
+    stack: "Shopify",
     media: [
       {
         type: "mobileVideo",
@@ -138,7 +135,6 @@ const projects = [
       },
       " to develop a shade finder quiz for Basma Beauty."
     ],
-    serviceTags: "Front-End Development",
     stackTags: {
       commerce: "Shopify"
     },
@@ -146,7 +142,8 @@ const projects = [
   {
     name: "Full Court Press",
     year: "2022",
-    type: "Shopify",
+    type: "Theme Development",
+    stack: "Shopify",
     media: [
       {
         type: "mobileVideo",
@@ -154,14 +151,13 @@ const projects = [
       }
     ],
     description: [
-      "Front-End Development for New York-based clothing line/publishing house Full Court Press.\n\nUI/UX Design by ",
+      "Front-End Development for New York-based clothing line/publishing house Full Court Press.\n\nDesign by ",
       { 
         text: "Ronan Mcgee", 
         link: "https://www.xn--rnn-fla2g.com/" 
       },
       "."
     ],
-    serviceTags: "Front-End Development",
     stackTags: {
       commerce: "Shopify"
     },
@@ -169,7 +165,8 @@ const projects = [
   {
     name: "Norman Wong",
     year: "2021",
-    type: "FE Development",
+    type: "Theme Development",
+    stack: "Craft",
     media: [
       {
         type: "image",
@@ -187,7 +184,6 @@ const projects = [
     description: [
       "Front-End Development for Toronto-based photographer Norman Wong."
     ],
-    serviceTags: "Front-End Development",
     stackTags: {
       cms: "Craft",
     },
@@ -195,7 +191,8 @@ const projects = [
   {
     name: "Susan for Susan",
     year: "2021",
-    type: "FE Development",
+    type: "Theme Development",
+    stack: "Squarespace",
     media: [
       {
         type: "mobileVideo",
@@ -209,14 +206,13 @@ const projects = [
       }
     ],
     description: [
-      "Front-End Development for Toronto-based design studio Susan for Susan.\n\nUI/UX Design by ",
+      "Front-End Development for Toronto-based design studio Susan for Susan.\n\nDesign by ",
       { 
         text: "Ronan Mcgee", 
         link: "https://www.xn--rnn-fla2g.com/" 
       },
       "."
     ],
-    serviceTags: "Front-End Development",
     stackTags: {
       cms: "Squarespace"
     },
@@ -224,7 +220,8 @@ const projects = [
   {
     name: "Club Dieciséis",
     year: "2021",
-    type: "Shopify",
+    type: "Theme Development",
+    stack: "Shopify",
     media: [
       {
         type: "desktopVideo",
@@ -232,14 +229,13 @@ const projects = [
       }
     ],
     description: [
-      "Front-End Development for Puerto Rican musician Tainy.\n\nUI/UX Design by ",
+      "Front-End Development for Puerto Rican musician Tainy.\n\nDesign by ",
       { 
         text: "Ronan Mcgee", 
         link: "https://www.xn--rnn-fla2g.com/" 
       },
       "."
     ],
-    serviceTags: "Front-End Development",
     stackTags: {
       commerce: "Shopify"
     },
@@ -278,28 +274,23 @@ export default function Home() {
         </header>
         <main className="container pt-16">
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
-            <div className="grid grid-cols-[50%_50%] lg:grid-cols-[35%_22%_22%_21%] h-max mt-12 lg:mt-24 mb-12 lg:mb-24">
-              {/* <h1 className="mt-8 lg:mt-24 mb-12 lg:mb-24 text-xs animate-fade-in-slow-delay opacity-0">
-                JNPR works with clients on website development and e-commerce strategy.<br />
-                Based in Toronto, Canada.
-              </h1> */}
-              <p className="col-span-2 lg:col-span-1 text-xs mb-12 lg:mb-8 max-w-56">
-                JNPR works with clients on website development and e-commerce strategy.<br /><br />
-                Based in Toronto.
+            <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12 lg:mb-24">
+              <p className="col-span-2 lg:col-span-1 mb-4 lg:mb-0 max-w-44 text-xs">
+                JNPR works with clients on website development and e-commerce strategy.
               </p>
-              <p className="col-span-2 lg:col-span-1 mb-4 lg:mb-0 text-xs">
-                Services:
-              </p>
-              <p className="lg:mb-3 text-xs">
-                Shopify Development<br /><br /><br />
-                Jamstack Development<br /><br /><br />
+              <p className="text-xs">
+                What We Do:<br /><br /><br />
+                Frontend Engineering<br /><br /><br /><br />
+                Theme Development<br /><br /><br /><br />
                 Core Web Vitals
               </p>
-              <p className="lg:mb-3 text-xs">
-                Headless Integrations<br />
-                Theme Customization<br /><br />
-                Next.js<br />
-                Nuxt.js<br /><br />
+              <p className="text-xs"><br /><br /><br />
+                Meta JS Frameworks<br />
+                Headless Commerce<br />
+                Headless CMS<br /><br />
+                Shopify<br />
+                Squarespace<br />
+                Craft<br /><br />
                 Performance<br />
                 Accessibility<br />
                 Best Practices<br />
@@ -311,13 +302,22 @@ export default function Home() {
               <Accordion type="single" defaultValue="item-0" collapsible className="space-y-2">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[35%_35%_auto_max-content] w-full text-xs/none font-normal text-left">
+                    <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_30%_auto_max-content] w-full text-xs/none font-normal text-left">
                       <p className="whitespace-pre-line text-xs">{project.name}</p>
                       <p className="hidden lg:block whitespace-pre-line text-xs">{project.type}</p>
+                      <p className="hidden lg:block whitespace-pre-line text-xs">{project.stack}</p>
                       <p className="whitespace-pre-line text-xs pr-2">{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[35%_35%_auto]">
+                      <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[30%_40%_30%]">
+                        <div className="lg:hidden mt-2 grid grid-cols-[50%_auto_max-content] lg:grid-cols-[35%_65%]">
+                          <div className="text-xs max-w-[95%] whitespace-pre-line">
+                            {project.type}
+                          </div>
+                          <div className="text-xs max-w-[95%] whitespace-pre-line">
+                            {project.stack}
+                          </div>
+                        </div>
                         <Carousel className="relative w-full py-2 lg:order-1" orientation="horizontal">
                           <CarouselContent>
                           {project.media.map((item, itemIndex) => (
@@ -359,54 +359,20 @@ export default function Home() {
                           <CarouselNext variant="quiet" />
                         </Carousel>
                         {project.description &&
-                          <p className="text-xs whitespace-pre-line lg:pr-32">
-                            {project.description.map((item, i) =>
-                              typeof item === "string" ? (
-                                item
-                              ) : (
-                                <a key={i} href={item.link} target="_blank" className="link-primary">
-                                  {item.text}
-                                </a>
-                              )
-                            )}
-                          </p>
+                          <div className="lg:flex lg:items-center lg:justify-between">
+                            <p className="text-xs whitespace-pre-line lg:pr-32">
+                              {project.description.map((item, i) =>
+                                typeof item === "string" ? (
+                                  item
+                                ) : (
+                                  <a key={i} href={item.link} target="_blank" className="link-primary">
+                                    {item.text}
+                                  </a>
+                                )
+                              )}
+                            </p>
+                          </div>
                         }
-                        <div className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[35%_65%]">
-                          <div className="text-xs max-w-[95%] whitespace-pre-line">
-                            {project.stackTags.frontEnd &&
-                              <p className="whitespace-nowrap">JS Framework:</p>
-                            }
-                            {project.stackTags.ui &&
-                              <p className="whitespace-nowrap">UI Documentation:</p>
-                            }
-                            {project.stackTags.commerce &&
-                              <p className="whitespace-nowrap">E-Commerce:</p>
-                            }
-                            {project.stackTags.deployment &&
-                              <p className="whitespace-nowrap">PAAS:</p>
-                            }
-                            {project.stackTags.cms &&
-                              <p className="whitespace-nowrap">CMS:</p>
-                            }
-                          </div>
-                          <div className="text-xs max-w-[95%] whitespace-pre-line">
-                            {project.stackTags.frontEnd &&
-                              <p className="whitespace-nowrap">{project.stackTags.frontEnd}</p>
-                            }
-                            {project.stackTags.ui &&
-                              <p className="whitespace-nowrap">{project.stackTags.ui}</p>
-                            }
-                            {project.stackTags.commerce &&
-                              <p className="whitespace-nowrap">{project.stackTags.commerce}</p>
-                            }
-                            {project.stackTags.deployment &&
-                              <p className="whitespace-nowrap">{project.stackTags.deployment}</p>
-                            }
-                            {project.stackTags.cms &&
-                              <p className="whitespace-nowrap">{project.stackTags.cms}</p>
-                            }
-                          </div>
-                        </div>
                       </div>
                       </AccordionContent>
                   </AccordionItem>
