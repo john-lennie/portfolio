@@ -36,7 +36,7 @@ const projects = [
       } 
     ],
     description: [
-      "Developed custom landing pages and improved accessibility across the multi-brand Nuxt.js application for The North Face, Vans, and Timberland.",
+      "Developed custom landing pages and improved accessibility for The North Face, Vans, and Timberland within VF's multi-brand Nuxt.js application.",
     ],
     stackTags: {
       frontEnd: "Nuxt",
