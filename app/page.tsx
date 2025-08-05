@@ -36,7 +36,7 @@ const projects = [
       } 
     ],
     description: [
-      "Worked with the VF Digital Technology Team on the development of custom landing pages, component feature requests, and accessibility improvements for VF's umbrella of brands including The North Face, Vans, and Timberland.",
+      "Worked with the VF Digital Technology Team to develop custom landing pages, and components, along with accessibility audits and improvements for VF's umbrella of brands including The North Face, Vans, and Timberland.",
     ],
     stackTags: {
       frontEnd: "Nuxt",
@@ -313,14 +313,14 @@ export default function Home() {
                       <p className="whitespace-pre-line text-xs pr-2">{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[25%_auto]">
+                      <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[50%_auto]">
                         <Carousel className="relative w-full py-2 lg:order-1" orientation="horizontal" opts={{
                           align: 'start',
                           loop: false
                         }}>
                           <CarouselContent>
                           {project.media.map((item, itemIndex) => (
-                            <CarouselItem key={itemIndex} className="flex justify-center items-center pt-4">
+                            <CarouselItem key={itemIndex} className={`flex justify-center items-center pt-4 ${project.media.length > 1 ? 'lg:flex-[0_0_50%]' : 'flex-[0_0_100%]'}`}>
                               {item.type === "image" && (
                                 <div
                                   className="relative w-full"
@@ -354,8 +354,8 @@ export default function Home() {
                             </CarouselItem>
                           ))}
                           </CarouselContent>
-                          <CarouselNavigation className="lg:hidden" />
-                          {/* <CarouselNext variant="quiet" /> */}
+                          <CarouselNavigation />
+                          <CarouselNext variant="quiet" />
                         </Carousel>
                         {project.description &&
                           <div className="lg:flex lg:items-center lg:justify-between">

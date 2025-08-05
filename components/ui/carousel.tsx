@@ -158,7 +158,7 @@
     const { carouselRef, orientation } = useCarousel()
 
     return (
-      <div ref={carouselRef} className="overflow-hiden lg:overflow-x-auto pb-4">
+      <div ref={carouselRef} className="overflow-hidden pb-4">
         <div
           ref={ref}
           className={cn(
@@ -185,7 +185,7 @@
         role="group"
         aria-roledescription="slide"
         className={cn(
-          "embla__slide flex-[0_0_100%] lg:flex-[0_0_50%] min-w-0",
+          "embla__slide flex-[0_0_100%] min-w-0",
           orientation === "horizontal" ? "pl-4" : "pt-4",
           className
         )}
