@@ -36,7 +36,7 @@ const projects = [
       } 
     ],
     description: [
-      "Developed custom landing pages and improved accessibility for The North Face, Vans, and Timberland within VF's multi-brand Nuxt.js application.",
+      "Worked with the VF Digital Technology Team on the development of custom landing pages, component feature requests, and accessibility improvements for VF's umbrella of brands including The North Face, Vans, and Timberland.",
     ],
     stackTags: {
       frontEnd: "Nuxt",
@@ -57,7 +57,7 @@ const projects = [
       }
     ],
     description: [
-      "Designed and built a headless e-commerce platform for Faces of Another, a contemporary men's clothing line .\n\n",
+      "Designed and built a headless e-commerce platform for Faces of Another, a men's contemporary clothing line .\n\n",
       { 
         text: "facesofanother.com", 
         link: "https://facesofanother.com/" 
