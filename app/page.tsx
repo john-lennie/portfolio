@@ -32,7 +32,7 @@ const projects = [
         type: "image",
         src: "/vf-corp/tnf_history_2.png",
         width: 1500,
-        height: 954
+        height: 864
       } 
     ],
     description: [
@@ -53,7 +53,7 @@ const projects = [
         type: "image",
         src: "/faces-of-another/foa_7.png",
         width: 1500,
-        height: 1068
+        height: 862
       }
     ],
     description: [
@@ -320,7 +320,7 @@ export default function Home() {
                         }}>
                           <CarouselContent>
                           {project.media.map((item, itemIndex) => (
-                            <CarouselItem key={itemIndex} className={`flex justify-center items-center pt-4 ${project.media.length > 1 ? 'lg:flex-[0_0_50%]' : 'flex-[0_0_100%]'}`}>
+                            <CarouselItem key={itemIndex} className={`flex justify-center items-center ${project.media.length > 1 ? 'lg:flex-[0_0_50%]' : 'flex-[0_0_100%]'}`}>
                               {item.type === "image" && (
                                 <div
                                   className="relative w-full"
