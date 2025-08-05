@@ -25,8 +25,8 @@ const projects = [
   {
     name: "VF Corporation",
     year: "2023 - 2025",
-    type: "Frontend Engineering, Core Web Vitals",
-    stack: "Nuxt.js, Accessibility",
+    type: "Frontend Engineering\nCore Web Vitals",
+    stack: "Nuxt.js\nAccessibility",
     media: [
       {
         type: "image",
@@ -46,8 +46,8 @@ const projects = [
   {
     name: "Faces Of Another", 
     year: "2022 - 2025",
-    type: "Frontend Engineering",
-    stack: "Headless CMS & Commerce, Next.js",
+    type: "Design\nFrontend Engineering",
+    stack: "Visual\nHeadless CMS (Sanity)\nHeadless Commerce (Shopify)\nNext.js",
     media: [
       {
         type: "image",
@@ -73,8 +73,8 @@ const projects = [
   {
     name: "North of Now",
     year: "2022",
-    type: "Frontend Engineering",
-    stack: "Headless CMS, Next.js",
+    type: "Design\n\nFrontend Engineering",
+    stack: "Visual\nUI\nHeadless CMS (Prismic)\nNext.js",
     media: [
       {
         type: "image",
@@ -280,14 +280,17 @@ export default function Home() {
               </p>
               <p className="mb-4 lg:mb-8 col-span-2 lg:col-span-4 text-xs">Services:</p>
               <p className="text-xs lg:col-start-2">
+                Design<br /><br /><br />
                 Frontend Engineering<br /><br /><br /><br />
                 Theme Development<br /><br /><br /><br />
                 Core Web Vitals
               </p>
               <p className="text-xs">
-                Meta JS Frameworks<br />
+                Visual<br />
+                UI<br /><br />
+                Headless CMS<br />
                 Headless Commerce<br />
-                Headless CMS<br /><br />
+                JS Frameworks<br /><br />
                 Shopify<br />
                 Squarespace<br />
                 Craft<br /><br />
@@ -302,15 +305,18 @@ export default function Home() {
               <Accordion type="single" collapsible className="space-y-2">
                 {projects.map((project, index) => (
                   <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_30%_auto_max-content] w-full text-xs/none font-normal text-left">
+                    <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left">
                       <p className="whitespace-pre-line text-xs">{project.name}</p>
                       <p className="hidden lg:block whitespace-pre-line text-xs">{project.type}</p>
-                      <p className="hidden lg:block whitespace-pre-line text-xs">{project.stack}</p>
+                      <p className="hidden lg:block whitespace-pre-line text-xs pr-6">{project.stack}</p>
                       <p className="whitespace-pre-line text-xs pr-2">{project.year}</p>
                     </AccordionTrigger>
                     <AccordionContent>
-                      <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[30%_40%_30%]">
-                        <Carousel className="relative w-full py-2 lg:order-1" orientation="horizontal">
+                      <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[25%_auto]">
+                        <Carousel className="relative w-full py-2 lg:order-1" orientation="horizontal" opts={{
+                          align: 'start',
+                          loop: false
+                        }}>
                           <CarouselContent>
                           {project.media.map((item, itemIndex) => (
                             <CarouselItem key={itemIndex} className="flex justify-center items-center pt-4">
@@ -347,8 +353,8 @@ export default function Home() {
                             </CarouselItem>
                           ))}
                           </CarouselContent>
-                          <CarouselNavigation />
-                          <CarouselNext variant="quiet" />
+                          <CarouselNavigation className="lg:hidden" />
+                          {/* <CarouselNext variant="quiet" /> */}
                         </Carousel>
                         {project.description &&
                           <div className="lg:flex lg:items-center lg:justify-between">
@@ -366,6 +372,7 @@ export default function Home() {
                           </div>
                         }
                         <div className="lg:hidden grid grid-cols-[50%_auto]">
+                          <h3 className="col-span-2 text-xs mb-4">Services: </h3>
                           <div className="text-xs max-w-[95%] mb-2 whitespace-pre-line">
                             {project.type}
                           </div>
