@@ -30,7 +30,7 @@ const projects = [
     media: [
       {
         type: "image",
-        src: "/vf-corp/tnf_history_1.png",
+        src: "/vf-corp/tnf_history_2.png",
         width: 1500,
         height: 954
       } 
