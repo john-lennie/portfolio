@@ -158,7 +158,7 @@
     const { carouselRef, orientation } = useCarousel()
 
     return (
-      <div ref={carouselRef} className="overflow-hidden">
+      <div ref={carouselRef} className="overflow-hidden pt-2">
         <div
           ref={ref}
           className={cn(
