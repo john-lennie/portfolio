@@ -274,7 +274,7 @@ export default function Home() {
         </header>
         <main className="container pt-16">
           <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
-            <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12 lg:mb-24">
+            <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
               <p className="col-span-2 lg:col-span-1 mb-12 lg:mb-0 max-w-44 text-xs">
                 JNPR works with clients on website development and e-commerce strategy.
               </p>
