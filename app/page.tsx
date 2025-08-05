@@ -102,7 +102,7 @@ const projects = [
       }
     ],
     description: [
-      "New visual identity and website for Los Angeles based film production company North of Now."
+      "Design and development of a new website for Los Angeles based film production company North of Now."
     ],
     stackTags: {
       cms: "Prismic",
