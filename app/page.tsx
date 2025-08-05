@@ -51,7 +51,7 @@ const projects = [
     media: [
       {
         type: "image",
-        src: "/faces-of-another/foa-5.png",
+        src: "/faces-of-another/foa_7.png",
         width: 1500,
         height: 1068
       }
