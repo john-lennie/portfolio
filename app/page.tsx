@@ -73,8 +73,8 @@ const projects = [
   {
     name: "North of Now",
     year: "2022",
-    type: "Design\n\nFrontend Engineering",
-    stack: "Visual\nUI\nHeadless CMS (Prismic)\nNext.js",
+    type: "Design\n\n\nFrontend Engineering",
+    stack: "Visual\nGraphic\nUI\nHeadless CMS (Prismic)\nNext.js",
     media: [
       {
         type: "image",
@@ -280,13 +280,14 @@ export default function Home() {
               </p>
               <p className="mb-4 lg:mb-8 col-span-2 lg:col-span-4 text-xs">Services:</p>
               <p className="text-xs lg:col-start-2">
-                Design<br /><br /><br />
+                Design<br /><br /><br /><br />
                 Frontend Engineering<br /><br /><br /><br />
                 Theme Development<br /><br /><br /><br />
                 Core Web Vitals
               </p>
               <p className="text-xs">
                 Visual<br />
+                Graphic<br />
                 UI<br /><br />
                 Headless CMS<br />
                 Headless Commerce<br />
