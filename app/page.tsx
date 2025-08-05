@@ -36,7 +36,7 @@ const projects = [
       } 
     ],
     description: [
-      "Worked with the VF Digital Technology Team to develop custom landing pages, and components, along with accessibility audits and improvements for VF's umbrella of brands including The North Face, Vans, and Timberland.",
+      "Worked with the VF Digital Technology Team to develop custom landing pages & components, along with accessibility audits and improvements for VF's umbrella of brands including The North Face, Vans, and Timberland.",
     ],
     stackTags: {
       frontEnd: "Nuxt",
