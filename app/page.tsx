@@ -117,14 +117,14 @@ const projects = [
     stack: "Shopify",
     media: [
       {
-        type: "mobileVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"
-      },
-      {
         type: "image",
         src: "/basma/bb-d.png",
         width: 1000,
         height: 761
+      },
+      {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"
       }
     ],
     description: [
