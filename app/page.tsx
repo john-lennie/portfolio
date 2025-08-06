@@ -279,7 +279,7 @@ export default function Home() {
               <img className="h-8" src="/jnpr.svg" alt="JNPR Studio" />
             </div>
             <button className={infoVisibility ? 'block' : 'hidden'} onClick={toggleInfo}>
-              <CrossCircledIcon className="h-6 w-6" />
+              <CrossCircledIcon className="h-5 w-5 lg:h-7 lg:w-7" />
             </button>
             <button className={"text-xs " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Studio Info</button>
           </div>
