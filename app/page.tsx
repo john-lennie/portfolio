@@ -273,7 +273,7 @@ export default function Home() {
             backdropFilter: 'blur(3px)'
           }}
         >
-          <div className="relative z-50 flex justify-between items-center pr-2 animate-fade-in-slow">
+          <div className="relative z-50 flex justify-between items-center mr-1 animate-fade-in-slow">
             <div className="py-4 md:pl-0">
               <img className="h-7 xl:h-9" src="/jnpr.svg" alt="JNPR Studio" />
             </div>
@@ -283,14 +283,20 @@ export default function Home() {
             </button>
             <button className={"text-xs " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Studio Info</button>
           </div>
-          <div className={infoVisibility ? 'block w-full lg:w-2/5' : 'hidden'}>
-            <p className="text-base text-red-600">We research, design, and build digital products.</p>
-          </div>
-          <div className={"mb-5 " + (infoVisibility ? 'block' : 'hidden')}>
+          <div className={infoVisibility ? 'block w-3/5 lg:w-1/2' : 'hidden'}>
             <p className="text-base text-red-600">
-              For work inquiries:
+              JNPR is the independent design & development studio of John Lennie.<br /><br />
+              We collaborate closely with teams and designers to bring thoughtful, digital experiences to life.<br /><br />
+              Specializing in design, e-commerce and headless frontend architecture solutions.
             </p>
-            <CopyButton className="text-base link-primary" textToCopy="hello@jnpr.studio" />
+          </div>
+          <div className={"flex justify-between mb-5 " + (infoVisibility ? 'block' : 'hidden')}>
+            <p className="text-base">68 Claremont St<br />Toronto, ON<br />Canada</p>
+            <p className="text-base text-right">
+              <a href="tel:+14166708705" className="link-primary">&#43;1&#32;416&#32;670&#32;8705</a><br />
+              <CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /><br />
+              <a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a>
+            </p>
           </div>
         </header>
         <main className="container relative grid grid-cols-1 box-border w-full animate-fade-in-slow-delay opacity-0 pt-16">
