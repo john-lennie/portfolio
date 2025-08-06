@@ -262,10 +262,10 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <div className="min-h-screen text-black">
+      <div className="text-black">
         <GlobalStyles />
         <header
-          className={"container fixed z-[2] duration-300 flex flex-col justify-between " + (infoVisibility ? 'h-screen ' : 'h-auto ') + (direction === 'down' ? '-top-[76px] lg:-top-[104px]' : 'top-0')}
+          className={"container fixed z-[2] duration-300 flex flex-col justify-between " + (infoVisibility ? 'h-dvh ' : 'h-auto ') + (direction === 'down' ? '-top-[76px] lg:-top-[104px]' : 'top-0')}
           style={{
             backgroundColor: 'transparent',
             backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
