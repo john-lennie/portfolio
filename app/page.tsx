@@ -299,7 +299,7 @@ export default function Home() {
             <p className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 max-w-64 text-xs">
               JNPR works with clients on website development and e-commerce strategy.
             </p>
-            <p className="mb-4 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
+            <p className="mb-2 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
             <p className="text-xs lg:col-start-2 italic">
               Design<br /><br /><br /><br />
               Frontend Engineering<br /><br /><br /><br />
@@ -321,7 +321,7 @@ export default function Home() {
             </p>
           </div>
           <div className="mb-12 lg:mb-24">
-            <h2 className="text-xs mb-4 uppercase">Work:</h2>
+            <h2 className="text-xs mb-2 uppercase">Work:</h2>
             <Accordion type="single" defaultValue="item-1" collapsible className="space-y-2">
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
@@ -407,7 +407,7 @@ export default function Home() {
               ))}
             </Accordion>
           </div>
-          <div className="grid lg:grid-cols-[25%_auto] h-max mb-12 lg:mb-24 animate-fade-in-slow-delay opacity-0">
+          <div className="grid grid-cols-[50%_auto] lg:grid-cols-[25%_auto] mb-16 lg:mb-24 animate-fade-in-slow-delay opacity-0">
             <p className="text-xs">E-Mail:<br /><CopyButton textToCopy="hello@jnpr.studio" /></p>
             <p className="text-xs">Instagram:<br /><a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a></p>
           </div>
