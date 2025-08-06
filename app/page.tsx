@@ -40,7 +40,7 @@ const projects = [
       } 
     ],
     description: [
-      "Worked with the VF Digital Technology Team to develop custom landing pages, build on design systems, and perform accessibility audits/improvements for VF's umbrella of brands including The North Face, Vans, and Timberland.",
+      "Worked with the VF Digital Technology Team to develop custom landing pages, build design systems, and perform accessibility audits/improvements for VF's umbrella of brands including The North Face, Vans, and Timberland.",
     ],
     stackTags: {
       frontEnd: "Nuxt",
@@ -278,7 +278,9 @@ export default function Home() {
             <div className="py-4 md:pl-0">
               <img className="h-8" src="/jnpr.svg" alt="JNPR Studio" />
             </div>
-            <CrossCircledIcon className={"h-5 w-5 " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo} />
+            <button className={infoVisibility ? 'block' : 'hidden'} onClick={toggleInfo}>
+              <CrossCircledIcon className="h-6 w-6" />
+            </button>
             <button className={"text-xs " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Studio Info</button>
           </div>
           <div className={infoVisibility ? 'block w-full lg:w-2/5' : 'hidden'}>
@@ -299,14 +301,14 @@ export default function Home() {
             <p className="col-span-2 lg:col-span-1 lg:row-span-2 mb-12 lg:mb-0 max-w-56 text-xs">
               JNPR works with clients on website development and e-commerce strategy.
             </p>
-            <p className="mb-4 lg:mb-8 col-span-2 lg:col-span-4 text-xs">Services:</p>
-            <p className="text-xs lg:col-start-2">
+            <p className="mb-4 lg:mb-8 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
+            <p className="text-xs lg:col-start-2 italic">
               Design<br /><br /><br /><br />
               Frontend Engineering<br /><br /><br /><br />
               Theme Development<br /><br /><br /><br />
               Core Web Vitals
             </p>
-            <p className="text-xs">
+            <p className="text-xs italic">
               Visual<br />
               Graphic<br />
               UI<br /><br />
@@ -322,14 +324,14 @@ export default function Home() {
             </p>
           </div>
           <div className="mb-12 lg:mb-24">
-            <h2 className="text-xs mb-4 lg:mb-8">Work:</h2>
+            <h2 className="text-xs mb-4 lg:mb-8 uppercase">Work:</h2>
             <Accordion type="single" collapsible className="space-y-2">
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
                   <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left">
                     <span className="whitespace-pre-line text-xs">{project.name}</span>
-                    <span className="hidden lg:block whitespace-pre-line text-xs">{project.type}</span>
-                    <span className="hidden lg:block whitespace-pre-line text-xs pr-6">{project.stack}</span>
+                    <span className="hidden lg:block whitespace-pre-line text-xs italic">{project.type}</span>
+                    <span className="hidden lg:block whitespace-pre-line text-xs pr-6 italic">{project.stack}</span>
                     <span className="whitespace-pre-line text-xs pr-2">{project.year}</span>
                   </AccordionTrigger>
                   <AccordionContent>
@@ -393,8 +395,8 @@ export default function Home() {
                           </p>
                         </div>
                       }
-                      <div className="lg:hidden grid grid-cols-[50%_auto]">
-                        <h3 className="col-span-2 text-xs mb-4">Services: </h3>
+                      <div className="lg:hidden grid grid-cols-[50%_auto] italic">
+                        {/* <h3 className="col-span-2 text-xs mb-4">Services: </h3> */}
                         <div className="text-xs max-w-[95%] mb-2 whitespace-pre-line">
                           {project.type}
                         </div>

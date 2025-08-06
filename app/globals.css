@@ -111,11 +111,11 @@ p {
 }
 
 .text-xs {
-  @apply font-normal text-[3vw] leading-[4vw] lg:text-[0.9vw] lg:leading-[1.1vw];
+  @apply text-[3vw] leading-[4vw] lg:text-[0.9vw] lg:leading-[1.1vw];
 }
 
 .text-sm {
-  @apply font-normal text-[2.5vw] leading-[2.75vw] sm:text-[2vw] sm:leading-[3vw] lg:text-[1vw] lg:leading-[1.5vw];
+  @apply text-[2.5vw] leading-[2.75vw] sm:text-[2vw] sm:leading-[3vw] lg:text-[1vw] lg:leading-[1.5vw];
 }
 
 .text-base {
