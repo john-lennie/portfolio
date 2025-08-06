@@ -119,7 +119,7 @@ p {
 }
 
 .text-base {
-  @apply font-semibold tracking-tighter text-[4.5vw] leading-[5.5vw] lg:text-[1.5vw] lg:leading-[2vw];
+  @apply font-semibold tracking-tighter text-[4.5vw] leading-[5.5vw] lg:text-[1.5vw] lg:leading-[1.9vw];
 }
 
 .btn-primary {
