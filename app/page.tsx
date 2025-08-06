@@ -287,7 +287,7 @@ export default function Home() {
             <p className="text-base text-red-600">
               JNPR is an independent design & development studio run by John Lennie.<br /><br />
               We collaborate with teams and designers to bring digital experiences to life.<br /><br />
-              Specializing in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.
+              Specializing in UI & visual design, e-commerce strategy, and headless frontend architecture solutions.
             </p>
           </div>
           <div className={"flex justify-between mb-5 " + (infoVisibility ? 'block' : 'hidden')}>
