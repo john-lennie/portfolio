@@ -406,16 +406,15 @@ export default function Home() {
               ))}
             </Accordion>
           </div>
-          <div className="grid grid-cols-[50%_auto] lg:grid-cols-[25%_25%_auto] mb-16 lg:mb-24 animate-fade-in-slow-delay opacity-0">
+          <div className="grid grid-cols-[50%_auto] mb-16 lg:mb-24 animate-fade-in-slow-delay opacity-0">
             <p className="text-xs">68 Claremont St<br />Toronto, ON<br />Canada</p>
-            <div className="lg:hidden text-right">
+            <div className="text-right">
               <p className="text-xs">
+                <a href="tel:+14166708705" className="link-primary">&#43;1&#32;416&#32;670&#32;8705</a><br />
                 <CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /><br />
                 <a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a>
               </p>
             </div>
-            <p className="hidden lg:block text-xs"><CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /></p>
-            <p className="hidden lg:block text-xs"><a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a></p>
           </div>
         </main>
       </div>
