@@ -267,11 +267,10 @@ export default function Home() {
         <header
           className={"container fixed z-[2] duration-300 flex flex-col justify-between " + (infoVisibility ? 'h-dvh ' : 'h-auto ') + (direction === 'down' ? '-top-[76px] lg:-top-[104px]' : 'top-0')}
           style={{
-            backgroundColor: 'transparent',
+            backgroundColor: '#ffffffab',
             backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
             backgroundSize: '4px 4px',
-            backdropFilter: 'blur(3px)',
-            mask: 'linear-gradient(#000 calc(100%), #0000)'
+            backdropFilter: 'blur(3px)'
           }}
         >
           <div className="relative z-50 flex justify-between items-center pr-2 animate-fade-in-slow">
