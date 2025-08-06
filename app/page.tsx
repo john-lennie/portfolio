@@ -276,7 +276,7 @@ export default function Home() {
         >
           <div className="relative z-50 flex justify-between items-center pr-2 animate-fade-in-slow">
             <div className="py-4 md:pl-0">
-              <img className="h-8" src="/jnpr.svg" alt="JNPR Studio" />
+              <img className="h-7 xl:h-9" src="/jnpr.svg" alt="JNPR Studio" />
             </div>
             <button className={"flex text-xs !leading-none items-center " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
               Close
@@ -296,7 +296,7 @@ export default function Home() {
         </header>
         <main className="container relative grid grid-cols-1 box-border w-full animate-fade-in-slow-delay opacity-0 pt-16">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
-            <p className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 max-w-64 text-xs">
+            <p className="lg:row-span-2 mb-16 lg:mb-0 text-xs max-w-56">
               JNPR works with clients on website development and e-commerce strategy.
             </p>
             <p className="mb-2 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
@@ -407,9 +407,14 @@ export default function Home() {
               ))}
             </Accordion>
           </div>
-          <div className="grid grid-cols-[50%_auto] lg:grid-cols-[25%_auto] mb-16 lg:mb-24 animate-fade-in-slow-delay opacity-0">
-            <p className="text-xs">E-mail:<br /><CopyButton textToCopy="hello@jnpr.studio" /></p>
-            <p className="text-xs">Instagram:<br /><a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a></p>
+          <div className="grid grid-cols-[50%_auto] lg:grid-cols-[25%_25%_auto] mb-16 lg:mb-24 animate-fade-in-slow-delay opacity-0">
+            <p className="text-xs">LOCATION:<br />68 Claremont St<br />Toronto, ON<br />Canada</p>
+            <div className="lg:hidden">
+              <p className="text-xs mb-4">E-MAIL:<br /><CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /></p>
+              <p className="text-xs">INSTAGRAM:<br /><a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a></p>
+            </div>
+            <p className="hidden lg:block text-xs">E-MAIL:<br /><CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /></p>
+            <p className="hidden lg:block text-xs">INSTAGRAM:<br /><a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a></p>
           </div>
         </main>
       </div>
