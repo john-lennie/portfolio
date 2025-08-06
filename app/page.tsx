@@ -291,7 +291,7 @@ export default function Home() {
             <p className="text-base text-red-600">
               For work inquiries:
             </p>
-            <CopyButton className="text-base" textToCopy="hello@jnpr.studio" />
+            <CopyButton className="text-base link-primary" textToCopy="hello@jnpr.studio" />
           </div>
         </header>
         <main className="container relative grid grid-cols-1 box-border w-full animate-fade-in-slow-delay opacity-0 pt-16">
