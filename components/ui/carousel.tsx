@@ -276,14 +276,14 @@
     if (!api || scrollSnaps.length <= 1) return null
   
     return (
-      <div className={cn("flex justify-center gap-1 mt-4", className)}>
+      <div className={cn("flex justify-center gap-[1px] mt-4", className)}>
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
             onClick={() => api.scrollTo(index)}
             className={cn(
-              "h-1 w-1 rounded-full",
-              index === selectedIndex ? "bg-black" : "bg-gray-300"
+              "h-1.5 w-1.5",
+              index === selectedIndex ? "bg-black" : "bg-gray-200"
             )}
             aria-label={`Go to slide ${index + 1}`}
           />
