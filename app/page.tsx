@@ -36,7 +36,7 @@ const projects = [
       } 
     ],
     description: [
-      "Worked with the VF Digital Technology Team to develop custom landing pages & components, along with accessibility audits and improvements for VF's umbrella of brands including The North Face, Vans, and Timberland.",
+      "Worked with the VF Digital Technology Team to develop custom landing pages, build on design systems, and perform accessibility audits/improvements for VF's umbrella of brands including The North Face, Vans, and Timberland.",
     ],
     stackTags: {
       frontEnd: "Nuxt",
@@ -57,7 +57,7 @@ const projects = [
       }
     ],
     description: [
-      "Designed and built a headless e-commerce platform for Faces of Another, a men's contemporary clothing brand.\n\n",
+      "Designed and built a headless e-commerce platform for Faces Of Another, a men's contemporary clothing brand.\n\n",
       { 
         text: "facesofanother.com", 
         link: "https://facesofanother.com/" 
@@ -102,7 +102,7 @@ const projects = [
       }
     ],
     description: [
-      "Design and development of a new website for Los Angeles based film production company North of Now."
+      "Logomark, website design and development for Los Angeles based film production company North of Now."
     ],
     stackTags: {
       cms: "Prismic",
@@ -244,159 +244,169 @@ const projects = [
 
 export default function Home() {
 
-  const [direction, setDirection] = React.useState('up')
   const { scrollDir } = useDetectScroll();
-
+  const [direction, setDirection] = React.useState('up')
   React.useEffect(() => {
     scrollDir === "down" && setDirection('down')
     scrollDir === "up" && setDirection('up')
   }, [scrollDir])
+
+  const [infoVisibility, setInfoVisibility] = React.useState(false);
+  const toggleInfo = () => setInfoVisibility(prev => !prev);
 
   return (
     <div className="bg-white">
       <div className="min-h-screen text-black">
         <GlobalStyles />
         <header
-          className={"container fixed z-[2] duration-300 " + (direction === 'down' ? '-top-[76px] lg:-top-[104px]' : 'top-0')}
+          className={"container fixed z-[2] duration-300 flex flex-col justify-between " + (infoVisibility ? 'h-screen ' : 'h-auto ') + (direction === 'down' ? '-top-[76px] lg:-top-[104px]' : 'top-0')}
           style={{
             backgroundColor: 'transparent',
             backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
             backgroundSize: '4px 4px',
             backdropFilter: 'blur(3px)',
-            mask: 'linear-gradient(#000 calc(100% - 16px), #0000)'
+            mask: 'linear-gradient(#000 calc(100%), #0000)'
           }}
         >
-          <div className="relative z-50 flex justify-between items-center animate-fade-in-slow">
-            <div className="pt-4 pb-8 pr-12 md:pl-0">
+          <div className="relative z-50 flex justify-between items-center animate-fade-in-slow pr-2">
+            <div className="py-4 md:pl-0">
               <img className="h-8" src="/jnpr.svg" alt="JNPR Studio" />
-              </div>
+            </div>
+            <button className="text-xs" onClick={toggleInfo}>Studio Info</button>
+          </div>
+          <div className={infoVisibility ? 'block' : 'hidden'}>
+            <p className="text-base">We research, design, and build digital products.</p>
+            <p className="text-base">We support our clients' vision, addressing their needs and delivering products that improve life.</p>
+            <p className="text-base">We enhance transformation by cultivating creativity led by strategy, and expressed by design.</p>
+            <p className="text-base">We love challenges. We're constantly looking for simple solutions aimed at tackling complexities, still maintaining a strong emphasis on craft in every detail.</p>
+          </div>
+          <div className={"mb-5 " +  (infoVisibility ? 'block' : 'hidden')}>
+            <p className="text-base">
+              For work inquiries:
+            </p>
+            <CopyButton className="text-base text-blue-700" textToCopy="hello@jnpr.studio" />
           </div>
         </header>
-        <main className="container pt-16">
-          <div className="relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0">
-            <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
-              <p className="col-span-2 lg:col-span-1 mb-12 lg:mb-0 max-w-44 text-xs">
-                JNPR works with clients on website development and e-commerce strategy.
-              </p>
-              <p className="mb-4 lg:mb-8 col-span-2 lg:col-span-4 text-xs">Services:</p>
-              <p className="text-xs lg:col-start-2">
-                Design<br /><br /><br /><br />
-                Frontend Engineering<br /><br /><br /><br />
-                Theme Development<br /><br /><br /><br />
-                Core Web Vitals
-              </p>
-              <p className="text-xs">
-                Visual<br />
-                Graphic<br />
-                UI<br /><br />
-                Headless CMS<br />
-                Headless Commerce<br />
-                JS Frameworks<br /><br />
-                Shopify<br />
-                Squarespace<br />
-                Craft<br /><br />
-                Performance<br />
-                Accessibility<br />
-                Best Practices<br />
-                SEO
-              </p>
-            </div>
-            <div className="mb-12 lg:mb-24">
-              <h2 className="text-xs mb-4 lg:mb-8">Work:</h2>
-              <Accordion type="single" collapsible className="space-y-2">
-                {projects.map((project, index) => (
-                  <AccordionItem key={index} value={`item-${index}`}>
-                    <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left">
-                      <p className="whitespace-pre-line text-xs">{project.name}</p>
-                      <p className="hidden lg:block whitespace-pre-line text-xs">{project.type}</p>
-                      <p className="hidden lg:block whitespace-pre-line text-xs pr-6">{project.stack}</p>
-                      <p className="whitespace-pre-line text-xs pr-2">{project.year}</p>
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[50%_auto]">
-                        <Carousel className="relative w-full py-2 lg:order-1" orientation="horizontal" opts={{
-                          align: 'start',
-                          loop: false
-                        }}>
-                          <CarouselContent>
-                          {project.media.map((item, itemIndex) => (
-                            <CarouselItem key={itemIndex} className={`flex justify-center items-center ${project.media.length > 1 ? 'lg:flex-[0_0_50%]' : 'flex-[0_0_100%]'}`}>
-                              {item.type === "image" && (
-                                <div
-                                  className="relative w-full"
-                                  style={{
-                                    aspectRatio: `${item.width} / ${item.height}`,
-                                  }}
-                                >
-                                  <Image
-                                    fill
-                                    src={item.src}
-                                    alt={`${project.name} screenshot ${itemIndex + 1}`}
-                                    sizes="(max-width: 1024px) 100vw, 40vw"
-                                    style={{ objectFit: "contain" }}
-                                  />
-                                </div>
-                              )}
-                              {item.type === "mobileVideo" && (
-                                <div className="aspect-w-16 aspect-h-9 w-1/2 sm:w-2/5">
-                                  <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
-                                    Your browser does not support the video tag.
-                                  </video>
-                                </div>
-                              )}
-                              {item.type === "desktopVideo" && (
-                                <div className="aspect-w-16 aspect-h-9">
-                                  <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
-                                    Your browser does not support the video tag.
-                                  </video>
-                                </div>
-                              )}
-                            </CarouselItem>
-                          ))}
-                          </CarouselContent>
-                          <CarouselNavigation />
-                          <CarouselNext variant="quiet" />
-                        </Carousel>
-                        {project.description &&
-                          <div className="lg:flex lg:items-center lg:justify-between">
-                            <p className="text-xs whitespace-pre-line lg:pr-32">
-                              {project.description.map((item, i) =>
-                                typeof item === "string" ? (
-                                  item
-                                ) : (
-                                  <a key={i} href={item.link} target="_blank" className="link-primary">
-                                    {item.text}
-                                  </a>
-                                )
-                              )}
-                            </p>
-                          </div>
-                        }
-                        <div className="lg:hidden grid grid-cols-[50%_auto]">
-                          <h3 className="col-span-2 text-xs mb-4">Services: </h3>
-                          <div className="text-xs max-w-[95%] mb-2 whitespace-pre-line">
-                            {project.type}
-                          </div>
-                          <div className="text-xs max-w-[95%] whitespace-pre-line">
-                            {project.stack}
-                          </div>
+        <main className="container relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0 pt-16">
+          <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
+            <p className="col-span-2 lg:col-span-1 lg:row-span-2 mb-12 lg:mb-0 max-w-56 text-xs">
+              JNPR works with clients on website development and e-commerce strategy.
+            </p>
+            <p className="mb-4 lg:mb-8 col-span-2 lg:col-span-4 text-xs">Services:</p>
+            <p className="text-xs lg:col-start-2">
+              Design<br /><br /><br /><br />
+              Frontend Engineering<br /><br /><br /><br />
+              Theme Development<br /><br /><br /><br />
+              Core Web Vitals
+            </p>
+            <p className="text-xs">
+              Visual<br />
+              Graphic<br />
+              UI<br /><br />
+              Headless CMS<br />
+              Headless Commerce<br />
+              JS Frameworks<br /><br />
+              Shopify<br />
+              Squarespace<br />
+              Craft<br /><br />
+              Performance<br />
+              Accessibility<br />
+              Best Practices
+            </p>
+          </div>
+          <div className="mb-12 lg:mb-24">
+            <h2 className="text-xs mb-4 lg:mb-8">Work:</h2>
+            <Accordion type="single" collapsible className="space-y-2">
+              {projects.map((project, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left">
+                    <span className="whitespace-pre-line text-xs">{project.name}</span>
+                    <span className="hidden lg:block whitespace-pre-line text-xs">{project.type}</span>
+                    <span className="hidden lg:block whitespace-pre-line text-xs pr-6">{project.stack}</span>
+                    <span className="whitespace-pre-line text-xs pr-2">{project.year}</span>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[50%_auto]">
+                      <Carousel className="relative w-full py-2 lg:order-1" orientation="horizontal" opts={{
+                        align: 'start',
+                        loop: false
+                      }}>
+                        <CarouselContent>
+                        {project.media.map((item, itemIndex) => (
+                          <CarouselItem key={itemIndex} className={`flex justify-center items-center ${project.media.length > 1 ? 'lg:flex-[0_0_50%]' : 'flex-[0_0_100%]'}`}>
+                            {item.type === "image" && (
+                              <div
+                                className="relative w-full"
+                                style={{
+                                  aspectRatio: `${item.width} / ${item.height}`,
+                                }}
+                              >
+                                <Image
+                                  fill
+                                  src={item.src}
+                                  alt={`${project.name} screenshot ${itemIndex + 1}`}
+                                  sizes="(max-width: 1024px) 100vw, 40vw"
+                                  style={{ objectFit: "contain" }}
+                                />
+                              </div>
+                            )}
+                            {item.type === "mobileVideo" && (
+                              <div className="aspect-w-16 aspect-h-9 w-1/2 sm:w-2/5">
+                                <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                                  Your browser does not support the video tag.
+                                </video>
+                              </div>
+                            )}
+                            {item.type === "desktopVideo" && (
+                              <div className="aspect-w-16 aspect-h-9">
+                                <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
+                                  Your browser does not support the video tag.
+                                </video>
+                              </div>
+                            )}
+                          </CarouselItem>
+                        ))}
+                        </CarouselContent>
+                        <CarouselNavigation />
+                        <CarouselPrevious variant="quiet" />
+                        <CarouselNext variant="quiet" />
+                      </Carousel>
+                      {project.description &&
+                        <div className="lg:flex lg:items-center lg:justify-between w-full lg:w-3/4">
+                          <p className="text-xs whitespace-pre-line lg:pr-32">
+                            {project.description.map((item, i) =>
+                              typeof item === "string" ? (
+                                item
+                              ) : (
+                                <a key={i} href={item.link} target="_blank" className="link-primary">
+                                  {item.text}
+                                </a>
+                              )
+                            )}
+                          </p>
+                        </div>
+                      }
+                      <div className="lg:hidden grid grid-cols-[50%_auto]">
+                        <h3 className="col-span-2 text-xs mb-4">Services: </h3>
+                        <div className="text-xs max-w-[95%] mb-2 whitespace-pre-line">
+                          {project.type}
+                        </div>
+                        <div className="text-xs max-w-[95%] whitespace-pre-line">
+                          {project.stack}
                         </div>
                       </div>
-                      </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+                    </div>
+                    </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+          <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24 animate-fade-in-slow-delay opacity-0">
+            <div>
+              <CopyButton className="text-xs" textToCopy="hello@jnpr.studio" />
             </div>
-            <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24 animate-fade-in-slow-delay opacity-0">
-              <div>
-                <p className="text-xs">
-                  For work inquiries:
-                </p>
-                <CopyButton textToCopy="hello@jnpr.studio" />
-              </div>
-              <div></div>
-              <div></div>
-            </div>
+            <div></div>
+            <div></div>
           </div>
         </main>
       </div>

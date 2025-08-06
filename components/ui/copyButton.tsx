@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { CopyIcon } from "@radix-ui/react-icons"
 
 interface CopyButtonProps {
   textToCopy: string;
+  className?: string;
 }
 
-function CopyButton({ textToCopy }: CopyButtonProps) {
+function CopyButton({ textToCopy, className = '' }: CopyButtonProps) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -16,8 +16,11 @@ function CopyButton({ textToCopy }: CopyButtonProps) {
   };
 
   return (
-    <button className='text-blue-700 text-xs flex items-center justify-between w-full' onClick={handleCopy}>
-      {copied ? 'Copied.' : textToCopy }
+    <button
+      onClick={handleCopy}
+      className={`flex items-center justify-between w-full ${className}`}
+    >
+      {copied ? 'Copied.' : textToCopy}
       {/* <CopyIcon className='w-[10vw] h-[10vw] md:w-[9vw] md:h-[9vw]' /> */}
     </button>
   );

@@ -207,17 +207,13 @@
         variant={variant}
         size={size}
         className={cn(
-          "absolute h-4 w-4 hidden lg:block",
-          orientation === "horizontal"
-            ? "left-0 top-1/2 -translate-y-1/2"
-            : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+          "absolute top-0 left-0 h-full w-1/2 hidden lg:block",
           className
         )}
         disabled={!canScrollPrev}
         onClick={scrollPrev}
         {...props}
       >
-        <ArrowLeft strokeWidth={1} className="h-4 w-4" />
         <span className="sr-only">Previous slide</span>
       </Button>
     )
@@ -236,10 +232,7 @@
         variant={variant}
         size={size}
         className={cn(
-          "absolute h-full w-full hidden lg:block",
-          orientation === "horizontal"
-            ? "left-0 right-0 top-1/2 -translate-y-1/2"
-            : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+          "absolute top-0 left-1/2 h-full w-1/2 hidden lg:block",
           className
         )}
         disabled={!canScrollNext}
