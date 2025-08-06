@@ -408,7 +408,7 @@ export default function Home() {
             </Accordion>
           </div>
           <div className="grid grid-cols-[50%_auto] lg:grid-cols-[25%_25%_auto] mb-16 lg:mb-24 animate-fade-in-slow-delay opacity-0">
-            <p className="text-xs">LOCATION:<br />68 Claremont St<br />Toronto, ON<br />Canada</p>
+            <p className="text-xs">ADDRESS:<br />68 Claremont St<br />Toronto, ON<br />Canada</p>
             <div className="lg:hidden">
               <p className="text-xs mb-4">E-MAIL:<br /><CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /></p>
               <p className="text-xs">INSTAGRAM:<br /><a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a></p>
