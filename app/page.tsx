@@ -411,7 +411,7 @@ export default function Home() {
             <p className="text-xs">68 Claremont St<br />Toronto, ON<br />Canada</p>
             <div className="lg:hidden text-right">
               <p className="text-xs">
-                <CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /><br />
+                <CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /><br /><br />
                 <a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a>
               </p>
             </div>
