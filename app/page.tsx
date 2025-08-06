@@ -408,7 +408,7 @@ export default function Home() {
             </Accordion>
           </div>
           <div className="grid grid-cols-[50%_auto] lg:grid-cols-[25%_auto] mb-16 lg:mb-24 animate-fade-in-slow-delay opacity-0">
-            <p className="text-xs">E-Mail:<br /><CopyButton textToCopy="hello@jnpr.studio" /></p>
+            <p className="text-xs">E-mail:<br /><CopyButton textToCopy="hello@jnpr.studio" /></p>
             <p className="text-xs">Instagram:<br /><a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a></p>
           </div>
         </main>
