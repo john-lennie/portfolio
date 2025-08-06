@@ -1,6 +1,7 @@
 "use client"
 
 import * as React from "react"
+import Image from "next/image"
 import useDetectScroll from "@smakss/react-scroll-direction"
 import { 
   Accordion, 
@@ -16,10 +17,10 @@ import {
   CarouselNext,
   CarouselNavigation
 } from "@/components/ui/carousel"
-import { EnvelopeClosedIcon } from "@radix-ui/react-icons"
 import CopyButton from '@/components/ui/copyButton';
-import Image from "next/image"
+
 import { GlobalStyles } from "@/components/GlobalStyles"
+import useLockBodyScroll from '@/hooks/use-lock-body-scroll';
 
 const projects = [
   {
@@ -254,6 +255,8 @@ export default function Home() {
   const [infoVisibility, setInfoVisibility] = React.useState(false);
   const toggleInfo = () => setInfoVisibility(prev => !prev);
 
+  useLockBodyScroll(infoVisibility);
+
   return (
     <div className="bg-white">
       <div className="min-h-screen text-black">
@@ -274,14 +277,14 @@ export default function Home() {
             </div>
             <button className="text-xs" onClick={toggleInfo}>Studio Info</button>
           </div>
-          <div className={infoVisibility ? 'block' : 'hidden'}>
-            <p className="text-base">We research, design, and build digital products.</p>
-            <p className="text-base">We support our clients' vision, addressing their needs and delivering products that improve life.</p>
-            <p className="text-base">We enhance transformation by cultivating creativity led by strategy, and expressed by design.</p>
-            <p className="text-base">We love challenges. We're constantly looking for simple solutions aimed at tackling complexities, still maintaining a strong emphasis on craft in every detail.</p>
+          <div className={infoVisibility ? 'block w-full lg:w-2/5' : 'hidden'}>
+            <p className="text-base text-red-600">We research, design, and build digital products.</p>
+            <p className="text-base text-red-600">We support our clients' vision, addressing their needs and delivering products that improve life.</p>
+            <p className="text-base text-red-600">We enhance transformation by cultivating creativity led by strategy, and expressed by design.</p>
+            <p className="text-base text-red-600">We love challenges. We're constantly looking for simple solutions aimed at tackling complexities, still maintaining a strong emphasis on craft in every detail.</p>
           </div>
           <div className={"mb-5 " +  (infoVisibility ? 'block' : 'hidden')}>
-            <p className="text-base">
+            <p className="text-base text-red-600">
               For work inquiries:
             </p>
             <CopyButton className="text-base text-blue-700" textToCopy="hello@jnpr.studio" />
