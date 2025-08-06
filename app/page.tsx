@@ -167,32 +167,6 @@ const projects = [
     },
   },
   {
-    name: "Norman Wong",
-    year: "2021",
-    type: "Theme Development",
-    stack: "Craft",
-    media: [
-      {
-        type: "image",
-        src: "/norman-wong/1.png",
-        width: 800,
-        height: 487
-      },
-      {
-        type: "image",
-        src: "/norman-wong/3.png",
-        width: 800,
-        height: 487
-      }
-    ],
-    description: [
-      "Frontend development for Toronto-based photographer Norman Wong."
-    ],
-    stackTags: {
-      cms: "Craft",
-    },
-  },
-  {
     name: "Susan for Susan",
     year: "2021",
     type: "Theme Development",
@@ -243,7 +217,33 @@ const projects = [
     stackTags: {
       commerce: "Shopify"
     },
-  }
+  },
+  {
+    name: "Norman Wong",
+    year: "2020",
+    type: "Theme Development",
+    stack: "Craft",
+    media: [
+      {
+        type: "image",
+        src: "/norman-wong/1.png",
+        width: 800,
+        height: 487
+      },
+      {
+        type: "image",
+        src: "/norman-wong/3.png",
+        width: 800,
+        height: 487
+      }
+    ],
+    description: [
+      "Frontend development for Toronto-based photographer Norman Wong."
+    ],
+    stackTags: {
+      cms: "Craft",
+    },
+  },
 ]
 
 export default function Home() {
