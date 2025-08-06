@@ -325,7 +325,7 @@ export default function Home() {
               Best Practices
             </p>
           </div>
-          <div className="mb-12 lg:mb-24">
+          <div className="mb-16 lg:mb-24">
             <h2 className="text-xs mb-2 uppercase">Work:</h2>
             <Accordion type="single" defaultValue="item-2" collapsible className="space-y-2">
               {projects.map((project, index) => (
