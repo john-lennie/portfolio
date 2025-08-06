@@ -301,7 +301,7 @@ export default function Home() {
         </header>
         <main className="container relative grid grid-cols-1 box-border w-full animate-fade-in-slow-delay opacity-0 pt-16">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
-            <p className="lg:row-span-2 mb-16 lg:mb-0 text-xs max-w-56">
+            <p className="hidden lg:block lg:row-span-2 mb-16 lg:mb-0 text-xs max-w-56">
               JNPR works with clients on website development and e-commerce strategy.
             </p>
             <p className="mb-2 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
