@@ -63,7 +63,7 @@ const projects = [
     description: [
       "Designed and built a headless e-commerce platform for Faces Of Another, a men's contemporary clothing brand.\n\n",
       { 
-        text: "facesofanother.com", 
+        text: "www.facesofanother.com", 
         link: "https://facesofanother.com/" 
       },
     ],
@@ -291,7 +291,7 @@ export default function Home() {
             <p className="text-base text-red-600">
               For work inquiries:
             </p>
-            <CopyButton className="text-base text-blue-700" textToCopy="hello@jnpr.studio" />
+            <CopyButton className="text-base" textToCopy="hello@jnpr.studio" />
           </div>
         </header>
         <main className="container relative grid grid-cols-1 box-border w-full animate-fade-in-slow-delay opacity-0 pt-16">
@@ -407,12 +407,9 @@ export default function Home() {
               ))}
             </Accordion>
           </div>
-          <div className="grid grid-cols-[35%_35%_auto] h-max mb-12 lg:mb-24 animate-fade-in-slow-delay opacity-0">
-            <div>
-              <CopyButton className="text-xs" textToCopy="hello@jnpr.studio" />
-            </div>
-            <div></div>
-            <div></div>
+          <div className="grid lg:grid-cols-[25%_auto] h-max mb-12 lg:mb-24 animate-fade-in-slow-delay opacity-0">
+            <p className="text-xs">E-Mail:<br /><CopyButton textToCopy="hello@jnpr.studio" /></p>
+            <p className="text-xs">Instagram:<br /><a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a></p>
           </div>
         </main>
       </div>

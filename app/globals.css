@@ -127,7 +127,7 @@ p {
 }
 
 .link-primary {
-  @apply text-blue-700 underline hover:text-blue-700;
+  @apply text-blue-700 hover:text-blue-700;
 }
 
 .link-secondary {
