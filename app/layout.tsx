@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   title: 'JNPR Studio',
   description: 'JNPR is a digital design and engineering studio based in Toronto.',
   openGraph: {
-    images: ['https://jnpr.studio/og_img_08_07_2025.png'],
+    images: ['https://jnpr.studio/og_img_08_08_2025.png'],
   },
 }
 
