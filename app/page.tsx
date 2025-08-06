@@ -274,20 +274,18 @@ export default function Home() {
             mask: 'linear-gradient(#000 calc(100%), #0000)'
           }}
         >
-          <div className="relative z-50 flex justify-between items-center animate-fade-in-slow pr-2">
-            <div className="py-4 md:pl-0">
+          <div className="relative z-50 flex justify-between items-center pr-2">
+            <div className="py-4 md:pl-0 animate-fade-in-slow">
               <img className="h-8" src="/jnpr.svg" alt="JNPR Studio" />
             </div>
-            <button className={infoVisibility ? 'block' : 'hidden'} onClick={toggleInfo}>
-              <CrossCircledIcon className="h-5 w-5 lg:h-7 lg:w-7" />
+            <button className={"flex text-xs !leading-none items-center " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
+              Close
+              <CrossCircledIcon className="ml-1 h-[4.5vw] w-[4.5vw] lg:h-[1.25vw] lg:w-[1.25vw]" />
             </button>
-            <button className={"text-xs " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Studio Info</button>
+            <button className={"text-xs opacity-0 animate-fade-in-slow-delay " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Studio Info</button>
           </div>
           <div className={infoVisibility ? 'block w-full lg:w-2/5' : 'hidden'}>
             <p className="text-base text-red-600">We research, design, and build digital products.</p>
-            <p className="text-base text-red-600">We support our clients' vision, addressing their needs and delivering products that improve life.</p>
-            <p className="text-base text-red-600">We enhance transformation by cultivating creativity led by strategy, and expressed by design.</p>
-            <p className="text-base text-red-600">We love challenges. We're constantly looking for simple solutions aimed at tackling complexities, still maintaining a strong emphasis on craft in every detail.</p>
           </div>
           <div className={"mb-5 " + (infoVisibility ? 'block' : 'hidden')}>
             <p className="text-base text-red-600">
@@ -296,16 +294,16 @@ export default function Home() {
             <CopyButton className="text-base text-blue-700" textToCopy="hello@jnpr.studio" />
           </div>
         </header>
-        <main className="container relative grid grid-cols-1 box-border w-full animate-fade-in-slower-delay opacity-0 pt-16">
+        <main className="container relative grid grid-cols-1 box-border w-full animate-fade-in-slow-delay opacity-0 pt-16">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
-            <p className="col-span-1 lg:row-span-2 mb-12 lg:mb-0 max-w-56 text-xs">
+            <p className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 max-w-64 text-xs">
               JNPR works with clients on website development and e-commerce strategy.
             </p>
-            <p className="mb-4 lg:mb-8 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
+            <p className="mb-4 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
             <p className="text-xs lg:col-start-2 italic">
               Design<br /><br /><br /><br />
               Frontend Engineering<br /><br /><br /><br />
-              Theme Development<br /><br /><br /><br />
+              Theme Development<br /><br /><br />
               Core Web Vitals
             </p>
             <p className="text-xs italic">
@@ -314,18 +312,17 @@ export default function Home() {
               UI<br /><br />
               Headless CMS<br />
               Headless Commerce<br />
-              JS Frameworks<br /><br />
+              JS Meta Frameworks<br /><br />
               Shopify<br />
-              Squarespace<br />
-              Craft<br /><br />
+              Monolithic CMS's<br /><br />
               Performance<br />
               Accessibility<br />
               Best Practices
             </p>
           </div>
           <div className="mb-12 lg:mb-24">
-            <h2 className="text-xs mb-4 lg:mb-8 uppercase">Work:</h2>
-            <Accordion type="single" collapsible className="space-y-2">
+            <h2 className="text-xs mb-4 uppercase">Work:</h2>
+            <Accordion type="single" defaultValue="item-1" collapsible className="space-y-2">
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
                   <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left">
