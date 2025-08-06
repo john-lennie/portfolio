@@ -327,7 +327,7 @@ export default function Home() {
           </div>
           <div className="mb-24">
             <h2 className="text-xs mb-2 uppercase">Work:</h2>
-            <Accordion type="single" defaultValue="item-2" collapsible className="space-y-2">
+            <Accordion type="single" defaultValue="item-1" collapsible className="space-y-2">
               {projects.map((project, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
                   <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left">
