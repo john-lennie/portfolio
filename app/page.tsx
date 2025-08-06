@@ -274,15 +274,15 @@ export default function Home() {
             mask: 'linear-gradient(#000 calc(100%), #0000)'
           }}
         >
-          <div className="relative z-50 flex justify-between items-center pr-2">
-            <div className="py-4 md:pl-0 animate-fade-in-slow">
+          <div className="relative z-50 flex justify-between items-center pr-2 animate-fade-in-slow">
+            <div className="py-4 md:pl-0">
               <img className="h-8" src="/jnpr.svg" alt="JNPR Studio" />
             </div>
             <button className={"flex text-xs !leading-none items-center " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
               Close
               <CrossCircledIcon className="ml-1 h-[4.5vw] w-[4.5vw] lg:h-[1.25vw] lg:w-[1.25vw]" />
             </button>
-            <button className={"text-xs opacity-0 animate-fade-in-slow-delay " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Studio Info</button>
+            <button className={"text-xs " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Studio Info</button>
           </div>
           <div className={infoVisibility ? 'block w-full lg:w-2/5' : 'hidden'}>
             <p className="text-base text-red-600">We research, design, and build digital products.</p>
