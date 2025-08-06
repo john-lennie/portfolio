@@ -3,6 +3,9 @@
 import * as React from "react"
 import Image from "next/image"
 import useDetectScroll from "@smakss/react-scroll-direction"
+
+import { CrossCircledIcon } from "@radix-ui/react-icons"
+
 import { 
   Accordion, 
   AccordionContent, 
@@ -18,8 +21,8 @@ import {
   CarouselNavigation
 } from "@/components/ui/carousel"
 import CopyButton from '@/components/ui/copyButton';
-
 import { GlobalStyles } from "@/components/GlobalStyles"
+
 import useLockBodyScroll from '@/hooks/use-lock-body-scroll';
 
 const projects = [
@@ -275,7 +278,8 @@ export default function Home() {
             <div className="py-4 md:pl-0">
               <img className="h-8" src="/jnpr.svg" alt="JNPR Studio" />
             </div>
-            <button className="text-xs" onClick={toggleInfo}>Studio Info</button>
+            <CrossCircledIcon className={"h-5 w-5 " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo} />
+            <button className={"text-xs " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Studio Info</button>
           </div>
           <div className={infoVisibility ? 'block w-full lg:w-2/5' : 'hidden'}>
             <p className="text-base text-red-600">We research, design, and build digital products.</p>
@@ -283,7 +287,7 @@ export default function Home() {
             <p className="text-base text-red-600">We enhance transformation by cultivating creativity led by strategy, and expressed by design.</p>
             <p className="text-base text-red-600">We love challenges. We're constantly looking for simple solutions aimed at tackling complexities, still maintaining a strong emphasis on craft in every detail.</p>
           </div>
-          <div className={"mb-5 " +  (infoVisibility ? 'block' : 'hidden')}>
+          <div className={"mb-5 " + (infoVisibility ? 'block' : 'hidden')}>
             <p className="text-base text-red-600">
               For work inquiries:
             </p>
