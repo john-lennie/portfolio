@@ -144,29 +144,6 @@ const projects = [
     },
   },
   {
-    name: "Full Court Press",
-    year: "2022",
-    type: "Theme Development",
-    stack: "Shopify",
-    media: [
-      {
-        type: "mobileVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"
-      }
-    ],
-    description: [
-      "Shopify theme development for New York-based clothing line/publishing house Full Court Press.\n\nDesign by ",
-      { 
-        text: "Ronan Mcgee", 
-        link: "https://www.xn--rnn-fla2g.com/" 
-      },
-      "."
-    ],
-    stackTags: {
-      commerce: "Shopify"
-    },
-  },
-  {
     name: "Susan for Susan",
     year: "2021",
     type: "Theme Development",
@@ -208,6 +185,29 @@ const projects = [
     ],
     description: [
       "Shopify theme development for Puerto Rican musician Tainy.\n\nDesign by ",
+      { 
+        text: "Ronan Mcgee", 
+        link: "https://www.xn--rnn-fla2g.com/" 
+      },
+      "."
+    ],
+    stackTags: {
+      commerce: "Shopify"
+    },
+  },
+  {
+    name: "Full Court Press",
+    year: "2020",
+    type: "Theme Development",
+    stack: "Shopify",
+    media: [
+      {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"
+      }
+    ],
+    description: [
+      "Shopify theme development for New York-based clothing line/publishing house Full Court Press.\n\nDesign by ",
       { 
         text: "Ronan Mcgee", 
         link: "https://www.xn--rnn-fla2g.com/" 
