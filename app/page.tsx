@@ -199,14 +199,14 @@ const projects = [
     stack: "Squarespace",
     media: [
       {
-        type: "mobileVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/downloads/default.mp4"
-      },
-      {
         type: "image",
         src: "/susan-for-susan/1.png",
         width: 1000,
         height: 652
+      },
+      {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/downloads/default.mp4"
       }
     ],
     description: [
