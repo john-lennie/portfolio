@@ -277,11 +277,11 @@ export default function Home() {
             <div className="py-4 md:pl-0">
               <img className="h-7 xl:h-9" src="/jnpr.svg" alt="JNPR Studio" />
             </div>
-            <button className={"flex text-xs !leading-none items-center " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
+            <button className={"flex text-base !leading-none items-center " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
               Close
-              <CrossCircledIcon className="ml-1 h-[4.5vw] w-[4.5vw] lg:h-[1.25vw] lg:w-[1.25vw]" />
+              {/* <CrossCircledIcon className="ml-2 h-[4.5vw] w-[4.5vw] lg:h-[1.75vw] lg:w-[1.75vw]" /> */}
             </button>
-            <button className={"text-xs " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Studio Info</button>
+            <button className={"text-base " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Info</button>
           </div>
           <div className={infoVisibility ? 'block w-3/5 lg:w-1/3' : 'hidden'}>
             <p className="text-base text-red-600">
