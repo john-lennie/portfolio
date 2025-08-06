@@ -283,7 +283,7 @@ export default function Home() {
             </button>
             <button className={"text-xs " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Studio Info</button>
           </div>
-          <div className={infoVisibility ? 'block w-3/5 lg:w-1/2' : 'hidden'}>
+          <div className={infoVisibility ? 'block w-3/5 lg:w-1/3' : 'hidden'}>
             <p className="text-base text-red-600">
               JNPR is the independent design & development studio of John Lennie.<br /><br />
               We collaborate closely with teams and designers to bring thoughtful, digital experiences to life.<br /><br />
