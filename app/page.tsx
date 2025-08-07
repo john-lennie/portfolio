@@ -49,7 +49,7 @@ const projects = [
   },
   {
     name: "Faces Of Another", 
-    year: "2022 - 2025",
+    year: "2022 - 2024",
     type: "Design\nFrontend Engineering",
     stack: "Visual\nHeadless CMS (Sanity)\nHeadless Commerce (Shopify)\nNext.js",
     media: [
