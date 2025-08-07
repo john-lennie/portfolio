@@ -332,7 +332,7 @@ export default function Home() {
                   key={index} value={`item-${index}`}
                   style={{
                     borderBottom: 'none',
-                    backgroundImage: 'radial-gradient(black 1px, transparent 1px)',
+                    backgroundImage: 'radial-gradient(#e5e7eb 1px, transparent 1px)',
                     backgroundSize: '4px 4px',
                     backgroundRepeat: 'repeat-x',
                     backgroundPosition: 'bottom'
