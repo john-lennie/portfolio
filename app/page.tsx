@@ -305,23 +305,23 @@ export default function Home() {
             </p>
             <p className="mb-2 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
             <p className="text-xs lg:col-start-2 italic">
-              Design<br /><br /><br /><br />
               Frontend Engineering<br /><br /><br /><br />
               Theme Development<br /><br /><br />
-              Core Web Vitals
+              Core Web Vitals<br /><br /><br /><br />
+              Design
             </p>
             <p className="text-xs italic">
-              Visual<br />
-              Graphic<br />
-              UI<br /><br />
+              JS Meta Frameworks<br />
               Headless CMS<br />
-              Headless Commerce<br />
-              JS Meta Frameworks<br /><br />
+              Headless Commerce<br /><br />
               Shopify<br />
               Monolithic CMS's<br /><br />
               Performance<br />
               Accessibility<br />
-              Best Practices
+              Best Practices<br /><br />
+              Visual<br />
+              Graphic<br />
+              UI
             </p>
           </div>
           <div className="mb-24">
