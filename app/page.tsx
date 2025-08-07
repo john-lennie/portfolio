@@ -303,7 +303,7 @@ export default function Home() {
             <p className="hidden lg:block lg:row-span-2 mb-16 lg:mb-0 text-xs max-w-56">
               JNPR works with clients on website development and e-commerce strategy.
             </p>
-            <p className="mb-2 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
+            <p className="mb-4 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
             <p className="text-xs lg:col-start-2 italic">
               Frontend Engineering<br /><br /><br /><br />
               Theme Development<br /><br /><br />
@@ -325,19 +325,30 @@ export default function Home() {
             </p>
           </div>
           <div className="mb-24">
-            <h2 className="text-xs mb-2 uppercase">Work:</h2>
+            <h2 className="text-xs mb-4 uppercase">Work:</h2>
             <Accordion type="single" collapsible className="space-y-2">
               {projects.map((project, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left">
+                <AccordionItem
+                  key={index} value={`item-${index}`}
+                  style={{
+                    borderBottom: 'none',
+                    backgroundImage: 'radial-gradient(black 1px, transparent 1px)',
+                    backgroundSize: '4px 4px',
+                    backgroundRepeat: 'repeat-x',
+                    backgroundPosition: 'bottom'
+                  }}
+                >
+                  <AccordionTrigger
+                    className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left pb-3"
+                  >
                     <span className="whitespace-pre-line text-xs">{project.name}</span>
                     <span className="hidden lg:block whitespace-pre-line text-xs italic">{project.type}</span>
                     <span className="hidden lg:block whitespace-pre-line text-xs pr-6 italic">{project.stack}</span>
                     <span className="whitespace-pre-line text-xs pr-2">{project.year}</span>
                   </AccordionTrigger>
                   <AccordionContent>
-                    <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[50%_auto]">
-                      <Carousel className="relative w-full py-2 lg:order-1" orientation="horizontal" opts={{
+                    <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[25%_25%_50%]">
+                      <Carousel className="relative w-full py-2 lg:order-2" orientation="horizontal" opts={{
                         align: 'start',
                         loop: false
                       }}>
@@ -382,7 +393,7 @@ export default function Home() {
                         <CarouselNext variant="quiet" />
                       </Carousel>
                       {project.description &&
-                        <div className="lg:flex lg:items-center lg:justify-between w-full lg:w-3/4">
+                        <div className="lg:flex lg:items-center lg:justify-between w-full lg:col-span-2 lg:w-1/2">
                           <p className="text-xs whitespace-pre-line lg:pr-32">
                             {project.description.map((item, i) =>
                               typeof item === "string" ? (
