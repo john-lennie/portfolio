@@ -285,9 +285,8 @@ export default function Home() {
           </div>
           <div className={infoVisibility ? 'block w-3/5 lg:w-1/3' : 'hidden'}>
             <p className="text-base text-red-600">
-              JNPR is an independent design & development studio run by John Lennie.<br /><br />
-              We collaborate with teams and designers to bring digital experiences to life.<br /><br />
-              Specializing in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.
+              JNPR is a design and  development studio based in Toronto.<br /><br />
+              We specialize in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.
             </p>
           </div>
           <div className={"flex justify-between mb-5 " + (infoVisibility ? 'block' : 'hidden')}>
