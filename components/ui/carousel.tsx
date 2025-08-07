@@ -276,7 +276,7 @@
     if (!api || scrollSnaps.length <= 1) return null
   
     return (
-      <div className={cn("flex justify-center items-center h-2 gap-[5px] mt-4", className)}>
+      <div className={cn("flex justify-center items-center h-2 gap-[2px] mt-4", className)}>
         {scrollSnaps.map((_, index) => (
           <button
             key={index}
