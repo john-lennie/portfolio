@@ -324,7 +324,7 @@ export default function Home() {
               UI
             </p>
           </div>
-          <div className="mb-32">
+          <div className="mb-28">
             <h2 className="text-xs mb-4 uppercase">Work:</h2>
             <Accordion type="single" collapsible className="space-y-2">
               {projects.map((project, index) => (
