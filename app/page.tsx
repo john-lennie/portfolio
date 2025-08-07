@@ -326,20 +326,14 @@ export default function Home() {
           </div>
           <div className="mb-28">
             <h2 className="text-xs mb-4 uppercase">Work:</h2>
-            <Accordion type="single" collapsible className="space-y-2">
+            <Accordion type="single" defaultValue="item-2" collapsible className="space-y-2">
               {projects.map((project, index) => (
                 <AccordionItem
                   key={index} value={`item-${index}`}
-                  style={{
-                    borderBottom: 'none',
-                    backgroundImage: 'radial-gradient(#e5e7eb 1px, transparent 1px)',
-                    backgroundSize: '4px 4px',
-                    backgroundRepeat: 'repeat-x',
-                    backgroundPosition: 'bottom'
-                  }}
+                  className="border-b border-black"
                 >
                   <AccordionTrigger
-                    className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left pb-3"
+                    className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left pb-2"
                   >
                     <span className="whitespace-pre-line text-xs">{project.name}</span>
                     <span className="hidden lg:block whitespace-pre-line text-xs italic">{project.type}</span>
