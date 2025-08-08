@@ -330,7 +330,6 @@ export default function Home() {
               {projects.map((project, index) => (
                 <AccordionItem
                   key={index} value={`item-${index}`}
-                  className="border-b border-black"
                 >
                   <AccordionTrigger
                     className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left pb-2"
