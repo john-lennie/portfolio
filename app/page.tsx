@@ -40,7 +40,7 @@ const projects = [
       } 
     ],
     description: [
-      "Worked with VF Digital Technology Team to develop product campaign pages, design system components, and improve core web vitals for The North Face, Vans & Timberland",
+      "Worked with VF Digital Technology Team to develop product campaign pages, design system components, and improve core web vitals for The North Face, Vans & Timberland.",
     ],
     stackTags: {
       frontEnd: "Nuxt",
@@ -61,7 +61,7 @@ const projects = [
       }
     ],
     description: [
-      "Designed and built a headless e-commerce platform for Faces Of Another, a men's contemporary clothing brand\n\n",
+      "Designed and built a headless e-commerce platform for Faces Of Another, a men's contemporary clothing brand.\n\n",
       { 
         text: "www.facesofanother.com", 
         link: "https://facesofanother.com/" 
@@ -106,7 +106,7 @@ const projects = [
       }
     ],
     description: [
-      "Logomark, website design and development for Los Angeles based film production company North of Now"
+      "Logomark, website design and development for Los Angeles based film production company North of Now."
     ],
     stackTags: {
       cms: "Prismic",
@@ -137,7 +137,7 @@ const projects = [
         text: "56.digital", 
         link: "https://56.digital/" 
       },
-      " to develop a shade finder quiz for Basma Beauty"
+      " to develop a shade finder quiz for Basma Beauty."
     ],
     stackTags: {
       commerce: "Shopify"
@@ -161,7 +161,7 @@ const projects = [
       }
     ],
     description: [
-      "Frontend development for Toronto-based design studio Susan for Susan\n\nDesign by ",
+      "Frontend development for Toronto-based design studio Susan for Susan.\n\nDesign by ",
       { 
         text: "Ronan Mcgee", 
         link: "https://www.xn--rnn-fla2g.com/" 
@@ -183,7 +183,7 @@ const projects = [
       }
     ],
     description: [
-      "Shopify theme development for Puerto Rican musician Tainy\n\nDesign by ",
+      "Shopify theme development for Puerto Rican musician Tainy.\n\nDesign by ",
       { 
         text: "Ronan Mcgee", 
         link: "https://www.xn--rnn-fla2g.com/" 
@@ -205,7 +205,7 @@ const projects = [
       }
     ],
     description: [
-      "Shopify theme development for New York-based clothing line/publishing house Full Court Press\n\nDesign by ",
+      "Shopify theme development for New York-based clothing line/publishing house Full Court Press.\n\nDesign by ",
       { 
         text: "Ronan Mcgee", 
         link: "https://www.xn--rnn-fla2g.com/" 
@@ -235,7 +235,7 @@ const projects = [
       }
     ],
     description: [
-      "Frontend development for Toronto-based photographer Norman Wong"
+      "Frontend development for Toronto-based photographer Norman Wong."
     ],
     stackTags: {
       cms: "Craft",
