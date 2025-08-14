@@ -30,7 +30,7 @@ const projects = [
     name: "VF Corporation",
     year: "2023 - 2025",
     type: "Frontend Engineering\nCore Web Vitals",
-    stack: "Nuxt.js\nAccessibility",
+    stack: "Nuxt.js\nPerformance\nAccessibility",
     media: [
       {
         type: "image",
@@ -40,7 +40,7 @@ const projects = [
       } 
     ],
     description: [
-      "Worked with VF Digital Technology Team to build marketing pages, enhance design systems, and improve accessibility for The North Face, Vans & Timberland",
+      "Worked with VF Digital Technology Team to develop product campaign pages, design system components, and improve core web vitals for The North Face, Vans & Timberland",
     ],
     stackTags: {
       frontEnd: "Nuxt",
