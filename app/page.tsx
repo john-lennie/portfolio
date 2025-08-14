@@ -320,7 +320,6 @@ export default function Home() {
               Accessibility<br />
               Best Practices<br /><br />
               Visual<br />
-              Graphic<br />
               UI
             </p>
           </div>
