@@ -298,7 +298,7 @@ export default function Home() {
             </p>
           </div>
         </header>
-        <main className="relative grid grid-cols-1 box-border w-full animate-fade-in-slow-delay opacity-0 pt-16 min-h-screen">
+        <main className="animate-fade-in-slow-delay pt-16 min-h-[88vh]">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
             <p className="hidden lg:block lg:row-span-2 mb-16 lg:mb-0 text-xs max-w-56">
               JNPR works with clients on website development and e-commerce strategy.
