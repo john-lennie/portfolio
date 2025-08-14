@@ -262,10 +262,10 @@ export default function Home() {
 
   return (
     <div className="bg-white">
-      <div className="text-black">
+      <div className="container text-black">
         <GlobalStyles />
         <header
-          className={"container fixed z-[2] duration-300 flex flex-col justify-between " + (infoVisibility ? 'h-dvh ' : 'h-auto ') + (direction === 'down' ? '-top-[76px] lg:-top-[104px]' : 'top-0')}
+          className={"container fixed left-0 z-[2] duration-300 flex flex-col justify-between " + (infoVisibility ? 'h-dvh ' : 'h-auto ') + (direction === 'down' ? '-top-[76px] lg:-top-[104px]' : 'top-0')}
           style={{
             backgroundColor: '#ffffffab',
             backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
@@ -273,9 +273,9 @@ export default function Home() {
             backdropFilter: 'blur(3px)'
           }}
         >
-          <div className="relative z-50 flex justify-between items-center mr-1 animate-fade-in-slow">
+          <div className="relative z-50 flex justify-between items-center animate-fade-in-slow">
             <div className="py-4 md:pl-0">
-              <img className="h-7 xl:h-9" src="/jnpr.svg" alt="JNPR Studio" />
+              <img className="h-[6vw] sm:h-[4vw] lg:h-[2vw]" src="/jnpr.svg" alt="JNPR Studio" />
             </div>
             <button className={"flex text-base !leading-none items-center " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
               Close
@@ -285,7 +285,7 @@ export default function Home() {
           </div>
           <div className={infoVisibility ? 'block w-3/5 lg:w-1/3' : 'hidden'}>
             <p className="text-base text-red-600">
-              JNPR is a design and  development studio based in Toronto.<br /><br />
+              JNPR is a design & development studio based in Toronto.<br /><br />
               We specialize in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.
             </p>
           </div>
@@ -298,7 +298,7 @@ export default function Home() {
             </p>
           </div>
         </header>
-        <main className="container relative grid grid-cols-1 box-border w-full animate-fade-in-slow-delay opacity-0 pt-16">
+        <main className="relative grid grid-cols-1 box-border w-full animate-fade-in-slow-delay opacity-0 pt-16 min-h-screen">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
             <p className="hidden lg:block lg:row-span-2 mb-16 lg:mb-0 text-xs max-w-56">
               JNPR works with clients on website development and e-commerce strategy.
@@ -347,7 +347,10 @@ export default function Home() {
                       }}>
                         <CarouselContent>
                         {project.media.map((item, itemIndex) => (
-                          <CarouselItem key={itemIndex} className={`flex justify-center items-center ${project.media.length > 1 ? 'lg:flex-[0_0_50%]' : 'flex-[0_0_100%]'}`}>
+                          <CarouselItem
+                            key={itemIndex}
+                            className={`flex justify-center items-center ${project.media.length > 1 ? 'lg:flex-[0_0_50%]' : 'flex-[0_0_100%]'}`}
+                          >
                             {item.type === "image" && (
                               <div
                                 className="relative w-full"
@@ -415,17 +418,17 @@ export default function Home() {
               ))}
             </Accordion>
           </div>
-          <div className="grid grid-cols-[50%_auto] mb-16 lg:mb-24 animate-fade-in-slow-delay opacity-0">
-            <p className="text-xs">68 Claremont St<br />Toronto, ON<br />Canada</p>
-            <div className="text-right">
-              <p className="text-xs">
-                <a href="tel:+14166708705" className="link-primary">&#43;1&#32;416&#32;670&#32;8705</a><br />
-                <CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /><br />
-                <a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a>
-              </p>
-            </div>
-          </div>
         </main>
+        <footer className="grid grid-cols-[50%_auto] mb-16 lg:mb-24 animate-fade-in-slow-delay opacity-0">
+          <p className="text-xs">68 Claremont St<br />Toronto, ON<br />Canada</p>
+          <div className="text-right">
+            <p className="text-xs">
+              <a href="tel:+14166708705" className="link-primary">&#43;1&#32;416&#32;670&#32;8705</a><br />
+              <CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /><br />
+              <a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a>
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
   )
