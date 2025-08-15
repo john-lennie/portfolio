@@ -111,7 +111,7 @@ p {
 }
 
 .text-xs {
-  @apply text-[3.25vw] leading-[4.25vw] sm:text-[1.5vw] sm:leading-[2vw] lg:text-[0.9vw] lg:leading-[1.1vw] 2xl:text-[0.7vw] 2xl:leading-[0.9vw];
+  @apply text-[3.25vw] leading-[4.5vw] sm:text-[1.5vw] sm:leading-[2vw] lg:text-[0.9vw] lg:leading-[1.1vw] 2xl:text-[0.7vw] 2xl:leading-[0.9vw];
 }
 
 .text-sm {
@@ -119,7 +119,7 @@ p {
 }
 
 .text-base {
-  @apply font-semibold tracking-tighter text-[4.5vw] leading-[5.5vw] sm:text-[3vw] sm:leading-[3.5vw] lg:text-[1.5vw] lg:leading-[1.7vw];
+  @apply font-semibold tracking-tighter text-[4.3vw] leading-[5.5vw] sm:text-[3vw] sm:leading-[3.5vw] lg:text-[1.5vw] lg:leading-[1.7vw];
 }
 
 .btn-primary {

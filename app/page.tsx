@@ -34,10 +34,15 @@ const projects = [
     media: [
       {
         type: "image",
-        src: "/vf-corp/tnf_history_2.png",
+        src: "/vf-corp/tnf_about_1.png",
         width: 1500,
-        height: 864
-      } 
+        height: 1152
+      },
+      {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4",
+      },
+      
     ],
     description: [
       "Worked with VF Digital Technology Team to develop product campaign pages, design system components, and improve core web vitals for The North Face, Vans & Timberland.",
@@ -262,27 +267,30 @@ export default function Home() {
       <div className="container text-black">
         <GlobalStyles />
         <header
-          className={"container fixed left-0 z-[2] duration-300 flex flex-col justify-between " + (infoVisibility ? 'h-dvh ' : 'h-auto ') + (direction === 'down' ? '-top-[76px] lg:-top-[104px]' : 'top-0')}
+          className={"container fixed left-0 z-[2] duration-300 flex flex-col justify-between "
+           + (infoVisibility ? 'h-dvh ' : 'h-auto ')
+           + (direction === 'down' ? '-top-[76px] lg:-top-[104px]' : 'top-0')
+          }
           style={{
-            backgroundColor: '#ffffffab',
+            backgroundColor: '#ffffffa3',
             backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
-            backgroundSize: '4px 4px',
-            backdropFilter: 'blur(3px)'
+            backgroundSize: '3px 3px',
+            backdropFilter: 'blur(5px)'
           }}
         >
           <div className="relative z-50 flex justify-between items-center animate-fade-in-slow">
             <div className="py-4 md:pl-0">
               <img className="h-[6vw] sm:h-[4vw] lg:h-[2vw]" src="/jnpr.svg" alt="JNPR Studio" />
             </div>
-            <button className={"flex text-base !leading-none items-center " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
+            <button className={"flex text-base !leading-none items-center uppercase " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
               Close
               {/* <CrossCircledIcon className="ml-2 h-[4.5vw] w-[4.5vw] lg:h-[1.75vw] lg:w-[1.75vw]" /> */}
             </button>
-            <button className={"text-base " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Info</button>
+            <button className={"text-base uppercase " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Info</button>
           </div>
           <div className={infoVisibility ? 'block w-3/5 lg:w-1/3' : 'hidden'}>
             <p className="text-base text-red-600">
-              JNPR is a design & development studio based in Toronto.<br /><br />
+              JNPR is a design and development studio based in Toronto.<br /><br />
               We specialize in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.
             </p>
           </div>
@@ -295,34 +303,35 @@ export default function Home() {
             </p>
           </div>
         </header>
-        <main className="animate-fade-in-slow-delay pt-16 min-h-[88vh]">
+        <main className="animate-fade-in-slower-delay opacity-0 pt-16 xl:pt-36 min-h-[92vh]">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
-            <p className="hidden lg:block lg:row-span-2 mb-16 lg:mb-0 text-xs max-w-56">
-              JNPR works with clients on website development and e-commerce strategy.
-            </p>
-            <p className="mb-4 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
-            <p className="text-xs lg:col-start-2 italic">
+            <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:max-w-56">
+              <p className="mb-4 italic">About:</p>
+              <p>JNPR is a design and development studio based in Toronto.</p>
+              <p>We specialize in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.</p>
+            </div>
+            <p className="mb-4 col-span-2 lg:col-span-4 text-xs italic">Areas of Interest:</p>
+            <p className="text-xs lg:col-start-2">
               Frontend Engineering<br /><br /><br /><br />
-              Theme Development<br /><br /><br />
               Core Web Vitals<br /><br /><br /><br />
+              UI Development<br /><br />
               Design
             </p>
-            <p className="text-xs italic">
+            <p className="text-xs">
               JS Meta Frameworks<br />
-              Headless CMS<br />
-              Headless Commerce<br /><br />
-              Shopify<br />
-              Monolithic CMS's<br /><br />
+              Headless Commerce<br />
+              Headless CMS<br /><br />
+              Best Practices<br />
               Performance<br />
-              Accessibility<br />
-              Best Practices<br /><br />
-              Visual<br />
-              UI
+              Accessibility<br /><br />
+              Shopify<br /><br />
+              Storefront<br />
+              VisualUI
             </p>
           </div>
           <div className="mb-28">
-            <h2 className="text-xs mb-4 uppercase">Work:</h2>
-            <Accordion type="single" collapsible className="space-y-2">
+            <h2 className="text-xs mb-4 italic">Work:</h2>
+            <Accordion type="single" defaultValue="item-0" collapsible className="space-y-2">
               {projects.map((project, index) => (
                 <AccordionItem
                   key={index} value={`item-${index}`}
@@ -331,8 +340,8 @@ export default function Home() {
                     className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left pb-2"
                   >
                     <span className="whitespace-pre-line text-xs">{project.name}</span>
-                    <span className="hidden lg:block whitespace-pre-line text-xs italic">{project.type}</span>
-                    <span className="hidden lg:block whitespace-pre-line text-xs pr-6 italic">{project.stack}</span>
+                    <span className="hidden lg:block whitespace-pre-line text-xs">{project.type}</span>
+                    <span className="hidden lg:block whitespace-pre-line text-xs pr-6">{project.stack}</span>
                     <span className="whitespace-pre-line text-xs pr-2">{project.year}</span>
                   </AccordionTrigger>
                   <AccordionContent>
@@ -364,7 +373,7 @@ export default function Home() {
                               </div>
                             )}
                             {item.type === "mobileVideo" && (
-                              <div className="aspect-w-16 aspect-h-9 w-1/2 sm:w-2/5">
+                              <div className="aspect-w-16 aspect-h-9 w-[38%]">
                                 <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
                                   Your browser does not support the video tag.
                                 </video>
@@ -399,7 +408,7 @@ export default function Home() {
                           </p>
                         </div>
                       }
-                      <div className="lg:hidden grid grid-cols-[50%_auto] italic">
+                      <div className="lg:hidden grid grid-cols-[50%_auto]">
                         {/* <h3 className="col-span-2 text-xs mb-4">Services: </h3> */}
                         <div className="text-xs max-w-[95%] mb-2 whitespace-pre-line">
                           {project.type}
