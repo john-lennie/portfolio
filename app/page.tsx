@@ -264,8 +264,8 @@ export default function Home() {
   useLockBodyScroll(infoVisibility);
 
   // tweak these if you like
-  const size = 24;       // button square (px)
-  const lineW = 24;      // line width (px)
+  const size = 20;       // button square (px)
+  const lineW = 20;      // line width (px)
   const lineH = 3;       // line thickness (px)
   const gap = 5;         // distance from center when closed (px)
 
