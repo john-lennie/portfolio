@@ -4,7 +4,8 @@ import * as React from "react"
 import Image from "next/image"
 import useDetectScroll from "@smakss/react-scroll-direction"
 
-import { CrossCircledIcon } from "@radix-ui/react-icons"
+import { motion, AnimatePresence } from "framer-motion";
+import { HamburgerMenuIcon, Cross2Icon } from "@radix-ui/react-icons";
 
 import { 
   Accordion, 
@@ -262,6 +263,23 @@ export default function Home() {
 
   useLockBodyScroll(infoVisibility);
 
+  // tweak these if you like
+  const size = 24;       // button square (px)
+  const lineW = 24;      // line width (px)
+  const lineH = 2;       // line thickness (px)
+  const gap = 9;         // distance from center when closed (px)
+
+  const common = {
+    style: {
+      width: lineW,
+      height: lineH,
+    },
+    className:
+      "absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 " +
+      "bg-current rounded-full origin-center",
+    transition: { duration: 0.1, ease: "easeInOut" },
+  };
+
   return (
     <div className="bg-white">
       <div className="container text-black">
@@ -282,11 +300,45 @@ export default function Home() {
             <div className="py-4 md:pl-0">
               <img className="h-[6vw] sm:h-[4vw] lg:h-[2vw]" src="/jnpr.svg" alt="JNPR Studio" />
             </div>
-            <button className={"flex text-base !leading-none items-center uppercase " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
-              Close
-              {/* <CrossCircledIcon className="ml-2 h-[4.5vw] w-[4.5vw] lg:h-[1.75vw] lg:w-[1.75vw]" /> */}
+            <button
+              onClick={toggleInfo}
+              aria-pressed={infoVisibility}
+              aria-label={infoVisibility ? "Close menu" : "Open menu"}
+              className="relative inline-flex items-center justify-center"
+              style={{ width: size, height: size }}
+            >
+              {/* Top line */}
+              <motion.span
+                {...common}
+                animate={{
+                  y: infoVisibility ? 0 : -gap,
+                  rotate: infoVisibility ? 45 : 0,
+                }}
+              />
+              {/* Middle line */}
+              <motion.span
+                {...common}
+                animate={{
+                  y: 0,
+                  opacity: infoVisibility ? 0 : 1,
+                  scaleX: infoVisibility ? 0.8 : 1,
+                }}
+                transition={{ duration: 0.18, ease: "easeInOut" }}
+              />
+              {/* Bottom line */}
+              <motion.span
+                {...common}
+                animate={{
+                  y: infoVisibility ? 0 : gap,
+                  rotate: infoVisibility ? -45 : 0,
+                }}
+              />
             </button>
-            <button className={"text-base uppercase " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Info</button>
+            {/* <button className={"flex text-base !leading-none items-center uppercase " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
+              Close
+              <Cross2Icon className="ml-2 h-[7vw] w-[7vw] lg:h-[1.75vw] lg:w-[1.75vw]" />
+            </button>
+            <button className={"text-base uppercase " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Info</button> */}
           </div>
           <div className={infoVisibility ? 'block w-3/5 lg:w-1/3' : 'hidden'}>
             <p className="text-base text-red-600">
