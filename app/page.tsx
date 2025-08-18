@@ -266,8 +266,8 @@ export default function Home() {
   // tweak these if you like
   const size = 24;       // button square (px)
   const lineW = 24;      // line width (px)
-  const lineH = 2;       // line thickness (px)
-  const gap = 9;         // distance from center when closed (px)
+  const lineH = 3;       // line thickness (px)
+  const gap = 5;         // distance from center when closed (px)
 
   const common = {
     style: {
@@ -276,7 +276,7 @@ export default function Home() {
     },
     className:
       "absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 " +
-      "bg-current rounded-full origin-center",
+      "bg-current origin-center",
     transition: { duration: 0.1, ease: "easeInOut" },
   };
 
@@ -285,16 +285,9 @@ export default function Home() {
       <div className="container text-black">
         <GlobalStyles />
         <header
-          className={"container fixed left-0 z-[2] duration-300 flex flex-col justify-between "
-           + (infoVisibility ? 'h-dvh ' : 'h-auto ')
+          className={"container fixed left-0 z-[2] duration-100 "
            + (direction === 'down' ? '-top-[76px] lg:-top-[104px]' : 'top-0')
           }
-          style={{
-            backgroundColor: '#ffffffa3',
-            backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
-            backgroundSize: '3px 3px',
-            backdropFilter: 'blur(5px)'
-          }}
         >
           <div className="relative z-50 flex justify-between items-center animate-fade-in-slow">
             <div className="py-4 md:pl-0">
@@ -340,25 +333,36 @@ export default function Home() {
             </button>
             <button className={"text-base uppercase " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Info</button> */}
           </div>
-          <div className={infoVisibility ? 'block w-3/5 lg:w-1/3' : 'hidden'}>
-            <p className="text-base text-red-600">
-              JNPR is a design and development studio based in Toronto.<br /><br />
-              We specialize in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.
-            </p>
-          </div>
-          <div className={"flex justify-between mb-5 " + (infoVisibility ? 'block' : 'hidden')}>
-            <p className="text-base">68 Claremont St<br />Toronto, ON<br />Canada</p>
-            <p className="text-base text-right">
-              <a href="tel:+14166708705" className="link-primary">&#43;1&#32;416&#32;670&#32;8705</a><br />
-              <CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /><br />
-              <a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a>
-            </p>
+          <div
+            className={"container fixed top-0 left-0 flex flex-col justify-between h-dvh transition-opacity duration-900 pointer-events-none " + (infoVisibility ? 'opacity-100 pointer-events-auto ' : 'opacity-0 ')}
+            style={{
+              backgroundColor: '#ffffffa3',
+              backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
+              backgroundSize: '3px 3px',
+              backdropFilter: 'blur(5px)'
+            }}
+          >
+            <div></div>
+            <div className="w-3/5 lg:w-1/3">
+              <p className="text-base text-red-600">
+                JNPR is a design and development studio based in Toronto.<br /><br />
+                We specialize in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.
+              </p>
+            </div>
+            <div className="flex justify-between mb-5">
+              <p className="text-base">68 Claremont St<br />Toronto, ON<br />Canada</p>
+              <p className="text-base text-right">
+                <a href="tel:+14166708705" className="link-primary">&#43;1&#32;416&#32;670&#32;8705</a><br />
+                <CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /><br />
+                <a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a>
+              </p>
+            </div>
           </div>
         </header>
         <main className="animate-fade-in-slower-delay opacity-0 pt-16 xl:pt-36 min-h-[92vh]">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
-            <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:max-w-56">
-              <p className="mb-4 italic">About:</p>
+            <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:max-w-56 italic">
+              <p className="mb-4">About:</p>
               <p>JNPR is a design and development studio based in Toronto.</p>
               <p>We specialize in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.</p>
             </div>
@@ -366,7 +370,6 @@ export default function Home() {
             <p className="text-xs lg:col-start-2">
               Frontend Engineering<br /><br /><br /><br />
               Core Web Vitals<br /><br /><br /><br />
-              UI Development<br /><br />
               Design
             </p>
             <p className="text-xs">
@@ -376,9 +379,9 @@ export default function Home() {
               Best Practices<br />
               Performance<br />
               Accessibility<br /><br />
-              Shopify<br /><br />
-              Storefront<br />
-              VisualUI
+              Visual<br />
+              UX<br />
+              UI
             </p>
           </div>
           <div className="mb-28">
