@@ -437,7 +437,7 @@ export default function Home() {
               <p>JNPR is a design and development studio based in Toronto.</p>
               <p>We help clients realize their creative ideas through digital experiences.</p>
               <p>Interested in working together?</p>
-              <p>Say hi, or, <a target="_blank" className="link-primary" href="mailto:hello@jnpr.studio">hello@jnpr.studio</a>!</p>
+              <p>Say hi, or <a target="_blank" className="link-primary" href="mailto:hello@jnpr.studio">hello@jnpr.studio</a>!</p>
             </div>
             <p className="mb-4 col-span-2 lg:col-span-4 text-xs italic">Areas of Interest:</p>
             <p className="text-xs lg:col-start-2">
