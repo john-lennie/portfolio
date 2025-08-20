@@ -298,7 +298,7 @@ export default function Home() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.02 }, // per-letter speed
+      transition: { staggerChildren: 0.01 }, // per-letter speed
     },
   };
 
