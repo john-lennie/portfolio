@@ -282,7 +282,7 @@ export default function Home() {
 
   const paragraphs = [
     "JNPR is a design and development studio based in Toronto.",
-    "With a depth of knowledge in contemporary design, e-commerce, and frontend engineering, we evaluate each project's specific needs and craft solutions, turning ideas into impactful experiences.",
+    "With a depth of knowledge in contemporary design, e-commerce platforms, and frontend engineering, we evaluate each project's specific needs, craft solutions, and turn ideas into impactful experiences.",
   ];
 
   const container = {
@@ -424,7 +424,7 @@ export default function Home() {
               <p className="mb-4">About:</p>
               <p>JNPR is a design and development studio based in Toronto.</p>
               <p>We help clients realize their creative ideas through digital experiences.</p>
-              <p>Interested in working together? Say <a target="_blank" href="mailto:hello@jnpr.studio">hello@jnpr.studio</a></p>
+              <p>Interested in working together?<br />Say Hi! Or <a target="_blank" className="link-primary" href="mailto:hello@jnpr.studio">hello@jnpr.studio</a></p>
             </div>
             <p className="mb-4 col-span-2 lg:col-span-4 text-xs italic">Areas of Interest:</p>
             <p className="text-xs lg:col-start-2">
