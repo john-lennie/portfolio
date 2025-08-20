@@ -283,7 +283,7 @@ export default function Home() {
   const paragraphs = [
     "JNPR is a design and development studio based in Toronto.",
     "We help clients realize creative designs and digital experiences.",
-    "With over 8 years of experience, we bring a depth of knowledge in aesthetics and design, e-commerce strategy, and headless frontend architecture solutions."
+    "With over 8 years of experience, we bring a depth of knowledge in aesthetics, design, e-commerce strategy, and headless frontend architecture solutions."
   ];
 
   const container = {
@@ -377,7 +377,7 @@ export default function Home() {
                   initial="hidden"
                   animate="visible"
                   exit={{ opacity: 0, transition: { duration: 0.2 } }}
-                  className="w-3/5 lg:w-1/3"
+                  className="w-5/6 lg:w-1/3"
                 >
                   {paragraphs.map((para, i) => (
                     <motion.p
@@ -421,11 +421,11 @@ export default function Home() {
         </header>
         <main className="animate-fade-in-slower-delay opacity-0 pt-16 xl:pt-36 min-h-[92vh]">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
-            <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:max-w-56 italic">
+            <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs w-5/6 lg:max-w-56 italic">
               <p className="mb-4">About:</p>
               <p>JNPR is a design and development studio based in Toronto.</p>
               <p>We help clients realize creative designs and digital experiences.</p>
-              <p>With over 8 years of experience, we bring a depth of knowledge in aesthetics and design, e-commerce strategy, and headless frontend architecture solutions.</p>
+              <p>With over 8 years of experience, we bring a depth of knowledge in aesthetics, design, e-commerce strategy, and headless frontend architecture solutions.</p>
             </div>
             <p className="mb-4 col-span-2 lg:col-span-4 text-xs italic">Areas of Interest:</p>
             <p className="text-xs lg:col-start-2">
