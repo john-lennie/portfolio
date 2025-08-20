@@ -276,7 +276,7 @@ export default function Home() {
   useLockBodyScroll(infoVisibility);
 
   // tweak these if you like
-  const size = 20;       // button square (px)
+  const size = 40;       // button square (px)
   const lineW = 20;      // line width (px)
   const lineH = 1.5;       // line thickness (px)
   const gap = 5;         // distance from center when closed (px)
@@ -287,7 +287,7 @@ export default function Home() {
       height: lineH,
     },
     className:
-      "absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 " +
+      "absolute right-0 top-1/2 -translate-x-1/2 -translate-y-1/2 " +
       "bg-current origin-center",
     transition: { duration: 0.1, ease: "easeInOut" },
   };
