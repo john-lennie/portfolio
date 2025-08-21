@@ -428,7 +428,7 @@ export default function Home() {
         </header>
         <main className="animate-fade-in-slower-delay opacity-0 pt-16 xl:pt-36 min-h-[92vh]">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
-            <div className="col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:max-w-64 italic">
+            <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs w-1/2 lg:w-full lg:max-w-64 italic">
               <p className="mb-4">About:</p>
               <p>JNPR is a design and development studio based in Toronto.</p>
               <p>We help clients realize their creative ideas through digital experiences.</p>
