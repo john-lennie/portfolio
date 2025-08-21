@@ -290,7 +290,7 @@ export default function Home() {
 
   const paragraphs = [
     "JNPR is a design and development studio based in Toronto.",
-    "Understanding the importance of the interplay between design, e-commerce, and frontend engineering, we're able to evaluate each project's goals, craft visons, and implement solutions, turning ideas into experiences.",
+    "We understand the importance in the interplay between design, e-commerce, and frontend engineering choices. This allows us to bring an experienced perspective to each project, craft visons, and implement solutions, turning ideas into experiences.",
   ];
 
   const container = {
