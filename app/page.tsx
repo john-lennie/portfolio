@@ -61,7 +61,7 @@ const projects = [
     media: [
       {
         type: "image",
-        src: "/faces-of-another/foa_9.png",
+        src: "/faces-of-another/foa_10.png",
         width: 1500,
         height: 862
       },
@@ -107,10 +107,6 @@ const projects = [
       {
         type: "mobileVideo",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
-      },
-      {
-        type: "mobileVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/63a1f5c62792f9d1b14507c55cf1ea5b/downloads/default.mp4",
       },
       {
         type: "image",
