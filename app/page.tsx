@@ -290,7 +290,7 @@ export default function Home() {
 
   const paragraphs = [
     "JNPR is a design and development studio based in Toronto.",
-    "We have a deep understanding of the importance of design, e-commerce, and frontend engineering choices. This allows us to bring an high-level perspective to each project, craft visons, and implement solutions, turning ideas into experiences.",
+    "We help clients realize creative ideas through digital experiences.",
   ];
 
   const container = {
@@ -430,7 +430,7 @@ export default function Home() {
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
             <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs w-1/2 lg:w-full lg:max-w-64 italic">
               <p>JNPR is a design and development studio based in Toronto.</p>
-              <p>We help clients realize their creative ideas through digital experiences.</p>
+              <p>We help clients realize creative ideas through digital experiences.</p>
               <p>Interested in working together?</p>
               <p>Say hi, or <a target="_blank" className="link-primary" href="mailto:hello@jnpr.studio">hello@jnpr.studio</a></p>
             </div>
