@@ -79,7 +79,7 @@ const projects = [
       }
     ],
     description: [
-      "Designed and built a headless e-commerce storefront for Faces Of Another, a contemporary menswear brand.\n\n",
+      "Design, development, & e-commerce management for Faces Of Another, a contemporary menswear brand.\n\n",
       { 
         text: "www.facesofanother.com", 
         link: "https://facesofanother.com/" 
@@ -290,7 +290,7 @@ export default function Home() {
 
   const paragraphs = [
     "JNPR is a design and development studio based in Toronto.",
-    "We help clients realize creative ideas through digital experiences.",
+    "We help clients realize creative ideas through digital experiences with a focus on digital product design and frontend engineering.",
   ];
 
   const container = {
@@ -370,7 +370,7 @@ export default function Home() {
           <div
             className={"container fixed top-0 left-0 flex flex-col justify-between h-dvh transition duration-150 ease-in-out pointer-events-none " + (infoVisibility ? 'opacity-100 pointer-events-auto ' : 'opacity-0 ')}
             style={{
-              backgroundColor: '#ffffffb8',
+              backgroundColor: '#ffffff40',
               backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
               backgroundSize: '2px 2px',
               backdropFilter: 'blur(10px)'
@@ -384,8 +384,12 @@ export default function Home() {
                   initial="hidden"
                   animate="visible"
                   exit={{ opacity: 0, transition: { duration: 0.2 } }}
-                  className="w-5/6 lg:w-1/3"
+                  className="w-5/6 lg:w-1/3 relative"
                 >
+                  <span
+                    className="absolute -z-10 left-[-50%] top-[-50%] w-[200%] h-[200%]"
+                    style={{ background: 'radial-gradient(closest-side, rgb(255 255 255), rgb(255 255 255 / 0%))' }}
+                  />
                   {paragraphs.map((para, i) => (
                     <motion.p
                       key={i}
@@ -416,7 +420,11 @@ export default function Home() {
                 We specialize in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.
               </p>
             </div> */}
-            <div className="flex justify-between mb-5">
+            <div className="flex justify-between mb-5 relative">
+              <span
+                className="absolute -z-10 left-[-50%] top-[-50%] w-[200%] h-[200%]"
+                style={{ background: 'radial-gradient(closest-side, rgb(255 255 255), rgb(255 255 255 / 0%))' }}
+              />
               <p className="text-base">68 Claremont St<br />Toronto, ON<br />Canada</p>
               <p className="text-base text-right">
                 <a href="tel:+14166708705" className="link-primary">&#43;1&#32;416&#32;670&#32;8705</a><br />
@@ -436,20 +444,20 @@ export default function Home() {
             </div>
             <p className="mb-4 col-span-2 lg:col-span-4 text-xs italic">Areas of Interest:</p>
             <p className="text-xs lg:col-start-2">
-              Frontend Engineering<br /><br /><br /><br />
-              Core Web Vitals<br /><br /><br /><br />
-              Design
+              Digital Product Design<br /><br /><br /><br /><br /><br />
+              Frontend Engineering
             </p>
             <p className="text-xs">
-              JS Meta Frameworks<br />
-              Headless Commerce<br />
-              Headless CMS<br /><br />
-              Best Practices<br />
+              Art Direction<br />
+              Branding<br />
+              Content Strategy<br />
+              E-Commerce<br />
+              UI Design<br /><br />
+              Accessibility<br />
+              JS Frameworks<br />
               Performance<br />
-              Accessibility<br /><br />
-              Visual<br />
-              UX<br />
-              UI
+              State Management<br />
+              UI Development<br />
             </p>
           </div>
           <div className="mb-28">
