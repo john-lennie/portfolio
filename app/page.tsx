@@ -436,7 +436,8 @@ export default function Home() {
         </header>
         <main className="animate-fade-in-slower-delay opacity-0 pt-16 xl:pt-36 min-h-[92vh]">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-12">
-            <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs w-1/2 lg:w-full lg:max-w-64 italic">
+            <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs w-1/2 lg:w-full md:max-w-[60%]">
+              <p className="mb-4 text-xs italic">Info:</p>
               <p>JNPR is a design and development studio based in Toronto.</p>
               <p>We help clients realize creative ideas through digital experiences.</p>
               <p>Interested in working together?</p>
@@ -444,19 +445,15 @@ export default function Home() {
             </div>
             <p className="mb-4 col-span-2 lg:col-span-4 text-xs italic">Areas of Interest:</p>
             <p className="text-xs lg:col-start-2">
-              Digital Product Design<br /><br /><br /><br /><br /><br />
+              Digital Product Design<br /><br /><br /><br />
               Frontend Engineering
             </p>
             <p className="text-xs">
-              Art Direction<br />
-              Branding<br />
-              Content Strategy<br />
-              E-Commerce<br />
+              Art Direction & Branding<br />
+              E-Commerce Strategy<br />
               UI Design<br /><br />
-              Accessibility<br />
-              JS Frameworks<br />
-              Performance<br />
-              State Management<br />
+              Javascript Frameworks<br />
+              Performance & Accessibility<br />
               UI Development<br />
             </p>
           </div>
