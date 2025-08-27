@@ -28,34 +28,8 @@ import useLockBodyScroll from '@/hooks/use-lock-body-scroll';
 
 const projects = [
   {
-    name: "VF Corporation",
-    year: "2023 - 2025",
-    type: "Frontend Engineering\nCore Web Vitals",
-    stack: "Nuxt.js\nPerformance\nAccessibility",
-    media: [
-      {
-        type: "image",
-        src: "/vf-corp/tnf_about_1.png",
-        width: 1500,
-        height: 1152
-      },
-      {
-        type: "mobileVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4",
-      },
-      
-    ],
-    description: [
-      "Worked with VF Digital Technology Team to develop product campaign pages, design system components, & improve core web vitals for The North Face, Vans & Timberland.",
-    ],
-    stackTags: {
-      frontEnd: "Nuxt",
-      ui: "Storybook"
-    },
-  },
-  {
     name: "Faces Of Another", 
-    year: "2022 - 2024",
+    year: "2022 - 2025",
     type: "Design\nFrontend Engineering",
     stack: "Visual\nHeadless CMS (Sanity)\nHeadless Commerce (Shopify)\nNext.js",
     media: [
@@ -90,6 +64,32 @@ const projects = [
       commerce: "Shopify",
       frontEnd: "Next.js",
       deployment: "Vercel"
+    },
+  },
+  {
+    name: "VF Corporation",
+    year: "2023 - 2025",
+    type: "Frontend Engineering\nCore Web Vitals",
+    stack: "Nuxt.js\nPerformance\nAccessibility",
+    media: [
+      {
+        type: "image",
+        src: "/vf-corp/tnf_about_1.png",
+        width: 1500,
+        height: 1152
+      },
+      {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4",
+      },
+      
+    ],
+    description: [
+      "Worked with VF Digital Technology Team to develop product campaign pages, design system components, & improve core web vitals for The North Face, Vans & Timberland.",
+    ],
+    stackTags: {
+      frontEnd: "Nuxt",
+      ui: "Storybook"
     },
   },
   {
@@ -459,7 +459,7 @@ export default function Home() {
           </div>
           <div className="mb-28">
             <h2 className="text-xs mb-4 italic">Work:</h2>
-            <Accordion type="single" defaultValue="item-1" collapsible className="space-y-2">
+            <Accordion type="single" defaultValue="item-0" collapsible className="space-y-2">
               {projects.map((project, index) => (
                 <AccordionItem
                   key={index} value={`item-${index}`}
