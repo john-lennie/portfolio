@@ -53,7 +53,7 @@ const projects = [
       }
     ],
     description: [
-      "Design, development, & e-commerce management for Faces Of Another, a contemporary menswear brand.\n\n",
+      "Design, Development, & E-Commerce Management for Faces Of Another, a contemporary menswear brand.\n\n",
       { 
         text: "www.facesofanother.com", 
         link: "https://facesofanother.com/" 
