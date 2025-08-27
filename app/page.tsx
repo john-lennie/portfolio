@@ -30,8 +30,8 @@ const projects = [
   {
     name: "Faces Of Another", 
     year: "2022 - 2025",
-    type: "Design\nFrontend Engineering",
-    stack: "Visual\nHeadless CMS (Sanity)\nHeadless Commerce (Shopify)\nNext.js",
+    type: "Digital Product Design\n\n\nFrontend Engineering",
+    stack: "Art Direction & Branding\nE-Commerce Strategy\nUI/UX Design\nJS Framework Development",
     media: [
       {
         type: "image",
@@ -69,8 +69,8 @@ const projects = [
   {
     name: "VF Corporation",
     year: "2023 - 2025",
-    type: "Frontend Engineering\nCore Web Vitals",
-    stack: "Nuxt.js\nPerformance\nAccessibility",
+    type: "Frontend Engineering",
+    stack: "JS Framework Development\nPerformance & A11y",
     media: [
       {
         type: "image",
@@ -95,8 +95,8 @@ const projects = [
   {
     name: "North of Now",
     year: "2022",
-    type: "Design\n\n\nFrontend Engineering",
-    stack: "Visual\nGraphic\nUI\nHeadless CMS (Prismic)\nNext.js",
+    type: "Digital Product Design\n\nFrontend Engineering",
+    stack: "Art Direction & Branding\nUI/UX Design\nJS Framework Development",
     media: [
       {
         type: "image",
@@ -131,8 +131,8 @@ const projects = [
   {
     name: "Basma Beauty",
     year: "2022",
-    type: "Theme Development",
-    stack: "Shopify",
+    type: "Frontend Engineering",
+    stack: "Shopify Development",
     media: [
       {
         type: "image",
@@ -160,8 +160,8 @@ const projects = [
   {
     name: "Susan for Susan",
     year: "2021",
-    type: "Theme Development",
-    stack: "Squarespace",
+    type: "Frontend Engineering",
+    stack: "Static Site Generation",
     media: [
       {
         type: "image",
@@ -185,33 +185,33 @@ const projects = [
       cms: "Squarespace"
     },
   },
-  {
-    name: "Club Dieciséis",
-    year: "2021",
-    type: "Theme Development",
-    stack: "Shopify",
-    media: [
-      {
-        type: "desktopVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4"
-      }
-    ],
-    description: [
-      "Shopify theme development for Puerto Rican musician Tainy.\n\nDesign by ",
-      { 
-        text: "Ronan Mcgee", 
-        link: "https://www.xn--rnn-fla2g.com/" 
-      }
-    ],
-    stackTags: {
-      commerce: "Shopify"
-    },
-  },
+  // {
+  //   name: "Club Dieciséis",
+  //   year: "2021",
+  //   type: "Frontend Engineering",
+  //   stack: "Shopify",
+  //   media: [
+  //     {
+  //       type: "desktopVideo",
+  //       src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4"
+  //     }
+  //   ],
+  //   description: [
+  //     "Shopify theme development for Puerto Rican musician Tainy.\n\nDesign by ",
+  //     { 
+  //       text: "Ronan Mcgee", 
+  //       link: "https://www.xn--rnn-fla2g.com/" 
+  //     }
+  //   ],
+  //   stackTags: {
+  //     commerce: "Shopify"
+  //   },
+  // },
   {
     name: "Full Court Press",
     year: "2020",
-    type: "Theme Development",
-    stack: "Shopify",
+    type: "Frontend Engineering",
+    stack: "Shopify Development",
     media: [
       {
         type: "mobileVideo",
@@ -232,8 +232,8 @@ const projects = [
   {
     name: "Norman Wong",
     year: "2020",
-    type: "Theme Development",
-    stack: "Craft",
+    type: "Frontend Engineering",
+    stack: "Static Site Generation",
     media: [
       {
         type: "image",
@@ -451,10 +451,11 @@ export default function Home() {
             <p className="text-xs">
               Art Direction & Branding<br />
               E-Commerce Strategy<br />
-              UI Design<br /><br />
-              Javascript Frameworks<br />
-              Performance & Accessibility<br />
-              UI Development<br />
+              UI/UX Design<br /><br />
+              JS Framework Development<br />
+              Static Site Generation<br />
+              Shopify Development<br />
+              Performance & A11y<br />
             </p>
           </div>
           <div className="mb-28">
