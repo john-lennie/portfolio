@@ -437,13 +437,13 @@ export default function Home() {
         <main className="animate-fade-in-slower-delay opacity-0 pt-16 min-h-[92vh]">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-16">
             <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:w-full md:max-w-[60%]">
-              <p className="mb-4 text-xs italic">Info:</p>
+              <p className="mb-4 text-xs italic uppercase">Info:</p>
               <p>JNPR is a design and development studio based in Toronto.</p>
               <p>We help clients realize creative ideas through digital experiences.</p>
               <p>Interested in working together?</p>
               <p>Say hi, or <a target="_blank" className="link-primary" href="mailto:hello@jnpr.studio">hello@jnpr.studio</a></p>
             </div>
-            <p className="mb-4 col-span-2 lg:col-span-4 text-xs italic">Areas of Interest:</p>
+            <p className="mb-4 col-span-2 lg:col-span-4 text-xs italic uppercase">Services:</p>
             <p className="text-xs lg:col-start-2">
               Digital Product Design<br /><br /><br /><br />
               Frontend Engineering
@@ -459,7 +459,7 @@ export default function Home() {
             </p>
           </div>
           <div className="mb-28">
-            <h2 className="text-xs mb-4 italic">Work:</h2>
+            <h2 className="mb-4 text-xs italic uppercase">Work:</h2>
             <Accordion type="single" defaultValue="item-0" collapsible className="space-y-2">
               {projects.map((project, index) => (
                 <AccordionItem
@@ -471,7 +471,7 @@ export default function Home() {
                     <span className="whitespace-pre-line text-xs">{project.name}</span>
                     <span className="hidden lg:block whitespace-pre-line text-xs">{project.type}</span>
                     <span className="hidden lg:block whitespace-pre-line text-xs pr-6">{project.stack}</span>
-                    <span className="whitespace-pre-line text-xs pr-2">{project.year}</span>
+                    <span className="text-right whitespace-pre-line text-xs pr-2">{project.year}</span>
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[25%_25%_50%]">
