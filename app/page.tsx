@@ -429,7 +429,7 @@ export default function Home() {
               <p className="text-base text-right">
                 <a href="tel:+14166708705" className="link-primary">&#43;1&#32;416&#32;670&#32;8705</a><br />
                 <CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /><br />
-                <a href="https://www.instagram.com/jnpr.studio/" className="link-primary" target="_blank">@jnpr.studio</a>
+                <a href="https://www.are.na/john-lennie/jnpr-studio" className="link-primary" target="_blank">are.na</a>
               </p>
             </div>
           </div>
