@@ -68,7 +68,7 @@ const projects = [
   },
   {
     name: "VF Corporation",
-    year: "2023 - 2025",
+    year: "2022 - 2025",
     type: "Frontend Engineering",
     stack: "JS Framework (Nuxt.js) Development\nPerformance & A11y",
     media: [
