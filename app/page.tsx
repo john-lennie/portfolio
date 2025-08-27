@@ -30,8 +30,8 @@ const projects = [
   {
     name: "Faces Of Another", 
     year: "2022 - 2025",
-    type: "Digital Product Design, Frontend Engineering",
-    stack: "Art Direction & Branding\nE-Commerce Strategy\nUI/UX Design\nJS Framework Development",
+    type: "Digital Product Design\n\n\nFrontend Engineering",
+    stack: "Art Direction\nUI Design\n\nJS Framework (Next.js) Development",
     media: [
       {
         type: "image",
@@ -70,7 +70,7 @@ const projects = [
     name: "VF Corporation",
     year: "2023 - 2025",
     type: "Frontend Engineering",
-    stack: "JS Framework Development\nPerformance & A11y",
+    stack: "JS Framework (Nuxt.js) Development\nPerformance & A11y",
     media: [
       {
         type: "image",
@@ -95,8 +95,8 @@ const projects = [
   {
     name: "North of Now",
     year: "2022",
-    type: "Digital Product Design, Frontend Engineering",
-    stack: "Art Direction & Branding\nUI/UX Design\nJS Framework Development",
+    type: "Digital Product Design\n\n\n\nFrontend Engineering",
+    stack: "Art Direction\nBranding\nUX & UI Design\n\nJS Framework (Next.js) Development",
     media: [
       {
         type: "image",
@@ -132,7 +132,7 @@ const projects = [
     name: "Basma Beauty",
     year: "2022",
     type: "Frontend Engineering",
-    stack: "Shopify Development",
+    stack: "Shopify Theme Development",
     media: [
       {
         type: "image",
@@ -211,7 +211,7 @@ const projects = [
     name: "Full Court Press",
     year: "2020",
     type: "Frontend Engineering",
-    stack: "Shopify Development",
+    stack: "Shopify Theme Development",
     media: [
       {
         type: "mobileVideo",
@@ -436,7 +436,7 @@ export default function Home() {
         </header>
         <main className="animate-fade-in-slower-delay opacity-0 pt-16 min-h-[92vh]">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-16">
-            <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs w-1/2 lg:w-full md:max-w-[60%]">
+            <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:w-full md:max-w-[60%]">
               <p className="mb-4 text-xs italic">Info:</p>
               <p>JNPR is a design and development studio based in Toronto.</p>
               <p>We help clients realize creative ideas through digital experiences.</p>
@@ -449,12 +449,12 @@ export default function Home() {
               Frontend Engineering
             </p>
             <p className="text-xs">
-              Art Direction & Branding<br />
-              E-Commerce Strategy<br />
-              UI/UX Design<br /><br />
+              Art Direction<br />
+              Branding<br />
+              UX/UI Design<br /><br />
+              Shopify Theme Development<br />
               JS Framework Development<br />
               Static Site Generation<br />
-              Shopify Development<br />
               Performance & A11y<br />
             </p>
           </div>
@@ -466,7 +466,7 @@ export default function Home() {
                   key={index} value={`item-${index}`}
                 >
                   <AccordionTrigger
-                    className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left pb-2"
+                    className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] lg:mb-8 w-full text-xs/none font-normal text-left pb-2"
                   >
                     <span className="whitespace-pre-line text-xs">{project.name}</span>
                     <span className="hidden lg:block whitespace-pre-line text-xs">{project.type}</span>
