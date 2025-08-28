@@ -11,7 +11,7 @@ const sourceCodePro = Source_Code_Pro({
 
 export const metadata: Metadata = {
   title: 'JNPR Studio',
-  description: 'JNPR is a digital design and engineering studio based in Toronto.',
+  description: 'JNPR is a digital product design & engineering studio based in Toronto.',
   openGraph: {
     images: ['https://jnpr.studio/og_img_08_28_2025.png'],
   },
