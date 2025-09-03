@@ -105,6 +105,12 @@ const projects = [
         height: 1131
       },
       {
+        type: "image",
+        src: "/north-of-now/non-6.png",
+        width: 1500,
+        height: 815
+      },
+      {
         type: "mobileVideo",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
       },
