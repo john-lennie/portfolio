@@ -34,14 +34,14 @@ const projects = [
     stack: "JS Framework Development (Nuxt.js)\nPerformance & A11y",
     media: [
       {
-        type: "mobileVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4",
-      },
-      {
         type: "image",
         src: "/vf-corp/tnf_about_1.png",
         width: 1500,
         height: 1152
+      },
+      {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4",
       }
     ],
     description: [
