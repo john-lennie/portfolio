@@ -79,10 +79,7 @@ const projects = [
       }
     ],
     description: [
-      { 
-        text: "www.facesofanother.com", 
-        link: "https://facesofanother.com/" 
-      }
+      "Web Design & Development for Faces Of Another, a contemporary menswear brand."
     ],
     stackTags: {
       cms: "Sanity",
