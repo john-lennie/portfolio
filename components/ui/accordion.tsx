@@ -31,7 +31,7 @@ const AccordionTrigger = React.forwardRef(
           {children}
           {/* <ArrowDownIcon className="duration-200 h-3 transition-transform group-data-[state=open]:rotate-180" aria-hidden /> */}
           {/* <ChevronDownIcon className="duration-200 h-3 transition-transform group-data-[state=open]:rotate-180" aria-hidden /> */}
-          <span className="relative h-auto w-[3vw] lg:w-[1vw] 2xl:w-[0.8vw]">
+          <span className="relative h-auto w-3.5 lg:w-[1vw] 2xl:w-[0.8vw]">
             <Plus className="absolute inset-0 h-full lg:h-auto w-full transition-opacity duration-200 group-data-[state=open]:opacity-0" />
             <Minus className="absolute inset-0 h-full lg:h-auto w-full opacity-0 transition-opacity duration-200 group-data-[state=open]:opacity-100" />
           </span>
