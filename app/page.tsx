@@ -28,10 +28,36 @@ import useLockBodyScroll from '@/hooks/use-lock-body-scroll';
 
 const projects = [
   {
+    name: "VF Corporation",
+    year: "2022 - 2025",
+    type: "Frontend Engineering",
+    stack: "JS Framework Development (Nuxt.js)\nPerformance & A11y",
+    media: [
+      {
+        type: "image",
+        src: "/vf-corp/tnf_about_1.png",
+        width: 1500,
+        height: 1152
+      },
+      {
+        type: "mobileVideo",
+        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4",
+      },
+      
+    ],
+    description: [
+      "Worked with VF Digital Technology Team to develop product campaign pages, design system components, & improve core web vitals for The North Face, Vans & Timberland.",
+    ],
+    stackTags: {
+      frontEnd: "Nuxt",
+      ui: "Storybook"
+    },
+  },
+  {
     name: "Faces Of Another", 
     year: "2022 - 2025",
     type: "Digital Product Design\n\n\nFrontend Engineering",
-    stack: "Art Direction\nUI Design\n\nJS Framework (Next.js) Development",
+    stack: "Art Direction\nUI Design\n\nJS Framework Development (Next.js)",
     media: [
       {
         type: "image",
@@ -67,36 +93,10 @@ const projects = [
     },
   },
   {
-    name: "VF Corporation",
-    year: "2022 - 2025",
-    type: "Frontend Engineering",
-    stack: "JS Framework (Nuxt.js) Development\nPerformance & A11y",
-    media: [
-      {
-        type: "image",
-        src: "/vf-corp/tnf_about_1.png",
-        width: 1500,
-        height: 1152
-      },
-      {
-        type: "mobileVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4",
-      },
-      
-    ],
-    description: [
-      "Worked with VF Digital Technology Team to develop product campaign pages, design system components, & improve core web vitals for The North Face, Vans & Timberland.",
-    ],
-    stackTags: {
-      frontEnd: "Nuxt",
-      ui: "Storybook"
-    },
-  },
-  {
     name: "North of Now",
     year: "2022",
     type: "Digital Product Design\n\n\n\nFrontend Engineering",
-    stack: "Art Direction\nBranding\nUX & UI Design\n\nJS Framework (Next.js) Development",
+    stack: "Art Direction\nBranding\nUX & UI Design\n\nJS Framework Development (Next.js)",
     media: [
       {
         type: "image",
