@@ -443,13 +443,13 @@ export default function Home() {
         <main className="animate-fade-in-slower-delay opacity-0 pt-16 min-h-[92vh]">
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-16">
             <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:w-full md:max-w-[60%]">
-              <p className="mb-4 text-xs italic uppercase">Info:</p>
+              <p className="mb-4 text-xs uppercase">Info:</p>
               <p>JNPR is a design and development studio based in Toronto.</p>
               <p>We help clients realize creative ideas through digital experiences.</p>
               <p>Interested in working together?</p>
               <p>Say hi, or <a target="_blank" className="link-primary" href="mailto:hello@jnpr.studio">hello@jnpr.studio</a></p>
             </div>
-            <p className="mb-4 col-span-2 lg:col-span-4 text-xs italic uppercase">Services:</p>
+            <p className="mb-4 col-span-2 lg:col-span-4 text-xs uppercase">Services:</p>
             <p className="text-xs lg:col-start-2">
               Digital Product Design<br /><br /><br /><br />
               Frontend Engineering
@@ -465,7 +465,7 @@ export default function Home() {
             </p>
           </div>
           <div className="mb-28">
-            <h2 className="mb-4 text-xs italic uppercase">Work:</h2>
+            <h2 className="mb-4 text-xs uppercase">Work:</h2>
             <Accordion type="single" defaultValue="item-0" collapsible className="space-y-2">
               {projects.map((project, index) => (
                 <AccordionItem
