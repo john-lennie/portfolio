@@ -152,7 +152,7 @@ const projects = [
         text: "56.digital", 
         link: "https://56.digital/" 
       },
-      " to develop a shade finder quiz for Basma Beauty."
+      " on the development of a shade finder quiz for Basma Beauty."
     ],
     stackTags: {
       commerce: "Shopify"
