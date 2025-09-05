@@ -186,28 +186,28 @@ const projects = [
       cms: "Squarespace"
     },
   },
-  {
-    name: "Club Dieciséis",
-    year: "2021",
-    type: "Frontend Engineering",
-    stack: "Shopify Theme Development",
-    media: [
-      {
-        type: "desktopVideo",
-        src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4"
-      }
-    ],
-    description: [
-      "Shopify theme development for Puerto Rican musician Tainy.\n\nDesign by ",
-      { 
-        text: "Ronan Mcgee", 
-        link: "https://www.xn--rnn-fla2g.com/" 
-      }
-    ],
-    stackTags: {
-      commerce: "Shopify"
-    },
-  },
+  // {
+  //   name: "Club Dieciséis",
+  //   year: "2021",
+  //   type: "Frontend Engineering",
+  //   stack: "Shopify Theme Development",
+  //   media: [
+  //     {
+  //       type: "desktopVideo",
+  //       src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/787904e7ebf09dc97b99c0247acfa6f6/downloads/default.mp4"
+  //     }
+  //   ],
+  //   description: [
+  //     "Shopify theme development for Puerto Rican musician Tainy.\n\nDesign by ",
+  //     { 
+  //       text: "Ronan Mcgee", 
+  //       link: "https://www.xn--rnn-fla2g.com/" 
+  //     }
+  //   ],
+  //   stackTags: {
+  //     commerce: "Shopify"
+  //   },
+  // },
   {
     name: "Full Court Press",
     year: "2020",
