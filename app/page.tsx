@@ -45,7 +45,7 @@ const projects = [
       }
     ],
     description: [
-      "Worked with VF Digital Technology Team to develop product campaign pages, design system components, & improve core web vitals for The North Face, Vans & Timberland.",
+      "Worked with VF Digital Technology Team to develop product campaign pages, design system components, and improve core web vitals for The North Face, Vans & Timberland.",
     ],
     stackTags: {
       frontEnd: "Nuxt",
