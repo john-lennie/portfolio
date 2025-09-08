@@ -56,7 +56,7 @@ const projects = [
     name: "Faces Of Another", 
     year: "2022 - 2025",
     type: "Digital Product Design\n\n\nFrontend Engineering",
-    stack: "Art Direction\nUI Design\n\nJS Framework Development (Next.js)",
+    stack: "UI Design\n\nJS Framework Development (Next.js)",
     media: [
       {
         type: "image",
@@ -91,7 +91,7 @@ const projects = [
     name: "North of Now",
     year: "2022",
     type: "Digital Product Design\n\n\n\nFrontend Engineering",
-    stack: "Art Direction\nBranding\nUX & UI Design\n\nJS Framework Development (Next.js)",
+    stack: "Branding\nUX & UI Design\n\nJS Framework Development (Next.js)",
     media: [
       {
         type: "image",
@@ -447,11 +447,10 @@ export default function Home() {
             </div>
             <p className="mb-4 col-span-2 lg:col-span-4 text-xs">Services:</p>
             <p className="text-xs lg:col-start-2">
-              Digital Product Design<br /><br /><br /><br />
+              Digital Product Design<br /><br /><br />
               Frontend Engineering
             </p>
             <p className="text-xs">
-              Art Direction<br />
               Branding<br />
               UX/UI Design<br /><br />
               Shopify Theme Development<br />
