@@ -442,7 +442,7 @@ export default function Home() {
               <p>JNPR is a digital product design & engineering studio based in Toronto.</p>
               <p>
                 Interested in working together?<br />
-                Send us an e-mail at: <CopyButton textToCopy="hello@jnpr.studio" /><br />
+                E-mail us at: <CopyButton textToCopy="hello@jnpr.studio" /><br />
               </p>
             </div>
             <p className="mb-4 col-span-2 lg:col-span-4 text-xs">Services:</p>
