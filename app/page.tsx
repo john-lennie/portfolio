@@ -290,7 +290,7 @@ export default function Home() {
   };
 
   const paragraphs = [
-    "JNPR is a design and development studio based in Toronto.",
+    "JNPR is a digital product design and engineering studio based in Toronto.",
     "We help clients realize creative ideas through digital product design & frontend engineering.",
   ];
 
@@ -417,7 +417,7 @@ export default function Home() {
             </AnimatePresence>
             {/* <div className="w-3/5 lg:w-1/3">
               <p className="text-base text-red-600">
-                JNPR is a design and development studio based in Toronto.<br /><br />
+                JNPR is a digital product design and engineering studio based in Toronto.<br /><br />
                 We specialize in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.
               </p>
             </div> */}
@@ -439,7 +439,7 @@ export default function Home() {
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-16">
             <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:w-full md:max-w-[60%]">
               <p className="mb-4 text-xs uppercase">Info:</p>
-              <p>JNPR is a design and development studio based in Toronto.</p>
+              <p>JNPR is a digital product design and engineering studio based in Toronto.</p>
               <p>We help clients realize creative ideas through digital experiences.</p>
               <p>Interested in working together?</p>
               <p>Say hi, or <a target="_blank" className="link-primary" href="mailto:hello@jnpr.studio">hello@jnpr.studio</a></p>
