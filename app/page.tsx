@@ -78,7 +78,7 @@ const projects = [
       }
     ],
     description: [
-      "Owned the design, build, and optimization of The Faces of Another e-commerce website, continually  collaborating with partners on design updates, new features, and analyzing analytics insights."
+      "Owned the design, build, and optimization of The Faces of Another e-commerce website; continually  collaborating with partners on design updates, new features, and analyzing analytics insights."
     ],
     stackTags: {
       cms: "Sanity",
