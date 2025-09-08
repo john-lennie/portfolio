@@ -17,16 +17,14 @@ function CopyButton({ textToCopy, className = '' }: CopyButtonProps) {
   };
 
   return (
-    <div className='inline-flex items-center space-x-1 link-primary'>
+    <span className='inline-flex items-center space-x-1 link-primary'>
       <a target="_blank" className="link-primary" href={`mailto:${textToCopy}`}>{textToCopy}</a>
       <button
         onClick={handleCopy}
-        className={`${className}`}
       >
-        {copied ? 'Copied.' : <CopyIcon />}
-        {/* <CopyIcon className='w-[10vw] h-[10vw] md:w-[9vw] md:h-[9vw]' /> */}
+        {copied ? 'Copied.' : <CopyIcon className='w-[1em] h-[1em]' />}
       </button>
-    </div>
+    </span>
   );
 }
 
