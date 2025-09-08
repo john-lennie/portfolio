@@ -121,7 +121,7 @@ const projects = [
       }
     ],
     description: [
-      "Logomark, website design and development for Los Angeles based film production company North of Now."
+      "Logomark, website design & development for Los Angeles based film production company North of Now."
     ],
     stackTags: {
       cms: "Prismic",
