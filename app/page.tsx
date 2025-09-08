@@ -443,7 +443,7 @@ export default function Home() {
               <p>We help clients realize creative ideas and optimize user engagement through data-driven insights.</p>
               <p>
                 Interested in working together?<br />
-                Say hi, or <a target="_blank" className="link-primary" href="mailto:hello@jnpr.studio">hello@jnpr.studio</a>
+                Say hi, or <CopyButton textToCopy="hello@jnpr.studio" /><br />
               </p>
             </div>
             <p className="mb-4 col-span-2 lg:col-span-4 text-xs">Services:</p>
@@ -561,7 +561,7 @@ export default function Home() {
           <div className="text-right">
             <p className="text-xs">
               <a href="tel:+14166708705" className="link-primary">&#43;1&#32;416&#32;670&#32;8705</a><br />
-              <CopyButton className="link-primary" textToCopy="hello@jnpr.studio" /><br />
+              <CopyButton textToCopy="hello@jnpr.studio" /><br />
               <a href="https://www.are.na/jnpr-studio/all" className="link-primary" target="_blank">are.na</a>
             </p>
           </div>
