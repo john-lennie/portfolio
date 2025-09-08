@@ -290,8 +290,8 @@ export default function Home() {
   };
 
   const paragraphs = [
-    "JNPR is a digital product design and engineering studio based in Toronto.",
-    "We help clients realize creative ideas and optimize user engagement through data-driven insights.",
+    "JNPR is a digital product design & engineering studio based in Toronto.",
+    "We help clients realize creative ideas & optimize user engagement through data-driven insights.",
   ];
 
   const container = {
@@ -417,8 +417,8 @@ export default function Home() {
             </AnimatePresence>
             {/* <div className="w-3/5 lg:w-1/3">
               <p className="text-base text-red-600">
-                JNPR is a digital product design and engineering studio based in Toronto.<br /><br />
-                We specialize in UI and visual design, e-commerce strategy, and headless frontend architecture solutions.
+                JNPR is a digital product design & engineering studio based in Toronto.<br /><br />
+                We specialize in UI & visual design, e-commerce strategy, & headless frontend architecture solutions.
               </p>
             </div> */}
             <div className="flex justify-between mb-5 relative">
@@ -439,8 +439,8 @@ export default function Home() {
           <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-16">
             <div className="col-span-2 lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:w-full md:max-w-[60%]">
               <p className="mb-4 text-xs uppercase">Info:</p>
-              <p>JNPR is a digital product design and engineering studio based in Toronto.</p>
-              <p>We help clients realize creative ideas and optimize user engagement through data-driven insights.</p>
+              <p>JNPR is a digital product design & engineering studio based in Toronto.</p>
+              <p>We help clients realize creative ideas & optimize user engagement through data-driven insights.</p>
               <p>Interested in working together?</p>
               <p>Say hi, or <a target="_blank" className="link-primary" href="mailto:hello@jnpr.studio">hello@jnpr.studio</a></p>
             </div>
