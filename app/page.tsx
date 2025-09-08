@@ -78,7 +78,7 @@ const projects = [
       }
     ],
     description: [
-      "Web Design & Development for Faces Of Another, a contemporary menswear brand."
+      "Owned the design, build, and continuous optimization of The Faces Of Anotther e-commerce site. Collaboarting with co-owners on the prioritization of new features, as well as analyzing analytics insights."
     ],
     stackTags: {
       cms: "Sanity",
