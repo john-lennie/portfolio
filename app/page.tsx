@@ -55,7 +55,7 @@ const projects = [
   {
     name: "Faces Of Another", 
     year: "2022 - 2025",
-    type: "Digital Product Design\n\n\nFrontend Engineering",
+    type: "Digital Product Design\n\nFrontend Engineering",
     stack: "UI Design\n\nJS Framework Development (Next.js)",
     media: [
       {
@@ -90,7 +90,7 @@ const projects = [
   {
     name: "North of Now",
     year: "2022",
-    type: "Digital Product Design\n\n\n\nFrontend Engineering",
+    type: "Digital Product Design\n\n\nFrontend Engineering",
     stack: "Branding\nUX & UI Design\n\nJS Framework Development (Next.js)",
     media: [
       {
