@@ -111,7 +111,7 @@ p {
 }
 
 .text-xs {
-  @apply text-[3.25vw] leading-[4.7vw] sm:text-[1.5vw] sm:leading-[2vw] lg:text-[0.9vw] lg:leading-[1vw] 2xl:text-[0.7vw] 2xl:leading-[0.9vw];
+  @apply text-[3.25vw] leading-[4.7vw] sm:text-[1.5vw] sm:leading-[2.2vw] lg:text-[0.9vw] lg:leading-[1.3vw] 2xl:text-[0.7vw] 2xl:leading-[1vw];
 }
 
 .text-sm {

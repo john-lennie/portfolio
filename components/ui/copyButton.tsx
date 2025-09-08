@@ -12,7 +12,7 @@ function CopyButton({ textToCopy, className = '' }: CopyButtonProps) {
   const handleCopy = () => {
     navigator.clipboard.writeText(textToCopy).then(() => {
       setCopied(true);
-      setTimeout(() => setCopied(false), 1500);
+      setTimeout(() => setCopied(false), 1000);
     });
   };
 
