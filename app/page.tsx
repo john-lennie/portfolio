@@ -291,7 +291,7 @@ export default function Home() {
 
   const paragraphs = [
     "JNPR is a digital product design & engineering studio based in Toronto.",
-    "We help clients realize creative ideas and optimize user engagement through data-driven insights.",
+    "We help clients realize creative ideas & optimize user engagement through data-driven insights.",
   ];
 
   const container = {
@@ -440,7 +440,7 @@ export default function Home() {
             <div className="col-span-2 max-w-[80%] lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:w-full md:max-w-[70%]">
               <p className="mb-4 text-xs">Info:</p>
               <p>JNPR is a digital product design & engineering studio based in Toronto.</p>
-              <p>We help clients realize creative ideas and optimize user engagement through data-driven insights.</p>
+              <p>We help clients realize creative ideas & optimize user engagement through data-driven insights.</p>
               <p>
                 Interested in working together?<br />
                 Say hi, or <CopyButton textToCopy="hello@jnpr.studio" /><br />
