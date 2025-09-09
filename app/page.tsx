@@ -291,7 +291,7 @@ export default function Home() {
 
   const paragraphs = [
     "JNPR is a digital product design & engineering studio based in Toronto.",
-    "We help clients realize creative ideas and improve performance for their web-based digital experiences.",
+    "We help clients with realizing creative ideas and improving performance for web-based digital experiences.",
   ];
 
   const container = {
