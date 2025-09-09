@@ -78,7 +78,7 @@ const projects = [
       }
     ],
     description: [
-      "Owned all aspects of the Faces of Another e-commerce website; continually  collaborating on design updates and new features, as well as analyzing analytics insights."
+      "Owned all aspects of the Faces of Another e-commerce website; continually  collaborating on design updates and new features."
     ],
     stackTags: {
       cms: "Sanity",
