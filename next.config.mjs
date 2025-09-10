@@ -15,6 +15,14 @@ const nextConfig = {
   },
   images: {
     unoptimized: false,
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.ctfassets.net',
+        port: '',
+        pathname: '/{space_id}/**',
+      },
+    ],
   },
   experimental: {
     webpackBuildWorker: true,

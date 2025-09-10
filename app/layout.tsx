@@ -1,5 +1,8 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import { GlobalStyles } from "@/components/GlobalStyles"
+import Header from "@/components/header"
+import Footer from "@/components/footer"
 
 import { Source_Code_Pro } from 'next/font/google';
 
@@ -24,7 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={sourceCodePro.variable}>
-      <body>{children}</body>
+      <body>
+        <GlobalStyles />
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

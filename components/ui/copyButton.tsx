@@ -17,7 +17,7 @@ function CopyButton({ textToCopy, className = '' }: CopyButtonProps) {
   };
 
   return (
-    <span className='inline-flex items-center space-x-1 link-primary'>
+    <span className='inline-flex items-center space-x-1'>
       <a target="_blank" className="link-primary" href={`mailto:${textToCopy}`}>{textToCopy}</a>
       <button
         onClick={handleCopy}
