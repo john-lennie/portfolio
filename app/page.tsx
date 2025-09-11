@@ -267,10 +267,8 @@ export default function Home() {
         <div className="col-span-2 max-w-[65%] lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:w-full md:max-w-[70%]">
           <h2 className="text-sm mb-4 uppercase">Info</h2>
           <p>JNPR is a digital product design & engineering studio.</p>
-          <p>
-            Interested in working together?<br />
-            E-mail <CopyButton textToCopy="hello@jnpr.studio" /><br />
-          </p>
+          <p>Interested in working together?</p>
+          <p>E-mail <CopyButton textToCopy="hello@jnpr.studio" /></p>
         </div>
         <h2 className="text-sm mb-4 col-span-2 lg:col-span-4 uppercase">Services</h2>
         <p className="text-xs lg:col-start-2">
