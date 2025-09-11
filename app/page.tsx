@@ -331,7 +331,15 @@ export default function Home() {
                         )}
                         {item.type === "mobileVideo" && (
                           <div className="aspect-w-16 aspect-h-9 w-[38%] max-w-[200px]">
-                            <DeferredVideo
+                            <video
+                              poster={item.poster}
+                              src={item.src}
+                              muted
+                              playsInline
+                              autoPlay
+                              loop
+                            />
+                            {/* <DeferredVideo
                               poster={item.poster}
                               src={item.src}
                               muted
@@ -339,12 +347,20 @@ export default function Home() {
                               autoPlay
                               loop
                               unloadOnClose  // optional: frees memory after closing
-                            />
+                            /> */}
                           </div>
                         )}
                         {item.type === "desktopVideo" && (
                           <div className="aspect-w-16 aspect-h-9">
-                            <DeferredVideo
+                            <video
+                              poster={item.poster}
+                              src={item.src}
+                              muted
+                              playsInline
+                              autoPlay
+                              loop
+                            />
+                            {/* <DeferredVideo
                               poster={item.poster}
                               src={item.src}
                               muted
@@ -352,7 +368,7 @@ export default function Home() {
                               autoPlay
                               loop
                               unloadOnClose  // optional: frees memory after closing
-                            />
+                            /> */}
                           </div>
                         )}
                       </CarouselItem>
