@@ -29,26 +29,22 @@ export default async function Blog() {
             {posts.map((post) => (
               <article
                 key={post.sys.id}
-                className="h-full w-5/6 lg:w-full flex flex-col overflow-hidden space-y-2"
+                className="h-full w-5/6 lg:w-full flex flex-col overflow-hidden"
               >
                 <Link href={`/blog/${post.slug}`}>
                   <h3 className="text-sm uppercase w-2/3">
                     {post.title}
                   </h3>
                 </Link>
-
-                <p className="text-xs italic lg:w-2/3">
+                <p className="text-xs italic mt-4 lg:w-2/3">
                   {post.subTitle}
                 </p>
-
-                <div className="flex">
-                  <Link
-                    className="text-xs link-primary"
-                    href={`/blog/${post.slug}`}
-                  >
-                    Read More
-                  </Link>
-                </div>
+                <Link
+                  className="text-xs link-primary"
+                  href={`/blog/${post.slug}`}
+                >
+                  Read More
+                </Link>
               </article>
             ))}
           </div>

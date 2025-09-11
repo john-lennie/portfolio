@@ -45,7 +45,7 @@ export const options: Options = {
     },
     // Heading 2 handling
     [BLOCKS.HEADING_2]: (_node: any, children: ReactNode): ReactNode => {
-      return <h2 className="text-sm uppercase mt-8 lg:mt-12 mb-2 lg:mb-4">{children}</h2>
+      return <h2 className="text-sm uppercase mt-8 lg:mt-16 mb-2 lg:mb-4">{children}</h2>
     },
   },
 }
@@ -71,12 +71,14 @@ export default async function BlogPostPage({
   return (
     <main className="container animate-fade-in-slow flex py-16 min-h-[92vh]">
       <section className="w-full lg:w-1/2 2xl:w-2/5 mx-auto mt-12">
-        <h1 className="text-base text-center uppercase mb-4">
-          {post.title}
-        </h1>
-        <h2 className="text-xs text-center italic">
-          {post.subTitle}
-        </h2>
+        <div className="px-8">
+          <h1 className="text-base text-center uppercase mb-4">
+            {post.title}
+          </h1>
+          <h2 className="text-xs text-center italic">
+            {post.subTitle}
+          </h2>
+        </div>
         <div className="pt-20 space-y-8 lg:space-y-10">
           <div className="space-y-4 md:space-y-6">
             <div className="space-y-2">
