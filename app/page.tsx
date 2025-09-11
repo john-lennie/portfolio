@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { MobileIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
+import type { Project } from "@/types/projects";
 import Image from "next/image"
 
 import { 
@@ -18,9 +18,11 @@ import {
   CarouselNext,
   CarouselNavigation
 } from "@/components/ui/carousel"
+
+import { DeferredVideo } from "@/components/ui/DeferredVideo"
 import CopyButton from '@/components/ui/copyButton';
 
-const projects = [
+const projects: Project[] = [
   {
     name: "VF Corporation",
     year: "2022 - 2025",
@@ -35,6 +37,7 @@ const projects = [
       },
       {
         type: "mobileVideo",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/thumbnails/thumbnail.jpg?time=3s",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4",
       }
     ],
@@ -101,6 +104,7 @@ const projects = [
       },
       {
         type: "mobileVideo",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/thumbnails/thumbnail.jpg?time=3s",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
       },
       {
@@ -111,6 +115,7 @@ const projects = [
       },
       {
         type: "mobileVideo",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/thumbnails/thumbnail.jpg?time=3s",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"
       }
     ],
@@ -137,6 +142,7 @@ const projects = [
       },
       {
         type: "mobileVideo",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/thumbnails/thumbnail.jpg?time=3s",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"
       }
     ],
@@ -166,6 +172,7 @@ const projects = [
       },
       {
         type: "mobileVideo",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/thumbnails/thumbnail.jpg?time=3s",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/downloads/default.mp4"
       }
     ],
@@ -210,6 +217,7 @@ const projects = [
     media: [
       {
         type: "mobileVideo",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/thumbnails/thumbnail.jpg?time=3s",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"
       }
     ],
@@ -286,7 +294,7 @@ export default function Home() {
               key={index} value={`item-${index}`}
             >
               <AccordionTrigger
-                className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] lg:mb-8 w-full text-xs/none font-normal text-left pb-2"
+                className="grid grid-cols-[50%_auto_max-content] lg:grid-cols-[25%_25%_25%_auto_max-content] w-full text-xs/none font-normal text-left pb-2"
               >
                 <span className="whitespace-pre-line text-xs">{project.name}</span>
                 <span className="hidden lg:block whitespace-pre-line text-xs">{project.type}</span>
@@ -323,16 +331,28 @@ export default function Home() {
                         )}
                         {item.type === "mobileVideo" && (
                           <div className="aspect-w-16 aspect-h-9 w-[38%]">
-                            <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
-                              Your browser does not support the video tag.
-                            </video>
+                            <DeferredVideo
+                              poster={item.poster}
+                              src={item.src}
+                              muted
+                              playsInline
+                              autoPlay
+                              loop
+                              unloadOnClose  // optional: frees memory after closing
+                            />
                           </div>
                         )}
                         {item.type === "desktopVideo" && (
                           <div className="aspect-w-16 aspect-h-9">
-                            <video src={item.src} muted playsInline autoPlay loop className="w-full h-full object-cover">
-                              Your browser does not support the video tag.
-                            </video>
+                            <DeferredVideo
+                              poster={item.poster}
+                              src={item.src}
+                              muted
+                              playsInline
+                              autoPlay
+                              loop
+                              unloadOnClose  // optional: frees memory after closing
+                            />
                           </div>
                         )}
                       </CarouselItem>
@@ -345,12 +365,12 @@ export default function Home() {
                   {project.description &&
                     <div className="lg:flex lg:items-center lg:justify-between w-full lg:col-span-2 lg:w-1/2">
                       <p className="text-xs whitespace-pre-line lg:pr-32">
-                        {project.description.map((item, i) =>
-                          typeof item === "string" ? (
-                            item
+                        {project.description.map((descriptionItem, i) =>
+                          typeof descriptionItem === "string" ? (
+                            descriptionItem
                           ) : (
-                            <a key={i} href={item.link} target="_blank" className="link-primary">
-                              {item.text}
+                            <a key={i} href={descriptionItem.link} target="_blank" className="link-primary">
+                              {descriptionItem.text}
                             </a>
                           )
                         )}
