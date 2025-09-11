@@ -268,7 +268,7 @@ export default function Home() {
           <h2 className="text-sm mb-4 uppercase">Info</h2>
           <p>JNPR is a digital product design & engineering studio.</p>
           <p>Interested in working together?</p>
-          <p>E-mail <CopyButton textToCopy="hello@jnpr.studio" /></p>
+          <p>E-mail: <CopyButton textToCopy="hello@jnpr.studio" /></p>
         </div>
         <h2 className="text-sm mb-4 col-span-2 lg:col-span-4 uppercase">Services</h2>
         <p className="text-xs lg:col-start-2">
