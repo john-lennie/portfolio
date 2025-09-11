@@ -185,6 +185,9 @@ export default function Header() {
               style={{ background: 'radial-gradient(closest-side, rgb(255 255 255), rgb(255 255 255 / 0%))' }}
             />
             <div className="space-x-4">
+              <Link href="/" onClick={() => handleNavClick("/")} className="text-base underline">
+                Home
+              </Link>
               <Link href="/blog" onClick={() => handleNavClick("/blog")} className="text-base underline">
                 Blog
               </Link>
