@@ -71,10 +71,10 @@ export default async function BlogPostPage({
   return (
     <main className="container grid lg:grid-cols-[50%_50%] animate-fade-in-slow py-16 min-h-[92vh]">
       <section className="mt-12">
-        <h1 className="text-base uppercase mb-4">
+        <h1 className="text-base uppercase mb-4 w-2/3">
           {post.title}
         </h1>
-        <h2 className="text-xs italic">
+        <h2 className="text-xs italic lg:w-2/3">
           {post.subTitle}
         </h2>
         <div className="pt-20 space-y-8 lg:space-y-10">
