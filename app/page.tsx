@@ -37,7 +37,7 @@ const projects: Project[] = [
       },
       {
         type: "mobileVideo",
-        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/thumbnails/thumbnail.jpg?time=0s&width=30&format=webp&quality=70",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/thumbnails/thumbnail.jpg?time=0s&width=200&format=webp&quality=70",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/0fe25865e5279f39e50e1ac910a8bef8/downloads/default.mp4",
       }
     ],
@@ -104,7 +104,7 @@ const projects: Project[] = [
       },
       {
         type: "mobileVideo",
-        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/thumbnails/thumbnail.jpg?time=0s&width=30&format=webp&quality=70",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/thumbnails/thumbnail.jpg?time=0s&width=200&format=webp&quality=70",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/b2da14eb06df9eea6578a5da81aa9ade/downloads/default.mp4",
       },
       {
@@ -115,7 +115,7 @@ const projects: Project[] = [
       },
       {
         type: "mobileVideo",
-        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/thumbnails/thumbnail.jpg?time=0s&width=30&format=webp&quality=70",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/thumbnails/thumbnail.jpg?time=0s&width=200&format=webp&quality=70",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/c82c8fba2dc5c30e7b9cd590829f6869/downloads/default.mp4"
       }
     ],
@@ -142,7 +142,7 @@ const projects: Project[] = [
       },
       {
         type: "mobileVideo",
-        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/thumbnails/thumbnail.jpg?time=0s&width=30&format=webp&quality=70",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/thumbnails/thumbnail.jpg?time=0s&width=200&format=webp&quality=70",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/3effe4b4174d7cdd27b1a2ac41f00561/downloads/default.mp4"
       }
     ],
@@ -172,7 +172,7 @@ const projects: Project[] = [
       },
       {
         type: "mobileVideo",
-        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/thumbnails/thumbnail.jpg?time=0s&width=30&format=webp&quality=70",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/thumbnails/thumbnail.jpg?time=0s&width=200&format=webp&quality=70",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/49a789f383f94691c5ccd93afc0cb2c3/downloads/default.mp4"
       }
     ],
@@ -217,7 +217,7 @@ const projects: Project[] = [
     media: [
       {
         type: "mobileVideo",
-        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/thumbnails/thumbnail.jpg?time=0s&width=30&format=webp&quality=70",
+        poster: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/thumbnails/thumbnail.jpg?time=0s&width=200&format=webp&quality=70",
         src: "https://customer-8yrmilz5ghwcudh1.cloudflarestream.com/71478c576dacfc40d3b92e13366f9e73/downloads/default.mp4"
       }
     ],
@@ -330,7 +330,7 @@ export default function Home() {
                           </div>
                         )}
                         {item.type === "mobileVideo" && (
-                          <div className="aspect-w-16 aspect-h-9 w-[38%]">
+                          <div className="aspect-w-16 aspect-h-9 w-[38%] max-w-[200px]">
                             <DeferredVideo
                               poster={item.poster}
                               src={item.src}
