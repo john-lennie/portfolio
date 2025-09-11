@@ -20,6 +20,7 @@ function CopyButton({ textToCopy, className = '' }: CopyButtonProps) {
     <span className='inline-flex items-center space-x-1'>
       <a target="_blank" className="link-primary" href={`mailto:${textToCopy}`}>{textToCopy}</a>
       <button
+        aria-label="Copy"
         onClick={handleCopy}
       >
         {copied ? 'Copied.' : <CopyIcon className='w-[1em] h-[1em]' />}
