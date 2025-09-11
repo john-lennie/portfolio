@@ -133,3 +133,16 @@ p {
 .link-secondary {
   @apply text-black hover:text-black text-sm/none underline;
 }
+
+.accordion-plus {
+  display: block;
+}
+.accordion-minus {
+  display: none;
+}
+[data-state=open] .accordion-plus {
+  display: none;
+}
+[data-state=open] .accordion-minus {
+  display: block;
+}

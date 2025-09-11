@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { GlobalStyles } from "@/components/GlobalStyles"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Analytics } from "@vercel/analytics/next"
@@ -28,7 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={sourceCodePro.variable}>
       <body>
-        <GlobalStyles />
         <Header />
         {children}
         <Footer />
