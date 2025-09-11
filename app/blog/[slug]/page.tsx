@@ -41,11 +41,11 @@ export const options: Options = {
     },
     // Paragraph handling
     [BLOCKS.PARAGRAPH]: (_node: any, children: ReactNode): ReactNode => {
-      return <p className="text-sm">{children}</p>
+      return <p className="text-xs">{children}</p>
     },
     // Heading 2 handling
     [BLOCKS.HEADING_2]: (_node: any, children: ReactNode): ReactNode => {
-      return <h2 className="h2">{children}</h2>
+      return <h2 className="text-sm uppercase mt-8 lg:mt-12 mb-2 lg:mb-4">{children}</h2>
     },
   },
 }
@@ -69,24 +69,19 @@ export default async function BlogPostPage({
   }
 
   return (
-    <main className="animate-fade-in-slow flex justify-center min-h-screen py-32">
-      <section className="w-full md:w-3/4 lg:w-1/2">
-        <div className="container space-y-20 px-4 md:px-6">
-          <div className="space-y-2 flex flex-col items-center">
-            <h1 className="text-base text-center font-bold tracking-tighter sm:text-5xl">
-              {post.title}
-            </h1>
-            <p className="text-xs text-center w-3/4 italic">
-              {post.subTitle}
-            </p>
-          </div>
-
-          <div className="space-y-8 lg:space-y-10">
-            <div className="space-y-4 md:space-y-6">
-              <div className="space-y-2">
-                <div className="prose">
-                  {documentToReactComponents(post.content.json, options)}
-                </div>
+    <main className="container animate-fade-in-slow flex py-16 min-h-[92vh]">
+      <section className="w-full lg:w-1/2 2xl:w-2/5 mx-auto mt-12">
+        <h1 className="text-base text-center uppercase mb-4">
+          {post.title}
+        </h1>
+        <h2 className="text-xs text-center italic">
+          {post.subTitle}
+        </h2>
+        <div className="pt-20 space-y-8 lg:space-y-10">
+          <div className="space-y-4 md:space-y-6">
+            <div className="space-y-2">
+              <div className="prose">
+                {documentToReactComponents(post.content.json, options)}
               </div>
             </div>
           </div>
