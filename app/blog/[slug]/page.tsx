@@ -69,16 +69,14 @@ export default async function BlogPostPage({
   }
 
   return (
-    <main className="container animate-fade-in-slow flex py-16 min-h-[92vh]">
-      <section className="w-full lg:w-1/2 2xl:w-2/5 mx-auto mt-12">
-        <div className="px-8">
-          <h1 className="text-base text-center uppercase mb-4">
-            {post.title}
-          </h1>
-          <h2 className="text-xs text-center italic">
-            {post.subTitle}
-          </h2>
-        </div>
+    <main className="container grid lg:grid-cols-[50%_50%] animate-fade-in-slow py-16 min-h-[92vh]">
+      <section className="mt-12">
+        <h1 className="text-base uppercase mb-4">
+          {post.title}
+        </h1>
+        <h2 className="text-xs italic">
+          {post.subTitle}
+        </h2>
         <div className="pt-20 space-y-8 lg:space-y-10">
           <div className="space-y-4 md:space-y-6">
             <div className="space-y-2">

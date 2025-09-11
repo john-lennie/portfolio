@@ -19,7 +19,7 @@ export default async function Blog() {
     <main className="animate-fade-in-slow flex py-16 min-h-[92vh]">
       <section className="w-full mt-12">
         <div className="mx-auto container">
-          <h1 className="text-sm uppercase mb-4">
+          <h1 className="text-base uppercase mb-4">
             Blog
           </h1>
           <h2 className="text-xs">
