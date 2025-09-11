@@ -332,7 +332,6 @@ export default function Home() {
                         {item.type === "mobileVideo" && (
                           <div className="aspect-w-16 aspect-h-9 w-[38%] max-w-[200px]">
                             <video
-                              poster={item.poster}
                               src={item.src}
                               muted
                               playsInline
@@ -353,7 +352,6 @@ export default function Home() {
                         {item.type === "desktopVideo" && (
                           <div className="aspect-w-16 aspect-h-9">
                             <video
-                              poster={item.poster}
                               src={item.src}
                               muted
                               playsInline
