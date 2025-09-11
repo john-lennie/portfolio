@@ -279,7 +279,7 @@ export default function Home() {
         </p>
       </div>
       <div className="mb-28">
-        <h2 className="text-sm uppercase">Work</h2>
+        <h2 className="text-sm uppercase mb-4">Work</h2>
         <Accordion type="single" defaultValue="item-0" collapsible className="space-y-2">
           {projects.map((project, index) => (
             <AccordionItem
