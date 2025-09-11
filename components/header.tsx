@@ -133,7 +133,7 @@ export default function Header() {
         <button className={"text-base uppercase " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Info</button> */}
       </div>
       <div
-        className={"container fixed top-0 left-0 pt-48 flex flex-col justify-between h-dvh transition duration-150 ease-in-out pointer-events-none " + (infoVisibility ? 'opacity-100 pointer-events-auto ' : 'opacity-0 ')}
+        className={"container fixed top-0 left-0 pt-48 flex flex-col justify-end h-dvh transition duration-150 ease-in-out pointer-events-none " + (infoVisibility ? 'opacity-100 pointer-events-auto ' : 'opacity-0 ')}
         style={{
           backgroundColor: '#ffffff40',
           backgroundImage: 'radial-gradient(transparent 1px, #fff 1px)',
@@ -141,52 +141,56 @@ export default function Header() {
           backdropFilter: 'blur(10px)'
         }}
       >
-        <div className="relative w-fit py-10 pr-10">
-          <span
-            className="absolute -z-10 left-[-90%] top-[-50%] w-[200%] h-[200%]"
-            style={{ background: 'radial-gradient(closest-side, rgb(255 255 255), rgb(255 255 255 / 0%))' }}
-          />
-          <Link href="/blog" onClick={() => handleNavClick("/blog")} className="text-base text-red-600 underline">
-            Blog
-          </Link>
+        <div>
+          <AnimatePresence mode="wait">
+            {infoVisibility && (
+              <motion.div
+                key="typing-text"
+                initial="hidden"
+                animate="visible"
+                exit={{ opacity: 0, transition: { duration: 0.2 } }}
+                className="w-5/6 lg:w-1/3 relative"
+              >
+                <span
+                  className="absolute -z-10 left-[-50%] top-[-50%] w-[200%] h-[200%]"
+                  style={{ background: 'radial-gradient(closest-side, rgb(255 255 255), rgb(255 255 255 / 0%))' }}
+                />
+                {paragraphs.map((para, i) => (
+                  <motion.p
+                    key={i}
+                    className="text-base text-red-600 mb-4 whitespace-normal"
+                    variants={container}
+                  >
+                    {para.split(" ").map((word, wIndex) => (
+                      <motion.span
+                        key={wIndex}
+                        className="inline-block mr-1" // keeps spacing
+                        variants={wordContainer}
+                      >
+                        {word.split("").map((char, cIndex) => (
+                          <motion.span key={cIndex} variants={letter}>
+                            {char}
+                          </motion.span>
+                        ))}
+                      </motion.span>
+                    ))}
+                  </motion.p>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+          <div className="relative w-fit pt-10 pr-10 pb-16">
+            <span
+              className="absolute -z-10 left-[-90%] top-[-50%] w-[200%] h-[200%]"
+              style={{ background: 'radial-gradient(closest-side, rgb(255 255 255), rgb(255 255 255 / 0%))' }}
+            />
+            <div className="space-x-4">
+              <Link href="/blog" onClick={() => handleNavClick("/blog")} className="text-base underline">
+                Blog
+              </Link>
+            </div>
+          </div>
         </div>
-        <AnimatePresence mode="wait">
-          {infoVisibility && (
-            <motion.div
-              key="typing-text"
-              initial="hidden"
-              animate="visible"
-              exit={{ opacity: 0, transition: { duration: 0.2 } }}
-              className="w-5/6 lg:w-1/3 relative"
-            >
-              <span
-                className="absolute -z-10 left-[-50%] top-[-50%] w-[200%] h-[200%]"
-                style={{ background: 'radial-gradient(closest-side, rgb(255 255 255), rgb(255 255 255 / 0%))' }}
-              />
-              {paragraphs.map((para, i) => (
-                <motion.p
-                  key={i}
-                  className="text-base text-red-600 mb-4 whitespace-normal"
-                  variants={container}
-                >
-                  {para.split(" ").map((word, wIndex) => (
-                    <motion.span
-                      key={wIndex}
-                      className="inline-block mr-1" // keeps spacing
-                      variants={wordContainer}
-                    >
-                      {word.split("").map((char, cIndex) => (
-                        <motion.span key={cIndex} variants={letter}>
-                          {char}
-                        </motion.span>
-                      ))}
-                    </motion.span>
-                  ))}
-                </motion.p>
-              ))}
-            </motion.div>
-          )}
-        </AnimatePresence>
         {/* <div className="w-3/5 lg:w-1/3">
           <p className="text-base text-red-600">
             JNPR is a digital product design & engineering studio based in Toronto.<br /><br />

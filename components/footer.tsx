@@ -5,7 +5,7 @@ import { MobileIcon, ExternalLinkIcon } from "@radix-ui/react-icons";
 
 export default function Footer() {
   return (
-    <footer className="container grid grid-cols-[50%_auto] mb-16 lg:mb-24 animate-fade-in-slow-delay opacity-0">
+    <footer className="container grid grid-cols-[50%_auto] mb-6 lg:mb-24 animate-fade-in-slow-delay opacity-0">
       <p className="text-xs">68 Claremont St<br />Toronto, ON<br />Canada</p>
       <div className="text-right">
         <p className="text-xs">

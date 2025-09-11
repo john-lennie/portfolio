@@ -16,31 +16,36 @@ export default async function Blog() {
   const posts: BlogPost[] = await getAllBlogPosts(3)
 
   return (
-    <main className="flex min-h-screen py-32 bg-white">
+    <main className="animate-fade-in-slow flex min-h-screen py-32 bg-white">
       <section className="w-full">
-        <div className="mx-auto container space-y-16">
-          {/* <h1 className="text-base text-center">
-            Blog Entries
-          </h1> */}
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto container">
+          <div className="space-y-1">
+            <h1 className="text-base">
+              Blog
+            </h1>
+            <h2 className="text-xs">
+              Deep & shallow dives on various topics.
+            </h2>
+          </div>
+          <div className="pt-20 grid gap-20 md:grid-cols-2 lg:grid-cols-3">
             {posts.map((post) => (
               <article
                 key={post.sys.id}
-                className="h-full flex flex-col overflow-hidden"
+                className="h-full w-5/6 lg:w-full flex flex-col overflow-hidden space-y-2"
               >
                 <Link href={`/blog/${post.slug}`}>
-                  <h3 className="text-base mb-2">
+                  <h3 className="text-base">
                     {post.title}
                   </h3>
                 </Link>
 
-                <p className="text-xs w-3/4 italic">
+                <p className="text-xs italic lg:w-2/3">
                   {post.subTitle}
                 </p>
 
-                <div className="flex mr-6">
+                <div className="flex">
                   <Link
-                    className="text-xs uppercase link-primary"
+                    className="text-xs link-primary mt-2"
                     href={`/blog/${post.slug}`}
                   >
                     Read More

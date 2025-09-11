@@ -7,7 +7,7 @@ body {
 }
 
 p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 @layer utilities {
@@ -114,7 +114,7 @@ p {
   @apply text-[3.25vw] leading-[4.7vw] sm:text-[1.5vw] sm:leading-[2.2vw] lg:text-[0.9vw] lg:leading-[1.2vw] 2xl:text-[0.7vw] 2xl:leading-[0.9vw];
 }
 
-h2 {
+.h2 {
   @apply font-semibold tracking-tighter text-[3.75vw] leading-[4vw] sm:text-[2vw] sm:leading-[2.25vw] lg:text-[1vw] lg:leading-[1.25vw] mt-8 mb-4;
 }
 

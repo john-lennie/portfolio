@@ -43,6 +43,10 @@ export const options: Options = {
     [BLOCKS.PARAGRAPH]: (_node: any, children: ReactNode): ReactNode => {
       return <p className="text-sm">{children}</p>
     },
+    // Heading 2 handling
+    [BLOCKS.HEADING_2]: (_node: any, children: ReactNode): ReactNode => {
+      return <h2 className="h2">{children}</h2>
+    },
   },
 }
 
@@ -65,8 +69,8 @@ export default async function BlogPostPage({
   }
 
   return (
-    <main className="flex items-center justify-center min-h-screen py-32">
-      <section className="w-full md:w-3/4 lg:w-3/5">
+    <main className="animate-fade-in-slow flex justify-center min-h-screen py-32">
+      <section className="w-full md:w-3/4 lg:w-1/2">
         <div className="container space-y-20 px-4 md:px-6">
           <div className="space-y-2 flex flex-col items-center">
             <h1 className="text-base text-center font-bold tracking-tighter sm:text-5xl">
