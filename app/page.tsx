@@ -302,7 +302,7 @@ export default function Home() {
                 <span className="text-right whitespace-pre-line text-xs pr-2">{project.year}</span>
               </AccordionTrigger>
               <AccordionContent>
-                <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-1 lg:grid lg:grid-cols-[25%_25%_50%]">
+                <div className="space-y-4 lg:space-y-0 lg:mt-4 mt-1 mb-4 lg:grid lg:grid-cols-[25%_25%_50%]">
                   <Carousel className="relative w-full py-2 lg:order-2" orientation="horizontal" opts={{
                     align: 'start',
                     loop: false
