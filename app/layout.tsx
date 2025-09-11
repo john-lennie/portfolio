@@ -3,7 +3,7 @@ import './globals.css'
 import { GlobalStyles } from "@/components/GlobalStyles"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-
+import { Analytics } from "@vercel/analytics/next"
 import { Source_Code_Pro } from 'next/font/google';
 
 const sourceCodePro = Source_Code_Pro({
@@ -32,6 +32,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   )
