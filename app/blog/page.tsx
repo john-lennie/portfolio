@@ -1,21 +1,13 @@
 // app/blog/page.tsx
-import { getAllBlogPosts } from "@/lib/api"
+import { getAllArticles } from "@/lib/api"
 import { draftMode } from 'next/headers';
 import Link from "next/link"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Document, BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types"
 
-type BlogPost = {
-  sys: { id: string }
-  title: string
-  slug: string
-  subTitle: string
-  content: { json: Document }
-}
-
 export default async function Blog() {
   const { isEnabled } = draftMode(); 
-  const posts: BlogPost[] = await getAllBlogPosts(3, isEnabled)
+  const posts = await getAllArticles(3, isEnabled)
 
   return (
     <main className="animate-fade-in-slow flex py-16 min-h-[92vh]">
@@ -39,7 +31,7 @@ export default async function Blog() {
                   </h3>
                 </Link>
                 <p className="text-xs italic mt-4 lg:w-2/3">
-                  {post.subTitle}
+                  {post.summary}
                 </p>
                 <Link
                   className="text-xs link-primary"

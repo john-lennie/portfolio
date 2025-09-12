@@ -1,4 +1,4 @@
-import { getAllBlogPosts, getBlogPost } from "@/lib/api"
+import { getAllArticles, getArticle } from "@/lib/api"
 import { draftMode } from 'next/headers';
 import { Options, documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { INLINES, BLOCKS, MARKS, Document, type Hyperlink } from "@contentful/rich-text-types"
@@ -6,16 +6,9 @@ import Link from "next/link"
 import type { ReactNode } from "react"
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { notFound } from "next/navigation"
+import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-
-type BlogPost = {
-  sys: { id: string }
-  title: string
-  slug: string
-  subTitle: string
-  content: { json: Document }
-}
 
 export const options: Options = {
   renderNode: {
@@ -89,15 +82,17 @@ export const options: Options = {
 
 // Generate static params for all blog slugs
 export async function generateStaticParams() {
-  const allPosts: BlogPost[] = await getAllBlogPosts()
+  const allPosts = await getAllArticles()
   return allPosts.map((post) => ({ slug: post.slug }))
 }
 
 // Blog detail page
-export default async function BlogPostPage({params,}: {params: { slug: string }}) {
+export default async function BlogPostPage({
+  params,
+}) {
 
   const { isEnabled } = draftMode(); 
-  const post: BlogPost | undefined = await getBlogPost(params.slug, isEnabled)
+  const post = await getArticle(params.slug, isEnabled)
 
   if (!post) {
     notFound()
@@ -110,13 +105,20 @@ export default async function BlogPostPage({params,}: {params: { slug: string }}
           {post.title}
         </h1>
         <h2 className="text-xs italic lg:w-2/3">
-          {post.subTitle}
+          {post.summary}
         </h2>
+        <Image
+          alt="Article Image"
+          className="aspect-video w-full overflow-hidden rounded-xl object-cover"
+          height="365"
+          src={post.articleImage.url}
+          width="650"
+        />
         <div className="pt-20 space-y-8 lg:space-y-10">
           <div className="space-y-4 md:space-y-6">
             <div className="space-y-2">
               <div className="prose">
-                {documentToReactComponents(post.content.json, options)}
+                {documentToReactComponents(post.details.json, options)}
               </div>
             </div>
           </div>
