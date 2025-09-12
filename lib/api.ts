@@ -1,5 +1,10 @@
-// Set a variable that contains all the fields needed for posts when a fetch for
-// content is performed
+// lib/api.ts
+import type { Document } from "@contentful/rich-text-types";
+
+/**
+ * Fields to fetch for each Blog Post entry.
+ * Adjust links/assets as needed if you plan to embed images or other entries.
+ */
 const BLOG_POST_GRAPHQL_FIELDS = `
   sys {
     id
@@ -12,9 +17,7 @@ const BLOG_POST_GRAPHQL_FIELDS = `
     links {
       assets {
         block {
-          sys {
-            id
-          }
+          sys { id }
           url
           description
         }
@@ -23,70 +26,102 @@ const BLOG_POST_GRAPHQL_FIELDS = `
   }
 `;
 
-async function fetchGraphQL(query, preview = false) {
-  return fetch(
-   `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
+// ---- Types ----
+export type BlogPost = {
+  sys: { id: string };
+  title: string;
+  slug: string;
+  subTitle?: string;
+  content: {
+    json: Document;
+    links: {
+      assets: {
+        block: {
+          sys: { id: string };
+          url: string;
+          description: string;
+        };
+      }[];
+    };
+  };
+};
+
+type ContentfulResponse<T> = {
+  data?: {
+    blogPostCollection?: {
+      items: T[];
+    };
+  };
+};
+
+// ---- Fetch wrapper ----
+async function fetchGraphQL<T>(
+  query: string,
+  preview = false
+): Promise<ContentfulResponse<T>> {
+  const response = await fetch(
+    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // Switch the Bearer token depending on whether the fetch is supposed to retrieve live
-        // Contentful content or draft content
         Authorization: `Bearer ${
           preview
-            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
-            : process.env.CONTENTFUL_ACCESS_TOKEN
+            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN!
+            : process.env.CONTENTFUL_ACCESS_TOKEN!
         }`,
       },
       body: JSON.stringify({ query }),
-      // Associate all fetches for posts with an "posts" cache tag so content can
-      // be revalidated or updated from Contentful on publish
-      next: { tags: ["posts"] },
+      next: { tags: ["blogPosts"] }, // useful for Next.js revalidation
     }
-  ).then((response) => response.json());
+  );
+
+  return (await response.json()) as ContentfulResponse<T>;
 }
 
-function extractArticleEntries(fetchResponse) {
-  return fetchResponse?.data?.blogPostCollection?.items;
+function extractBlogPostEntries<T>(
+  fetchResponse: ContentfulResponse<T>
+): T[] {
+  return fetchResponse?.data?.blogPostCollection?.items ?? [];
 }
 
-export async function getBlogPosts(
-  // For this demo set the default limit to always return 3 posts.
+// ---- Public API ----
+export async function getAllBlogPosts(
   limit = 3,
-  // By default this function will return published content but will provide an option to
-  // return draft content for reviewing posts before they are live
   isDraftMode = false
-) {
-  const posts = await fetchGraphQL(
+): Promise<BlogPost[]> {
+  const posts = await fetchGraphQL<BlogPost>(
     `query {
-        blogPostCollection(where:{slug_exists: true}, order: date_DESC, limit: ${limit}, preview: ${
-      isDraftMode ? "true" : "false"
-    }) {
-          items {
-            ${BLOG_POST_GRAPHQL_FIELDS}
-          }
+      blogPostCollection(order: sys_publishedAt_DESC, limit: ${limit}, preview: ${
+        isDraftMode ? "true" : "false"
+      }) {
+        items {
+          ${BLOG_POST_GRAPHQL_FIELDS}
         }
-      }`,
+      }
+    }`,
     isDraftMode
   );
-  return extractArticleEntries(posts);
+
+  return extractBlogPostEntries(posts);
 }
 
 export async function getBlogPost(
-  slug,
+  slug: string,
   isDraftMode = false
-) {
-  const article = await fetchGraphQL(
+): Promise<BlogPost | undefined> {
+  const post = await fetchGraphQL<BlogPost>(
     `query {
-        blogPostCollection(where:{slug: "${slug}"}, limit: 1, preview: ${
-      isDraftMode ? "true" : "false"
-    }) {
-          items {
-            ${BLOG_POST_GRAPHQL_FIELDS}
-          }
+      blogPostCollection(where: { slug: "${slug}" }, limit: 1, preview: ${
+        isDraftMode ? "true" : "false"
+      }) {
+        items {
+          ${BLOG_POST_GRAPHQL_FIELDS}
         }
-      }`,
+      }
+    }`,
     isDraftMode
   );
-  return extractArticleEntries(article)[0];
+
+  return extractBlogPostEntries(post)[0];
 }
