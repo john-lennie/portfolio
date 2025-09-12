@@ -1,6 +1,5 @@
-// lib/api.ts
-import type { Document } from "@contentful/rich-text-types"
-
+// Set a variable that contains all the fields needed for posts when a fetch for
+// content is performed
 const BLOG_POST_GRAPHQL_FIELDS = `
   sys {
     id
@@ -13,110 +12,81 @@ const BLOG_POST_GRAPHQL_FIELDS = `
     links {
       assets {
         block {
-          sys { id }
+          sys {
+            id
+          }
           url
           description
         }
       }
     }
   }
-`
+`;
 
-// Types
-export type BlogPost = {
-  sys: { id: string }
-  title: string
-  slug: string
-  subTitle: string
-  content: {
-    json: Document
-    links: {
-      assets: {
-        block: {
-          sys: { id: string }
-          url: string
-          description: string
-        }
-      }[]
-    }
-  }
-}
-
-type ContentfulResponse<T> = {
-  data?: {
-    blogPostCollection?: {
-      items: T[]
-    }
-  }
-}
-
-// Fetch wrapper
-async function fetchGraphQL<T>(
-  query: string,
-  preview = false
-): Promise<ContentfulResponse<T>> {
-  const response = await fetch(
-    `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
+async function fetchGraphQL(query, preview = false) {
+  return fetch(
+   `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
     {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        // Switch the Bearer token depending on whether the fetch is supposed to retrieve live
+        // Contentful content or draft content
         Authorization: `Bearer ${
           preview
-            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN!
-            : process.env.CONTENTFUL_ACCESS_TOKEN!
+            ? process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN
+            : process.env.CONTENTFUL_ACCESS_TOKEN
         }`,
       },
       body: JSON.stringify({ query }),
-      next: { revalidate: 60, tags: ["blogPosts"] }, // useful for Next.js revalidation
+      // Associate all fetches for posts with an "posts" cache tag so content can
+      // be revalidated or updated from Contentful on publish
+      next: { tags: ["posts"] },
     }
-  )
-
-  return (await response.json()) as ContentfulResponse<T>
+  ).then((response) => response.json());
 }
 
-function extractBlogPostEntries<T>(
-  fetchResponse: ContentfulResponse<T>
-): T[] {
-  return fetchResponse?.data?.blogPostCollection?.items ?? []
+function extractArticleEntries(fetchResponse) {
+  return fetchResponse?.data?.blogPostCollection?.items;
 }
 
-export async function getAllBlogPosts(
-  limit = 5,
+export async function getBlogPosts(
+  // For this demo set the default limit to always return 3 posts.
+  limit = 3,
+  // By default this function will return published content but will provide an option to
+  // return draft content for reviewing posts before they are live
   isDraftMode = false
-): Promise<BlogPost[]> {
-  const posts = await fetchGraphQL<BlogPost>(
+) {
+  const posts = await fetchGraphQL(
     `query {
-      blogPostCollection(order: sys_publishedAt_DESC, limit: ${limit}, preview: ${
+        blogPostCollection(where:{slug_exists: true}, order: date_DESC, limit: ${limit}, preview: ${
       isDraftMode ? "true" : "false"
     }) {
-        items {
-          ${BLOG_POST_GRAPHQL_FIELDS}
+          items {
+            ${BLOG_POST_GRAPHQL_FIELDS}
+          }
         }
-      }
-    }`,
+      }`,
     isDraftMode
-  )
-
-  return extractBlogPostEntries(posts)
+  );
+  return extractArticleEntries(posts);
 }
 
 export async function getBlogPost(
-  slug: string,
+  slug,
   isDraftMode = false
-): Promise<BlogPost | undefined> {
-  const post = await fetchGraphQL<BlogPost>(
+) {
+  const article = await fetchGraphQL(
     `query {
-      blogPostCollection(where:{slug: "${slug}"}, limit: 1, preview: ${
+        blogPostCollection(where:{slug: "${slug}"}, limit: 1, preview: ${
       isDraftMode ? "true" : "false"
     }) {
-        items {
-          ${BLOG_POST_GRAPHQL_FIELDS}
+          items {
+            ${BLOG_POST_GRAPHQL_FIELDS}
+          }
         }
-      }
-    }`,
+      }`,
     isDraftMode
-  )
-
-  return extractBlogPostEntries(post)[0]
+  );
+  return extractArticleEntries(article)[0];
 }
