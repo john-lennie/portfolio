@@ -1,10 +1,13 @@
 import { getAllBlogPosts, getBlogPost } from "@/lib/api"
+import { draftMode } from 'next/headers';
 import { Options, documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { INLINES, BLOCKS, Document, type Hyperlink } from "@contentful/rich-text-types"
+import { INLINES, BLOCKS, MARKS, Document, type Hyperlink } from "@contentful/rich-text-types"
 import Link from "next/link"
 import type { ReactNode } from "react"
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { notFound } from "next/navigation"
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 type BlogPost = {
   sys: { id: string }
@@ -39,15 +42,43 @@ export const options: Options = {
       )
     },
     // Paragraph handling
-    [BLOCKS.PARAGRAPH]: (_node: any, children: ReactNode): ReactNode => {
-      const isEmpty = _node.content.every(
-        (c): c is Text =>
-          c.nodeType === 'text' && c.value.trim().length === 0
-      )
+    [BLOCKS.PARAGRAPH]: (node: any, children: ReactNode): ReactNode => {
+      // 1. Check if paragraph is completely empty
+      const isEmpty = node.content.every(
+        (c: any): c is Text =>
+          c.nodeType === "text" && c.value.trim().length === 0
+      );
 
-      return isEmpty
-        ? <br />
-        : <p className="text-xs">{children}</p>
+      if (isEmpty) return <br />;
+
+      // 2. Detect if all child text nodes are marked as `code`
+      const allCode = node.content.every(
+        (c: any) =>
+          c.nodeType === "text" &&
+          c.marks?.some((m: any) => m.type === MARKS.CODE)
+      );
+
+      if (allCode) {
+        // Extract the raw string so we don't double-wrap marks
+        const codeText = node.content.map((c: any) => c.value).join("");
+        return (
+          <p>
+            <SyntaxHighlighter
+            language="text"
+            style={oneDark}
+            >
+              {codeText}
+            </SyntaxHighlighter>
+          </p>
+        );
+      }
+
+      // 3. Default paragraph
+      return <p>{children}</p>;
+    },
+    // Heading 1 handling
+    [BLOCKS.HEADING_1]: (_node: any, children: ReactNode): ReactNode => {
+      return <h1 className="text-sm uppercase mt-8 lg:mt-16 mb-2 lg:mb-4">{children}</h1>
     },
     // Heading 2 handling
     [BLOCKS.HEADING_2]: (_node: any, children: ReactNode): ReactNode => {
@@ -63,12 +94,10 @@ export async function generateStaticParams() {
 }
 
 // Blog detail page
-export default async function BlogPostPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
-  const post: BlogPost | undefined = await getBlogPost(params.slug)
+export default async function BlogPostPage({params,}: {params: { slug: string }}) {
+
+  const { isEnabled } = draftMode(); 
+  const post: BlogPost | undefined = await getBlogPost(params.slug, isEnabled)
 
   if (!post) {
     notFound()

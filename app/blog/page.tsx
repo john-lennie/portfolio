@@ -1,5 +1,6 @@
 // app/blog/page.tsx
 import { getAllBlogPosts } from "@/lib/api"
+import { draftMode } from 'next/headers';
 import Link from "next/link"
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Document, BLOCKS, INLINES, MARKS } from "@contentful/rich-text-types"
@@ -13,7 +14,8 @@ type BlogPost = {
 }
 
 export default async function Blog() {
-  const posts: BlogPost[] = await getAllBlogPosts(3)
+  const { isEnabled } = draftMode(); 
+  const posts: BlogPost[] = await getAllBlogPosts(3, isEnabled)
 
   return (
     <main className="animate-fade-in-slow flex py-16 min-h-[92vh]">
