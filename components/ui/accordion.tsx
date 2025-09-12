@@ -180,10 +180,10 @@ export const AccordionContent = React.forwardRef<
         overflow: hidden;
       }
       .AccordionContent[data-state="open"] {
-        animation: slideDown 150ms ease-in-out;
+        animation: slideDown 300ms ease-in-out;
       }
       .AccordionContent[data-state="closed"] {
-        animation: slideUp 150ms ease-in-out;
+        animation: slideUp 300ms ease-in-out;
       }
       @keyframes slideDown {
         from {
