@@ -8,7 +8,7 @@ import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { notFound } from "next/navigation"
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { vscLightPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { vs } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const options: Options = {
   renderNode: {
@@ -58,7 +58,7 @@ export const options: Options = {
           <div className="w-[90vw] md:w-full mb-6">
             <SyntaxHighlighter
               language="html"
-              style={vscLightPlus}
+              style={vs}
               wrapLongLines
               customStyle={{
                 fontSize: '0.75rem',
@@ -125,12 +125,12 @@ export default async function BlogPostPage({
   }
 
   return (
-    <main className="container grid lg:grid-cols-[50%_50%] animate-fade-in-slow py-16 min-h-[92vh]">
+    <main className="container grid lg:grid-cols-[50%_50%] animate-fade-in-slow py-16 min-h-[10svh]">
       <section className="mt-12">
-        <h1 className="heading-1 uppercase w-2/3">
+        <h1 className="display-2 mb-4 w-5/6">
           {post.title}
         </h1>
-        <h2 className="text-xs italic lg:w-2/3">
+        <h2 className="text-xs italic lg:w-5/6">
           {post.summary}
         </h2>
         {post.articleImage &&

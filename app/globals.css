@@ -34,6 +34,10 @@ p {
   @apply text-xs;
 }
 
+.display-2 {
+  @apply text-xl md:text-2xl lg:text-3xl 2xl:text-4xl tracking-tighter font-bold;
+}
+
 .display-3 {
   @apply text-xs font-bold uppercase;
 }

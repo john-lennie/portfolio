@@ -10,10 +10,10 @@ export default async function Blog() {
   const posts = await getAllArticles(3, isEnabled)
 
   return (
-    <main className="animate-fade-in-slow flex py-16 min-h-[92vh]">
+    <main className="animate-fade-in-slow flex py-16 min-h-[100svh]">
       <section className="w-full mt-12">
         <div className="mx-auto container">
-          <h1 className="text-base uppercase mb-4">
+          <h1 className="display-2 mb-4">
             Blog
           </h1>
           <h2 className="text-xs">
@@ -26,11 +26,11 @@ export default async function Blog() {
                 className="h-full w-5/6 lg:w-full flex flex-col overflow-hidden"
               >
                 <Link href={`/blog/${post.slug}`}>
-                  <h3 className="text-sm uppercase w-2/3">
+                  <h3 className="display-2 mb-4 w-5/6">
                     {post.title}
                   </h3>
                 </Link>
-                <p className="text-xs italic mt-4 lg:w-2/3">
+                <p className="text-xs italic lg:w-5/6">
                   {post.summary}
                 </p>
                 <Link

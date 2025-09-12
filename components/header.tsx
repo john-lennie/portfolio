@@ -126,11 +126,11 @@ export default function Header() {
             }}
           />
         </button>
-        {/* <button className={"flex text-base !leading-none items-center uppercase " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
+        {/* <button className={"flex display-2 !leading-none items-center uppercase " + (infoVisibility ? 'block' : 'hidden')} onClick={toggleInfo}>
           Close
           <Cross2Icon className="ml-2 h-[7vw] w-[7vw] lg:h-[1.75vw] lg:w-[1.75vw]" />
         </button>
-        <button className={"text-base uppercase " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Info</button> */}
+        <button className={"display-2 uppercase " + (infoVisibility ? 'hidden' : 'block')} onClick={toggleInfo}>Info</button> */}
       </div>
       <div
         className={"container fixed top-0 left-0 pt-48 flex flex-col justify-end h-dvh transition duration-150 ease-in-out pointer-events-none " + (infoVisibility ? 'opacity-100 pointer-events-auto ' : 'opacity-0 ')}
@@ -158,7 +158,7 @@ export default function Header() {
                 {paragraphs.map((para, i) => (
                   <motion.p
                     key={i}
-                    className="text-base text-red-600 mb-4 whitespace-normal"
+                    className="display-2 text-red-600 mb-4 whitespace-normal"
                     variants={container}
                   >
                     {para.split(" ").map((word, wIndex) => (
@@ -185,17 +185,17 @@ export default function Header() {
               style={{ background: 'radial-gradient(closest-side, rgb(255 255 255), rgb(255 255 255 / 0%))' }}
             />
             <div className="space-x-4">
-              <Link href="/" onClick={() => handleNavClick("/")} className="text-base underline">
+              <Link href="/" onClick={() => handleNavClick("/")} className="display-2 underline">
                 Home
               </Link>
-              <Link href="/blog" onClick={() => handleNavClick("/blog")} className="text-base underline">
+              <Link href="/blog" onClick={() => handleNavClick("/blog")} className="display-2 underline">
                 Blog
               </Link>
             </div>
           </div>
         </div>
         {/* <div className="w-3/5 lg:w-1/3">
-          <p className="text-base text-red-600">
+          <p className="display-2 text-red-600">
             JNPR is a digital product design & engineering studio based in Toronto.<br /><br />
             We specialize in UI & visual design, e-commerce strategy, & headless frontend architecture solutions.
           </p>
@@ -205,8 +205,8 @@ export default function Header() {
             className="absolute -z-10 left-[-50%] top-[-50%] w-[200%] h-[200%]"
             style={{ background: 'radial-gradient(closest-side, rgb(255 255 255), rgb(255 255 255 / 0%))' }}
           />
-          <p className="text-base">68 Claremont St<br />Toronto, ON<br />Canada</p>
-          <p className="text-base text-right">
+          <p className="display-2">68 Claremont St<br />Toronto, ON<br />Canada</p>
+          <p className="display-2 text-right">
             <span className='inline-flex items-center space-x-2 link-primary'>
               <a href="tel:+14166708705">&#43;1&#32;416&#32;670&#32;8705</a>
               <MobileIcon className='w-[1em] h-[1em]' />
