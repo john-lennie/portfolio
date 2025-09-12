@@ -1,10 +1,9 @@
 import { getAllBlogPosts, getBlogPost } from "@/lib/api"
 import { Options, documentToReactComponents } from "@contentful/rich-text-react-renderer"
-import { INLINES, BLOCKS, type Hyperlink } from "@contentful/rich-text-types"
+import { INLINES, BLOCKS, Document, type Hyperlink } from "@contentful/rich-text-types"
 import Link from "next/link"
 import type { ReactNode } from "react"
 import { ExternalLinkIcon } from "@radix-ui/react-icons";
-import { Document } from "@contentful/rich-text-types"
 import { notFound } from "next/navigation"
 
 type BlogPost = {
@@ -41,7 +40,14 @@ export const options: Options = {
     },
     // Paragraph handling
     [BLOCKS.PARAGRAPH]: (_node: any, children: ReactNode): ReactNode => {
-      return <p className="text-xs">{children}</p>
+      const isEmpty = _node.content.every(
+        (c): c is Text =>
+          c.nodeType === 'text' && c.value.trim().length === 0
+      )
+
+      return isEmpty
+        ? <br />
+        : <p className="text-xs">{children}</p>
     },
     // Heading 2 handling
     [BLOCKS.HEADING_2]: (_node: any, children: ReactNode): ReactNode => {
