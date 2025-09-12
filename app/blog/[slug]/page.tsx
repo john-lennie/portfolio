@@ -107,13 +107,15 @@ export default async function BlogPostPage({
         <h2 className="text-xs italic lg:w-2/3">
           {post.summary}
         </h2>
-        <Image
-          alt="Article Image"
-          className="aspect-video w-full overflow-hidden rounded-xl object-cover"
-          height="365"
-          src={post.articleImage.url}
-          width="650"
-        />
+        {post.articleImage &&
+          <Image
+            alt="Article Image"
+            className="aspect-video w-full overflow-hidden rounded-xl object-cover"
+            height="365"
+            src={post.articleImage.url}
+            width="650"
+          />
+        }
         <div className="pt-20 space-y-8 lg:space-y-10">
           <div className="space-y-4 md:space-y-6">
             <div className="space-y-2">
