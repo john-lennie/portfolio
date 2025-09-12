@@ -8,7 +8,7 @@ import { ExternalLinkIcon } from "@radix-ui/react-icons";
 import { notFound } from "next/navigation"
 import Image from "next/image";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { vscLightPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 export const options: Options = {
   renderNode: {
@@ -55,14 +55,24 @@ export const options: Options = {
         // Extract the raw string so we don't double-wrap marks
         const codeText = node.content.map((c: any) => c.value).join("");
         return (
-          <p>
+          <div className="w-[90vw] md:w-full mb-6">
             <SyntaxHighlighter
-            language="text"
-            style={oneDark}
+              language="html"
+              style={vscLightPlus}
+              wrapLongLines
+              customStyle={{
+                fontSize: '0.75rem',
+                borderRadius: '0.5rem',     // 👈 8 px rounded corners
+                paddingRight: '20px',
+                width: '100%',
+                whiteSpace: "pre-wrap",
+                wordBreak: "break-word",
+                overflowWrap: "break-word"
+              }}
             >
               {codeText}
             </SyntaxHighlighter>
-          </p>
+          </div>
         );
       }
 
@@ -71,11 +81,27 @@ export const options: Options = {
     },
     // Heading 1 handling
     [BLOCKS.HEADING_1]: (_node: any, children: ReactNode): ReactNode => {
-      return <h1 className="text-sm uppercase mt-8 lg:mt-16 mb-2 lg:mb-4">{children}</h1>
+      return <h1 className="heading-1 w-5/6">{children}</h1>
     },
     // Heading 2 handling
     [BLOCKS.HEADING_2]: (_node: any, children: ReactNode): ReactNode => {
-      return <h2 className="text-sm uppercase mt-8 lg:mt-16 mb-2 lg:mb-4">{children}</h2>
+      return <h2 className="heading-2 w-5/6">{children}</h2>
+    },
+    // Heading 3 handling
+    [BLOCKS.HEADING_3]: (_node: any, children: ReactNode): ReactNode => {
+      return <h3 className="heading-3 w-5/6">{children}</h3>
+    },
+    // Heading 4 handling
+    [BLOCKS.HEADING_4]: (_node: any, children: ReactNode): ReactNode => {
+      return <h4 className="heading-4 w-5/6">{children}</h4>
+    },
+    // Heading 5 handling
+    [BLOCKS.HEADING_5]: (_node: any, children: ReactNode): ReactNode => {
+      return <h5 className="heading-5 w-5/6">{children}</h5>
+    },
+    // Heading 6 handling
+    [BLOCKS.HEADING_6]: (_node: any, children: ReactNode): ReactNode => {
+      return <h6 className="heading-6 w-5/6">{children}</h6>
     },
   },
 }
@@ -101,7 +127,7 @@ export default async function BlogPostPage({
   return (
     <main className="container grid lg:grid-cols-[50%_50%] animate-fade-in-slow py-16 min-h-[92vh]">
       <section className="mt-12">
-        <h1 className="text-base uppercase mb-4 w-2/3">
+        <h1 className="heading-1 uppercase w-2/3">
           {post.title}
         </h1>
         <h2 className="text-xs italic lg:w-2/3">

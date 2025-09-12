@@ -7,12 +7,46 @@ body {
 }
 
 p {
-  @apply text-xs mb-4 sm:text-sm sm:mb-5 md:text-base md:mb-6 lg:text-lg lg:mb-7 2xl:text-2xl 2xl:mb-8;
+  @apply text-sm;
 }
 
-pre, code {
-  white-space: pre-wrap;
-  word-break: break-word;
+.heading-1 {
+  @apply text-2xl;
+}
+
+.heading-2 {
+  @apply text-xl;
+}
+
+.heading-3 {
+  @apply text-lg;
+}
+
+.heading-4 {
+  @apply text-base;
+}
+
+.heading-5 {
+  @apply text-sm;
+}
+
+.heading-6 {
+  @apply text-xs;
+}
+
+.display-3 {
+  @apply text-xs font-bold uppercase;
+}
+
+.heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+  @apply mt-8;
+}
+
+pre, code, p, .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .heading-6 {
+  white-space: pre-wrap;    /* allow wrapping but keep line breaks */
+  word-wrap: break-word;    /* legacy name for overflow-wrap */
+  overflow-wrap: break-word;/* modern spec */
+  @apply mb-4;
 }
 
 @layer utilities {
@@ -113,18 +147,6 @@ pre, code {
 
 .field {
   @apply w-full px-3 py-1 border border-gray-300 rounded-md bg-white text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition;
-}
-
-.text-xs {
-  @apply text-[3.5vw] leading-[4.5vw] sm:text-[1.5vw] sm:leading-[2.2vw] lg:text-[0.9vw] lg:leading-[1.2vw] 2xl:text-[0.7vw] 2xl:leading-[0.9vw];
-}
-
-.text-sm {
-  @apply font-semibold tracking-tighter text-[3.75vw] leading-[4.25vw] sm:text-[2vw] sm:leading-[2.25vw] lg:text-[1vw] lg:leading-[1.25vw];
-}
-
-.text-base {
-  @apply font-semibold tracking-tighter text-[4.3vw] leading-[5.5vw] sm:text-[3vw] sm:leading-[3.5vw] lg:text-[1.5vw] lg:leading-[1.7vw];
 }
 
 .btn-primary {

@@ -265,12 +265,12 @@ export default function Home() {
     <main className="container bg-white text-black animate-fade-in-slow py-16 min-h-[92vh]">
       <div className="grid grid-cols-[50%_50%] lg:grid-cols-[25%_25%_30%_auto_max-content] h-max mt-12 mb-16">
         <div className="col-span-2 max-w-[65%] lg:col-span-1 lg:row-span-2 mb-16 lg:mb-0 text-xs lg:w-full md:max-w-[70%]">
-          <h2 className="text-sm mb-4 uppercase">Info</h2>
-          <p>JNPR is a digital product design & engineering studio.</p>
-          <p>Interested in working together?</p>
-          <p>E-mail: <CopyButton textToCopy="hello@jnpr.studio" /></p>
+          <h2 className="display-3 mb-4">Info</h2>
+          <h3>JNPR is a digital product design & engineering studio.</h3>
+          <p className="text-xs">Interested in working together?</p>
+          <p className="text-xs">E-mail: <CopyButton textToCopy="hello@jnpr.studio" /></p>
         </div>
-        <h2 className="text-sm mb-4 col-span-2 lg:col-span-4 uppercase">Services</h2>
+        <h2 className="display-3 mb-4 col-span-2 lg:col-span-4">Services</h2>
         <p className="text-xs lg:col-start-2">
           Digital Product Design<br /><br /><br />
           Frontend Engineering
@@ -285,7 +285,7 @@ export default function Home() {
         </p>
       </div>
       <div className="mb-28">
-        <h2 className="text-sm uppercase mb-4">Work</h2>
+        <h2 className="display-3 mb-4">Work</h2>
         <Accordion type="single" defaultValue="item-0" collapsible className="space-y-2">
           {projects.map((project, index) => (
             <AccordionItem
