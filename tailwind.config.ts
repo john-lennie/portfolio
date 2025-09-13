@@ -102,7 +102,8 @@ const config: Config = {
         tightest: '-.075em'
       },
 			fontFamily: {
-        source: ['var(--font-source-code-pro)']
+        source: ['var(--font-source-code-pro)'],
+				garamond: ['var(--font-cormorant-garamond)'],
       },
 			fontSize: {
         'xxs': '0.625rem', // 10px

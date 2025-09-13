@@ -130,7 +130,7 @@ export default async function BlogPostPage({
         <h1 className="display-2 mb-4 w-5/6">
           {post.title}
         </h1>
-        <h2 className="text-xs italic lg:w-5/6">
+        <h2 className="text-xs italic lg:w-4/6">
           {post.summary}
         </h2>
         {post.articleImage &&

@@ -50,7 +50,7 @@ pre, code, p, .heading-1, .heading-2, .heading-3, .heading-4, .heading-5, .headi
   white-space: pre-wrap;    /* allow wrapping but keep line breaks */
   word-wrap: break-word;    /* legacy name for overflow-wrap */
   overflow-wrap: break-word;/* modern spec */
-  @apply mb-4;
+  @apply mb-3;
 }
 
 @layer utilities {

@@ -3,12 +3,12 @@ import './globals.css'
 import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Analytics } from "@vercel/analytics/next"
-import { Source_Code_Pro } from 'next/font/google';
+import { Cormorant_Garamond } from 'next/font/google';
 
-const sourceCodePro = Source_Code_Pro({
+const cormorantGaramond = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-source-code-pro', // key part for Tailwind use
-  display: 'swap',
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-cormorant-garamond', // key part for Tailwind use
 });
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={sourceCodePro.variable}>
+    <html lang="en" className={cormorantGaramond.variable}>
       <body>
         <Header />
         {children}
