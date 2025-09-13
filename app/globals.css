@@ -35,7 +35,7 @@ p {
 }
 
 .display-2 {
-  @apply text-xl md:text-2xl lg:text-3xl 2xl:text-4xl tracking-tighter font-bold;
+  @apply text-xl/6 md:text-2xl/7 lg:text-3xl/9 2xl:text-4xl/10 tracking-tighter font-bold;
 }
 
 .display-3 {
